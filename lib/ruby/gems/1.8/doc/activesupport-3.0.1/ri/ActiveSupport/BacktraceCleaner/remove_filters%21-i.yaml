@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveSupport::BacktraceCleaner#remove_filters!
+is_singleton: false
+name: remove_filters!
+params: ()
+visibility: public

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionDispatch::Callbacks::after
+is_singleton: true
+name: after
+params: (*args, &block)
+visibility: public

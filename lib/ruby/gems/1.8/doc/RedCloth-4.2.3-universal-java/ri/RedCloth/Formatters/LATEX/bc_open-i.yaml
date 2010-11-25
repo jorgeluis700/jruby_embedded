@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: code blocks
+full_name: RedCloth::Formatters::LATEX#bc_open
+is_singleton: false
+name: bc_open
+params: (opts)
+visibility: public

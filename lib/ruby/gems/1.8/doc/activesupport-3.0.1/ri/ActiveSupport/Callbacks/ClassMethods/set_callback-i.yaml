@@ -1,0 +1,32 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Set callbacks for a previously defined callback.
+  - !ruby/struct:SM::Flow::P 
+    body: "Syntax:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  set_callback :save, :before, :before_meth\n  set_callback :save, :after,  :after_meth, :if =&gt; :condition\n  set_callback :save, :around, lambda { |r| stuff; yield; stuff }\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Use skip_callback to skip any defined one.
+  - !ruby/struct:SM::Flow::P 
+    body: When creating or skipping callbacks, you can specify conditions that are always the same for a given key. For instance, in Action Pack, we convert :only and :except conditions into per-key conditions.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  before_filter :authenticate, :except =&gt; &quot;index&quot;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: becomes
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  dispatch_callback :before, :authenticate, :per_key =&gt; {:unless =&gt; proc {|c| c.action_name == &quot;index&quot;}}\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "Per-Key conditions are evaluated only once per use of a given key. In the case of the above example, you would do:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  run_callbacks(:dispatch, action_name) { ... dispatch stuff ... }\n"
+  - !ruby/struct:SM::Flow::P 
+    body: In that case, each action_name would get its own compiled callback method that took into consideration the per_key conditions. This is a speed improvement for ActionPack.
+full_name: ActiveSupport::Callbacks::ClassMethods#set_callback
+is_singleton: false
+name: set_callback
+params: (name, *filter_list, &block)
+visibility: public

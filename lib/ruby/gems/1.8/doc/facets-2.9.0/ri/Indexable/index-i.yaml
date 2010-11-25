@@ -1,0 +1,15 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: index_of
+block_params: (slice(i))
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns the index of the first element equal to the given object or satisfying the block condition.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  [1,2,3,4].index{ |e| e == 3 }  #=&gt; 2\n  [1,2,3,4].index{ |e| e &gt; 3 }   #=&gt; 3\n"
+full_name: Indexable#index
+is_singleton: false
+name: index
+params: (obj=nil, &block) {|slice(i)| ...}
+visibility: public

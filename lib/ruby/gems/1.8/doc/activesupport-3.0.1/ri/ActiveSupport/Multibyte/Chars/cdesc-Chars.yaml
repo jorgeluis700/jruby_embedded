@@ -1,0 +1,107 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: wrapped_string
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: consumes?
+  - !ruby/object:RI::MethodSummary 
+    name: new
+  - !ruby/object:RI::MethodSummary 
+    name: wants?
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Chars enables you to work transparently with UTF-8 encoding in the Ruby String class without having extensive knowledge about the encoding. A Chars object accepts a string upon initialization and proxies String methods in an encoding safe manner. All the normal String methods are also implemented on the proxy.
+  - !ruby/struct:SM::Flow::P 
+    body: String methods are proxied through the Chars object, and can be accessed through the <tt>mb_chars</tt> method. Methods which would normally return a String object now return a Chars object so methods can be chained.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &quot;The Perfect String  &quot;.mb_chars.downcase.strip.normalize # =&gt; &quot;the perfect string&quot;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Chars objects are perfectly interchangeable with String objects as long as no explicit class checks are made. If certain methods do explicitly check the class, call <tt>to_s</tt> before you pass chars objects to them.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  bad.explicit_checking_method &quot;T&quot;.mb_chars.downcase.to_s\n"
+  - !ruby/struct:SM::Flow::P 
+    body: The default Chars implementation assumes that the encoding of the string is UTF-8, if you want to handle different encodings you can write your own multibyte string handler and configure it through ActiveSupport::Multibyte.proxy_class.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class CharsForUTF32\n    def size\n      @wrapped_string.size / 4\n    end\n\n    def self.accepts?(string)\n      string.length % 4 == 0\n    end\n  end\n\n  ActiveSupport::Multibyte.proxy_class = CharsForUTF32\n"
+constants: []
+
+full_name: ActiveSupport::Multibyte::Chars
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Comparable
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: +
+  - !ruby/object:RI::MethodSummary 
+    name: <=>
+  - !ruby/object:RI::MethodSummary 
+    name: =~
+  - !ruby/object:RI::MethodSummary 
+    name: =~
+  - !ruby/object:RI::MethodSummary 
+    name: "[]"
+  - !ruby/object:RI::MethodSummary 
+    name: "[]="
+  - !ruby/object:RI::MethodSummary 
+    name: acts_like_string?
+  - !ruby/object:RI::MethodSummary 
+    name: capitalize
+  - !ruby/object:RI::MethodSummary 
+    name: center
+  - !ruby/object:RI::MethodSummary 
+    name: compose
+  - !ruby/object:RI::MethodSummary 
+    name: decompose
+  - !ruby/object:RI::MethodSummary 
+    name: downcase
+  - !ruby/object:RI::MethodSummary 
+    name: g_length
+  - !ruby/object:RI::MethodSummary 
+    name: include?
+  - !ruby/object:RI::MethodSummary 
+    name: index
+  - !ruby/object:RI::MethodSummary 
+    name: insert
+  - !ruby/object:RI::MethodSummary 
+    name: limit
+  - !ruby/object:RI::MethodSummary 
+    name: ljust
+  - !ruby/object:RI::MethodSummary 
+    name: lstrip
+  - !ruby/object:RI::MethodSummary 
+    name: method_missing
+  - !ruby/object:RI::MethodSummary 
+    name: normalize
+  - !ruby/object:RI::MethodSummary 
+    name: ord
+  - !ruby/object:RI::MethodSummary 
+    name: respond_to?
+  - !ruby/object:RI::MethodSummary 
+    name: reverse
+  - !ruby/object:RI::MethodSummary 
+    name: rindex
+  - !ruby/object:RI::MethodSummary 
+    name: rjust
+  - !ruby/object:RI::MethodSummary 
+    name: rstrip
+  - !ruby/object:RI::MethodSummary 
+    name: size
+  - !ruby/object:RI::MethodSummary 
+    name: slice
+  - !ruby/object:RI::MethodSummary 
+    name: split
+  - !ruby/object:RI::MethodSummary 
+    name: strip
+  - !ruby/object:RI::MethodSummary 
+    name: tidy_bytes
+  - !ruby/object:RI::MethodSummary 
+    name: titlecase
+  - !ruby/object:RI::MethodSummary 
+    name: titleize
+  - !ruby/object:RI::MethodSummary 
+    name: upcase
+name: Chars
+superclass: Object

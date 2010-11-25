@@ -1,0 +1,26 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Display is just a shortcut to render a resource with the current format.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  display @user, :status =&gt; :ok\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "For XML requests it's equivalent to:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  render :xml =&gt; @user, :status =&gt; :ok\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "Options sent by the user are also used:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  respond_with(@user, :status =&gt; :created)\n  display(@user, :status =&gt; :ok)\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "Results in:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  render :xml =&gt; @user, :status =&gt; :created\n"
+full_name: ActionController::Responder#display
+is_singleton: false
+name: display
+params: (resource, given_options={})
+visibility: protected

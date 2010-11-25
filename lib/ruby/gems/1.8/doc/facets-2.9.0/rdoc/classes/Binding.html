@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: Binding</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">Binding</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/lib/core/facets/binding/caller_rb.html">
+                lib/core/facets/binding/caller.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/binding/defined_rb.html">
+                lib/core/facets/binding/defined.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/binding/eval_rb.html">
+                lib/core/facets/binding/eval.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/binding/local_variables_rb.html">
+                lib/core/facets/binding/local_variables.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/binding/op_rb.html">
+                lib/core/facets/binding/op.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/binding/self_rb.html">
+                lib/core/facets/binding/self.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/kernel/call_stack_rb.html">
+                lib/core/facets/kernel/call_stack.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                Object
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000070">[]</a>&nbsp;&nbsp;
+      <a href="#M000071">[]=</a>&nbsp;&nbsp;
+      <a href="#M000064">__DIR__</a>&nbsp;&nbsp;
+      <a href="#M000063">__FILE__</a>&nbsp;&nbsp;
+      <a href="#M000062">__LINE__</a>&nbsp;&nbsp;
+      <a href="#M000066">__callee__</a>&nbsp;&nbsp;
+      <a href="#M000065">__method__</a>&nbsp;&nbsp;
+      <a href="#M000073">call_stack</a>&nbsp;&nbsp;
+      <a href="#M000061">caller</a>&nbsp;&nbsp;
+      <a href="#M000074">callstack</a>&nbsp;&nbsp;
+      <a href="#M000067">defined?</a>&nbsp;&nbsp;
+      <a href="#M000068">eval</a>&nbsp;&nbsp;
+      <a href="#M000069">local_variables</a>&nbsp;&nbsp;
+      <a href="#M000072">self</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000070" class="method-detail">
+        <a name="M000070"></a>
+
+        <div class="method-heading">
+          <a href="Binding.src/M000070.html" target="Code" class="method-signature"
+            onclick="popupCode('Binding.src/M000070.html');return false;">
+          <span class="method-name">[]</span><span class="method-args">( x )</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the value of some variable.
+</p>
+<pre>
+  a = 2
+  binding[&quot;a&quot;]  #=&gt; 2
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000071" class="method-detail">
+        <a name="M000071"></a>
+
+        <div class="method-heading">
+          <a href="Binding.src/M000071.html" target="Code" class="method-signature"
+            onclick="popupCode('Binding.src/M000071.html');return false;">
+          <span class="method-name">[]=</span><span class="method-args">( l, v )</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<a href="Set.html">Set</a> the value of a local variable.
+</p>
+<pre>
+  binding[&quot;a&quot;] = 4
+  a  #=&gt; 4
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000064" class="method-detail">
+        <a name="M000064"></a>
+
+        <div class="method-heading">
+          <a href="Binding.src/M000064.html" target="Code" class="method-signature"
+            onclick="popupCode('Binding.src/M000064.html');return false;">
+          <span class="method-name">__DIR__</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return the directory of the file in which the binding was created.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000063" class="method-detail">
+        <a name="M000063"></a>
+
+        <div class="method-heading">
+          <a href="Binding.src/M000063.html" target="Code" class="method-signature"
+            onclick="popupCode('Binding.src/M000063.html');return false;">
+          <span class="method-name">__FILE__</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns file name in which the binding was created.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000062" class="method-detail">
+        <a name="M000062"></a>
+
+        <div class="method-heading">
+          <a href="Binding.src/M000062.html" target="Code" class="method-signature"
+            onclick="popupCode('Binding.src/M000062.html');return false;">
+          <span class="method-name">__LINE__</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return the line number on which the binding was created.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000066" class="method-detail">
+        <a name="M000066"></a>
+
+        <div class="method-heading">
+          <a href="Binding.src/M000066.html" target="Code" class="method-signature"
+            onclick="popupCode('Binding.src/M000066.html');return false;">
+          <span class="method-name">__callee__</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Retreive the current running method.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000065" class="method-detail">
+        <a name="M000065"></a>
+
+        <div class="method-heading">
+          <a href="Binding.src/M000065.html" target="Code" class="method-signature"
+            onclick="popupCode('Binding.src/M000065.html');return false;">
+          <span class="method-name">__method__</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Retreive the current running method.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000073" class="method-detail">
+        <a name="M000073"></a>
+
+        <div class="method-heading">
+          <a href="Binding.src/M000073.html" target="Code" class="method-signature"
+            onclick="popupCode('Binding.src/M000073.html');return false;">
+          <span class="method-name">call_stack</span><span class="method-args">(level=1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the call stack, in array format.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000061" class="method-detail">
+        <a name="M000061"></a>
+
+        <div class="method-heading">
+          <a href="Binding.src/M000061.html" target="Code" class="method-signature"
+            onclick="popupCode('Binding.src/M000061.html');return false;">
+          <span class="method-name">caller</span><span class="method-args">( skip=0 )</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the call stack, same format as Kernel#caller()
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000074" class="method-detail">
+        <a name="M000074"></a>
+
+        <div class="method-heading">
+          <span class="method-name">callstack</span><span class="method-args">(level=1)</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="Binding.html#M000073">call_stack</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000067" class="method-detail">
+        <a name="M000067"></a>
+
+        <div class="method-heading">
+          <a href="Binding.src/M000067.html" target="Code" class="method-signature"
+            onclick="popupCode('Binding.src/M000067.html');return false;">
+          <span class="method-name">defined?</span><span class="method-args">(x)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the nature of something within the context of the binding. Returns
+nil if that thing is not defined.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000068" class="method-detail">
+        <a name="M000068"></a>
+
+        <div class="method-heading">
+          <a href="Binding.src/M000068.html" target="Code" class="method-signature"
+            onclick="popupCode('Binding.src/M000068.html');return false;">
+          <span class="method-name">eval</span><span class="method-args">(str)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Evaluate a Ruby source code string (or block) in the binding context.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000069" class="method-detail">
+        <a name="M000069"></a>
+
+        <div class="method-heading">
+          <a href="Binding.src/M000069.html" target="Code" class="method-signature"
+            onclick="popupCode('Binding.src/M000069.html');return false;">
+          <span class="method-name">local_variables</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the local variables defined in the binding context:
+</p>
+<pre>
+  a = 1
+  b = 2
+
+  binding.local_variables  #=&gt; [:a, :b]
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000072" class="method-detail">
+        <a name="M000072"></a>
+
+        <div class="method-heading">
+          <a href="Binding.src/M000072.html" target="Code" class="method-signature"
+            onclick="popupCode('Binding.src/M000072.html');return false;">
+          <span class="method-name">self</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns <a href="Binding.html#M000072">self</a> of the binding context.
+</p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

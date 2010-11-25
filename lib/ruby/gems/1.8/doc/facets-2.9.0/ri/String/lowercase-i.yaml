@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Downcase first letter.
+full_name: String#lowercase
+is_singleton: false
+name: lowercase
+params: ()
+visibility: public

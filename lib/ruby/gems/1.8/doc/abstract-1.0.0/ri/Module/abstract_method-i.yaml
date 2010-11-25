@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: define abstract methods
+full_name: Module#abstract_method
+is_singleton: false
+name: abstract_method
+params: (args_str, *method_names)
+visibility: public

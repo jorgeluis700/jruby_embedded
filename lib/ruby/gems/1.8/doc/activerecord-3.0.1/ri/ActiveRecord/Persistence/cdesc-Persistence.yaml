@@ -1,0 +1,55 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::H 
+    level: 1
+    text: Active Record Persistence
+constants: []
+
+full_name: ActiveRecord::Persistence
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: becomes
+  - !ruby/object:RI::MethodSummary 
+    name: decrement
+  - !ruby/object:RI::MethodSummary 
+    name: decrement!
+  - !ruby/object:RI::MethodSummary 
+    name: delete
+  - !ruby/object:RI::MethodSummary 
+    name: destroy
+  - !ruby/object:RI::MethodSummary 
+    name: destroyed?
+  - !ruby/object:RI::MethodSummary 
+    name: increment
+  - !ruby/object:RI::MethodSummary 
+    name: increment!
+  - !ruby/object:RI::MethodSummary 
+    name: new_record?
+  - !ruby/object:RI::MethodSummary 
+    name: persisted?
+  - !ruby/object:RI::MethodSummary 
+    name: reload
+  - !ruby/object:RI::MethodSummary 
+    name: save
+  - !ruby/object:RI::MethodSummary 
+    name: save!
+  - !ruby/object:RI::MethodSummary 
+    name: toggle
+  - !ruby/object:RI::MethodSummary 
+    name: toggle!
+  - !ruby/object:RI::MethodSummary 
+    name: touch
+  - !ruby/object:RI::MethodSummary 
+    name: update_attribute
+  - !ruby/object:RI::MethodSummary 
+    name: update_attributes
+  - !ruby/object:RI::MethodSummary 
+    name: update_attributes!
+name: Persistence
+superclass: 

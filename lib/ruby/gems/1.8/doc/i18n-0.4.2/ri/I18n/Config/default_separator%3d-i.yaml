@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Sets the current default scope separator.
+full_name: I18n::Config#default_separator=
+is_singleton: false
+name: default_separator=
+params: (separator)
+visibility: public

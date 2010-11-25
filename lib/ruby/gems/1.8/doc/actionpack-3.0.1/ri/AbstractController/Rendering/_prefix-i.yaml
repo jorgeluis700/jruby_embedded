@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: The prefix used in render &quot;foo&quot; shortcuts.
+full_name: AbstractController::Rendering#_prefix
+is_singleton: false
+name: _prefix
+params: ()
+visibility: public

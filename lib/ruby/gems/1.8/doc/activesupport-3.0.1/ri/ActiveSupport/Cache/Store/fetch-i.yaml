@@ -1,0 +1,38 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: ""
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Fetches data from the cache, using the given key. If there is data in the cache with the given key, then that data is returned.
+  - !ruby/struct:SM::Flow::P 
+    body: If there is no such data in the cache (a cache miss occurred), then nil will be returned. However, if a block has been passed, then that block will be run in the event of a cache miss. The return value of the block will be written to the cache under the given cache key, and that return value will be returned.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  cache.write(&quot;today&quot;, &quot;Monday&quot;)\n  cache.fetch(&quot;today&quot;)  # =&gt; &quot;Monday&quot;\n\n  cache.fetch(&quot;city&quot;)   # =&gt; nil\n  cache.fetch(&quot;city&quot;) do\n    &quot;Duckburgh&quot;\n  end\n  cache.fetch(&quot;city&quot;)   # =&gt; &quot;Duckburgh&quot;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "You may also specify additional options via the <tt>options</tt> argument. Setting <tt>:force =&gt; true</tt> will force a cache miss:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  cache.write(&quot;today&quot;, &quot;Monday&quot;)\n  cache.fetch(&quot;today&quot;, :force =&gt; true)  # =&gt; nil\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Setting <tt>:compress</tt> will store a large cache entry set by the call in a compressed format.
+  - !ruby/struct:SM::Flow::P 
+    body: Setting <tt>:expires_in</tt> will set an expiration time on the cache. All caches support auto expiring content after a specified number of seconds. This value can be specified as an option to the construction in which call all entries will be affected. Or it can be supplied to the <tt>fetch</tt> or <tt>write</tt> method for just one entry.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  cache = ActiveSupport::Cache::MemoryStore.new(:expire_in =&gt; 5.minutes)\n  cache.write(key, value, :expire_in =&gt; 1.minute)  # Set a lower value for one entry\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Setting <tt>:race_condition_ttl</tt> is very useful in situations where a cache entry is used very frequently unver heavy load. If a cache expires and due to heavy load seven different processes will try to read data natively and then they all will try to write to cache. To avoid that case the first process to find an expired cache entry will bump the cache expiration time by the value set in <tt>:race_condition_ttl</tt>. Yes this process is extending the time for a stale value by another few seconds. Because of extended life of the previous cache, other processes will continue to use slightly stale data for a just a big longer. In the meantime that first process will go ahead and will write into cache the new value. After that all the processes will start getting new value. The key is to keep <tt>:race_condition_ttl</tt> small.
+  - !ruby/struct:SM::Flow::P 
+    body: If the process regenerating the entry errors out, the entry will be regenerated after the specified number of seconds. Also note that the life of stale cache is extended only if it expired recently. Otherwise a new value is generated and <tt>:race_condition_ttl</tt> does not play any role.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  # Set all values to expire after one minute.\n  cache = ActiveSupport::Cache::MemoryCache.new(:expires_in =&gt; 1.minute)\n\n  cache.write(&quot;foo&quot;, &quot;original value&quot;)\n  val_1 = nil\n  val_2 = nil\n  sleep 60\n\n  Thread.new do\n    val_1 = cache.fetch(&quot;foo&quot;, :race_condition_ttl =&gt; 10) do\n      sleep 1\n      &quot;new value 1&quot;\n    end\n  end\n\n  Thread.new do\n    val_2 = cache.fetch(&quot;foo&quot;, :race_condition_ttl =&gt; 10) do\n      &quot;new value 2&quot;\n    end\n  end\n\n  # val_1 =&gt; &quot;new value 1&quot;\n  # val_2 =&gt; &quot;original value&quot;\n  # sleep 10 # First thread extend the life of cache by another 10 seconds\n  # cache.fetch(&quot;foo&quot;) =&gt; &quot;new value 1&quot;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "Other options will be handled by the specific cache store implementation. Internally, #fetch calls #read_entry, and calls #write_entry on a cache miss. <tt>options</tt> will be passed to the #read and #write calls."
+  - !ruby/struct:SM::Flow::P 
+    body: "For example, MemCacheStore's #write method supports the +:raw+ option, which tells the memcached server to store all values as strings. We can use this option with #fetch too:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  cache = ActiveSupport::Cache::MemCacheStore.new\n  cache.fetch(&quot;foo&quot;, :force =&gt; true, :raw =&gt; true) do\n    :bar\n  end\n  cache.fetch(&quot;foo&quot;)  # =&gt; &quot;bar&quot;\n"
+full_name: ActiveSupport::Cache::Store#fetch
+is_singleton: false
+name: fetch
+params: (name, options = nil) {|| ...}
+visibility: public

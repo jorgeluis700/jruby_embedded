@@ -1,0 +1,33 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: cache_control
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: DEFAULT_CACHE_CONTROL
+    value: "\"max-age=0, private, must-revalidate\""
+full_name: ActionDispatch::Http::Cache::Response
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: etag
+  - !ruby/object:RI::MethodSummary 
+    name: etag=
+  - !ruby/object:RI::MethodSummary 
+    name: etag?
+  - !ruby/object:RI::MethodSummary 
+    name: last_modified
+  - !ruby/object:RI::MethodSummary 
+    name: last_modified=
+  - !ruby/object:RI::MethodSummary 
+    name: last_modified?
+name: Response
+superclass: 

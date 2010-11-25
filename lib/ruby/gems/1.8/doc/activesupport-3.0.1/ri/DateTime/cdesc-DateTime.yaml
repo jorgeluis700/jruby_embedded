@@ -1,0 +1,85 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: civil_from_format
+  - !ruby/object:RI::MethodSummary 
+    name: current
+  - !ruby/object:RI::MethodSummary 
+    name: local_offset
+comment: 
+constants: []
+
+full_name: DateTime
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: <=>
+  - !ruby/object:RI::MethodSummary 
+    name: acts_like_date?
+  - !ruby/object:RI::MethodSummary 
+    name: acts_like_time?
+  - !ruby/object:RI::MethodSummary 
+    name: advance
+  - !ruby/object:RI::MethodSummary 
+    name: ago
+  - !ruby/object:RI::MethodSummary 
+    name: at_beginning_of_day
+  - !ruby/object:RI::MethodSummary 
+    name: at_midnight
+  - !ruby/object:RI::MethodSummary 
+    name: beginning_of_day
+  - !ruby/object:RI::MethodSummary 
+    name: change
+  - !ruby/object:RI::MethodSummary 
+    name: compare_with_coercion
+  - !ruby/object:RI::MethodSummary 
+    name: end_of_day
+  - !ruby/object:RI::MethodSummary 
+    name: formatted_offset
+  - !ruby/object:RI::MethodSummary 
+    name: future?
+  - !ruby/object:RI::MethodSummary 
+    name: getutc
+  - !ruby/object:RI::MethodSummary 
+    name: in
+  - !ruby/object:RI::MethodSummary 
+    name: in_time_zone
+  - !ruby/object:RI::MethodSummary 
+    name: inspect
+  - !ruby/object:RI::MethodSummary 
+    name: midnight
+  - !ruby/object:RI::MethodSummary 
+    name: past?
+  - !ruby/object:RI::MethodSummary 
+    name: readable_inspect
+  - !ruby/object:RI::MethodSummary 
+    name: seconds_since_midnight
+  - !ruby/object:RI::MethodSummary 
+    name: since
+  - !ruby/object:RI::MethodSummary 
+    name: to_date
+  - !ruby/object:RI::MethodSummary 
+    name: to_datetime
+  - !ruby/object:RI::MethodSummary 
+    name: to_f
+  - !ruby/object:RI::MethodSummary 
+    name: to_formatted_s
+  - !ruby/object:RI::MethodSummary 
+    name: to_i
+  - !ruby/object:RI::MethodSummary 
+    name: to_s
+  - !ruby/object:RI::MethodSummary 
+    name: to_time
+  - !ruby/object:RI::MethodSummary 
+    name: utc
+  - !ruby/object:RI::MethodSummary 
+    name: utc?
+  - !ruby/object:RI::MethodSummary 
+    name: utc_offset
+  - !ruby/object:RI::MethodSummary 
+    name: xmlschema
+name: DateTime
+superclass: Object

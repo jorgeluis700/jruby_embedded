@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Alias for #set_primary_key"
+full_name: ActiveRecord::AttributeMethods::PrimaryKey::ClassMethods#primary_key=
+is_singleton: false
+name: primary_key=
+params: (value = nil, &block)
+visibility: public

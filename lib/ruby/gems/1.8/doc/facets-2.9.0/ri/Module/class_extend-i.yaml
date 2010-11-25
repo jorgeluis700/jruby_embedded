@@ -1,0 +1,20 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Normally when including modules, class/module methods are not extended. To achieve this behavior requires some clever Ruby Karate. Instead #class_extend provides an easy to use and clean solution. Simply place the extending class methods in a block of the special module method #class_extend."
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  module Mix\n    def inst_meth\n      puts 'inst_meth'\n    end\n\n    class_extend do\n      def class_meth\n        &quot;Class Method!&quot;\n      end\n    end\n  end\n\n  class X\n    include Mix\n  end\n\n  X.class_meth  #=&gt; &quot;Class Method!&quot;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "NOTE: This old #class_extension version of this method did not extend the containing class automatically --it had to be done by hand. With #class_extend, that is no longer the case."
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Daniel Schierbeck, Thomas Sawyer"
+  - !ruby/struct:SM::Flow::P 
+    body: "THANKS: Nobu Nakada, Ulysses"
+full_name: Module#class_extend
+is_singleton: false
+name: class_extend
+params: (*mods, &block)
+visibility: public

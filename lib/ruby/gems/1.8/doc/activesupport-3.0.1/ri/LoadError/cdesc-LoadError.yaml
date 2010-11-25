@@ -1,0 +1,21 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: REGEXPS
+    value: "[     /^no such file to load -- (.+)$/i,     /^Missing \\w+ (?:file\\s*)?([^\\s]+.rb)$/i,     /^Missing API definition file in (.+)$/i,     /^cannot load such file -- (.+)$/i,   ]"
+full_name: LoadError
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: is_missing?
+  - !ruby/object:RI::MethodSummary 
+    name: path
+name: LoadError
+superclass: Object

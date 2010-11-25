@@ -1,0 +1,45 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: I18n::Backend::Cldr
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: "::Cldr::Format"
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: detect_type
+  - !ruby/object:RI::MethodSummary 
+    name: format_currency
+  - !ruby/object:RI::MethodSummary 
+    name: format_date
+  - !ruby/object:RI::MethodSummary 
+    name: format_datetime
+  - !ruby/object:RI::MethodSummary 
+    name: format_decimal
+  - !ruby/object:RI::MethodSummary 
+    name: format_integer
+  - !ruby/object:RI::MethodSummary 
+    name: format_percent
+  - !ruby/object:RI::MethodSummary 
+    name: format_time
+  - !ruby/object:RI::MethodSummary 
+    name: formatter
+  - !ruby/object:RI::MethodSummary 
+    name: localize
+  - !ruby/object:RI::MethodSummary 
+    name: lookup_currency
+  - !ruby/object:RI::MethodSummary 
+    name: lookup_format
+  - !ruby/object:RI::MethodSummary 
+    name: lookup_format_data
+  - !ruby/object:RI::MethodSummary 
+    name: raise_unspecified_currency!
+  - !ruby/object:RI::MethodSummary 
+    name: raise_unspecified_format_type!
+name: Cldr
+superclass: 

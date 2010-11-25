@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Were we redirected?
+full_name: ActionDispatch::TestResponse#redirect?
+is_singleton: false
+name: redirect?
+params: ()
+visibility: public

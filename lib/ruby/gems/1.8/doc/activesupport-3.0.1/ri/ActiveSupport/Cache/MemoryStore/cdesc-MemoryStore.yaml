@@ -1,0 +1,35 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: A cache store implementation which stores everything into memory in the same process. If you're running multiple Ruby on Rails server processes (which is the case if you're using mongrel_cluster or Phusion Passenger), then this means that Rails server process instances won't be able to share cache data with each other and this may not be the most appropriate cache in that scenario.
+  - !ruby/struct:SM::Flow::P 
+    body: This cache has a bounded size specified by the :size options to the initializer (default is 32Mb). When the cache exceeds the allotted size, a cleanup will occur which tries to prune the cache down to three quarters of the maximum size by removing the least recently used entries.
+  - !ruby/struct:SM::Flow::P 
+    body: MemoryStore is thread-safe.
+constants: []
+
+full_name: ActiveSupport::Cache::MemoryStore
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: cleanup
+  - !ruby/object:RI::MethodSummary 
+    name: clear
+  - !ruby/object:RI::MethodSummary 
+    name: decrement
+  - !ruby/object:RI::MethodSummary 
+    name: delete_matched
+  - !ruby/object:RI::MethodSummary 
+    name: increment
+  - !ruby/object:RI::MethodSummary 
+    name: prune
+  - !ruby/object:RI::MethodSummary 
+    name: pruning?
+name: MemoryStore
+superclass: Store

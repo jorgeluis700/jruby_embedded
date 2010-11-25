@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: ""
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: A method which only uses the first format in the formats array for layout lookup. This method plays straight with instance variables for performance reasons.
+full_name: ActionView::LookupContext::Details#with_layout_format
+is_singleton: false
+name: with_layout_format
+params: () {|| ...}
+visibility: public

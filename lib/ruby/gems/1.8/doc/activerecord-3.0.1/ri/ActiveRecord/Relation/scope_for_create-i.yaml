@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveRecord::Relation#scope_for_create
+is_singleton: false
+name: scope_for_create
+params: ()
+visibility: public

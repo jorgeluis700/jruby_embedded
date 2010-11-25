@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Fetches data from the cache, using the given key. If there is data in the cache with the given key, then that data is returned. Otherwise, nil is returned.
+  - !ruby/struct:SM::Flow::P 
+    body: Options are passed to the underlying cache implementation.
+full_name: ActiveSupport::Cache::Store#read
+is_singleton: false
+name: read
+params: (name, options = nil)
+visibility: public

@@ -1,0 +1,51 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Validates whether the value of the specified attribute is of the correct form, going by the regular expression provided. You can require that the attribute matches the regular expression:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class Person &lt; ActiveRecord::Base\n    validates_format_of :email, :with =&gt; /\\A([^@\\s]+)@((?:[-a-z0-9]+\\.)+[a-z]{2,})\\Z/i, :on =&gt; :create\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "Alternatively, you can require that the specified attribute does <em>not</em> match the regular expression:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class Person &lt; ActiveRecord::Base\n    validates_format_of :email, :without =&gt; /NOSPAM/\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "Note: use <tt>\\A</tt> and <tt>\\Z</tt> to match the start and end of the string, <tt>^</tt> and <tt>$</tt> match the start/end of a line."
+  - !ruby/struct:SM::Flow::P 
+    body: You must pass either <tt>:with</tt> or <tt>:without</tt> as an option. In addition, both must be a regular expression, or else an exception will be raised.
+  - !ruby/struct:SM::Flow::P 
+    body: "Configuration options:"
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: "<tt>:message</tt> - A custom error message (default is: &quot;is invalid&quot;)."
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>:allow_nil</tt> - If set to true, skips this validation if the attribute is <tt>nil</tt> (default is <tt>false</tt>).
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>:allow_blank</tt> - If set to true, skips this validation if the attribute is blank (default is <tt>false</tt>).
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>:with</tt> - Regular expression that if the attribute matches will result in a successful validation.
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>:without</tt> - Regular expression that if the attribute does not match will result in a successful validation.
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>:on</tt> - Specifies when this validation is active (default is <tt>:save</tt>, other options <tt>:create</tt>, <tt>:update</tt>).
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>:if</tt> - Specifies a method, proc or string to call to determine if the validation should occur (e.g. <tt>:if =&gt; :allow_validation</tt>, or <tt>:if =&gt; Proc.new { |user| user.signup_step &gt; 2 }</tt>). The method, proc or string should return or evaluate to a true or false value.
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>:unless</tt> - Specifies a method, proc or string to call to determine if the validation should not occur (e.g. <tt>:unless =&gt; :skip_validation</tt>, or <tt>:unless =&gt; Proc.new { |user| user.signup_step &lt;= 2 }</tt>). The method, proc or string should return or evaluate to a true or false value.
+    type: :BULLET
+full_name: ActiveModel::Validations::HelperMethods#validates_format_of
+is_singleton: false
+name: validates_format_of
+params: (*attr_names)
+visibility: public

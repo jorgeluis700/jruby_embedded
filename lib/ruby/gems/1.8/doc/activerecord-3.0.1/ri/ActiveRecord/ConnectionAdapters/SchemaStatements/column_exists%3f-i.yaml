@@ -1,0 +1,17 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Checks to see if a column exists in a given table.
+  - !ruby/struct:SM::Flow::H 
+    level: 3
+    text: Examples
+  - !ruby/struct:SM::Flow::VERB 
+    body: " # Check a column exists\n column_exists?(:suppliers, :name)\n\n # Check a column exists of a particular type\n column_exists?(:suppliers, :name, :string)\n\n # Check a column exists with a specific definition\n column_exists?(:suppliers, :name, :string, :limit =&gt; 100)\n"
+full_name: ActiveRecord::ConnectionAdapters::SchemaStatements#column_exists?
+is_singleton: false
+name: column_exists?
+params: (table_name, column_name, type = nil, options = {})
+visibility: public

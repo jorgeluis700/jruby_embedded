@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionDispatch::Rescue#rescue_from
+is_singleton: false
+name: rescue_from
+params: (exception, rescuer)
+visibility: protected

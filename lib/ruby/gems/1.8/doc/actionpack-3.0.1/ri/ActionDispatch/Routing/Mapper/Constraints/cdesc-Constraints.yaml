@@ -1,0 +1,15 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: ActionDispatch::Routing::Mapper::Constraints
+includes: []
+
+instance_methods: []
+
+name: Constraints
+superclass: Object

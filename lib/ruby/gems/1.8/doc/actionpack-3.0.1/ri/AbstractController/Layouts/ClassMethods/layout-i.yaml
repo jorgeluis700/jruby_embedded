@@ -1,0 +1,55 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Specify the layout to use for this class.
+  - !ruby/struct:SM::Flow::P 
+    body: "If the specified layout is a:"
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "String:"
+        body: the String is the template name
+      - !ruby/struct:SM::Flow::LI 
+        label: "Symbol:"
+        body: call the method specified by the symbol, which will return
+    type: :NOTE
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  the template name\n"
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "false:"
+        body: There is no layout
+      - !ruby/struct:SM::Flow::LI 
+        label: "true:"
+        body: raise an ArgumentError
+    type: :NOTE
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Parameters
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>String, Symbol, false</tt> - The layout to use.
+    type: :BULLET
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Options (conditions)
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: ":only - A list of actions to apply this layout to."
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: ":except - Apply this layout to all actions but this one."
+    type: :BULLET
+full_name: AbstractController::Layouts::ClassMethods#layout
+is_singleton: false
+name: layout
+params: (layout, conditions = {})
+visibility: public

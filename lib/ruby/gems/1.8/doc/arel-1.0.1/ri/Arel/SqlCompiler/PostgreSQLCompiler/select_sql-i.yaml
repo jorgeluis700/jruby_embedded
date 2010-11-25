@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Arel::SqlCompiler::PostgreSQLCompiler#select_sql
+is_singleton: false
+name: select_sql
+params: ()
+visibility: public

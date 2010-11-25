@@ -1,0 +1,30 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: RedCloth::Formatters::Base
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: ignore
+  - !ruby/object:RI::MethodSummary 
+    name: ignore
+  - !ruby/object:RI::MethodSummary 
+    name: inline_redcloth_version
+  - !ruby/object:RI::MethodSummary 
+    name: inline_redcloth_version
+  - !ruby/object:RI::MethodSummary 
+    name: notextile
+  - !ruby/object:RI::MethodSummary 
+    name: notextile
+  - !ruby/object:RI::MethodSummary 
+    name: redcloth_version
+  - !ruby/object:RI::MethodSummary 
+    name: redcloth_version
+name: Base
+superclass: 

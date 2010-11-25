@@ -1,0 +1,18 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: write
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: This is a precursor to the possibility of a more extensive Atomic File I/O system. For now it simply provides a means for atomic file writing.
+constants: []
+
+full_name: AtomicFile
+includes: []
+
+instance_methods: []
+
+name: AtomicFile
+superclass: File

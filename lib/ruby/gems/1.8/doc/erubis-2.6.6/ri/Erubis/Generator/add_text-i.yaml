@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: (abstract) add text string to src
+full_name: Erubis::Generator#add_text
+is_singleton: false
+name: add_text
+params: (src, text)
+visibility: public

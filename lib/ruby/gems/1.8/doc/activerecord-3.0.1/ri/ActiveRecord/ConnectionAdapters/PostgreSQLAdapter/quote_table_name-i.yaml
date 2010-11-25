@@ -1,0 +1,33 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Checks the following cases:"
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "-"
+        body: table_name
+      - !ruby/struct:SM::Flow::LI 
+        label: "-"
+        body: "&quot;table.name&quot;"
+      - !ruby/struct:SM::Flow::LI 
+        label: "-"
+        body: schema_name.table_name
+      - !ruby/struct:SM::Flow::LI 
+        label: "-"
+        body: schema_name.&quot;table.name&quot;
+      - !ruby/struct:SM::Flow::LI 
+        label: "-"
+        body: "&quot;schema.name&quot;.table_name"
+      - !ruby/struct:SM::Flow::LI 
+        label: "-"
+        body: "&quot;schema.name&quot;.&quot;table.name&quot;"
+    type: :BULLET
+full_name: ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#quote_table_name
+is_singleton: false
+name: quote_table_name
+params: (name)
+visibility: public

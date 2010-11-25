@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: self
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Sets an option to the given value. If the value is a proc, the proc will be called every time the option is accessed.
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Blake Mizerany (Sinatra)"
+full_name: Module#set
+is_singleton: false
+name: set
+params: (option, value=self, &block) {|self| ...}
+visibility: public

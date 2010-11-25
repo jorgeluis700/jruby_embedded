@@ -1,0 +1,57 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: christener
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: engine
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: name
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: options
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: table_alias
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: engine
+  - !ruby/object:RI::MethodSummary 
+    name: engine=
+  - !ruby/object:RI::MethodSummary 
+    name: new
+  - !ruby/object:RI::MethodSummary 
+    name: tables
+  - !ruby/object:RI::MethodSummary 
+    name: tables=
+comment: 
+constants: []
+
+full_name: Arel::Table
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Relation
+  - !ruby/object:RI::IncludedModule 
+    name: Recursion::BaseCase
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: as
+  - !ruby/object:RI::MethodSummary 
+    name: attributes
+  - !ruby/object:RI::MethodSummary 
+    name: column_for
+  - !ruby/object:RI::MethodSummary 
+    name: columns
+  - !ruby/object:RI::MethodSummary 
+    name: reset
+  - !ruby/object:RI::MethodSummary 
+    name: table_exists?
+name: Table
+superclass: Object

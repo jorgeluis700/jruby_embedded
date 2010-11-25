@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: n_
+block_params: 
+comment: 
+full_name: I18n::Gettext::Helpers#ngettext
+is_singleton: false
+name: ngettext
+params: (msgid, msgid_plural, n = 1)
+visibility: public

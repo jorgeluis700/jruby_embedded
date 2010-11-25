@@ -1,0 +1,86 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: The Accept header to send.
+    name: accept
+    rw: RW
+  - !ruby/object:RI::Attribute 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: A reference to the controller instance used by the last request.
+    name: controller
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: host
+    rw: W
+  - !ruby/object:RI::Attribute 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: The remote_addr used in the last request.
+    name: remote_addr
+    rw: RW
+  - !ruby/object:RI::Attribute 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: A reference to the request instance used by the last request.
+    name: request
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: A running counter of the number of requests processed.
+    name: request_count
+    rw: RW
+  - !ruby/object:RI::Attribute 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: A reference to the response instance used by the last request.
+    name: response
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: An integration Session instance represents a set of requests and responses performed sequentially by some virtual user. Because you can instantiate multiple sessions and run them side-by-side, you can also mimic (to some limited extent) multiple simultaneous users interacting with your system.
+  - !ruby/struct:SM::Flow::P 
+    body: Typically, you will instantiate a new session using IntegrationTest#open_session, rather than instantiating Integration::Session directly.
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: DEFAULT_HOST
+    value: "\"www.example.com\""
+full_name: ActionDispatch::Integration::Session
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Test::Unit::Assertions
+  - !ruby/object:RI::IncludedModule 
+    name: TestProcess
+  - !ruby/object:RI::IncludedModule 
+    name: RequestHelpers
+  - !ruby/object:RI::IncludedModule 
+    name: Assertions
+  - !ruby/object:RI::IncludedModule 
+    name: ActionDispatch::Routing::UrlFor
+  - !ruby/object:RI::IncludedModule 
+    name: ActionController::Testing
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: cookies
+  - !ruby/object:RI::MethodSummary 
+    name: default_url_options
+  - !ruby/object:RI::MethodSummary 
+    name: host
+  - !ruby/object:RI::MethodSummary 
+    name: host!
+  - !ruby/object:RI::MethodSummary 
+    name: https!
+  - !ruby/object:RI::MethodSummary 
+    name: https?
+  - !ruby/object:RI::MethodSummary 
+    name: reset!
+name: Session
+superclass: Object

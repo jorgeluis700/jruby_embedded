@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Erubis::Helpers::RailsFormHelper#_pp_remove_error_div
+is_singleton: false
+name: _pp_remove_error_div
+params: (s)
+visibility: public

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveSupport::XmlMini_NokogiriSAX::HashBuilder#current_hash
+is_singleton: false
+name: current_hash
+params: ()
+visibility: public

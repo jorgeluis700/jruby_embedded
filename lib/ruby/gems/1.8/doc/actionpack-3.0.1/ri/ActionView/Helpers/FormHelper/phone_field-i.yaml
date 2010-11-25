@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Alias for #telephone_field"
+full_name: ActionView::Helpers::FormHelper#phone_field
+is_singleton: false
+name: phone_field
+params: (object_name, method, options = {})
+visibility: public

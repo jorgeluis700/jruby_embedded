@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "TODO: HACK FOR RJS"
+full_name: ActionView::Base#view_context
+is_singleton: false
+name: view_context
+params: ()
+visibility: public

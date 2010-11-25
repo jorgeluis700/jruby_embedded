@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveSupport::XmlMini#to_tag
+is_singleton: false
+name: to_tag
+params: (key, value, options)
+visibility: public

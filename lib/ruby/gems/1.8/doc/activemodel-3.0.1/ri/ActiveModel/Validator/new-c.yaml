@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Accepts options that will be made available through the <tt>options</tt> reader.
+full_name: ActiveModel::Validator::new
+is_singleton: true
+name: new
+params: (options)
+visibility: public

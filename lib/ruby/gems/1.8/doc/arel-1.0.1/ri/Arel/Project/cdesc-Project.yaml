@@ -1,0 +1,30 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: attributes
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: christener
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: projections
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: []
+
+full_name: Arel::Project
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: eval
+  - !ruby/object:RI::MethodSummary 
+    name: externalizable?
+name: Project
+superclass: Compound

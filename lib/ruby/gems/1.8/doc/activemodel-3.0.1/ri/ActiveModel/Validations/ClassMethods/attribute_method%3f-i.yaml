@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Check if method is an attribute method or not.
+full_name: ActiveModel::Validations::ClassMethods#attribute_method?
+is_singleton: false
+name: attribute_method?
+params: (attribute)
+visibility: public

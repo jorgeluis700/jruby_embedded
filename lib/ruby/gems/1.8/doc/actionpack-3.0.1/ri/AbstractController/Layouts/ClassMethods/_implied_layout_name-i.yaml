@@ -1,0 +1,21 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: If no layout is supplied, look for a template named the return value of this method.
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Returns
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>String</tt> - A template name
+    type: :BULLET
+full_name: AbstractController::Layouts::ClassMethods#_implied_layout_name
+is_singleton: false
+name: _implied_layout_name
+params: ()
+visibility: public

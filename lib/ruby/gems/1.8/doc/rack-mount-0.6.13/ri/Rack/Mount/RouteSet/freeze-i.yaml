@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Finalizes the set and builds optimized data structures. You <b>must</b> freeze the set before you can use <tt>call</tt> and <tt>url</tt>. So remember to call freeze after you are done adding routes.
+full_name: Rack::Mount::RouteSet#freeze
+is_singleton: false
+name: freeze
+params: ()
+visibility: public

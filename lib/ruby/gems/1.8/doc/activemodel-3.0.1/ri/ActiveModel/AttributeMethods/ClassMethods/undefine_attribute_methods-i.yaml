@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Removes all the previously dynamically defined methods from the class
+full_name: ActiveModel::AttributeMethods::ClassMethods#undefine_attribute_methods
+is_singleton: false
+name: undefine_attribute_methods
+params: ()
+visibility: public

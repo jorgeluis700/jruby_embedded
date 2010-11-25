@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Whenever setting view paths, makes a copy so we can manipulate then in instance objects as we wish.
+full_name: ActionView::LookupContext::ViewPaths#view_paths=
+is_singleton: false
+name: view_paths=
+params: (paths)
+visibility: public

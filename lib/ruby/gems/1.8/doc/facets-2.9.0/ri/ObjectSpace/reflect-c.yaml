@@ -1,0 +1,28 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Reflection ensures that information about an object is actual according to Ruby's Kernel definitions, just in case such methods have been overridden.
+  - !ruby/struct:SM::Flow::VERB 
+    body: " ObjectSpace.reflect(&quot;object&quot;).object_id\n"
+  - !ruby/struct:SM::Flow::P 
+    body: There is also a global short-cut for this method to ease meta-programming with it.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  $ref[&quot;object&quot;].class\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Typically theis method will be used to gather the object's id, as in the example given, or it's class, but any Kernel method can be used.
+  - !ruby/struct:SM::Flow::P 
+    body: Care should be taken in utilizing this technique. In most cases it is not needed, but in certain cases is useful for improving the robustness of meta-programming solutions.
+  - !ruby/struct:SM::Flow::P 
+    body: Note that this is also equivalent to using +as(Kernel)+ ...
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &quot;object&quot;.as(Kernel).object_id\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "But obviously, in this case there is the risk that #as has be overridden too."
+full_name: ObjectSpace::reflect
+is_singleton: true
+name: reflect
+params: (obj)
+visibility: public

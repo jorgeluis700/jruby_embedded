@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Smallest integer not smaller than <tt>x</tt>.
+full_name: Math::ceil
+is_singleton: true
+name: ceil
+params: (x)
+visibility: public

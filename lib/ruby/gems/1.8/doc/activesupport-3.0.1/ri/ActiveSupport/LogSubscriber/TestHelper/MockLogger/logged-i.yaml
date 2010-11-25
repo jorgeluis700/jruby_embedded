@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveSupport::LogSubscriber::TestHelper::MockLogger#logged
+is_singleton: false
+name: logged
+params: (level)
+visibility: public

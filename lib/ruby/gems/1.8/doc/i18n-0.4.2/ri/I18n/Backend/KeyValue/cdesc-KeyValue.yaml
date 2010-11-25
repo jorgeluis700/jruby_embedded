@@ -1,0 +1,61 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "This is a basic backend for key value stores. It receives on initialization the store, which should respond to three methods:"
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: store#[](key) - Used to get a value
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: store#[]=(key, value) - Used to set a value
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: store#keys - Used to get all keys
+    type: :BULLET
+  - !ruby/struct:SM::Flow::P 
+    body: Since these stores only supports string, all values are converted to JSON before being stored, allowing it to also store booleans, hashes and arrays. However, this store does not support Procs.
+  - !ruby/struct:SM::Flow::P 
+    body: As the ActiveRecord backend, Symbols are just supported when loading translations from the filesystem or through explicit store translations.
+  - !ruby/struct:SM::Flow::P 
+    body: Also, avoid calling I18n.available_locales since it's a somehow expensive operation in most stores.
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: Example
+  - !ruby/struct:SM::Flow::P 
+    body: "To setup I18n to use TokyoCabinet in memory is quite straightforward:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  require 'rufus/tokyo/cabinet' # gem install rufus-tokyo\n  I18n.backend = I18n::Backend::KeyValue.new(Rufus::Tokyo::Cabinet.new('*'))\n"
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: Performance
+  - !ruby/struct:SM::Flow::P 
+    body: You may make this backend even faster by including the Memoize module. However, notice that you should properly clear the cache if you change values directly in the key-store.
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: Subtrees
+  - !ruby/struct:SM::Flow::P 
+    body: "In most backends, you are allowed to retrieve part of a translation tree:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  I18n.backend.store_translations :en, :foo =&gt; { :bar =&gt; :baz }\n  I18n.t &quot;foo&quot; #=&gt; { :bar =&gt; :baz }\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "This backend supports this feature by default, but it slows down the storage of new data considerably and makes hard to delete entries. That said, you are allowed to disable the storage of subtrees on initialization:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  I18n::Backend::KeyValue.new(@store, false)\n"
+  - !ruby/struct:SM::Flow::P 
+    body: This is useful if you are using a KeyValue backend chained to a Simple backend.
+constants: []
+
+full_name: I18n::Backend::KeyValue
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Implementation
+instance_methods: []
+
+name: KeyValue
+superclass: Object

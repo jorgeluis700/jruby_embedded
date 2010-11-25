@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Similar to #group_by but returns an array of the groups. Returned elements are sorted by block."
+  - !ruby/struct:SM::Flow::VERB 
+    body: "   %w{this is a test}.cluster_by {|x| x[0]}\n   #=&gt; [ ['a'], ['is'], ['this', 'test'] ]\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Erik Veenstra"
+full_name: Enumerable#cluster_by
+is_singleton: false
+name: cluster_by
+params: (&b)
+visibility: public

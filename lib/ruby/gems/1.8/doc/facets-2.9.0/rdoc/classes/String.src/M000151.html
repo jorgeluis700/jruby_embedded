@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>cleave (String)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/core/facets/string/cleave.rb, line 8</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cleave</span>(<span class="ruby-identifier">threshold</span>=<span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">len</span>=<span class="ruby-keyword kw">nil</span>)
+    <span class="ruby-identifier">l</span> = (<span class="ruby-identifier">len</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">size</span> <span class="ruby-operator">/</span> <span class="ruby-value">2</span>)
+    <span class="ruby-identifier">t</span> = <span class="ruby-identifier">threshold</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">size</span>
+
+    <span class="ruby-identifier">h1</span> = <span class="ruby-keyword kw">self</span>[<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">l</span>]
+    <span class="ruby-identifier">h2</span> = <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">l</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>]
+
+    <span class="ruby-identifier">i1</span> = <span class="ruby-identifier">h1</span>.<span class="ruby-identifier">rindex</span>(<span class="ruby-regexp re">/\s/</span>) <span class="ruby-operator">||</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">d1</span> = (<span class="ruby-identifier">i1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">l</span>).<span class="ruby-identifier">abs</span>
+
+    <span class="ruby-identifier">d2</span> = <span class="ruby-identifier">h2</span>.<span class="ruby-identifier">index</span>(<span class="ruby-regexp re">/\s/</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">l</span>
+    <span class="ruby-identifier">i2</span> = <span class="ruby-identifier">d2</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">l</span>
+
+    <span class="ruby-identifier">d1</span> = (<span class="ruby-identifier">i1</span><span class="ruby-operator">-</span><span class="ruby-identifier">l</span>).<span class="ruby-identifier">abs</span>
+    <span class="ruby-identifier">d2</span> = (<span class="ruby-identifier">i2</span><span class="ruby-operator">-</span><span class="ruby-identifier">l</span>).<span class="ruby-identifier">abs</span>
+
+    <span class="ruby-keyword kw">if</span> [<span class="ruby-identifier">d1</span>, <span class="ruby-identifier">d2</span>].<span class="ruby-identifier">min</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">t</span>
+      <span class="ruby-identifier">i</span> = <span class="ruby-identifier">t</span>
+    <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">d1</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">d2</span>
+      <span class="ruby-identifier">i</span> = <span class="ruby-identifier">i1</span>
+    <span class="ruby-keyword kw">else</span>
+      <span class="ruby-identifier">i</span> = <span class="ruby-identifier">i2</span>
+    <span class="ruby-keyword kw">end</span>
+
+    <span class="ruby-comment cmt">#dup.insert(l, &quot;\n&quot;).gsub(/^\s+|\s+$/, '')</span>
+    <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">i</span>].<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">strip</span>, <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>].<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">strip</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

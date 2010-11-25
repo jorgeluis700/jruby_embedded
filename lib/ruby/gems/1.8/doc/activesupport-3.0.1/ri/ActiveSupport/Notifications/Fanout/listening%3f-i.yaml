@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveSupport::Notifications::Fanout#listening?
+is_singleton: false
+name: listening?
+params: (name)
+visibility: public

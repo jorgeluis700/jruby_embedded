@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Turns a string into a regular expression.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &quot;a?&quot;.to_re  #=&gt; /a?/\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Trans"
+full_name: String#to_re
+is_singleton: false
+name: to_re
+params: (esc=false)
+visibility: public

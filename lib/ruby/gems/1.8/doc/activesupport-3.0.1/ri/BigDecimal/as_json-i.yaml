@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: A BigDecimal would be naturally represented as a JSON number. Most libraries, however, parse non-integer JSON numbers directly as floats. Clients using those libraries would get in general a wrong number and no way to recover other than manually inspecting the string with the JSON code itself.
+  - !ruby/struct:SM::Flow::P 
+    body: That's why a JSON string is returned. The JSON literal is not numeric, but if the other end knows by contract that the data is supposed to be a BigDecimal, it still has the chance to post-process the string and get the real value.
+full_name: BigDecimal#as_json
+is_singleton: false
+name: as_json
+params: (options = nil)
+visibility: public

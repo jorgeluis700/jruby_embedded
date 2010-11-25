@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Types#typecast_error
+is_singleton: false
+name: typecast_error
+params: (value)
+visibility: public

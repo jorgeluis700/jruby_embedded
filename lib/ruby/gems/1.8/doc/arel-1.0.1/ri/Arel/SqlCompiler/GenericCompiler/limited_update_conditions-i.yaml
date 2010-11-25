@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Arel::SqlCompiler::GenericCompiler#limited_update_conditions
+is_singleton: false
+name: limited_update_conditions
+params: (conditions, taken)
+visibility: protected

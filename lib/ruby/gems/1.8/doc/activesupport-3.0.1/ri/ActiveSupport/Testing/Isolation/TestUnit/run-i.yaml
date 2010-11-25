@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: (Test::Unit::TestCase::STARTED, name)
+comment: 
+full_name: ActiveSupport::Testing::Isolation::TestUnit#run
+is_singleton: false
+name: run
+params: (result) {|Test::Unit::TestCase::STARTED, name| ...}
+visibility: public

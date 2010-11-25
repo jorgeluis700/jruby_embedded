@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionDispatch::TestResponse::DeprecatedHelpers#layout
+is_singleton: false
+name: layout
+params: ()
+visibility: public

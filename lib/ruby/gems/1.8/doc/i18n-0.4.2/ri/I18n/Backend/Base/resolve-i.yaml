@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Resolves a translation. If the given subject is a Symbol, it will be translated with the given options. If it is a Proc then it will be evaluated. All other subjects will be returned directly.
+full_name: I18n::Backend::Base#resolve
+is_singleton: false
+name: resolve
+params: (locale, object, subject, options = {})
+visibility: protected

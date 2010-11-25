@@ -1,0 +1,17 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: make h() method faster (only for Rails 1.X)
+constants: []
+
+full_name: ERB::Util
+includes: []
+
+instance_methods: []
+
+name: Util
+superclass: 

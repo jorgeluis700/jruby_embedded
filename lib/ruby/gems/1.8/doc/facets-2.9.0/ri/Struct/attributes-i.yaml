@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns a hash containing the names and values for all instance settings in the Struct.
+  - !ruby/struct:SM::Flow::P 
+    body: "This will eventually be deprecated in favor of #to_h."
+full_name: Struct#attributes
+is_singleton: false
+name: attributes
+params: ()
+visibility: public

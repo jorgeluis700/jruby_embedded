@@ -1,0 +1,29 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: flush_count
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: level
+    rw: RW
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: []
+
+full_name: ActiveSupport::LogSubscriber::TestHelper::MockLogger
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: ActiveSupport::BufferedLogger::Severity
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: flush
+  - !ruby/object:RI::MethodSummary 
+    name: logged
+  - !ruby/object:RI::MethodSummary 
+    name: method_missing
+name: MockLogger
+superclass: Object

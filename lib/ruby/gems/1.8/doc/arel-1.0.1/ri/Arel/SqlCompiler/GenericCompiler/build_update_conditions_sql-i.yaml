@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Arel::SqlCompiler::GenericCompiler#build_update_conditions_sql
+is_singleton: false
+name: build_update_conditions_sql
+params: ()
+visibility: protected

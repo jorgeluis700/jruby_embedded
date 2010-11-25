@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: []
+
+full_name: OpEsc::method_to_filename
+is_singleton: true
+name: method_to_filename
+params: (name)
+visibility: public

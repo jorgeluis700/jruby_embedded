@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: helper method evaluate Proc object with contect object. context may be Binding, Hash, or Object.
+full_name: Erubis::Engine#process_proc
+is_singleton: false
+name: process_proc
+params: (proc_obj, context=nil, filename=nil)
+visibility: public

@@ -1,0 +1,31 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: []
+
+full_name: ActionDispatch::MiddlewareStack
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: active
+  - !ruby/object:RI::MethodSummary 
+    name: assert_index
+  - !ruby/object:RI::MethodSummary 
+    name: build
+  - !ruby/object:RI::MethodSummary 
+    name: insert
+  - !ruby/object:RI::MethodSummary 
+    name: insert_after
+  - !ruby/object:RI::MethodSummary 
+    name: insert_before
+  - !ruby/object:RI::MethodSummary 
+    name: swap
+  - !ruby/object:RI::MethodSummary 
+    name: use
+name: MiddlewareStack
+superclass: Array

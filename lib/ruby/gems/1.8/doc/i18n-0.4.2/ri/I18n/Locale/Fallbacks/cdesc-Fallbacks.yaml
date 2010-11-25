@@ -1,0 +1,26 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: defaults
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: []
+
+full_name: I18n::Locale::Fallbacks
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: "[]"
+  - !ruby/object:RI::MethodSummary 
+    name: compute
+  - !ruby/object:RI::MethodSummary 
+    name: defaults=
+  - !ruby/object:RI::MethodSummary 
+    name: map
+name: Fallbacks
+superclass: Hash

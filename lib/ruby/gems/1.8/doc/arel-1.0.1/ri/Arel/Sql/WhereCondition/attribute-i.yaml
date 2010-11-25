@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Arel::Sql::WhereCondition#attribute
+is_singleton: false
+name: attribute
+params: (attribute)
+visibility: public

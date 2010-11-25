@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Calculates the Theil index (a statistic used to measure economic inequality).
+  - !ruby/struct:SM::Flow::P 
+    body: TI = \sum_{i=1}^N \frac{x_i}{\sum_{j=1}^N x_j} ln \frac{x_i}{\bar{x}}
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  http://en.wikipedia.org/wiki/Theil_index\n"
+full_name: Math::theil_index
+is_singleton: true
+name: theil_index
+params: (array)
+visibility: public

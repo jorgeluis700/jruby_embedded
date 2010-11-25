@@ -1,0 +1,28 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: predicates
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: build
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: []
+
+full_name: Arel::Predicates::Polyadic
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: ==
+  - !ruby/object:RI::MethodSummary 
+    name: bind
+  - !ruby/object:RI::MethodSummary 
+    name: eval
+  - !ruby/object:RI::MethodSummary 
+    name: to_sql
+name: Polyadic
+superclass: Predicate

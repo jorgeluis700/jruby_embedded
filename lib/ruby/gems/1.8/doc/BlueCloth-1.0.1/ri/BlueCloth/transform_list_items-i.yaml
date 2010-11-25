@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Transform list items in a copy of the given <tt>str</tt> and return it.
+full_name: BlueCloth#transform_list_items
+is_singleton: false
+name: transform_list_items
+params: ( str, rs )
+visibility: public

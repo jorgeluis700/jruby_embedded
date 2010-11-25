@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: []
+
+full_name: Random::IntegerExtensions#random_delta
+is_singleton: false
+name: random_delta
+params: (last, exclude_end)
+visibility: public

@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Like change but does not reset earlier times.
+  - !ruby/struct:SM::Flow::P 
+    body: "NOTE: It would be better, probably if this were called &quot;change&quot;. and that #change were called &quot;reset&quot;."
+full_name: Time#set
+is_singleton: false
+name: set
+params: (options)
+visibility: public

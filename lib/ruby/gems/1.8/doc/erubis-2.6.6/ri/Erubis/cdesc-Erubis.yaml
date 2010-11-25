@@ -1,0 +1,40 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: an implementation of eRuby
+  - !ruby/struct:SM::Flow::P 
+    body: ex.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  input = &lt;&lt;'END'\n   &lt;ul&gt;\n    &lt;% for item in @list %&gt;\n     &lt;li&gt;&lt;%= item %&gt;\n         &lt;%== item %&gt;&lt;/li&gt;\n    &lt;% end %&gt;\n   &lt;/ul&gt;\n  END\n  list = ['&lt;aaa&gt;', 'b&amp;b', '&quot;ccc&quot;']\n  eruby = Erubis::Eruby.new(input)\n  puts &quot;--- code ---&quot;\n  puts eruby.src\n  puts &quot;--- result ---&quot;\n  context = Erubis::Context.new()   # or new(:list=&gt;list)\n  context[:list] = list\n  puts eruby.evaluate(context)\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "result:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  --- source ---\n  _buf = ''; _buf &lt;&lt; '&lt;ul&gt;\n  ';  for item in @list\n   _buf &lt;&lt; '  &lt;li&gt;'; _buf &lt;&lt; ( item ).to_s; _buf &lt;&lt; '\n  '; _buf &lt;&lt; '      '; _buf &lt;&lt; Erubis::XmlHelper.escape_xml( item ); _buf &lt;&lt; '&lt;/li&gt;\n  ';  end\n   _buf &lt;&lt; '&lt;/ul&gt;\n  ';\n  _buf.to_s\n  --- result ---\n   &lt;ul&gt;\n     &lt;li&gt;&lt;aaa&gt;\n         &amp;lt;aaa&amp;gt;&lt;/li&gt;\n     &lt;li&gt;b&amp;b\n         b&amp;amp;b&lt;/li&gt;\n     &lt;li&gt;&quot;ccc&quot;\n         &amp;quot;ccc&amp;quot;&lt;/li&gt;\n   &lt;/ul&gt;\n"
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: EMPTY_BINDING
+    value: binding()
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: Ejs
+    value: Ejavascript
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: EscapedEjs
+    value: EscapedEjavascript
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: VERSION
+    value: "('$Release: 2.6.6 $' =~ /([.\\d]+)/) && $1"
+full_name: Erubis
+includes: []
+
+instance_methods: []
+
+name: Erubis
+superclass: 

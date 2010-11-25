@@ -1,0 +1,18 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns a new array created by traversing the array and its sub-arrays, executing the given block on the elements.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  h = [&quot;A&quot;, &quot;B&quot;, [&quot;X&quot;, &quot;Y&quot;]]\n\n  g = h.traverse{ |e| e.downcase }\n\n  g  #=&gt; [&quot;a&quot;, &quot;b&quot;, [&quot;x&quot;, &quot;y&quot;]]\n"
+  - !ruby/struct:SM::Flow::P 
+    body: This is the same as <tt>recursive.map</tt> and will likely be deprecated in the future because of it.
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Trans"
+full_name: Array#traverse
+is_singleton: false
+name: traverse
+params: (&block)
+visibility: public

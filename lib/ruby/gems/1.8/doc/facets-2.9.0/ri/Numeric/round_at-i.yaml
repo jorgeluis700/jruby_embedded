@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Conceptually, rounding is expected to apply to floating point numbers. However it can actually be applied to pretty much any Numeric object. For example, one could round an Integer to the nearest kilo.
+  - !ruby/struct:SM::Flow::P 
+    body: See Float#round_at.
+full_name: Numeric#round_at
+is_singleton: false
+name: round_at
+params: (*args)
+visibility: public

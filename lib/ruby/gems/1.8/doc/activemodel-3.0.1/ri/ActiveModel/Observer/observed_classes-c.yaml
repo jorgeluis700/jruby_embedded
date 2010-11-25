@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns an array of Classes to observe.
+  - !ruby/struct:SM::Flow::P 
+    body: You can override this instead of using the <tt>observe</tt> helper.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class AuditObserver &lt; ActiveModel::Observer\n    def self.observed_classes\n      [Account, Balance]\n    end\n  end\n"
+full_name: ActiveModel::Observer::observed_classes
+is_singleton: true
+name: observed_classes
+params: ()
+visibility: public

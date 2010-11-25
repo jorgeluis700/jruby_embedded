@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Given a locale and a UTF-8 string, return the locale's ASCII approximation for the string.
+full_name: I18n::Backend::Transliterator#transliterate
+is_singleton: false
+name: transliterate
+params: (locale, string, replacement = nil)
+visibility: public

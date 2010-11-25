@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Evaluates defaults. If given subject is an Array, it walks the array and returns the first translation that can be resolved. Otherwise it tries to resolve the translation directly.
+full_name: I18n::Backend::Base#default
+is_singleton: false
+name: default
+params: (locale, object, subject, options = {})
+visibility: protected

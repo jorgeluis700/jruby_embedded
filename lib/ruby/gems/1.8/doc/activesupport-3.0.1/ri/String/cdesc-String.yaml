@@ -1,0 +1,19 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: String inflections define new methods on the String class to transform names for different purposes. For instance, you can figure out the name of a database from the name of a class.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &quot;ScaleScore&quot;.tableize # =&gt; &quot;scale_scores&quot;\n"
+constants: []
+
+full_name: String
+includes: []
+
+instance_methods: []
+
+name: String
+superclass: Object

@@ -1,0 +1,23 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: evaluator for Ruby
+constants: []
+
+full_name: Erubis::RubyEvaluator
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Evaluator
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: def_method
+  - !ruby/object:RI::MethodSummary 
+    name: evaluate
+  - !ruby/object:RI::MethodSummary 
+    name: result
+name: RubyEvaluator
+superclass: 

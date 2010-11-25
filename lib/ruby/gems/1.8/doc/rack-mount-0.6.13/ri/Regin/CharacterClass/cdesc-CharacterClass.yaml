@@ -1,0 +1,30 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: negate
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: []
+
+full_name: Regin::CharacterClass
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: bracketed?
+  - !ruby/object:RI::MethodSummary 
+    name: include?
+  - !ruby/object:RI::MethodSummary 
+    name: literal?
+  - !ruby/object:RI::MethodSummary 
+    name: negated?
+  - !ruby/object:RI::MethodSummary 
+    name: option_names
+  - !ruby/object:RI::MethodSummary 
+    name: to_s
+name: CharacterClass
+superclass: Character

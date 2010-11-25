@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: ""
+comment: 
+full_name: ActiveSupport::Autoload#autoload_under
+is_singleton: false
+name: autoload_under
+params: (path) {|| ...}
+visibility: public

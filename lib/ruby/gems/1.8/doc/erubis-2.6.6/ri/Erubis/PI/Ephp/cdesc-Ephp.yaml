@@ -1,0 +1,23 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: class XmlEphp &lt; Ephp
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  include EscapeEnhancer\n"
+  - !ruby/struct:SM::Flow::P 
+    body: end
+constants: []
+
+full_name: Erubis::PI::Ephp
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: PhpGenerator
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: init_converter
+name: Ephp
+superclass: PI::Engine

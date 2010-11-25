@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionDispatch::TestRequest#action=
+is_singleton: false
+name: action=
+params: (action_name)
+visibility: public

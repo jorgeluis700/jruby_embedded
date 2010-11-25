@@ -1,0 +1,28 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: ActiveModel::Observing::ClassMethods
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: add_observer
+  - !ruby/object:RI::MethodSummary 
+    name: count_observers
+  - !ruby/object:RI::MethodSummary 
+    name: inherited
+  - !ruby/object:RI::MethodSummary 
+    name: instantiate_observers
+  - !ruby/object:RI::MethodSummary 
+    name: notify_observers
+  - !ruby/object:RI::MethodSummary 
+    name: observers
+  - !ruby/object:RI::MethodSummary 
+    name: observers=
+name: ClassMethods
+superclass: 

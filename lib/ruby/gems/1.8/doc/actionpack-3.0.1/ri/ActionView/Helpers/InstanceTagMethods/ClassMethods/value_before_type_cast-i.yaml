@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionView::Helpers::InstanceTagMethods::ClassMethods#value_before_type_cast
+is_singleton: false
+name: value_before_type_cast
+params: (object, method_name)
+visibility: public

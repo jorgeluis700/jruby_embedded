@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Transform backticked spans into &lt;code&gt; spans.
+full_name: BlueCloth#transform_code_spans
+is_singleton: false
+name: transform_code_spans
+params: ( str, rs )
+visibility: public

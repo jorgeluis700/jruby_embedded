@@ -1,0 +1,19 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: compact_collect
+block_params: (*a)
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "A more versitle #compact method. It can be used to collect and filter items out in one single step."
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  c = [1,2,3].compact_map do |n|\n    n &lt; 2 ? nil : n\n  end\n\n  c  #=&gt; [2,3]\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Trans"
+  - !ruby/struct:SM::Flow::P 
+    body: "DEPRECATE: This method should probably be removed b/c #purge does almost the same thing and enum.map{}.compact works too."
+full_name: Enumerable#compact_map
+is_singleton: false
+name: compact_map
+params: (&block) {|*a| ...}
+visibility: public

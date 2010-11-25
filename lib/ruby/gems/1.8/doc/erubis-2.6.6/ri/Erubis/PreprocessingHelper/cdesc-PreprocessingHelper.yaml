@@ -1,0 +1,24 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: helper methods for preprocessing
+constants: []
+
+full_name: Erubis::PreprocessingHelper
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: _?
+  - !ruby/object:RI::MethodSummary 
+    name: _P
+  - !ruby/object:RI::MethodSummary 
+    name: _decode
+  - !ruby/object:RI::MethodSummary 
+    name: _p
+name: PreprocessingHelper
+superclass: 

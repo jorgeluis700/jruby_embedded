@@ -1,0 +1,17 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: base error class
+constants: []
+
+full_name: Erubis::ErubisError
+includes: []
+
+instance_methods: []
+
+name: ErubisError
+superclass: StandardError

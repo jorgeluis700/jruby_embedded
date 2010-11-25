@@ -1,0 +1,16 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: AbstractController::Rendering::ClassMethods
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: view_context_class
+name: ClassMethods
+superclass: 

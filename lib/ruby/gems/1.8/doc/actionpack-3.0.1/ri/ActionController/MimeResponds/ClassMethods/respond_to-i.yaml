@@ -1,0 +1,28 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Defines mime types that are rendered by default when invoking <tt>respond_with</tt>.
+  - !ruby/struct:SM::Flow::P 
+    body: "Examples:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  respond_to :html, :xml, :json\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Specifies that all actions in the controller respond to requests for <tt>:html</tt>, <tt>:xml</tt> and <tt>:json</tt>.
+  - !ruby/struct:SM::Flow::P 
+    body: "To specify on per-action basis, use <tt>:only</tt> and <tt>:except</tt> with an array of actions or a single action:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  respond_to :html\n  respond_to :xml, :json, :except =&gt; [ :edit ]\n"
+  - !ruby/struct:SM::Flow::P 
+    body: This specifies that all actions respond to <tt>:html</tt> and all actions except <tt>:edit</tt> respond to <tt>:xml</tt> and <tt>:json</tt>.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  respond_to :rjs, :only =&gt; :create\n"
+  - !ruby/struct:SM::Flow::P 
+    body: This specifies that the <tt>:create</tt> action and no other responds to <tt>:rjs</tt>.
+full_name: ActionController::MimeResponds::ClassMethods#respond_to
+is_singleton: false
+name: respond_to
+params: (*mimes)
+visibility: public

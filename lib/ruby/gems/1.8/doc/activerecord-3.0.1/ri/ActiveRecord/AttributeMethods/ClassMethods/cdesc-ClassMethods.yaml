@@ -1,0 +1,20 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: ActiveRecord::AttributeMethods::ClassMethods
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: define_attribute_methods
+  - !ruby/object:RI::MethodSummary 
+    name: defined_activerecord_methods
+  - !ruby/object:RI::MethodSummary 
+    name: instance_method_already_implemented?
+name: ClassMethods
+superclass: 

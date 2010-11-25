@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Common Unix cryptography method. This adds a default salt to the built-in crypt method.
+full_name: String#crypt
+is_singleton: false
+name: crypt
+params: (salt=nil)
+visibility: public

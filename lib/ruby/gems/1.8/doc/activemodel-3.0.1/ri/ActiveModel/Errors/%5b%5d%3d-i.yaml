@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Adds to the supplied attribute the supplied error message.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  p.errors[:name] = &quot;must be set&quot;\n  p.errors[:name] # =&gt; ['must be set']\n"
+full_name: ActiveModel::Errors#[]=
+is_singleton: false
+name: "[]="
+params: (attribute, error)
+visibility: public

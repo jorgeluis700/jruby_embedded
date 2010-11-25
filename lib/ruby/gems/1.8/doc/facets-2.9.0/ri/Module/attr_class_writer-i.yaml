@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: []
+
+full_name: Module#attr_class_writer
+is_singleton: false
+name: attr_class_writer
+params: (name)
+visibility: public

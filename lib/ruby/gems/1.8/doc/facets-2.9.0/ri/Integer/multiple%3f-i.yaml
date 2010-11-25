@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Is <tt>self</tt> a multiple of a given number?
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  7.multiple?(2)  #=&gt; false\n  8.multiple?(2)  #=&gt; true\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Trans"
+full_name: Integer#multiple?
+is_singleton: false
+name: multiple?
+params: (number)
+visibility: public

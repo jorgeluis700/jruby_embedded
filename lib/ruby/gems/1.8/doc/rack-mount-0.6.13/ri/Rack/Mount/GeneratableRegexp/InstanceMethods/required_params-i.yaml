@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Rack::Mount::GeneratableRegexp::InstanceMethods#required_params
+is_singleton: false
+name: required_params
+params: ()
+visibility: public

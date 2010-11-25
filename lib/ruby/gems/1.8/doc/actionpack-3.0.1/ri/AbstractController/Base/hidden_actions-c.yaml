@@ -1,0 +1,21 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: The list of hidden actions to an empty array. Defaults to an empty array. This can be modified by other modules or subclasses to specify particular actions as hidden.
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Returns
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>array</tt> - An array of method names that should not be considered actions.
+    type: :BULLET
+full_name: AbstractController::Base::hidden_actions
+is_singleton: true
+name: hidden_actions
+params: ()
+visibility: public

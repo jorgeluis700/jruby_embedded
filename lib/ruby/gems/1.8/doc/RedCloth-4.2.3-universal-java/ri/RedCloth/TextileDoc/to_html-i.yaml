@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Generates HTML from the Textile contents.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  RedCloth.new( &quot;And then? She <b>fell</b>!&quot; ).to_html\n    #=&gt;&quot;&lt;p&gt;And then? She &lt;strong&gt;fell&lt;/strong&gt;!&lt;/p&gt;&quot;\n"
+full_name: RedCloth::TextileDoc#to_html
+is_singleton: false
+name: to_html
+params: ( *rules )
+visibility: public

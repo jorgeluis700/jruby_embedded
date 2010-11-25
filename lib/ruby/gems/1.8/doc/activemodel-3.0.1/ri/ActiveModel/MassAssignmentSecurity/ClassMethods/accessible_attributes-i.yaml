@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveModel::MassAssignmentSecurity::ClassMethods#accessible_attributes
+is_singleton: false
+name: accessible_attributes
+params: ()
+visibility: public

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveSupport::JSON::Encoding::Encoder#encode
+is_singleton: false
+name: encode
+params: (value)
+visibility: public

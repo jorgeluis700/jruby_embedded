@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: (object_name, method)
+comment: 
+full_name: Erubis::Helpers::RailsFormHelper#pp_error_on
+is_singleton: false
+name: pp_error_on
+params: (object_name, method) {|object_name, method| ...}
+visibility: public

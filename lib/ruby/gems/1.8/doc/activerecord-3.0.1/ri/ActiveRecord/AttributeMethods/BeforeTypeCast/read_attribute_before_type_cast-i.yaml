@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveRecord::AttributeMethods::BeforeTypeCast#read_attribute_before_type_cast
+is_singleton: false
+name: read_attribute_before_type_cast
+params: (attr_name)
+visibility: public

@@ -1,0 +1,19 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: ActionController::UrlFor
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: ActionDispatch::Routing::UrlFor
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: _routes
+  - !ruby/object:RI::MethodSummary 
+    name: url_options
+name: UrlFor
+superclass: 

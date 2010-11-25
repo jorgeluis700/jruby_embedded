@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Transform Markdown-style codeblocks in a copy of the specified <tt>str</tt> and return it.
+full_name: BlueCloth#transform_code_blocks
+is_singleton: false
+name: transform_code_blocks
+params: ( str, rs )
+visibility: public

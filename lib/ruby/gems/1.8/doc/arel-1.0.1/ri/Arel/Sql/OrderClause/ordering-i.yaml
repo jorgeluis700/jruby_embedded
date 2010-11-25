@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Arel::Sql::OrderClause#ordering
+is_singleton: false
+name: ordering
+params: (ordering)
+visibility: public

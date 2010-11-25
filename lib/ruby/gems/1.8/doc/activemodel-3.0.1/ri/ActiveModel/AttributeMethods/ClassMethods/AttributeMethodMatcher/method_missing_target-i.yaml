@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveModel::AttributeMethods::ClassMethods::AttributeMethodMatcher#method_missing_target
+is_singleton: false
+name: method_missing_target
+params: ()
+visibility: public

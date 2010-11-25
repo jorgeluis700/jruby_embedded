@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveRecord::SpawnMethods#apply_finder_options
+is_singleton: false
+name: apply_finder_options
+params: (options)
+visibility: public

@@ -1,0 +1,48 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: engine
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: relation
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: []
+
+full_name: Arel::SqlCompiler::GenericCompiler
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: add_limit_on_delete
+  - !ruby/object:RI::MethodSummary 
+    name: assignment_sql
+  - !ruby/object:RI::MethodSummary 
+    name: build_clauses
+  - !ruby/object:RI::MethodSummary 
+    name: build_query
+  - !ruby/object:RI::MethodSummary 
+    name: build_update_conditions_sql
+  - !ruby/object:RI::MethodSummary 
+    name: christener
+  - !ruby/object:RI::MethodSummary 
+    name: delete_sql
+  - !ruby/object:RI::MethodSummary 
+    name: insert_sql
+  - !ruby/object:RI::MethodSummary 
+    name: limited_update_conditions
+  - !ruby/object:RI::MethodSummary 
+    name: locked
+  - !ruby/object:RI::MethodSummary 
+    name: select_sql
+  - !ruby/object:RI::MethodSummary 
+    name: supports_insert_with_returning?
+  - !ruby/object:RI::MethodSummary 
+    name: update_sql
+name: GenericCompiler
+superclass: Object

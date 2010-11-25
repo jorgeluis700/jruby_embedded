@@ -1,0 +1,18 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: BlockValidator is a special EachValidator which receives a block on initialization and call this block for each attribute being validated. <tt>validates_each</tt> uses this Validator.
+constants: []
+
+full_name: ActiveModel::BlockValidator
+includes: []
+
+instance_methods: []
+
+name: BlockValidator
+superclass: EachValidator

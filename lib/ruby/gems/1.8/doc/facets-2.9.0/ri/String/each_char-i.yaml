@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: ""
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Yields a single-character string for each character in the string. When $KCODE = 'UTF8', multi-byte characters are yielded appropriately.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  a = ''\n  &quot;HELLO&quot;.each_char{ |c| a &lt;&lt; &quot;#{c.downcase}&quot; }\n  a  #=&gt; 'hello'\n"
+full_name: String#each_char
+is_singleton: false
+name: each_char
+params: ( {|| ...}
+visibility: public

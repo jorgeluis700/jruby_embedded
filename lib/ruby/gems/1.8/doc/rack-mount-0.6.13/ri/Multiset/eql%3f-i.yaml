@@ -1,0 +1,13 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: ==
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns true if two sets are equal. Two multisets are equal if they have the same cardinalities and each element has the same multiplicity in both sets. The equality of each element inside the multiset is defined according to Object#eql?.
+full_name: Multiset#eql?
+is_singleton: false
+name: eql?
+params: (set)
+visibility: public

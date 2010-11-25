@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Symbol ends in `?`.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  :a?.query? #=&gt; true\n  :a.query?  #=&gt; false\n"
+full_name: Symbol#query?
+is_singleton: false
+name: query?
+params: ()
+visibility: public

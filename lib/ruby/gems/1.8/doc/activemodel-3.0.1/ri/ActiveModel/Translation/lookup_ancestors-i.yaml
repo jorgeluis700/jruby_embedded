@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: When localizing a string, it goes through the lookup returned by this method, which is used in ActiveModel::Name#human, ActiveModel::Errors#full_messages and ActiveModel::Translation#human_attribute_name.
+full_name: ActiveModel::Translation#lookup_ancestors
+is_singleton: false
+name: lookup_ancestors
+params: ()
+visibility: public

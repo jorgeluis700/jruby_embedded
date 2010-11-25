@@ -1,0 +1,24 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: define_model_callbacks accepts the same options define_callbacks does, in case you want to overwrite a default. Besides that, it also accepts an :only option, where you can choose if you want all types (before, around or after) or just some.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  define_model_callbacks :initializer, :only =&gt; :after\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Note, the <tt>:only =&gt; &lt;type&gt;</tt> hash will apply to all callbacks defined on that method call. To get around this you can call the define_model_callbacks method as many times as you need.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  define_model_callbacks :create, :only =&gt; :after\n  define_model_callbacks :update, :only =&gt; :before\n  define_model_callbacks :destroy, :only =&gt; :around\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Would create <tt>after_create</tt>, <tt>before_update</tt> and <tt>around_destroy</tt> methods only.
+  - !ruby/struct:SM::Flow::P 
+    body: You can pass in a class to before_&lt;type&gt;, after_&lt;type&gt; and around_&lt;type&gt;, in which case the callback will call that class's &lt;action&gt;_&lt;type&gt; method passing the object that the callback is being called on.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class MyModel\n    extend ActiveModel::Callbacks\n    define_model_callbacks :create\n\n    before_create AnotherClass\n  end\n\n  class AnotherClass\n    def self.before_create( obj )\n      # obj is the MyModel instance that the callback is being called on\n    end\n  end\n"
+full_name: ActiveModel::Callbacks#define_model_callbacks
+is_singleton: false
+name: define_model_callbacks
+params: (*callbacks)
+visibility: public

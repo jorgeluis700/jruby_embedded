@@ -1,0 +1,16 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: ""
+constants: []
+
+full_name: Erubis::StdoutEruby
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: StdoutEnhancer
+instance_methods: []
+
+name: StdoutEruby
+superclass: Eruby

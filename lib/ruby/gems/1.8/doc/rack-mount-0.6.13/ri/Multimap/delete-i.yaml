@@ -1,0 +1,17 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Deletes and returns a key-value pair from <em>map</em>. If only <em>key</em> is given, all the values matching that key will be deleted.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  map = Multimap[&quot;a&quot; =&gt; 100, &quot;b&quot; =&gt; [200, 300]]\n  map.delete(&quot;b&quot;, 300) #=&gt; 300\n  map.delete(&quot;a&quot;)      #=&gt; [100]\n"
+full_name: Multimap#delete
+is_singleton: false
+name: delete
+params: |
+  map.delete(key, value)  => value
+  map.delete(key)         => value
+
+visibility: public

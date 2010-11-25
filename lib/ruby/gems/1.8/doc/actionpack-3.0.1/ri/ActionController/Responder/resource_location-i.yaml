@@ -1,0 +1,15 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: navigation_location
+  - !ruby/object:RI::AliasName 
+    name: api_location
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns the resource location by retrieving it from the options or returning the resources array.
+full_name: ActionController::Responder#resource_location
+is_singleton: false
+name: resource_location
+params: ()
+visibility: protected

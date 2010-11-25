@@ -1,0 +1,19 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: use StringIO class for buffering
+  - !ruby/struct:SM::Flow::P 
+    body: this is only for Eruby.
+constants: []
+
+full_name: Erubis::StringIOEnhancer
+includes: []
+
+instance_methods: []
+
+name: StringIOEnhancer
+superclass: 

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveSupport::LogSubscriber::flushable_loggers
+is_singleton: true
+name: flushable_loggers
+params: ()
+visibility: public

@@ -1,0 +1,33 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::H 
+    level: 1
+    text: Denumerable
+  - !ruby/struct:SM::Flow::P 
+    body: Classes which include Denumerable will get versions of map, select, and so on, which return a Denumerator, so that they work horizontally without creating intermediate arrays.
+constants: []
+
+full_name: Denumerable
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: collect
+  - !ruby/object:RI::MethodSummary 
+    name: find_all
+  - !ruby/object:RI::MethodSummary 
+    name: map
+  - !ruby/object:RI::MethodSummary 
+    name: reject
+  - !ruby/object:RI::MethodSummary 
+    name: select
+  - !ruby/object:RI::MethodSummary 
+    name: skip
+  - !ruby/object:RI::MethodSummary 
+    name: take
+name: Denumerable
+superclass: 

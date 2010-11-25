@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionController::Compatibility#render_to_body
+is_singleton: false
+name: render_to_body
+params: (options)
+visibility: public

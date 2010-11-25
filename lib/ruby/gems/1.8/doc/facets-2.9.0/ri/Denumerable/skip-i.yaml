@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Skip the first n items in the list
+full_name: Denumerable#skip
+is_singleton: false
+name: skip
+params: (n)
+visibility: public

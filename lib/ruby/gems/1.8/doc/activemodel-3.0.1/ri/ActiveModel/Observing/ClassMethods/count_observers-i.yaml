@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveModel::Observing::ClassMethods#count_observers
+is_singleton: false
+name: count_observers
+params: ()
+visibility: public

@@ -1,0 +1,28 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: (e)
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "A versitle compaction method. Like #map but used to filter out multiple items in a single step."
+  - !ruby/struct:SM::Flow::P 
+    body: Without <tt>trash</tt> arguments <tt>nil</tt> is assumed.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  [1, nil, 2].purge  #=&gt; [1,2]\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "If <tt>trash</tt> arguments are given, each argument is compared for a match using #==."
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  (1..6).purge(3,4)  #=&gt; [1,2,5,6]\n"
+  - !ruby/struct:SM::Flow::P 
+    body: If a block is given, the yield is used in the matching condition instead of the element itsef.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  (1..6).purge(0){ |n| n % 2 }  #=&gt; [1,3,5]\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "NOTE: This could just as well be an override of the core #compact method, but to avoid potential issues associated with overriding core methods we use the alternate name #purge."
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Trans"
+full_name: Enumerable#purge
+is_singleton: false
+name: purge
+params: (*trash, &block) {|e| ...}
+visibility: public

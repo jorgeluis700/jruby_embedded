@@ -1,0 +1,24 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: TODO Should the cache be cleared if new translations are stored?
+constants: []
+
+full_name: I18n::Backend::Cache
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: fetch
+  - !ruby/object:RI::MethodSummary 
+    name: fetch_ignoring_procs
+  - !ruby/object:RI::MethodSummary 
+    name: fetch_storing_missing_translation_exception
+  - !ruby/object:RI::MethodSummary 
+    name: translate
+name: Cache
+superclass: 

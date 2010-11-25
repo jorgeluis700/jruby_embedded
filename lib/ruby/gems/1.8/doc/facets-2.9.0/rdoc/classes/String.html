@@ -1,0 +1,2828 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: String</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">String</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/lib/core/facets/boolean_rb.html">
+                lib/core/facets/boolean.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/comparable/cmp_rb.html">
+                lib/core/facets/comparable/cmp.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/kernel/blank_rb.html">
+                lib/core/facets/kernel/blank.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/object/object_state_rb.html">
+                lib/core/facets/object/object_state.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/align_rb.html">
+                lib/core/facets/string/align.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/bracket_rb.html">
+                lib/core/facets/string/bracket.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/bytes_rb.html">
+                lib/core/facets/string/bytes.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/camelcase_rb.html">
+                lib/core/facets/string/camelcase.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/capitalized_rb.html">
+                lib/core/facets/string/capitalized.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/characters_rb.html">
+                lib/core/facets/string/characters.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/cleanlines_rb.html">
+                lib/core/facets/string/cleanlines.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/cleave_rb.html">
+                lib/core/facets/string/cleave.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/compress_lines_rb.html">
+                lib/core/facets/string/compress_lines.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/divide_rb.html">
+                lib/core/facets/string/divide.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/each_char_rb.html">
+                lib/core/facets/string/each_char.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/each_word_rb.html">
+                lib/core/facets/string/each_word.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/edit_distance_rb.html">
+                lib/core/facets/string/edit_distance.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/exclude_rb.html">
+                lib/core/facets/string/exclude.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/expand_tab_rb.html">
+                lib/core/facets/string/expand_tab.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/file_rb.html">
+                lib/core/facets/string/file.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/fold_rb.html">
+                lib/core/facets/string/fold.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/indent_rb.html">
+                lib/core/facets/string/indent.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/index_all_rb.html">
+                lib/core/facets/string/index_all.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/interpolate_rb.html">
+                lib/core/facets/string/interpolate.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/lchomp_rb.html">
+                lib/core/facets/string/lchomp.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/lines_rb.html">
+                lib/core/facets/string/lines.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/line_wrap_rb.html">
+                lib/core/facets/string/line_wrap.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/margin_rb.html">
+                lib/core/facets/string/margin.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/methodize_rb.html">
+                lib/core/facets/string/methodize.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/modulize_rb.html">
+                lib/core/facets/string/modulize.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/mscan_rb.html">
+                lib/core/facets/string/mscan.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/natcmp_rb.html">
+                lib/core/facets/string/natcmp.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/nchar_rb.html">
+                lib/core/facets/string/nchar.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/newlines_rb.html">
+                lib/core/facets/string/newlines.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/op_div_rb.html">
+                lib/core/facets/string/op_div.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/op_sub_rb.html">
+                lib/core/facets/string/op_sub.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/pathize_rb.html">
+                lib/core/facets/string/pathize.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/quote_rb.html">
+                lib/core/facets/string/quote.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/range_rb.html">
+                lib/core/facets/string/range.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/rewrite_rb.html">
+                lib/core/facets/string/rewrite.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/shatter_rb.html">
+                lib/core/facets/string/shatter.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/similarity_rb.html">
+                lib/core/facets/string/similarity.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/snakecase_rb.html">
+                lib/core/facets/string/snakecase.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/splice_rb.html">
+                lib/core/facets/string/splice.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/squish_rb.html">
+                lib/core/facets/string/squish.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/start_with_rb.html">
+                lib/core/facets/string/start_with.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/store_rb.html">
+                lib/core/facets/string/store.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/tab_rb.html">
+                lib/core/facets/string/tab.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/tabto_rb.html">
+                lib/core/facets/string/tabto.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/titlecase_rb.html">
+                lib/core/facets/string/titlecase.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/to_re_rb.html">
+                lib/core/facets/string/to_re.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/underscore_rb.html">
+                lib/core/facets/string/underscore.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/unfold_rb.html">
+                lib/core/facets/string/unfold.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/uppercase_rb.html">
+                lib/core/facets/string/uppercase.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/variablize_rb.html">
+                lib/core/facets/string/variablize.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/words_rb.html">
+                lib/core/facets/string/words.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/word_wrap_rb.html">
+                lib/core/facets/string/word_wrap.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/string/xor_rb.html">
+                lib/core/facets/string/xor.rb
+                </a>
+        <br />
+                <a href="../files/lib/more/facets/date_rb.html">
+                lib/more/facets/date.rb
+                </a>
+        <br />
+                <a href="../files/lib/more/facets/random_rb.html">
+                lib/more/facets/random.rb
+                </a>
+        <br />
+                <a href="../files/lib/more/facets/tuple_rb.html">
+                lib/more/facets/tuple.rb
+                </a>
+        <br />
+                <a href="../files/lib/tour/facets/integer/roman_rb.html">
+                lib/tour/facets/integer/roman.rb
+                </a>
+        <br />
+                <a href="../files/lib/tour/facets/string/crypt_rb.html">
+                lib/tour/facets/string/crypt.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                Object
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000181">-</a>&nbsp;&nbsp;
+      <a href="#M000180">/</a>&nbsp;&nbsp;
+      <a href="#M000212">^</a>&nbsp;&nbsp;
+      <a href="#M000133">align</a>&nbsp;&nbsp;
+      <a href="#M000136">align_center</a>&nbsp;&nbsp;
+      <a href="#M000135">align_left</a>&nbsp;&nbsp;
+      <a href="#M000134">align_right</a>&nbsp;&nbsp;
+      <a href="#M000131">blank?</a>&nbsp;&nbsp;
+      <a href="#M000137">bracket</a>&nbsp;&nbsp;
+      <a href="#M000138">bracket!</a>&nbsp;&nbsp;
+      <a href="#M000141">bytes</a>&nbsp;&nbsp;
+      <a href="#M000142">camelcase</a>&nbsp;&nbsp;
+      <a href="#M000146">capitalized?</a>&nbsp;&nbsp;
+      <a href="#M000149">characters</a>&nbsp;&nbsp;
+      <a href="#M000150">cleanlines</a>&nbsp;&nbsp;
+      <a href="#M000151">cleave</a>&nbsp;&nbsp;
+      <a href="#M000130">cmp</a>&nbsp;&nbsp;
+      <a href="#M000152">compress_lines</a>&nbsp;&nbsp;
+      <a href="#M000217">crypt</a>&nbsp;&nbsp;
+      <a href="#M000153">divide</a>&nbsp;&nbsp;
+      <a href="#M000147">downcase?</a>&nbsp;&nbsp;
+      <a href="#M000154">each_char</a>&nbsp;&nbsp;
+      <a href="#M000155">each_word</a>&nbsp;&nbsp;
+      <a href="#M000157">edit_distance</a>&nbsp;&nbsp;
+      <a href="#M000156">edit_distance</a>&nbsp;&nbsp;
+      <a href="#M000196">end_with?</a>&nbsp;&nbsp;
+      <a href="#M000198">ends_with?</a>&nbsp;&nbsp;
+      <a href="#M000158">exclude?</a>&nbsp;&nbsp;
+      <a href="#M000160">expand_tab</a>&nbsp;&nbsp;
+      <a href="#M000159">expand_tabs</a>&nbsp;&nbsp;
+      <a href="#M000161">file</a>&nbsp;&nbsp;
+      <a href="#M000162">fold</a>&nbsp;&nbsp;
+      <a href="#M000163">indent</a>&nbsp;&nbsp;
+      <a href="#M000164">indent!</a>&nbsp;&nbsp;
+      <a href="#M000167">index_all</a>&nbsp;&nbsp;
+      <a href="#M000143">inter_camelcase</a>&nbsp;&nbsp;
+      <a href="#M000168">interpolate</a>&nbsp;&nbsp;
+      <a href="#M000169">lchomp</a>&nbsp;&nbsp;
+      <a href="#M000170">lchomp!</a>&nbsp;&nbsp;
+      <a href="#M000172">line_wrap</a>&nbsp;&nbsp;
+      <a href="#M000171">lines</a>&nbsp;&nbsp;
+      <a href="#M000145">lower_camelcase</a>&nbsp;&nbsp;
+      <a href="#M000207">lowercase</a>&nbsp;&nbsp;
+      <a href="#M000173">margin</a>&nbsp;&nbsp;
+      <a href="#M000174">methodize</a>&nbsp;&nbsp;
+      <a href="#M000175">modulize</a>&nbsp;&nbsp;
+      <a href="#M000176">mscan</a>&nbsp;&nbsp;
+      <a href="#M000177">natcmp</a>&nbsp;&nbsp;
+      <a href="#M000178">nchar</a>&nbsp;&nbsp;
+      <a href="#M000179">newlines</a>&nbsp;&nbsp;
+      <a href="#M000132">object_state</a>&nbsp;&nbsp;
+      <a href="#M000182">pathize</a>&nbsp;&nbsp;
+      <a href="#M000183">quote</a>&nbsp;&nbsp;
+      <a href="#M000185">range</a>&nbsp;&nbsp;
+      <a href="#M000186">range_all</a>&nbsp;&nbsp;
+      <a href="#M000187">range_of_line</a>&nbsp;&nbsp;
+      <a href="#M000188">rewrite</a>&nbsp;&nbsp;
+      <a href="#M000189">shatter</a>&nbsp;&nbsp;
+      <a href="#M000190">similarity</a>&nbsp;&nbsp;
+      <a href="#M000191">snakecase</a>&nbsp;&nbsp;
+      <a href="#M000192">splice</a>&nbsp;&nbsp;
+      <a href="#M000193">squish</a>&nbsp;&nbsp;
+      <a href="#M000194">squish!</a>&nbsp;&nbsp;
+      <a href="#M000195">start_with?</a>&nbsp;&nbsp;
+      <a href="#M000197">starts_with?</a>&nbsp;&nbsp;
+      <a href="#M000199">tab</a>&nbsp;&nbsp;
+      <a href="#M000200">tabto</a>&nbsp;&nbsp;
+      <a href="#M000201">titlecase</a>&nbsp;&nbsp;
+      <a href="#M000129">to_b</a>&nbsp;&nbsp;
+      <a href="#M000215">to_date</a>&nbsp;&nbsp;
+      <a href="#M000214">to_datetime</a>&nbsp;&nbsp;
+      <a href="#M000202">to_re</a>&nbsp;&nbsp;
+      <a href="#M000203">to_rx</a>&nbsp;&nbsp;
+      <a href="#M000216">to_t</a>&nbsp;&nbsp;
+      <a href="#M000213">to_time</a>&nbsp;&nbsp;
+      <a href="#M000139">unbracket</a>&nbsp;&nbsp;
+      <a href="#M000140">unbracket!</a>&nbsp;&nbsp;
+      <a href="#M000204">underscore</a>&nbsp;&nbsp;
+      <a href="#M000205">unfold</a>&nbsp;&nbsp;
+      <a href="#M000165">unindent</a>&nbsp;&nbsp;
+      <a href="#M000166">unindent!</a>&nbsp;&nbsp;
+      <a href="#M000184">unquote</a>&nbsp;&nbsp;
+      <a href="#M000148">upcase?</a>&nbsp;&nbsp;
+      <a href="#M000144">upper_camelcase</a>&nbsp;&nbsp;
+      <a href="#M000206">uppercase</a>&nbsp;&nbsp;
+      <a href="#M000208">variablize</a>&nbsp;&nbsp;
+      <a href="#M000210">word_wrap</a>&nbsp;&nbsp;
+      <a href="#M000211">word_wrap!</a>&nbsp;&nbsp;
+      <a href="#M000209">words</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+    <div id="includes">
+      <h3 class="section-bar">Included Modules</h3>
+
+      <div id="includes-list">
+        <span class="include-name"><a href="Random/StringExtensions.html">Random::StringExtensions</a></span>
+      </div>
+    </div>
+
+    <div id="section">
+
+
+    <div id="constants-list">
+      <h3 class="section-bar">Constants</h3>
+
+      <div class="name-list">
+        <table summary="Constants">
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">BRA2KET</td>
+          <td>=</td>
+          <td class="context-item-value">{ '['=&gt;']', '('=&gt;')', '{'=&gt;'}', '&lt;'=&gt;'&gt;' }</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">ROMAN</td>
+          <td>=</td>
+          <td class="context-item-value">/^M*(D?C{0,3}|C[DM])(L?X{0,3}|X[LC])(V?I{0,3}|I[VX])$/i unless const_defined?(:ROMAN)</td>
+          <td width="3em">&nbsp;</td>
+          <td class="context-item-desc">
+Taken from O&#8216;Reilly&#8216;s Perl Cookbook 6.23. Regular Expression
+Grabbag.
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">ROMAN_VALUES</td>
+          <td>=</td>
+          <td class="context-item-value">Integer::ROMAN_VALUES.inject({}) do |h,(r,a)|     h[r] = a;</td>
+        </tr>
+        </table>
+      </div>
+    </div>
+
+    <div id="aliases-list">
+      <h3 class="section-bar">External Aliases</h3>
+
+      <div class="name-list">
+                        <table summary="aliases">
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">[]=</td>
+          <td>-&gt;</td>
+          <td class="context-item-value">store</td>
+        </tr>
+      <tr class="top-aligned-row context-row">
+        <td>&nbsp;</td>
+        <td colspan="2" class="context-item-desc">
+Alias for []=.
+
+</td>
+      </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">crypt</td>
+          <td>-&gt;</td>
+          <td class="context-item-value">_crypt</td>
+        </tr>
+                        </table>
+      </div>
+    </div>
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000168" class="method-detail">
+        <a name="M000168"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000168.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000168.html');return false;">
+          <span class="method-name">interpolate</span><span class="method-args">(&amp;str)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Interpolate. Provides a means of extenally using Ruby string interpolation
+mechinism.
+</p>
+<pre>
+  try = &quot;hello&quot;
+  str = &quot;\#{try}!!!&quot;
+  String.interpolate{ str }    #=&gt; &quot;hello!!!&quot;
+</pre>
+<p>
+NOTE: The block neccessary in order to get then binding of the caller.
+</p>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000181" class="method-detail">
+        <a name="M000181"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000181.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000181.html');return false;">
+          <span class="method-name">-</span><span class="method-args">(pattern)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Removes occurances of a string or regexp.
+</p>
+<pre>
+  (&quot;HELLO HELLO&quot; - &quot;LL&quot;)    #=&gt; &quot;HEO HEO&quot;
+</pre>
+<p>
+CREDIT: Benjamin David Oakes
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000180" class="method-detail">
+        <a name="M000180"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000180.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000180.html');return false;">
+          <span class="method-name">/</span><span class="method-args">(path)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Treats <tt>self</tt> and <tt>path</tt> as representations of pathnames,
+joining thme together as a single path.
+</p>
+<pre>
+  ('home' / 'trans')  #=&gt; 'home/trans'
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000212" class="method-detail">
+        <a name="M000212"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000212.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000212.html');return false;">
+          <span class="method-name">^</span><span class="method-args">(aString)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Binary XOR of two strings.
+</p>
+<pre>
+  a = &quot;\000\000\001\001&quot; ^ &quot;\000\001\000\001&quot;
+  b = &quot;\003\003\003&quot; ^ &quot;\000\001\002&quot;
+
+  a  #=&gt; &quot;\000\001\001\000&quot;
+  b  #=&gt; &quot;\003\002\001&quot;
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000133" class="method-detail">
+        <a name="M000133"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000133.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000133.html');return false;">
+          <span class="method-name">align</span><span class="method-args">(direction, n, sep=&quot;\n&quot;, c=' ')</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alignment method dispatches to <a
+href="String.html#M000134">align_right</a>, <a
+href="String.html#M000135">align_left</a> or <a
+href="String.html#M000136">align_center</a>, accorging to the first
+<tt>direction</tt> parameter.
+</p>
+<pre>
+  s = &lt;&lt;-EOS
+  This is a test
+    and
+    so on
+  EOS
+
+  s.align(:right, 14)
+</pre>
+<p>
+<em>produces</em> &#8230;
+</p>
+<pre>
+  This is a test
+             and
+           so on
+</pre>
+<p>
+Returns a <a href="String.html">String</a> aligned right, left or center.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000136" class="method-detail">
+        <a name="M000136"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000136.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000136.html');return false;">
+          <span class="method-name">align_center</span><span class="method-args">(n, sep=&quot;\n&quot;, c=' ')</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Centers each line of a string.
+</p>
+<p>
+The default alignment separation is a new line (&quot;\n&quot;). This can
+be changed as can be the padding string which defaults to a single space
+(&#8217; &#8217;).
+</p>
+<pre>
+  s = &lt;&lt;-EOS
+    This is a test
+    and
+    so on
+  EOS
+
+  s.align_center(14)
+</pre>
+<p>
+<em>produces</em> &#8230;
+</p>
+<pre>
+  This is a test
+       and
+      so on
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000135" class="method-detail">
+        <a name="M000135"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000135.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000135.html');return false;">
+          <span class="method-name">align_left</span><span class="method-args">(n, sep=&quot;\n&quot;, c=' ')</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Align a string to the left.
+</p>
+<p>
+The default alignment separation is a new line (&quot;\n&quot;). This can
+be changed as can be the padding string which defaults to a single space
+(&#8217; &#8217;).
+</p>
+<pre>
+  s = &lt;&lt;-EOS
+  This is a test
+    and
+    so on
+  EOS
+
+  s.align_left(20, &quot;\n&quot;, '.')
+</pre>
+<p>
+<em>produces</em> &#8230;
+</p>
+<pre>
+  This is a test......
+  and.................
+  so on...............
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000134" class="method-detail">
+        <a name="M000134"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000134.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000134.html');return false;">
+          <span class="method-name">align_right</span><span class="method-args">(n, sep=&quot;\n&quot;, c=' ')</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Align a string to the right.
+</p>
+<p>
+The default alignment separation is a new line (&quot;\n&quot;). This can
+be changed as can be the padding string which defaults to a single space
+(&#8217; &#8217;).
+</p>
+<pre>
+  s = &lt;&lt;-EOS
+  This is a test
+    and
+    so on
+  EOS
+
+  s.align_right(14)
+</pre>
+<p>
+<em>produces</em> &#8230;
+</p>
+<pre>
+  This is a test
+             and
+           so on
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000131" class="method-detail">
+        <a name="M000131"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000131.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000131.html');return false;">
+          <span class="method-name">blank?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Is this string just whitespace?
+</p>
+<pre>
+  &quot;abc&quot;.blank?  #=&gt; false
+  &quot;   &quot;.blank?  #=&gt; true
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000137" class="method-detail">
+        <a name="M000137"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000137.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000137.html');return false;">
+          <span class="method-name">bracket</span><span class="method-args">(bra, ket=nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return a new string embraced by given brackets. If only one <a
+href="String.html#M000137">bracket</a> char is given it will be placed on
+either side.
+</p>
+<pre>
+  &quot;wrap me&quot;.bracket('{')        #=&gt; &quot;{wrap me}&quot;
+  &quot;wrap me&quot;.bracket('--','!')   #=&gt; &quot;--wrap me!&quot;
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000138" class="method-detail">
+        <a name="M000138"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000138.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000138.html');return false;">
+          <span class="method-name">bracket!</span><span class="method-args">(bra, ket=nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Inplace version of <a href="String.html#M000137">bracket</a>.
+</p>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000141" class="method-detail">
+        <a name="M000141"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000141.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000141.html');return false;">
+          <span class="method-name">bytes</span><span class="method-args">(&amp;blk)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Upacks string into <a href="String.html#M000141">bytes</a>.
+</p>
+<p>
+Note, this is not 100% compatible with 1.8.7+ which returns an enumerator
+instead of an array.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000142" class="method-detail">
+        <a name="M000142"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000142.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000142.html');return false;">
+          <span class="method-name">camelcase</span><span class="method-args">(first_letter=nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000146" class="method-detail">
+        <a name="M000146"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000146.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000146.html');return false;">
+          <span class="method-name">capitalized?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return true if the string is capitalized, otherwise false.
+</p>
+<pre>
+  &quot;This&quot;.capitalized?  #=&gt; true
+  &quot;THIS&quot;.capitalized?  #=&gt; false
+  &quot;this&quot;.capitalized?  #=&gt; false
+</pre>
+<p>
+Note Ruby&#8216;s strange concept of capitalized. See capitalcase for the
+more command conception.
+</p>
+<p>
+CREDIT: Phil Tomson
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000149" class="method-detail">
+        <a name="M000149"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000149.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000149.html');return false;">
+          <span class="method-name">characters</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns an array of <a href="String.html#M000149">characters</a>.
+</p>
+<pre>
+  &quot;abc&quot;.characters.to_a  #=&gt; [&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]
+</pre>
+<p>
+TODO: Probably should make this an enumerator. With scan?
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000150" class="method-detail">
+        <a name="M000150"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000150.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000150.html');return false;">
+          <span class="method-name">cleanlines</span><span class="method-args">(&amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns an <a href="Enumerator.html">Enumerator</a> for iterating over each
+line of the string, stripped of whitespace on either side.
+</p>
+<pre>
+  &quot;this\nthat\nother\n&quot;.cleanlines.to_a  #=&gt; ['this', 'that', 'other']
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000151" class="method-detail">
+        <a name="M000151"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000151.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000151.html');return false;">
+          <span class="method-name">cleave</span><span class="method-args">(threshold=nil, len=nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Cleave a string. Break a string in two parts at the nearest whitespace.
+</p>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000130" class="method-detail">
+        <a name="M000130"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000130.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000130.html');return false;">
+          <span class="method-name">cmp</span><span class="method-args">(other)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Compare method that takes length into account. Unlike #&lt;=&gt;, this is
+compatible with succ.
+</p>
+<pre>
+  &quot;abc&quot;.cmp(&quot;abc&quot;)   #=&gt;  0
+  &quot;abcd&quot;.cmp(&quot;abc&quot;)  #=&gt;  1
+  &quot;abc&quot;.cmp(&quot;abcd&quot;)  #=&gt; -1
+  &quot;xyz&quot;.cmp(&quot;abc&quot;)   #=&gt;  1
+</pre>
+<p>
+CREDIT: Peter Vanbroekhoven
+</p>
+<p>
+TODO: Move <a href="String.html#M000130">String#cmp</a> to string/
+directory.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000152" class="method-detail">
+        <a name="M000152"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000152.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000152.html');return false;">
+          <span class="method-name">compress_lines</span><span class="method-args">(spaced = true)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Matches any whitespace (including newline) and replaces with a single space
+</p>
+<pre>
+  string = &lt;&lt;-QUERY.compress_lines
+    SELECT name
+    FROM users
+  QUERY
+
+  string  #=&gt; &quot;SELECT name FROM users&quot;
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000217" class="method-detail">
+        <a name="M000217"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000217.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000217.html');return false;">
+          <span class="method-name">crypt</span><span class="method-args">(salt=nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Common Unix cryptography method. This adds a default salt to the built-in
+<a href="String.html#M000217">crypt</a> method.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000153" class="method-detail">
+        <a name="M000153"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000153.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000153.html');return false;">
+          <span class="method-name">divide</span><span class="method-args">( re )</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Breaks a string up into an array based on a regular expression. Similar to
+scan, but includes the matches.
+</p>
+<pre>
+  s = &quot;&lt;p&gt;This&lt;b&gt;is&lt;/b&gt;a test.&lt;/p&gt;&quot;
+  s.divide( /\&lt;.*?\&gt;/ )
+  #=&gt; [&quot;&lt;p&gt;This&quot;, &quot;&lt;b&gt;is&quot;, &quot;&lt;/b&gt;a test.&quot;, &quot;&lt;/p&gt;&quot;]
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000147" class="method-detail">
+        <a name="M000147"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000147.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000147.html');return false;">
+          <span class="method-name">downcase?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return true if the string is <a href="String.html#M000207">lowercase</a>
+(downcase), otherwise false.
+</p>
+<pre>
+  &quot;THIS&quot;.downcase?  #=&gt; false
+  &quot;This&quot;.downcase?  #=&gt; false
+  &quot;this&quot;.downcase?  #=&gt; true
+</pre>
+<p>
+CREDIT: Phil Tomson
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000154" class="method-detail">
+        <a name="M000154"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000154.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000154.html');return false;">
+          <span class="method-name">each_char</span><span class="method-args">( {|| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Yields a single-character string for each character in the string. When
+$KCODE = &#8216;UTF8&#8217;, multi-byte <a
+href="String.html#M000149">characters</a> are yielded appropriately.
+</p>
+<pre>
+  a = ''
+  &quot;HELLO&quot;.each_char{ |c| a &lt;&lt; &quot;#{c.downcase}&quot; }
+  a  #=&gt; 'hello'
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000155" class="method-detail">
+        <a name="M000155"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000155.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000155.html');return false;">
+          <span class="method-name">each_word</span><span class="method-args">(&amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Iterate through each word of a string.
+</p>
+<pre>
+  a = []
+
+  &quot;list of words&quot;.each_word { |word| a &lt;&lt; word }
+
+  a  #=&gt; ['list', 'of', 'words']
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000157" class="method-detail">
+        <a name="M000157"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000157.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000157.html');return false;">
+          <span class="method-name">edit_distance</span><span class="method-args">(str2)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Levenshtein distance algorithm implementation for Ruby, with UTF-8 support.
+</p>
+<p>
+The Levenshtein distance is a measure of how similar two strings s and t
+are, calculated as the number of deletions/insertions/substitutions needed
+to transform s into t. The greater the distance, the more the strings
+differ.
+</p>
+<p>
+The Levenshtein distance is also sometimes referred to as the
+easier-to-pronounce-and-spell &#8216;edit distance&#8217;.
+</p>
+<p>
+Calculate the Levenshtein distance between two strings <tt>self</tt> and
++str2+. <tt>self</tt> and +str2+ should be ASCII, UTF-8, or a one-byte-per
+character encoding such as ISO-8859-*.
+</p>
+<p>
+The strings will be treated as UTF-8 if $KCODE is set appropriately (i.e.
+&#8216;u&#8217;). Otherwise, the comparison will be performed byte-by-byte.
+There is no specific support for Shift-JIS or EUC strings.
+</p>
+<p>
+When using Unicode text, be aware that this algorithm does not perform
+normalisation. If there is a possibility of different normalised forms
+being used, normalisation should be performed beforehand.
+</p>
+<p>
+CREDIT: Paul Battley
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000156" class="method-detail">
+        <a name="M000156"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000156.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000156.html');return false;">
+          <span class="method-name">edit_distance</span><span class="method-args">(str2)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Levenshtein distance algorithm implementation for Ruby, with UTF-8 support.
+</p>
+<p>
+The Levenshtein distance is a measure of how similar two strings s and t
+are, calculated as the number of deletions/insertions/substitutions needed
+to transform s into t. The greater the distance, the more the strings
+differ.
+</p>
+<p>
+The Levenshtein distance is also sometimes referred to as the
+easier-to-pronounce-and-spell &#8216;edit distance&#8217;.
+</p>
+<p>
+Calculate the Levenshtein distance between two strings <tt>self</tt> and
++str2+. <tt>self</tt> and +str2+ should be ASCII, UTF-8, or a one-byte-per
+character encoding such as ISO-8859-*.
+</p>
+<p>
+The strings will be treated as UTF-8 if $KCODE is set appropriately (i.e.
+&#8216;u&#8217;). Otherwise, the comparison will be performed byte-by-byte.
+There is no specific support for Shift-JIS or EUC strings.
+</p>
+<p>
+When using Unicode text, be aware that this algorithm does not perform
+normalisation. If there is a possibility of different normalised forms
+being used, normalisation should be performed beforehand.
+</p>
+<p>
+CREDIT: Paul Battley
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000196" class="method-detail">
+        <a name="M000196"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000196.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000196.html');return false;">
+          <span class="method-name">end_with?</span><span class="method-args">(suffix)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Does a string end with the given suffix?
+</p>
+<pre>
+  &quot;hello&quot;.end_with?(&quot;lo&quot;)    #=&gt; true
+  &quot;hello&quot;.end_with?(&quot;to&quot;)    #=&gt; false
+</pre>
+<p>
+Note: This definition is better than standard Ruby&#8216;s becuase it
+handles regular expressions.
+</p>
+<p>
+CREDIT: Juris Galang
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000198" class="method-detail">
+        <a name="M000198"></a>
+
+        <div class="method-heading">
+          <span class="method-name">ends_with?</span><span class="method-args">(suffix)</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for end_with?
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000158" class="method-detail">
+        <a name="M000158"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000158.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000158.html');return false;">
+          <span class="method-name">exclude?</span><span class="method-args">(str)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+The inverse of include?.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000160" class="method-detail">
+        <a name="M000160"></a>
+
+        <div class="method-heading">
+          <span class="method-name">expand_tab</span><span class="method-args">(n=8)</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="String.html#M000159">expand_tabs</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000159" class="method-detail">
+        <a name="M000159"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000159.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000159.html');return false;">
+          <span class="method-name">expand_tabs</span><span class="method-args">(n=8)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Expands tabs to <tt>n</tt> spaces. Non-destructive. If <tt>n</tt> is 0,
+then tabs are simply removed. Raises an exception if <tt>n</tt> is
+negative.
+</p>
+<pre>
+  &quot;\t\tHey&quot;.expand_tabs(2)  #=&gt; &quot;    Hey&quot;
+</pre>
+<p>
+Thanks to GGaramuno for a more efficient algorithm. Very nice.
+</p>
+<p>
+CREDIT: Gavin Sinclair, Noah Gibbs, GGaramuno
+</p>
+<p>
+TODO: Don&#8216;t much care for the name <a
+href="String.html#M000159">String#expand_tabs</a>. What about a more
+concise name like detab?
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000161" class="method-detail">
+        <a name="M000161"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000161.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000161.html');return false;">
+          <span class="method-name">file</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Use fluent notation for making <a href="String.html#M000161">file</a>
+directives.
+</p>
+<pre>
+   'README.rdoc'.file.mtime
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000162" class="method-detail">
+        <a name="M000162"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000162.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000162.html');return false;">
+          <span class="method-name">fold</span><span class="method-args">(ignore_indented=false)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns a new string with all new <a href="String.html#M000171">lines</a>
+removed from adjacent <a href="String.html#M000171">lines</a> of text.
+</p>
+<pre>
+  s = &quot;This is\na test.\n\nIt clumps\nlines of text.&quot;
+  s.fold
+</pre>
+<p>
+<em>produces</em>
+</p>
+<pre>
+  &quot;This is a test.\n\nIt clumps lines of text. &quot;
+</pre>
+<p>
+One arguable flaw with this, that might need a fix: if the given string
+ends in a newline, it is replaced with a single space.
+</p>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000163" class="method-detail">
+        <a name="M000163"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000163.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000163.html');return false;">
+          <span class="method-name">indent</span><span class="method-args">(n, c=' ')</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Indent left or right by n spaces. (This used to be called <a
+href="String.html#M000199">tab</a> and aliased as <a
+href="String.html#M000163">indent</a>.)
+</p>
+<p>
+CREDIT: Gavin Sinclair, Trans, Tyler Rick
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000164" class="method-detail">
+        <a name="M000164"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000164.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000164.html');return false;">
+          <span class="method-name">indent!</span><span class="method-args">(n, c=' ')</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Equivalent to <a href="String.html#M000163">String#indent</a>, but modifies
+the receiver in place.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000167" class="method-detail">
+        <a name="M000167"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000167.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000167.html');return false;">
+          <span class="method-name">index_all</span><span class="method-args">(s, reuse=false)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Like index but returns an array of all index locations. The reuse flag
+allows the trailing portion of a match to be reused for subsquent matches.
+</p>
+<pre>
+  &quot;abcabcabc&quot;.index_all('a')  #=&gt; [0,3,6]
+
+  &quot;bbb&quot;.index_all('bb', false)  #=&gt; [0]
+  &quot;bbb&quot;.index_all('bb', true)   #=&gt; [0,1]
+</pre>
+<p>
+TODO: Culd probably be defined for <a href="Indexable.html">Indexable</a>
+in general too.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000143" class="method-detail">
+        <a name="M000143"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000143.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000143.html');return false;">
+          <span class="method-name">inter_camelcase</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000169" class="method-detail">
+        <a name="M000169"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000169.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000169.html');return false;">
+          <span class="method-name">lchomp</span><span class="method-args">(match)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Left chomp.
+</p>
+<pre>
+  &quot;help&quot;.lchomp(&quot;h&quot;)  #=&gt; &quot;elp&quot;
+  &quot;help&quot;.lchomp(&quot;k&quot;)  #=&gt; &quot;help&quot;
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000170" class="method-detail">
+        <a name="M000170"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000170.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000170.html');return false;">
+          <span class="method-name">lchomp!</span><span class="method-args">(match)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+In-place left chomp.
+</p>
+<pre>
+  &quot;help&quot;.lchomp(&quot;h&quot;)  #=&gt; &quot;elp&quot;
+  &quot;help&quot;.lchomp(&quot;k&quot;)  #=&gt; &quot;help&quot;
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000172" class="method-detail">
+        <a name="M000172"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000172.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000172.html');return false;">
+          <span class="method-name">line_wrap</span><span class="method-args">(width, tabs=4)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Line wrap at width.
+</p>
+<pre>
+  s = &quot;1234567890&quot;.line_wrap(5)
+
+  s  #=&gt; &quot;12345\n67890\n&quot;
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000171" class="method-detail">
+        <a name="M000171"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000171.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000171.html');return false;">
+          <span class="method-name">lines</span><span class="method-args">(&amp;blk)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns an array of <a href="String.html#M000149">characters</a>.
+</p>
+<pre>
+  &quot;abc\n123&quot;.lines.to_a  #=&gt; [&quot;abc\n&quot;,&quot;123&quot;]
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000145" class="method-detail">
+        <a name="M000145"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000145.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000145.html');return false;">
+          <span class="method-name">lower_camelcase</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000207" class="method-detail">
+        <a name="M000207"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000207.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000207.html');return false;">
+          <span class="method-name">lowercase</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Downcase first letter.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000173" class="method-detail">
+        <a name="M000173"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000173.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000173.html');return false;">
+          <span class="method-name">margin</span><span class="method-args">(n=0)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Provides a <a href="String.html#M000173">margin</a> controlled string.
+</p>
+<pre>
+  x = %Q{
+        | This
+        |   is
+        |     margin controlled!
+        }.margin
+</pre>
+<p>
+NOTE: This may still need a bit of tweaking.
+</p>
+<p>
+TODO: describe its limits and caveats and edge cases
+</p>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000174" class="method-detail">
+        <a name="M000174"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000174.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000174.html');return false;">
+          <span class="method-name">methodize</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Translate a (class or module) name to a suitable method name.
+</p>
+<pre>
+  &quot;My::CoolClass&quot;.methodize  #=&gt; &quot;my__cool_class&quot;
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000175" class="method-detail">
+        <a name="M000175"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000175.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000175.html');return false;">
+          <span class="method-name">modulize</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Converts a string to module name representation.
+</p>
+<p>
+This is essentially <a href="String.html#M000142">camelcase</a>. It also
+converts &#8217;/&#8217; to &#8217;::&#8217; which is useful for converting
+paths to namespaces.
+</p>
+<p>
+Examples
+</p>
+<pre>
+  &quot;method_name&quot;.modulize    #=&gt; &quot;MethodName&quot;
+  &quot;method/name&quot;.modulize    #=&gt; &quot;Method::Name&quot;
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000176" class="method-detail">
+        <a name="M000176"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000176.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000176.html');return false;">
+          <span class="method-name">mscan</span><span class="method-args">(re) {|| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Like scan but returns <a href="MatchData.html">MatchData</a> ($~) rather
+then matched string ($&amp;).
+</p>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000177" class="method-detail">
+        <a name="M000177"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000177.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000177.html');return false;">
+          <span class="method-name">natcmp</span><span class="method-args">(str2, caseInsensitive=false)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+&#8216;Natural order&#8217; comparison of strings, e.g. &#8230;
+</p>
+<pre>
+  &quot;my_prog_v1.1.0&quot; &lt; &quot;my_prog_v1.2.0&quot; &lt; &quot;my_prog_v1.10.0&quot;
+</pre>
+<p>
+which does not follow alphabetically. A secondary parameter, if set to
+<em>true</em>, makes the comparison case insensitive.
+</p>
+<pre>
+  &quot;Hello.1&quot;.natcmp(&quot;Hello.10&quot;)  #=&gt; -1
+</pre>
+<p>
+TODO: Invert case flag?
+</p>
+<p>
+CREDIT: Alan Davies, Martin Pool
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000178" class="method-detail">
+        <a name="M000178"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000178.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000178.html');return false;">
+          <span class="method-name">nchar</span><span class="method-args">(n, replacement=nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns <em>n</em> <a href="String.html#M000149">characters</a> of the
+string. If <em>n</em> is positive the <a
+href="String.html#M000149">characters</a> are from the beginning of the
+string. If <em>n</em> is negative from the end of the string.
+</p>
+<pre>
+   str = &quot;this is text&quot;
+
+   str.nchar(4)            #=&gt; &quot;this&quot;
+   str.nchar(-4)           #=&gt; &quot;text&quot;
+</pre>
+<p>
+Alternatively a replacement string can be given, which will replace the
+<em>n</em> <a href="String.html#M000149">characters</a>.
+</p>
+<pre>
+   str.nchar(4, 'that')    #=&gt; &quot;that is text&quot;
+</pre>
+<p>
+The original string remains unaffected.
+</p>
+<pre>
+   str  #=&gt; &quot;this is text&quot;
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000179" class="method-detail">
+        <a name="M000179"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000179.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000179.html');return false;">
+          <span class="method-name">newlines</span><span class="method-args">(&amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns an <a href="Enumerator.html">Enumerator</a> for iterating over each
+line of the string, void of the termining newline character, in contrast to
+<a href="String.html#M000171">lines</a> which retains it.
+</p>
+<pre>
+  &quot;a\nb\nc&quot;.newlines.class.assert == Enumerator
+  &quot;a\nb\nc&quot;.newlines.to_a.assert == %w{a b c}
+
+  a = []
+  &quot;a\nb\nc&quot;.newlines{|nl| a &lt;&lt; nl}
+  a.assert == %w{a b c}
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000132" class="method-detail">
+        <a name="M000132"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000132.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000132.html');return false;">
+          <span class="method-name">object_state</span><span class="method-args">(data=nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000182" class="method-detail">
+        <a name="M000182"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000182.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000182.html');return false;">
+          <span class="method-name">pathize</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Converts a <a href="String.html#M000142">camelcase</a> name (e.g. class or
+module name) to a unix path.
+</p>
+<pre>
+  &quot;ExamplePathize&quot;.pathize           #=&gt; &quot;example_pathize&quot;
+  &quot;ExamplePathize::Example&quot;.pathize  #=&gt; &quot;example_pathize/example&quot;
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000183" class="method-detail">
+        <a name="M000183"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000183.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000183.html');return false;">
+          <span class="method-name">quote</span><span class="method-args">(type=:double, count=nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return a new string embraced by given <tt>type</tt> and <tt>count</tt> of
+quotes. The arguments can be given in any order.
+</p>
+<p>
+If no type is given, double quotes are assumed.
+</p>
+<pre>
+  &quot;quote me&quot;.quote     #=&gt; '&quot;quote me&quot;'
+</pre>
+<p>
+If no type but a count is given then :mixed is assumed.
+</p>
+<pre>
+  &quot;quote me&quot;.quote(1)  #=&gt; %q{'quote me'}
+  &quot;quote me&quot;.quote(2)  #=&gt; %q{&quot;quote me&quot;}
+  &quot;quote me&quot;.quote(3)  #=&gt; %q{'&quot;quote me&quot;'}
+</pre>
+<p>
+Symbols can be used to describe the type.
+</p>
+<pre>
+  &quot;quote me&quot;.quote(:single)    #=&gt; %q{'quote me'}
+  &quot;quote me&quot;.quote(:double)    #=&gt; %q{&quot;quote me&quot;}
+  &quot;quote me&quot;.quote(:back)      #=&gt; %q{`quote me`}
+  &quot;quote me&quot;.quote(:bracket)   #=&gt; %q{`quote me'}
+</pre>
+<p>
+Or the character itself.
+</p>
+<pre>
+  &quot;quote me&quot;.quote(&quot;'&quot;)     #=&gt; %q{'quote me'}
+  &quot;quote me&quot;.quote('&quot;')     #=&gt; %q{&quot;quote me&quot;}
+  &quot;quote me&quot;.quote(&quot;`&quot;)     #=&gt; %q{`quote me`}
+  &quot;quote me&quot;.quote(&quot;`'&quot;)    #=&gt; %q{`quote me'}
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000185" class="method-detail">
+        <a name="M000185"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000185.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000185.html');return false;">
+          <span class="method-name">range</span><span class="method-args">(pattern, offset=0)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Like index but returns a <a href="Range.html">Range</a>.
+</p>
+<pre>
+  &quot;This is a test!&quot;.range('test')  #=&gt; (10..13)
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000186" class="method-detail">
+        <a name="M000186"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000186.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000186.html');return false;">
+          <span class="method-name">range_all</span><span class="method-args">(pattern, reuse=false)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Like <a href="String.html#M000167">index_all</a> but returns an array of
+Ranges.
+</p>
+<pre>
+  &quot;abc123abc123&quot;.range_all('abc')  #=&gt; [0..2, 6..8]
+</pre>
+<p>
+TODO: Add offset ?
+</p>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000187" class="method-detail">
+        <a name="M000187"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000187.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000187.html');return false;">
+          <span class="method-name">range_of_line</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns an array of ranges mapping the <a
+href="String.html#M000149">characters</a> per line.
+</p>
+<pre>
+  &quot;this\nis\na\ntest&quot;.range_of_line
+  #=&gt; [0..4, 5..7, 8..9, 10..13]
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000188" class="method-detail">
+        <a name="M000188"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000188.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000188.html');return false;">
+          <span class="method-name">rewrite</span><span class="method-args">(rules)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Apply a set of rules in the form of regular expression matches to the
+string.
+</p>
+<ul>
+<li>rules - The array containing rule-pairs (match, write).
+
+</li>
+</ul>
+<p>
+Keep in mind that the order of rules is significant.
+</p>
+<p>
+Returns the rewritten <a href="String.html">String</a>.
+</p>
+<p>
+CREDIT: George Moschovitis
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000189" class="method-detail">
+        <a name="M000189"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000189.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000189.html');return false;">
+          <span class="method-name">shatter</span><span class="method-args">( re )</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Breaks a string up into an array based on a regular expression. Similar to
+scan, but includes the matches.
+</p>
+<pre>
+  s = &quot;&lt;p&gt;This&lt;b&gt;is&lt;/b&gt;a test.&lt;/p&gt;&quot;
+  s.shatter( /\&lt;.*?\&gt;/ )
+</pre>
+<p>
+<em>produces</em>
+</p>
+<pre>
+  [&quot;&lt;p&gt;&quot;, &quot;This&quot;, &quot;&lt;b&gt;&quot;, &quot;is&quot;, &quot;&lt;/b&gt;&quot;, &quot;a test.&quot;, &quot;&lt;/p&gt;&quot;]
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000190" class="method-detail">
+        <a name="M000190"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000190.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000190.html');return false;">
+          <span class="method-name">similarity</span><span class="method-args">(str_in)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+A fuzzy matching mechanism. Returns a score from 0-1, based on the number
+of shared edges. To be effective, the strings must be of length 2 or
+greater.
+</p>
+<pre>
+  &quot;Alexsander&quot;.similarity(&quot;Aleksander&quot;)  #=&gt; 0.9
+</pre>
+<p>
+The way it works:
+</p>
+<ol>
+<li>Converts each string into a &quot;graph like&quot; object, with edges
+&#8230;
+
+<pre>
+ &quot;alexsander&quot; -&gt; [ alexsander, alexsand, alexsan ... lexsand ... san ... an, etc ]
+ &quot;aleksander&quot; -&gt; [ aleksander, aleksand ... etc. ]
+</pre>
+</li>
+<li>Perform match, then remove any subsets from this matched set (i.e. a hit
+
+</li>
+</ol>
+<p>
+on &quot;san&quot; is a subset of a hit on &quot;sander&quot;) &#8230;
+</p>
+<pre>
+    Above example, once reduced -&gt; [ ale, sander ]
+</pre>
+<ol>
+<li>See&#8216;s how many of the matches remain, and calculates a score based
+
+</li>
+</ol>
+<p>
+on how many matches, their length, and compare to the length of the larger
+of the two <a href="String.html#M000209">words</a>.
+</p>
+<p>
+Still a bit rough. Any suggestions for improvement are welcome.
+</p>
+<p>
+CREDIT: Derek Lewis.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000191" class="method-detail">
+        <a name="M000191"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000191.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000191.html');return false;">
+          <span class="method-name">snakecase</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+The reverse of <tt><a href="String.html#M000142">camelcase</a></tt>. Makes
+an underscored of a <a href="String.html#M000142">camelcase</a> string.
+</p>
+<p>
+Changes &#8217;::&#8217; to &#8217;/&#8217; to convert namespaces to paths.
+</p>
+<p>
+Examples
+</p>
+<pre>
+  &quot;SnakeCase&quot;.snakecase           #=&gt; &quot;snake_case&quot;
+  &quot;Snake-Case&quot;.snakecase          #=&gt; &quot;snake_case&quot;
+  &quot;SnakeCase::Errors&quot;.snakecase   #=&gt; &quot;snake_case/errors&quot;
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000192" class="method-detail">
+        <a name="M000192"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000192.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000192.html');return false;">
+          <span class="method-name">splice</span><span class="method-args">(idx, sub=nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+String#slice is essentially the same as store.
+</p>
+<pre>
+  a = &quot;HELLO&quot;
+  a.splice(1, &quot;X&quot;)
+  a                #=&gt; &quot;HXLLO&quot;
+</pre>
+<p>
+But it acts like slice! when given a single argument.
+</p>
+<pre>
+  a = &quot;HELLO&quot;
+  a.splice(1)    #=&gt; &quot;E&quot;
+  a              #=&gt; &quot;HLLO&quot;
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000193" class="method-detail">
+        <a name="M000193"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000193.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000193.html');return false;">
+          <span class="method-name">squish</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the string, first removing all whitespace on both ends of the
+string, and then changing remaining consecutive whitespace groups into one
+space each.
+</p>
+<pre>
+  %{ Multi-line
+     string }.squish                   # =&gt; &quot;Multi-line string&quot;
+
+  &quot; foo   bar    \n   \t   boo&quot;.squish # =&gt; &quot;foo bar boo&quot;
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000194" class="method-detail">
+        <a name="M000194"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000194.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000194.html');return false;">
+          <span class="method-name">squish!</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Performs a destructive <a href="String.html#M000193">squish</a>. See <a
+href="String.html#M000193">String#squish</a>.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000195" class="method-detail">
+        <a name="M000195"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000195.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000195.html');return false;">
+          <span class="method-name">start_with?</span><span class="method-args">(prefix)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Does a string start with the given prefix?
+</p>
+<pre>
+  &quot;hello&quot;.start_with?(&quot;he&quot;)    #=&gt; true
+  &quot;hello&quot;.start_with?(&quot;to&quot;)    #=&gt; false
+</pre>
+<p>
+Note: This definition is better than standard Ruby&#8216;s becuase it
+handles regular expressions.
+</p>
+<p>
+CREDIT: Juris Galang
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000197" class="method-detail">
+        <a name="M000197"></a>
+
+        <div class="method-heading">
+          <span class="method-name">starts_with?</span><span class="method-args">(prefix)</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for start_with?
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000199" class="method-detail">
+        <a name="M000199"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000199.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000199.html');return false;">
+          <span class="method-name">tab</span><span class="method-args">(n)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Aligns each line n spaces.
+</p>
+<p>
+CREDIT: Gavin Sinclair
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000200" class="method-detail">
+        <a name="M000200"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000200.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000200.html');return false;">
+          <span class="method-name">tabto</span><span class="method-args">(n)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Preserves relative tabbing. The first non-empty line ends up with n spaces
+before nonspace.
+</p>
+<p>
+CREDIT: Gavin Sinclair
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000201" class="method-detail">
+        <a name="M000201"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000201.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000201.html');return false;">
+          <span class="method-name">titlecase</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Title case.
+</p>
+<pre>
+  &quot;this is a string&quot;.titlecase
+  #=&gt; &quot;This Is A String&quot;
+</pre>
+<p>
+CREDIT: Eliazar Parra
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000129" class="method-detail">
+        <a name="M000129"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000129.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000129.html');return false;">
+          <span class="method-name">to_b</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Interpret common affirmative string meanings as true, otherwise nil or
+false. Blank space and case are ignored. The following strings that will
+return true &#8230;
+</p>
+<pre>
+  true
+  yes
+  on
+  t
+  1
+  y
+  ==
+</pre>
+<p>
+The following strings will return nil &#8230;
+</p>
+<pre>
+  nil
+  null
+</pre>
+<p>
+All other strings return false.
+</p>
+<p>
+Here are some exmamples.
+</p>
+<pre>
+  &quot;true&quot;.to_b   #=&gt; true
+  &quot;yes&quot;.to_b    #=&gt; true
+  &quot;no&quot;.to_b     #=&gt; false
+  &quot;123&quot;.to_b    #=&gt; false
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000215" class="method-detail">
+        <a name="M000215"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000215.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000215.html');return false;">
+          <span class="method-name">to_date</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Parse data from string.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000214" class="method-detail">
+        <a name="M000214"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000214.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000214.html');return false;">
+          <span class="method-name">to_datetime</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Convert string to <a href="DateTime.html">DateTime</a>.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000202" class="method-detail">
+        <a name="M000202"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000202.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000202.html');return false;">
+          <span class="method-name">to_re</span><span class="method-args">(esc=false)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Turns a string into a regular expression.
+</p>
+<pre>
+  &quot;a?&quot;.to_re  #=&gt; /a?/
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000203" class="method-detail">
+        <a name="M000203"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000203.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000203.html');return false;">
+          <span class="method-name">to_rx</span><span class="method-args">(esc=true)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Turns a string into a regular expression. By default it will escape all <a
+href="String.html#M000149">characters</a>. Use <tt>false</tt> argument to
+turn off escaping.
+</p>
+<pre>
+  &quot;[&quot;.to_rx  #=&gt; /\[/
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000216" class="method-detail">
+        <a name="M000216"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000216.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000216.html');return false;">
+          <span class="method-name">to_t</span><span class="method-args">( &amp;yld )</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Translates a string in the form on a set of numerical and/or alphanumerical
+<a href="String.html#M000149">characters</a> separated by non-word <a
+href="String.html#M000149">characters</a> (eg \W+) into a <a
+href="Tuple.html">Tuple</a>. The values of the tuple will be converted to
+integers if they are purely numerical.
+</p>
+<pre>
+  '1.2.3a'.to_t  #=&gt; [1,2,&quot;3a&quot;]
+</pre>
+<p>
+It you would like to control the interpretation of each value as it is
+added to the tuple you can supply a block.
+</p>
+<pre>
+  '1.2.3a'.to_t { |v| v.upcase }  #=&gt; [&quot;1&quot;,&quot;2&quot;,&quot;3A&quot;]
+</pre>
+<p>
+This method calls <a href="Tuple.html#M000687">Tuple.cast_from_string</a>.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000213" class="method-detail">
+        <a name="M000213"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000213.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000213.html');return false;">
+          <span class="method-name">to_time</span><span class="method-args">(form = :utc)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000139" class="method-detail">
+        <a name="M000139"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000139.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000139.html');return false;">
+          <span class="method-name">unbracket</span><span class="method-args">(bra=nil, ket=nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return a new string with the given brackets removed. If only one <a
+href="String.html#M000137">bracket</a> char is given it will be removed
+from either side.
+</p>
+<pre>
+  &quot;{unwrap me}&quot;.unbracket('{')        #=&gt; &quot;unwrap me&quot;
+  &quot;--unwrap me!&quot;.unbracket('--','!')  #=&gt; &quot;unwrap me&quot;
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000140" class="method-detail">
+        <a name="M000140"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000140.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000140.html');return false;">
+          <span class="method-name">unbracket!</span><span class="method-args">(bra=nil, ket=nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Inplace version of <a href="String.html#M000139">unbracket</a>.
+</p>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000204" class="method-detail">
+        <a name="M000204"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000204.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000204.html');return false;">
+          <span class="method-name">underscore</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+The reverse of <tt><a href="String.html#M000142">camelcase</a></tt>. Makes
+an underscored of a <a href="String.html#M000142">camelcase</a> string.
+</p>
+<p>
+Changes &#8217;::&#8217; to &#8217;/&#8217; to convert namespaces to paths.
+</p>
+<p>
+Examples
+</p>
+<pre>
+  &quot;SnakeCase&quot;.underscore           #=&gt; &quot;snake_case&quot;
+  &quot;Snake-Case&quot;.underscore          #=&gt; &quot;snake_case&quot;
+  &quot;SnakeCase::Errors&quot;.underscore   #=&gt; &quot;snake_case/errors&quot;
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000205" class="method-detail">
+        <a name="M000205"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000205.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000205.html');return false;">
+          <span class="method-name">unfold</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Unfold paragrpahs.
+</p>
+<p>
+FIXME: Sometimes adds one too many blank <a
+href="String.html#M000171">lines</a>. TEST!!!
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000165" class="method-detail">
+        <a name="M000165"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000165.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000165.html');return false;">
+          <span class="method-name">unindent</span><span class="method-args">(size=nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Remove excessive indentation. Useful for multi-line strings embeded in
+already indented code.
+</p>
+<pre>
+  &lt;&lt;-END.unindent
+      ohaie
+        wurld
+  END
+</pre>
+<p>
+Outputs &#8230;
+</p>
+<pre>
+  ohaie
+    wurld
+</pre>
+<p>
+Instead of &#8230;
+</p>
+<pre>
+      ohaie
+        wurld
+</pre>
+<p>
+CREDIT: Noah Gibbs, mynyml
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000166" class="method-detail">
+        <a name="M000166"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000166.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000166.html');return false;">
+          <span class="method-name">unindent!</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Equivalent to <a href="String.html#M000165">String#unindent</a>, but
+modifies the receiver in place.
+</p>
+<p>
+CREDIT: mynyml
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000184" class="method-detail">
+        <a name="M000184"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000184.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000184.html');return false;">
+          <span class="method-name">unquote</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Remove quotes from string.
+</p>
+<pre>
+  &quot;'hi'&quot;.unquote    #=&gt; &quot;hi&quot;
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000148" class="method-detail">
+        <a name="M000148"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000148.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000148.html');return false;">
+          <span class="method-name">upcase?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Is the string upcase/uppercase?
+</p>
+<pre>
+  &quot;THIS&quot;.upcase?  #=&gt; true
+  &quot;This&quot;.upcase?  #=&gt; false
+  &quot;this&quot;.upcase?  #=&gt; false
+</pre>
+<p>
+CREDIT: Phil Tomson
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000144" class="method-detail">
+        <a name="M000144"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000144.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000144.html');return false;">
+          <span class="method-name">upper_camelcase</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000206" class="method-detail">
+        <a name="M000206"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000206.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000206.html');return false;">
+          <span class="method-name">uppercase</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Upcase first letter.
+</p>
+<p>
+NOTE: One might argue that this method should behave the same as +upcase+
+and rather this behavior should be in place of +captialize+. Probably so,
+but since Matz has already defined +captialize+ the way it is, this name
+seems most fitting to the missing behavior.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000208" class="method-detail">
+        <a name="M000208"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000208.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000208.html');return false;">
+          <span class="method-name">variablize</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Prepend an &quot;@&quot; to the beginning of a string to make a instance
+variable name. This also replaces non-valid <a
+href="String.html#M000149">characters</a> with underscores.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000210" class="method-detail">
+        <a name="M000210"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000210.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000210.html');return false;">
+          <span class="method-name">word_wrap</span><span class="method-args">( col_width=80 )</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Word wrap a string not exceeding max width.
+</p>
+<pre>
+  &quot;this is a test&quot;.word_wrap(4)
+</pre>
+<p>
+<em>produces</em> &#8230;
+</p>
+<pre>
+  this
+  is a
+  test
+</pre>
+<p>
+This is basic implementation of word wrap, but smart enough to suffice for
+most use cases.
+</p>
+<p>
+CREDIT: Gavin Kistner, Dayne Broderson
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000211" class="method-detail">
+        <a name="M000211"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000211.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000211.html');return false;">
+          <span class="method-name">word_wrap!</span><span class="method-args">( col_width=80 )</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+As with <a href="String.html#M000210">word_wrap</a>, but modifies the
+string in place.
+</p>
+<p>
+CREDIT: Gavin Kistner, Dayne Broderson
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000209" class="method-detail">
+        <a name="M000209"></a>
+
+        <div class="method-heading">
+          <a href="String.src/M000209.html" target="Code" class="method-signature"
+            onclick="popupCode('String.src/M000209.html');return false;">
+          <span class="method-name">words</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns an array of <a href="String.html#M000149">characters</a>.
+</p>
+<pre>
+  &quot;abc 123&quot;.words  #=&gt; [&quot;abc&quot;,&quot;123&quot;]
+</pre>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

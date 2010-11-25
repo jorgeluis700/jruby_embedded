@@ -1,0 +1,89 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: "[]"
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Multimap is a generalization of a map or associative array abstract data type in which more than one value may be associated with and returned for a given key.
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: Example
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  require 'multimap'\n  map = Multimap.new\n  map[&quot;a&quot;] = 100\n  map[&quot;b&quot;] = 200\n  map[&quot;a&quot;] = 300\n  map[&quot;a&quot;]                              # -&gt; [100, 300]\n  map[&quot;b&quot;]                              # -&gt; [200]\n  map.keys                              # -&gt; #&lt;Multiset: {a, a, b}&gt;\n"
+constants: []
+
+full_name: Multimap
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Enumerable
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: "[]"
+  - !ruby/object:RI::MethodSummary 
+    name: "[]="
+  - !ruby/object:RI::MethodSummary 
+    name: containers
+  - !ruby/object:RI::MethodSummary 
+    name: delete
+  - !ruby/object:RI::MethodSummary 
+    name: delete_if
+  - !ruby/object:RI::MethodSummary 
+    name: each
+  - !ruby/object:RI::MethodSummary 
+    name: each_association
+  - !ruby/object:RI::MethodSummary 
+    name: each_container
+  - !ruby/object:RI::MethodSummary 
+    name: each_key
+  - !ruby/object:RI::MethodSummary 
+    name: each_pair
+  - !ruby/object:RI::MethodSummary 
+    name: each_value
+  - !ruby/object:RI::MethodSummary 
+    name: has_value?
+  - !ruby/object:RI::MethodSummary 
+    name: include?
+  - !ruby/object:RI::MethodSummary 
+    name: index
+  - !ruby/object:RI::MethodSummary 
+    name: invert
+  - !ruby/object:RI::MethodSummary 
+    name: keys
+  - !ruby/object:RI::MethodSummary 
+    name: length
+  - !ruby/object:RI::MethodSummary 
+    name: member?
+  - !ruby/object:RI::MethodSummary 
+    name: merge
+  - !ruby/object:RI::MethodSummary 
+    name: merge!
+  - !ruby/object:RI::MethodSummary 
+    name: reject
+  - !ruby/object:RI::MethodSummary 
+    name: reject!
+  - !ruby/object:RI::MethodSummary 
+    name: replace
+  - !ruby/object:RI::MethodSummary 
+    name: select
+  - !ruby/object:RI::MethodSummary 
+    name: size
+  - !ruby/object:RI::MethodSummary 
+    name: store
+  - !ruby/object:RI::MethodSummary 
+    name: to_a
+  - !ruby/object:RI::MethodSummary 
+    name: to_hash
+  - !ruby/object:RI::MethodSummary 
+    name: update
+  - !ruby/object:RI::MethodSummary 
+    name: value?
+  - !ruby/object:RI::MethodSummary 
+    name: values
+  - !ruby/object:RI::MethodSummary 
+    name: values_at
+name: Multimap
+superclass: Object

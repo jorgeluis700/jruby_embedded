@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveRecord::Associations::ThroughAssociationScope#construct_select
+is_singleton: false
+name: construct_select
+params: (custom_select = nil)
+visibility: protected

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns a meta tag with the cross-site request forgery protection token for forms to use. Place this in your head.
+full_name: ActionView::Helpers::CsrfHelper#csrf_meta_tag
+is_singleton: false
+name: csrf_meta_tag
+params: ()
+visibility: public

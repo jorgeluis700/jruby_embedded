@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: ([key, value])
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns a new Multimap consisting of the pairs for which the block returns true.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  map = Multimap[&quot;a&quot; =&gt; 100, &quot;b&quot; =&gt; 200, &quot;c&quot; =&gt; 300]\n  map.select { |k,v| k &gt; &quot;a&quot; }  #=&gt; Multimap[&quot;b&quot; =&gt; 200, &quot;c&quot; =&gt; 300]\n  map.select { |k,v| v &lt; 200 }  #=&gt; Multimap[&quot;a&quot; =&gt; 100]\n"
+full_name: Multimap#select
+is_singleton: false
+name: select
+params: |
+  map.select { |key, value| block }   => multimap
+
+visibility: public

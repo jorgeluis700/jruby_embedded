@@ -1,0 +1,23 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Attributes named in this macro are protected from mass-assignment whenever attributes are sanitized before assignment.
+  - !ruby/struct:SM::Flow::P 
+    body: Mass-assignment to these attributes will simply be ignored, to assign to them you can use direct writer methods. This is meant to protect sensitive attributes from being overwritten by malicious users tampering with URLs or forms.
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: Example
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class Customer\n    include ActiveModel::MassAssignmentSecurity\n\n    attr_accessor :name, :credit_rating\n    attr_protected :credit_rating\n\n    def attributes=(values)\n      sanitize_for_mass_assignment(values).each do |k, v|\n        send(&quot;#{k}=&quot;, v)\n      end\n    end\n  end\n\n  customer = Customer.new\n  customer.attributes = { &quot;name&quot; =&gt; &quot;David&quot;, &quot;credit_rating&quot; =&gt; &quot;Excellent&quot; }\n  customer.name          # =&gt; &quot;David&quot;\n  customer.credit_rating # =&gt; nil\n\n  customer.credit_rating = &quot;Average&quot;\n  customer.credit_rating # =&gt; &quot;Average&quot;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: To start from an all-closed default and enable attributes as needed, have a look at <tt>attr_accessible</tt>.
+  - !ruby/struct:SM::Flow::P 
+    body: Note that using <tt>Hash#except</tt> or <tt>Hash#slice</tt> in place of <tt>attr_protected</tt> to sanitize attributes won't provide sufficient protection.
+full_name: ActiveModel::MassAssignmentSecurity::ClassMethods#attr_protected
+is_singleton: false
+name: attr_protected
+params: (*names)
+visibility: public

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Arel::SqlLiteral#relation
+is_singleton: false
+name: relation
+params: ()
+visibility: public

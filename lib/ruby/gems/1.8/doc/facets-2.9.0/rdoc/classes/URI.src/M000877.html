@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>decode (URI)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/more/facets/uri.rb, line 11</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">decode</span>(<span class="ruby-identifier">uri</span>)
+    <span class="ruby-comment cmt">## gmosx: hmm is this needed?</span>
+    <span class="ruby-comment cmt">## guard against invalid filenames for example pictures with</span>
+    <span class="ruby-comment cmt">## spaces uploaded by users</span>
+    <span class="ruby-identifier">escaped_uri</span> = <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/ /</span>, <span class="ruby-value str">&quot;+&quot;</span>)
+
+    <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">md</span> = <span class="ruby-constant">URI</span><span class="ruby-operator">::</span><span class="ruby-constant">REGEXP</span><span class="ruby-operator">::</span><span class="ruby-constant">REL_URI</span>.<span class="ruby-identifier">match</span>(<span class="ruby-identifier">escaped_uri</span>)
+      <span class="ruby-identifier">path</span> = <span class="ruby-node">&quot;#{md[5]}#{md[6]}&quot;</span>
+      <span class="ruby-identifier">type</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">extname</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-identifier">query_string</span> = <span class="ruby-identifier">md</span>[<span class="ruby-value">7</span>]
+
+      <span class="ruby-comment cmt">## real_path = &quot;#{$root_dir}/#{path}&quot;</span>
+
+      <span class="ruby-identifier">parameters</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">query_to_hash</span>(<span class="ruby-identifier">query_string</span>)
+      <span class="ruby-identifier">path</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp re">/\+/</span>, <span class="ruby-value str">&quot; &quot;</span>)
+
+      <span class="ruby-keyword kw">return</span> [<span class="ruby-identifier">path</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">parameters</span>, <span class="ruby-identifier">query_string</span>]
+    <span class="ruby-keyword kw">end</span>
+
+    <span class="ruby-comment cmt">## this is usefull for uncovering bugs!</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;the parameter '#{uri}' is not a valid uri&quot;</span>)
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

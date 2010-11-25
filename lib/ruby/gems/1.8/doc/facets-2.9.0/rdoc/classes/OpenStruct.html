@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: OpenStruct</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">OpenStruct</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/lib/more/facets/ostruct_rb.html">
+                lib/more/facets/ostruct.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                Object
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000557">[]</a>&nbsp;&nbsp;
+      <a href="#M000558">[]=</a>&nbsp;&nbsp;
+      <a href="#M000564">__merge__</a>&nbsp;&nbsp;
+      <a href="#M000563">__update__</a>&nbsp;&nbsp;
+      <a href="#M000555">each</a>&nbsp;&nbsp;
+      <a href="#M000559">instance_delegate</a>&nbsp;&nbsp;
+      <a href="#M000554">new</a>&nbsp;&nbsp;
+      <a href="#M000560">ostruct_delegate</a>&nbsp;&nbsp;
+      <a href="#M000562">ostruct_merge</a>&nbsp;&nbsp;
+      <a href="#M000561">ostruct_update</a>&nbsp;&nbsp;
+      <a href="#M000556">to_h</a>&nbsp;&nbsp;
+      <a href="#M000565">to_ostruct</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000554" class="method-detail">
+        <a name="M000554"></a>
+
+        <div class="method-heading">
+          <a href="OpenStruct.src/M000554.html" target="Code" class="method-signature"
+            onclick="popupCode('OpenStruct.src/M000554.html');return false;">
+          <span class="method-name">new</span><span class="method-args">(hash=nil) {|self| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Allows the initialization of an <a href="OpenStruct.html">OpenStruct</a>
+with a setter block:
+</p>
+<pre>
+  person = OpenStruct.new do |o|
+    o.name    = 'John Smith'
+    o.gender  = :M
+    o.age     = 71
+  end
+</pre>
+<p>
+You can still provide a hash for initialization purposes, and even combine
+the two approaches if you wish.
+</p>
+<pre>
+  person = OpenStruct.new(:name =&gt; 'John Smith', :age =&gt; 31) do |p|
+    p.gender = :M
+  end
+</pre>
+<p>
+Alternatively you can provide a default block:
+</p>
+<pre>
+  stuff = OpenStruct.new{ |o,k| o[k] = [] }
+  stuff.place &lt;&lt; :a
+  stuff.place &lt;&lt; :b
+  stuff.place #=&gt; [:a, :b]
+</pre>
+<p>
+A setter block versus a defualt block is determined by the arity of the
+block. You can not provide both at the same time.
+</p>
+<p>
+CREDIT: Noah Gibbs, Gavin Sinclair
+</p>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000557" class="method-detail">
+        <a name="M000557"></a>
+
+        <div class="method-heading">
+          <a href="OpenStruct.src/M000557.html" target="Code" class="method-signature"
+            onclick="popupCode('OpenStruct.src/M000557.html');return false;">
+          <span class="method-name">[]</span><span class="method-args">(key)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Access a value in the <a href="OpenStruct.html">OpenStruct</a> by key, like
+a Hash. This increases <a href="OpenStruct.html">OpenStruct</a>&#8216;s
+&quot;duckiness&quot;.
+</p>
+<pre>
+  o = OpenStruct.new
+  o.t = 4
+  o['t']  #=&gt; 4
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000558" class="method-detail">
+        <a name="M000558"></a>
+
+        <div class="method-heading">
+          <a href="OpenStruct.src/M000558.html" target="Code" class="method-signature"
+            onclick="popupCode('OpenStruct.src/M000558.html');return false;">
+          <span class="method-name">[]=</span><span class="method-args">(key,val)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<a href="Set.html">Set</a> a value in the <a
+href="OpenStruct.html">OpenStruct</a> by key, like a Hash.
+</p>
+<pre>
+  o = OpenStruct.new
+  o['t'] = 4
+  o.t  #=&gt; 4
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000564" class="method-detail">
+        <a name="M000564"></a>
+
+        <div class="method-heading">
+          <a href="OpenStruct.src/M000564.html" target="Code" class="method-signature"
+            onclick="popupCode('OpenStruct.src/M000564.html');return false;">
+          <span class="method-name">__merge__</span><span class="method-args">(other)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Merge hash data creating a <a href="OpenStruct.html#M000554">new</a> <a
+href="OpenStruct.html">OpenStruct</a> object.
+</p>
+<pre>
+  o = OpenStruct.new
+  x = o.ostruct_merge(:a =&gt; 2)
+  x.a  #=&gt; 2
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000563" class="method-detail">
+        <a name="M000563"></a>
+
+        <div class="method-heading">
+          <a href="OpenStruct.src/M000563.html" target="Code" class="method-signature"
+            onclick="popupCode('OpenStruct.src/M000563.html');return false;">
+          <span class="method-name">__update__</span><span class="method-args">(other)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Insert/update hash data on the fly.
+</p>
+<pre>
+  o = OpenStruct.new
+  o.ostruct_update(:a =&gt; 2)
+  o.a  #=&gt; 2
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000555" class="method-detail">
+        <a name="M000555"></a>
+
+        <div class="method-heading">
+          <a href="OpenStruct.src/M000555.html" target="Code" class="method-signature"
+            onclick="popupCode('OpenStruct.src/M000555.html');return false;">
+          <span class="method-name">each</span><span class="method-args">(&amp;blk)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000559" class="method-detail">
+        <a name="M000559"></a>
+
+        <div class="method-heading">
+          <a href="OpenStruct.src/M000559.html" target="Code" class="method-signature"
+            onclick="popupCode('OpenStruct.src/M000559.html');return false;">
+          <span class="method-name">instance_delegate</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Provides access to an <a href="OpenStruct.html">OpenStruct</a>&#8216;s
+inner table.
+</p>
+<pre>
+  o = OpenStruct.new
+  o.a = 1
+  o.b = 2
+  o.instance_delegate.map { |k, v| &quot;#{k} #{v}&quot; }
+  #=&gt; [&quot;a 1&quot;, &quot;b 2&quot;]
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000560" class="method-detail">
+        <a name="M000560"></a>
+
+        <div class="method-heading">
+          <span class="method-name">ostruct_delegate</span><span class="method-args">()</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="OpenStruct.html#M000559">instance_delegate</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000562" class="method-detail">
+        <a name="M000562"></a>
+
+        <div class="method-heading">
+          <a href="OpenStruct.src/M000562.html" target="Code" class="method-signature"
+            onclick="popupCode('OpenStruct.src/M000562.html');return false;">
+          <span class="method-name">ostruct_merge</span><span class="method-args">(other)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Merge hash data creating a <a href="OpenStruct.html#M000554">new</a> <a
+href="OpenStruct.html">OpenStruct</a> object.
+</p>
+<pre>
+  o = OpenStruct.new
+  x = o.ostruct_merge(:a =&gt; 2)
+  x.a  #=&gt; 2
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000561" class="method-detail">
+        <a name="M000561"></a>
+
+        <div class="method-heading">
+          <a href="OpenStruct.src/M000561.html" target="Code" class="method-signature"
+            onclick="popupCode('OpenStruct.src/M000561.html');return false;">
+          <span class="method-name">ostruct_update</span><span class="method-args">(other)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Insert/update hash data on the fly.
+</p>
+<pre>
+  o = OpenStruct.new
+  o.ostruct_update(:a =&gt; 2)
+  o.a  #=&gt; 2
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000556" class="method-detail">
+        <a name="M000556"></a>
+
+        <div class="method-heading">
+          <a href="OpenStruct.src/M000556.html" target="Code" class="method-signature"
+            onclick="popupCode('OpenStruct.src/M000556.html');return false;">
+          <span class="method-name">to_h</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000565" class="method-detail">
+        <a name="M000565"></a>
+
+        <div class="method-heading">
+          <a href="OpenStruct.src/M000565.html" target="Code" class="method-signature"
+            onclick="popupCode('OpenStruct.src/M000565.html');return false;">
+          <span class="method-name">to_ostruct</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

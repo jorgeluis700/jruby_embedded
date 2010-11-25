@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: ""
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Like #uniq, but determines uniqueness based on a given block."
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  (-5..5).to_a.uniq_by {|i| i*i }\n  #=&gt; [-5, -4, -3, -2, -1, 0]\n"
+full_name: Enumerable#uniq_by
+is_singleton: false
+name: uniq_by
+params: ( {|| ...}
+visibility: public

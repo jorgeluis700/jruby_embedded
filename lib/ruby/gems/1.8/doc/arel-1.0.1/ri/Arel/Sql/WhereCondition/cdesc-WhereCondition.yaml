@@ -1,0 +1,24 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: Arel::Sql::WhereCondition
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: attribute
+  - !ruby/object:RI::MethodSummary 
+    name: expression
+  - !ruby/object:RI::MethodSummary 
+    name: scalar
+  - !ruby/object:RI::MethodSummary 
+    name: select
+  - !ruby/object:RI::MethodSummary 
+    name: value
+name: WhereCondition
+superclass: Formatter

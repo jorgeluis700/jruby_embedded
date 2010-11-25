@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "File.yaml? provides a way to check if a file is a YAML formatted file:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  File.yaml?('project.yaml')  #=&gt; true\n  File.yaml?('project.xml')   #=&gt; false\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Note this isn't perfect. At present it depends on the use use of an initial document separator (eg. '---'). With YAML 1.1 the %YAML delaration is supposed to be manditory, so in the future this can be adapted to fit that standard.
+full_name: File::yaml?
+is_singleton: true
+name: yaml?
+params: (file)
+visibility: public

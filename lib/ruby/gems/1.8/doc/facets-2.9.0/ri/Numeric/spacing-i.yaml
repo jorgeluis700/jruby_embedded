@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns the size of the string representation of a numerical value.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "     1.spacing   #=&gt; 1\n    10.spacing   #=&gt; 2\n   100.spacing   #=&gt; 3\n  -100.spacing   #=&gt; 4\n   1.2.spacing   #=&gt; 3\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Victor H. Goff III"
+full_name: Numeric#spacing
+is_singleton: false
+name: spacing
+params: ()
+visibility: public

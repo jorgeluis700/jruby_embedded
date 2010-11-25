@@ -1,0 +1,17 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: This is a class to fix I18n global state. Whenever you provide I18n.locale during a request, it will trigger the lookup_context and consequently expire the cache. TODO Add some deprecation warnings to remove I18n.locale from controllers
+constants: []
+
+full_name: AbstractController::I18nProxy
+includes: []
+
+instance_methods: []
+
+name: I18nProxy
+superclass: "::I18n::Config"

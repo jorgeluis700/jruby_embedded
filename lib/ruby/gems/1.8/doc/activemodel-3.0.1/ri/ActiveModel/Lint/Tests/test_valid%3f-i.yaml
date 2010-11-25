@@ -1,0 +1,15 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: Responds to <tt>valid?</tt>
+  - !ruby/struct:SM::Flow::P 
+    body: Returns a boolean that specifies whether the object is in a valid or invalid state.
+full_name: ActiveModel::Lint::Tests#test_valid?
+is_singleton: false
+name: test_valid?
+params: ()
+visibility: public

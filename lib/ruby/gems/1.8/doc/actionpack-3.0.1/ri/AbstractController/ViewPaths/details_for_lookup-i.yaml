@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: AbstractController::ViewPaths#details_for_lookup
+is_singleton: false
+name: details_for_lookup
+params: ()
+visibility: public

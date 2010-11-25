@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: <tt>x</tt> to the power <tt>y</tt>
+full_name: Math::pow
+is_singleton: true
+name: pow
+params: (x, y)
+visibility: public

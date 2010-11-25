@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: raise NotImplementedError
+full_name: Kernel#not_implemented
+is_singleton: false
+name: not_implemented
+params: (
+visibility: private

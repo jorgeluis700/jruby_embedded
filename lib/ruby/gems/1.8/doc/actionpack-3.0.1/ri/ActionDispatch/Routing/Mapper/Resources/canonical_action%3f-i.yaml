@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionDispatch::Routing::Mapper::Resources#canonical_action?
+is_singleton: false
+name: canonical_action?
+params: (action, flag)
+visibility: protected

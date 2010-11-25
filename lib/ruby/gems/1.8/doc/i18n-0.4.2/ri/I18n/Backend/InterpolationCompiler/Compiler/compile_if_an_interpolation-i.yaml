@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: I18n::Backend::InterpolationCompiler::Compiler#compile_if_an_interpolation
+is_singleton: false
+name: compile_if_an_interpolation
+params: (string)
+visibility: public

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Arel::Relation#outer_join
+is_singleton: false
+name: outer_join
+params: (other_relation = nil)
+visibility: public

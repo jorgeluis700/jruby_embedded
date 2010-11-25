@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Erubis::JavascriptGenerator#init_generator
+is_singleton: false
+name: init_generator
+params: (properties={})
+visibility: public

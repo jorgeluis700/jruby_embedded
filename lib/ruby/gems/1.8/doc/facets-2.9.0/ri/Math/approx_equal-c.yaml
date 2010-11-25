@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Approximately equal.
+  - !ruby/struct:SM::Flow::P 
+    body: "TODO: Use core extension Numeric#approx? instead."
+full_name: Math::approx_equal
+is_singleton: true
+name: approx_equal
+params: (a, b, epsilon=EPSILON)
+visibility: public

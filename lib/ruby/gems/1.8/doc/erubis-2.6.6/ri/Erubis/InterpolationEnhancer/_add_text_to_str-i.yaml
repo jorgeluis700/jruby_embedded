@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Erubis::InterpolationEnhancer#_add_text_to_str
+is_singleton: false
+name: _add_text_to_str
+params: (str, text)
+visibility: public

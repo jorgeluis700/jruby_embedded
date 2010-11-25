@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Wait notifications to be published.
+full_name: ActiveSupport::LogSubscriber::TestHelper#wait
+is_singleton: false
+name: wait
+params: ()
+visibility: public

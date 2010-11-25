@@ -1,0 +1,18 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Subtract modules.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  module AMinus\n    def a; &quot;a&quot;; end\n    def b; &quot;b&quot;; end\n  end\n\n  CMinus = AMinus - [:a]\n\n  class XMinus; include CMinus; end\n\n  expect NameError do\n    XMinus.new.a  #=&gt; &quot;a&quot;\n  end\n\n  XMinus.new.b    #=&gt; &quot;b&quot;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "TODO: Should this use all instance methods, not just public?"
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Thomas Sawyer, Robert Dober"
+full_name: Module#-
+is_singleton: false
+name: "-"
+params: (other)
+visibility: public

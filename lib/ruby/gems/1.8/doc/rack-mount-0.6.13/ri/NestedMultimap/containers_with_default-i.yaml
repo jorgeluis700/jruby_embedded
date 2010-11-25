@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns a new array populated with all the containers from <em>map</em> including the default.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  map = NestedMultimap.new\n  map[&quot;a&quot;] = 100\n  map[&quot;a&quot;, &quot;b&quot;] = 101\n  map[&quot;a&quot;] = 102\n  map.containers_with_default   #=&gt; [[100, 101, 102], [100, 102], []]\n"
+full_name: NestedMultimap#containers_with_default
+is_singleton: false
+name: containers_with_default
+params: |
+  multimap.containers_with_default    => array
+
+visibility: public

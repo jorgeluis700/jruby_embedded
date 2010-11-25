@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: For Class, Module#class_extend is similar to class_eval.
+  - !ruby/struct:SM::Flow::P 
+    body: The alternative is to &quot;undef_method :class_extend&quot;, but this seems uneccessarily limited.
+full_name: Class#class_extend
+is_singleton: false
+name: class_extend
+params: (*mods, &block)
+visibility: public

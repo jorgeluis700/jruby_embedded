@@ -1,0 +1,17 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Raised when a record cannot be inserted or updated because it references a non-existent record.
+constants: []
+
+full_name: ActiveRecord::InvalidForeignKey
+includes: []
+
+instance_methods: []
+
+name: InvalidForeignKey
+superclass: WrappedDatabaseException

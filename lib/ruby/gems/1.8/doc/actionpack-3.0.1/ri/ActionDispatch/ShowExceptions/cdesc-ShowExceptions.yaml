@@ -1,0 +1,26 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: This middleware rescues any exception returned by the application and renders nice exception pages if it's being rescued locally.
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: RESCUES_TEMPLATE_PATH
+    value: File.join(File.dirname(__FILE__), 'templates')
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: FAILSAFE_RESPONSE
+    value: "[500, {'Content-Type' => 'text/html'},       [\"<html><body><h1>500 Internal Server Error</h1>\" <<        \"If you are the administrator of this website, then please read this web \" <<        \"application's log file and/or the web server's log file to find out what \" <<        \"went wrong.</body></html>\"]]"
+full_name: ActionDispatch::ShowExceptions
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: call
+name: ShowExceptions
+superclass: Object

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: I18n::Backend::InterpolationCompiler::Compiler#escape_plain_str
+is_singleton: false
+name: escape_plain_str
+params: (str)
+visibility: protected

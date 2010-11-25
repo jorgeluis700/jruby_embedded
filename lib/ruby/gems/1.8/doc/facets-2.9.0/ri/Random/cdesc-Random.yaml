@@ -1,0 +1,45 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: letter
+comment: 
+  - !ruby/struct:SM::Flow::H 
+    level: 1
+    text: Randomization Extensions
+  - !ruby/struct:SM::Flow::P 
+    body: This library extends Array, String, Hash and other classes with randomization methods. Most of the methods are of one of two kinds. Either they &quot;pick&quot; a random element from the reciever or they randomly &quot;shuffle&quot; the reciever.
+  - !ruby/struct:SM::Flow::P 
+    body: The most common example is Array#shuffle, which simply randmomizes the order of an array's elements.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  [1,2,3].shuffle  #~&gt; [2,3,1]\n"
+  - !ruby/struct:SM::Flow::P 
+    body: The other methods do similar things for their respective classes.
+  - !ruby/struct:SM::Flow::P 
+    body: The classes are all extended via mixins which have been created within Ruby's Random class.
+  - !ruby/struct:SM::Flow::P 
+    body: "Credit for this work is due to:"
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: Ilmari Heikkinen
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: Christian Neukirchen
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: Thomas Sawyer
+    type: :BULLET
+  - !ruby/struct:SM::Flow::P 
+    body: "NOTE: Inline QED tests are almost pointless here b/c... yea, it's random. So indtead of the usual `#=&gt;` we use `#~&gt;` which means approx. equal and prevens QED from making a hard assertion."
+constants: []
+
+full_name: Random
+includes: []
+
+instance_methods: []
+
+name: Random
+superclass: Object

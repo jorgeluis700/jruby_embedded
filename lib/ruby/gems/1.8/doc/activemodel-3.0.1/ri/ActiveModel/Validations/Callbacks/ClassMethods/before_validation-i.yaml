@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveModel::Validations::Callbacks::ClassMethods#before_validation
+is_singleton: false
+name: before_validation
+params: (*args, &block)
+visibility: public

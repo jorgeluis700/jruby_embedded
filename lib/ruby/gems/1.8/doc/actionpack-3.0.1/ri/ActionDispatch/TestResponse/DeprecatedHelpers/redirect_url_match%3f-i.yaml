@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionDispatch::TestResponse::DeprecatedHelpers#redirect_url_match?
+is_singleton: false
+name: redirect_url_match?
+params: (pattern)
+visibility: public

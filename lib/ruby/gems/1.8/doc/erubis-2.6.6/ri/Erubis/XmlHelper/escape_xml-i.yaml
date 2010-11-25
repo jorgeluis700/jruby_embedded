@@ -1,0 +1,13 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: h
+  - !ruby/object:RI::AliasName 
+    name: html_escape
+block_params: 
+comment: 
+full_name: Erubis::XmlHelper#escape_xml
+is_singleton: false
+name: escape_xml
+params: (value)
+visibility: public

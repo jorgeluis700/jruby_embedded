@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns an array of locales for which translations are available. Unless you explicitely set these through I18n.available_locales= the call will be delegated to the backend.
+full_name: I18n::Config#available_locales
+is_singleton: false
+name: available_locales
+params: ()
+visibility: public

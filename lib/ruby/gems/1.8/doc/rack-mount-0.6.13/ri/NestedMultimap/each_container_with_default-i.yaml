@@ -1,0 +1,20 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Calls <em>block</em> for every container in <em>map</em> including the default, passing the container as a parameter.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  map = NestedMultimap.new\n  map[&quot;a&quot;] = 100\n  map[&quot;a&quot;, &quot;b&quot;] = 101\n  map[&quot;a&quot;] = 102\n  map.each_container_with_default { |container| puts container }\n"
+  - !ruby/struct:SM::Flow::P 
+    body: <em>produces:</em>
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  [100, 101, 102]\n  [100, 102]\n  []\n"
+full_name: NestedMultimap#each_container_with_default
+is_singleton: false
+name: each_container_with_default
+params: |
+  multimap.each_container_with_default { |container| block } => map
+
+visibility: public

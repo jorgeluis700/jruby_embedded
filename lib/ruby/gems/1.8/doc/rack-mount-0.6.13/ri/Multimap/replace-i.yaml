@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Replaces the contents of <em>map</em> with the contents of <em>other_map</em>.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  map = Multimap[&quot;a&quot; =&gt; 100, &quot;b&quot; =&gt; 200]\n  map.replace({ &quot;c&quot; =&gt; 300, &quot;d&quot; =&gt; 400 })\n  #=&gt; Multimap[&quot;c&quot; =&gt; 300, &quot;d&quot; =&gt; 400]\n"
+full_name: Multimap#replace
+is_singleton: false
+name: replace
+params: |
+  map.replace(other_map) => map
+
+visibility: public

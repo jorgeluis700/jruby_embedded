@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveSupport::XmlMini_LibXMLSAX::HashBuilder#on_start_document
+is_singleton: false
+name: on_start_document
+params: ()
+visibility: public

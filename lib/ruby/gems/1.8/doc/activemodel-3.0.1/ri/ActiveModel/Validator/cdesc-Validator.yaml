@@ -1,0 +1,57 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: options
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: kind
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: Active Model Validator
+  - !ruby/struct:SM::Flow::P 
+    body: A simple base class that can be used along with +ActiveModel::Validations::ClassMethods.validates_with+
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class Person\n    include ActiveModel::Validations\n    validates_with MyValidator\n  end\n\n  class MyValidator &lt; ActiveModel::Validator\n    def validate(record)\n      if some_complex_logic\n        record.errors[:base] = &quot;This record is invalid&quot;\n      end\n    end\n\n    private\n      def some_complex_logic\n        # ...\n      end\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Any class that inherits from ActiveModel::Validator must implement a method called <tt>validate</tt> which accepts a <tt>record</tt>.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class Person\n    include ActiveModel::Validations\n    validates_with MyValidator\n  end\n\n  class MyValidator &lt; ActiveModel::Validator\n    def validate(record)\n      record # =&gt; The person instance being validated\n      options # =&gt; Any non-standard options passed to validates_with\n    end\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: To cause a validation error, you must add to the &lt;tt&gt;record&lt;tt&gt;'s errors directly from within the validators message
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class MyValidator &lt; ActiveModel::Validator\n    def validate(record)\n      record.errors[:base] &lt;&lt; &quot;This is some custom error message&quot;\n      record.errors[:first_name] &lt;&lt; &quot;This is some complex validation&quot;\n      # etc...\n    end\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "To add behavior to the initialize method, use the following signature:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class MyValidator &lt; ActiveModel::Validator\n    def initialize(record, options)\n      super\n      @my_custom_field = options[:field_name] || :first_name\n    end\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "The easiest way to add custom validators for validating individual attributes is with the convenient ActiveModel::EachValidator for example:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class TitleValidator &lt; ActiveModel::EachValidator\n    def validate_each(record, attribute, value)\n      record.errors[attribute] &lt;&lt; 'must be Mr. Mrs. or Dr.' unless ['Mr.', 'Mrs.', 'Dr.'].include?(value)\n    end\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: This can now be used in combination with the <tt>validates</tt> method (see ActiveModel::Validations::ClassMethods.validates for more on this)
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class Person\n    include ActiveModel::Validations\n    attr_accessor :title\n\n    validates :title, :presence =&gt; true, :title =&gt; true\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "Validator may also define a <tt>setup</tt> instance method which will get called with the class that using that validator as it's argument. This can be useful when there are prerequisites such as an attr_accessor being present for example:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class MyValidator &lt; ActiveModel::Validator\n    def setup(klass)\n      klass.send :attr_accessor, :custom_attribute\n    end\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: This setup method is only called when used with validation macros or the class level <tt>validates_with</tt> method.
+constants: []
+
+full_name: ActiveModel::Validator
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: kind
+  - !ruby/object:RI::MethodSummary 
+    name: validate
+name: Validator
+superclass: Object

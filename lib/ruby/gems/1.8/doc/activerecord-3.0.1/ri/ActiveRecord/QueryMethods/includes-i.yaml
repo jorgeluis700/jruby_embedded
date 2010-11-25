@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveRecord::QueryMethods#includes
+is_singleton: false
+name: includes
+params: (*args)
+visibility: public

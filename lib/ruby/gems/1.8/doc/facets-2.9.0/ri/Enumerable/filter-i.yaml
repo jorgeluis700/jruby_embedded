@@ -1,0 +1,18 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: (output, *input)
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: The block acts as an arbitrary filter on the data. Unlike map, it can choose to drop elements from the result and/or add additional elements. The first object passed to the block is the receiver of the output.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  x = (1..10000)\n  x = x.filter{ |out,i| out &lt;&lt; i if i % 2 == 0 }   # like select\n  x = x.filter{ |out,i| out &lt;&lt; i + 100 }           # like map\n  x = x.take(3)\n\n  x  #=&gt; [102, 104, 106]\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "This is very similar to #each_with_object, but #filter handles argument better by reversing their order and using the splat operator. (This was also once known as #injecting.)"
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: David Black, Louis J Scoras"
+full_name: Enumerable#filter
+is_singleton: false
+name: filter
+params: (output=[]) {|output, *input| ...}
+visibility: public

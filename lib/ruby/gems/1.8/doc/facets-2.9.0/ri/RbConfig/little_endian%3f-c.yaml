@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: []
+
+full_name: RbConfig::little_endian?
+is_singleton: true
+name: little_endian?
+params: ()
+visibility: public

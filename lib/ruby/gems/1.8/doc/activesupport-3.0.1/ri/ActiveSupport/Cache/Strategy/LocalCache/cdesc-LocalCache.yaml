@@ -1,0 +1,20 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Caches that implement LocalCache will be backed by an in memory cache for the duration of a block. Repeated calls to the cache for the same key will hit the in memory cache for faster access.
+constants: []
+
+full_name: ActiveSupport::Cache::Strategy::LocalCache
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: middleware
+  - !ruby/object:RI::MethodSummary 
+    name: with_local_cache
+name: LocalCache
+superclass: 

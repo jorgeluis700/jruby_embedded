@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveRecord::Base::colorize_logging
+is_singleton: true
+name: colorize_logging
+params: (*args)
+visibility: public

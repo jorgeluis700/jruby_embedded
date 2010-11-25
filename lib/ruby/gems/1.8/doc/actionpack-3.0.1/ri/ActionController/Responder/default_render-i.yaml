@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: If a given response block was given, use it, otherwise call render on controller.
+full_name: ActionController::Responder#default_render
+is_singleton: false
+name: default_render
+params: ()
+visibility: protected

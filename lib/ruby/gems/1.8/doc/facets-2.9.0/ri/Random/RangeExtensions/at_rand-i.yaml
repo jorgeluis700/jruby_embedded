@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Return a random element from the range.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  (1..4).at_rand           #~&gt; 2\n  (1..4).at_rand           #~&gt; 4\n\n  (1.5..2.5).at_rand       #~&gt; 2.06309842754533\n  (1.5..2.5).at_rand       #~&gt; 1.74976944931541\n\n  ('a'..'z').at_rand       #~&gt; 'q'\n  ('a'..'z').at_rand       #~&gt; 'f'\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Lavir the Whiolet, Thomas Sawyer"
+full_name: Random::RangeExtensions#at_rand
+is_singleton: false
+name: at_rand
+params: ()
+visibility: public

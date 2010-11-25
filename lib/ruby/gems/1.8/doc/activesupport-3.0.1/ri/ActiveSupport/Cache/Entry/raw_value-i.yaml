@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Get the raw value. This value may be serialized and compressed.
+full_name: ActiveSupport::Cache::Entry#raw_value
+is_singleton: false
+name: raw_value
+params: ()
+visibility: public

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Alias for #ignore"
+full_name: RedCloth::Formatters::Base#notextile
+is_singleton: false
+name: notextile
+params: (opts)
+visibility: public

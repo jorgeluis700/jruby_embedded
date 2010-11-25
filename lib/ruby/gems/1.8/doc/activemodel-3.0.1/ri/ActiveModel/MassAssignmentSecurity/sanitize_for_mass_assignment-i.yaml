@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveModel::MassAssignmentSecurity#sanitize_for_mass_assignment
+is_singleton: false
+name: sanitize_for_mass_assignment
+params: (attributes)
+visibility: protected

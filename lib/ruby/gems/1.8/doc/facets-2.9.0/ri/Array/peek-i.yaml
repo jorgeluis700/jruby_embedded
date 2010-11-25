@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Peek at the top of the stack (the end of the array).
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  a = [1, 2, 3]\n  a.peek          #=&gt; 3\n  a               #=&gt; [1, 2, 3]\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Or provide an index to inspect the array from back to front.
+full_name: Array#peek
+is_singleton: false
+name: peek
+params: (i=0)
+visibility: public

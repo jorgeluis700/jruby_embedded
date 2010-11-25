@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Get available locales from the translations hash
+full_name: I18n::Backend::Simple::Implementation#available_locales
+is_singleton: false
+name: available_locales
+params: ()
+visibility: public

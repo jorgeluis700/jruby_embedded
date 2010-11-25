@@ -1,0 +1,17 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: duplicates
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns a list of non-unique elements
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  [1,1,2,2,3,4,5].nonuniq  #=&gt; [1,2]\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Martin DeMello"
+full_name: Array#nonuniq
+is_singleton: false
+name: nonuniq
+params: ()
+visibility: public

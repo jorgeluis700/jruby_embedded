@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Receives a hash of translations (where the key is a locale and the value is another hash) and return a hash with all translations flattened.
+  - !ruby/struct:SM::Flow::P 
+    body: Nested hashes are included in the flattened hash just if subtree is true and Symbols are automatically stored as links.
+full_name: I18n::Backend::Flatten#flatten_translations
+is_singleton: false
+name: flatten_translations
+params: (locale, data, escape, subtree)
+visibility: public

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: RedCloth::Formatters::HTML#multi_paragraph_quote
+is_singleton: false
+name: multi_paragraph_quote
+params: (opts)
+visibility: public

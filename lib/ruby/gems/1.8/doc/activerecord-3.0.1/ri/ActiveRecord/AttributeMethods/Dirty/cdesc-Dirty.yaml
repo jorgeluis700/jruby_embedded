@@ -1,0 +1,18 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: ActiveRecord::AttributeMethods::Dirty
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: ActiveModel::Dirty
+  - !ruby/object:RI::IncludedModule 
+    name: AttributeMethods::Write
+instance_methods: []
+
+name: Dirty
+superclass: 

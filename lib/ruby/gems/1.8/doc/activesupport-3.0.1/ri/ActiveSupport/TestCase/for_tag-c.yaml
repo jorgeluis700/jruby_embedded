@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: if $tags[tag]
+comment: 
+full_name: ActiveSupport::TestCase::for_tag
+is_singleton: true
+name: for_tag
+params: (tag) {|if $tags[tag]| ...}
+visibility: public

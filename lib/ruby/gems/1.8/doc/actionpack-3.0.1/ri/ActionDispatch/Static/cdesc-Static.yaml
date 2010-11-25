@@ -1,0 +1,20 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: FILE_METHODS
+    value: "%w(GET HEAD).freeze"
+full_name: ActionDispatch::Static
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: call
+name: Static
+superclass: Object

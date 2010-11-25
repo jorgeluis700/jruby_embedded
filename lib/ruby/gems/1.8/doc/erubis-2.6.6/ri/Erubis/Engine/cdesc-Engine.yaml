@@ -1,0 +1,25 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: load_file
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: (abstract) abstract engine class. subclass must include evaluator and converter module.
+constants: []
+
+full_name: Erubis::Engine
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: convert!
+  - !ruby/object:RI::MethodSummary 
+    name: process
+  - !ruby/object:RI::MethodSummary 
+    name: process_proc
+name: Engine
+superclass: Object

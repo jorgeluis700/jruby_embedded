@@ -1,0 +1,18 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Create an tester attribute. This creates a single method used to test the attribute for truth.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  attr_tester :a\n"
+  - !ruby/struct:SM::Flow::P 
+    body: is equivalent to
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  def a?\n    @a ? true : @a\n  end\n"
+full_name: Module#attr_tester
+is_singleton: false
+name: attr_tester
+params: (*args)
+visibility: public

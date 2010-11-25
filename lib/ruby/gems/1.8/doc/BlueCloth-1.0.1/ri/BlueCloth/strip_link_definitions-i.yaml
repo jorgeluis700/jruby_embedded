@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Strip link definitions from <tt>str</tt>, storing them in the given RenderState <tt>rs</tt>.
+full_name: BlueCloth#strip_link_definitions
+is_singleton: false
+name: strip_link_definitions
+params: ( str, rs )
+visibility: public

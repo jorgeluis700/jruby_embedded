@@ -1,0 +1,62 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: Active Model Errors
+  - !ruby/struct:SM::Flow::P 
+    body: Provides a modified <tt>OrderedHash</tt> that you can include in your object for handling error messages and interacting with Action Pack helpers.
+  - !ruby/struct:SM::Flow::P 
+    body: "A minimal implementation could be:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class Person\n\n    # Required dependency for ActiveModel::Errors\n    extend ActiveModel::Naming\n\n    def initialize\n      @errors = ActiveModel::Errors.new(self)\n    end\n\n    attr_accessor :name\n    attr_reader   :errors\n\n    def validate!\n      errors.add(:name, &quot;can not be nil&quot;) if name == nil\n    end\n\n    # The following methods are needed to be minimally implemented\n\n    def read_attribute_for_validation(attr)\n      send(attr)\n    end\n\n    def Person.human_attribute_name(attr, options = {})\n      attr\n    end\n\n    def Person.lookup_ancestors\n      [self]\n    end\n\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: The last three methods are required in your object for Errors to be able to generate error messages correctly and also handle multiple languages. Of course, if you extend your object with ActiveModel::Translations you will not need to implement the last two. Likewise, using ActiveModel::Validations will handle the validation related methods for you.
+  - !ruby/struct:SM::Flow::P 
+    body: "The above allows you to do:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  p = Person.new\n  p.validate!             # =&gt; [&quot;can not be nil&quot;]\n  p.errors.full_messages  # =&gt; [&quot;name can not be nil&quot;]\n  # etc..\n"
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: CALLBACKS_OPTIONS
+    value: "[:if, :unless, :on, :allow_nil, :allow_blank]"
+full_name: ActiveModel::Errors
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: DeprecatedErrorMethods
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: "[]"
+  - !ruby/object:RI::MethodSummary 
+    name: "[]="
+  - !ruby/object:RI::MethodSummary 
+    name: add
+  - !ruby/object:RI::MethodSummary 
+    name: add_on_blank
+  - !ruby/object:RI::MethodSummary 
+    name: add_on_empty
+  - !ruby/object:RI::MethodSummary 
+    name: as_json
+  - !ruby/object:RI::MethodSummary 
+    name: count
+  - !ruby/object:RI::MethodSummary 
+    name: each
+  - !ruby/object:RI::MethodSummary 
+    name: empty?
+  - !ruby/object:RI::MethodSummary 
+    name: full_messages
+  - !ruby/object:RI::MethodSummary 
+    name: generate_message
+  - !ruby/object:RI::MethodSummary 
+    name: size
+  - !ruby/object:RI::MethodSummary 
+    name: to_a
+  - !ruby/object:RI::MethodSummary 
+    name: to_xml
+name: Errors
+superclass: ActiveSupport::OrderedHash

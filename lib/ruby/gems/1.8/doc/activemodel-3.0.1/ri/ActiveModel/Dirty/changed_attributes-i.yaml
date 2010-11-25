@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Map of change <tt>attr =&gt; original value</tt>.
+full_name: ActiveModel::Dirty#changed_attributes
+is_singleton: false
+name: changed_attributes
+params: ()
+visibility: public

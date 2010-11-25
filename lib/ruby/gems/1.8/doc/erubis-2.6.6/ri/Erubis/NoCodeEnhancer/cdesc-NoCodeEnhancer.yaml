@@ -1,0 +1,32 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: remove code and leave text, especially useful when validating HTML tags.
+  - !ruby/struct:SM::Flow::P 
+    body: ex.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  $ erubis -s -E NoCode file.eruby | tidy -errors\n"
+  - !ruby/struct:SM::Flow::P 
+    body: this is language independent.
+constants: []
+
+full_name: Erubis::NoCodeEnhancer
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: add_expr
+  - !ruby/object:RI::MethodSummary 
+    name: add_postamble
+  - !ruby/object:RI::MethodSummary 
+    name: add_preamble
+  - !ruby/object:RI::MethodSummary 
+    name: add_stmt
+  - !ruby/object:RI::MethodSummary 
+    name: add_text
+name: NoCodeEnhancer
+superclass: 

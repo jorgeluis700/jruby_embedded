@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Determines whether the regexp must match the entire string.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  regexp_anchored?(/^foo$/) # =&gt; true\n  regexp_anchored?(/foo/)   # =&gt; false\n  regexp_anchored?(/^foo/)  # =&gt; false\n  regexp_anchored?(/foo$/)  # =&gt; false\n"
+full_name: Rack::Mount::Utils#regexp_anchored?
+is_singleton: false
+name: regexp_anchored?
+params: (regexp)
+visibility: public

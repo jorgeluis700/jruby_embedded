@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Recursively iterate over all Enumerable elements, or subset given :type=&gt;[type1, type2, ...].
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  [1, 2, 8..9].visit{ |x| x.succ }\n  # =&gt; [2, 3, [9, 10]]\n"
+full_name: Enumerable#visit
+is_singleton: false
+name: visit
+params: (opts={}, &block)
+visibility: public

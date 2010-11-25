@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Erubis::Helpers::RailsHelper::engine_class=
+is_singleton: true
+name: engine_class=
+params: (klass)
+visibility: public

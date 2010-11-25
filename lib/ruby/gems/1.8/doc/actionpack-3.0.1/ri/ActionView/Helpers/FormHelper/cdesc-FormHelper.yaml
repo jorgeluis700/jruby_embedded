@@ -1,0 +1,83 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Form helpers are designed to make working with resources much easier compared to using vanilla HTML.
+  - !ruby/struct:SM::Flow::P 
+    body: Forms for models are created with <tt>form_for</tt>. That method yields a form builder that knows the model the form is about. The form builder is thus able to generate default values for input fields that correspond to model attributes, and also convenient names, IDs, endpoints, etc.
+  - !ruby/struct:SM::Flow::P 
+    body: Conventions in the generated field names allow controllers to receive form data nicely structured in <tt>params</tt> with no effort on your side.
+  - !ruby/struct:SM::Flow::P 
+    body: "For example, to create a new person you typically set up a new instance of <tt>Person</tt> in the <tt>PeopleController#new</tt> action, <tt>@person</tt>, and pass it to <tt>form_for</tt>:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &lt;%= form_for @person do |f| %&gt;\n    &lt;%= f.label :first_name %&gt;:\n    &lt;%= f.text_field :first_name %&gt;&lt;br /&gt;\n\n    &lt;%= f.label :last_name %&gt;:\n    &lt;%= f.text_field :last_name %&gt;&lt;br /&gt;\n\n    &lt;%= f.submit %&gt;\n  &lt;% end %&gt;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "The HTML generated for this would be (modulus formatting):"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &lt;form action=&quot;/people&quot; class=&quot;new_person&quot; id=&quot;new_person&quot; method=&quot;post&quot;&gt;\n    &lt;div style=&quot;margin:0;padding:0;display:inline&quot;&gt;\n      &lt;input name=&quot;authenticity_token&quot; type=&quot;hidden&quot; value=&quot;NrOp5bsjoLRuK8IW5+dQEYjKGUJDe7TQoZVvq95Wteg=&quot; /&gt;\n    &lt;/div&gt;\n    &lt;label for=&quot;person_first_name&quot;&gt;First name&lt;/label&gt;:\n    &lt;input id=&quot;person_first_name&quot; name=&quot;person[first_name]&quot; size=&quot;30&quot; type=&quot;text&quot; /&gt;&lt;br /&gt;\n\n    &lt;label for=&quot;person_last_name&quot;&gt;Last name&lt;/label&gt;:\n    &lt;input id=&quot;person_last_name&quot; name=&quot;person[last_name]&quot; size=&quot;30&quot; type=&quot;text&quot; /&gt;&lt;br /&gt;\n\n    &lt;input id=&quot;person_submit&quot; name=&quot;commit&quot; type=&quot;submit&quot; value=&quot;Create Person&quot; /&gt;\n  &lt;/form&gt;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: As you see, the HTML reflects knowledge about the resource in several spots, like the path the form should be submitted to, or the names of the input fields.
+  - !ruby/struct:SM::Flow::P 
+    body: "In particular, thanks to the conventions followed in the generated field names, the controller gets a nested hash <tt>params[:person]</tt> with the person attributes set in the form. That hash is ready to be passed to <tt>Person.create</tt>:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  if @person = Person.create(params[:person])\n    # success\n  else\n    # error handling\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "Interestingly, the exact same view code in the previous example can be used to edit a person. If <tt>@person</tt> is an existing record with name &quot;John Smith&quot; and ID 256, the code above as is would yield instead:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &lt;form action=&quot;/people/256&quot; class=&quot;edit_person&quot; id=&quot;edit_person_256&quot; method=&quot;post&quot;&gt;\n    &lt;div style=&quot;margin:0;padding:0;display:inline&quot;&gt;\n      &lt;input name=&quot;_method&quot; type=&quot;hidden&quot; value=&quot;put&quot; /&gt;\n      &lt;input name=&quot;authenticity_token&quot; type=&quot;hidden&quot; value=&quot;NrOp5bsjoLRuK8IW5+dQEYjKGUJDe7TQoZVvq95Wteg=&quot; /&gt;\n    &lt;/div&gt;\n    &lt;label for=&quot;person_first_name&quot;&gt;First name&lt;/label&gt;:\n    &lt;input id=&quot;person_first_name&quot; name=&quot;person[first_name]&quot; size=&quot;30&quot; type=&quot;text&quot; value=&quot;John&quot; /&gt;&lt;br /&gt;\n\n    &lt;label for=&quot;person_last_name&quot;&gt;Last name&lt;/label&gt;:\n    &lt;input id=&quot;person_last_name&quot; name=&quot;person[last_name]&quot; size=&quot;30&quot; type=&quot;text&quot; value=&quot;Smith&quot; /&gt;&lt;br /&gt;\n\n    &lt;input id=&quot;person_submit&quot; name=&quot;commit&quot; type=&quot;submit&quot; value=&quot;Update Person&quot; /&gt;\n  &lt;/form&gt;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Note that the endpoint, default values, and submit button label are tailored for <tt>@person</tt>. That works that way because the involved helpers know whether the resource is a new record or not, and generate HTML accordingly.
+  - !ruby/struct:SM::Flow::P 
+    body: "The controller would receive the form data again in <tt>params[:person]</tt>, ready to be passed to <tt>Person#update_attributes</tt>:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  if @person.update_attributes(params[:person])\n    # success\n  else\n    # error handling\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: That's how you typically work with resources.
+constants: []
+
+full_name: ActionView::Helpers::FormHelper
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: FormTagHelper
+  - !ruby/object:RI::IncludedModule 
+    name: UrlHelper
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: check_box
+  - !ruby/object:RI::MethodSummary 
+    name: email_field
+  - !ruby/object:RI::MethodSummary 
+    name: fields_for
+  - !ruby/object:RI::MethodSummary 
+    name: file_field
+  - !ruby/object:RI::MethodSummary 
+    name: form_for
+  - !ruby/object:RI::MethodSummary 
+    name: hidden_field
+  - !ruby/object:RI::MethodSummary 
+    name: label
+  - !ruby/object:RI::MethodSummary 
+    name: number_field
+  - !ruby/object:RI::MethodSummary 
+    name: password_field
+  - !ruby/object:RI::MethodSummary 
+    name: phone_field
+  - !ruby/object:RI::MethodSummary 
+    name: radio_button
+  - !ruby/object:RI::MethodSummary 
+    name: range_field
+  - !ruby/object:RI::MethodSummary 
+    name: search_field
+  - !ruby/object:RI::MethodSummary 
+    name: telephone_field
+  - !ruby/object:RI::MethodSummary 
+    name: text_area
+  - !ruby/object:RI::MethodSummary 
+    name: text_field
+  - !ruby/object:RI::MethodSummary 
+    name: url_field
+name: FormHelper
+superclass: 

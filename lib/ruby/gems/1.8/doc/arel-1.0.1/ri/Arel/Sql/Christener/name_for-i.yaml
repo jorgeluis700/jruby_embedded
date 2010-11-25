@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Arel::Sql::Christener#name_for
+is_singleton: false
+name: name_for
+params: (relation)
+visibility: public

@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Creates a class-variable attr_writer that can be accessed both on an instance and class level.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class CAWExample\n    cattr_writer :a\n    def self.a\n      @@a\n    end\n  end\n\n  CAWExample.a = 10\n  CAWExample.a            #=&gt; 10\n  CAWExample.new.a = 29\n  CAWExample.a            #=&gt; 29\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: David Heinemeier Hansson"
+full_name: Module#cattr_writer
+is_singleton: false
+name: cattr_writer
+params: (*syms)
+visibility: public

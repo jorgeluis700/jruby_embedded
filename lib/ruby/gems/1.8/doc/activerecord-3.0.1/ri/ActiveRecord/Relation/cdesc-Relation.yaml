@@ -1,0 +1,115 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: extensions
+    rw: RW
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: klass
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: loaded
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: table
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+  - !ruby/struct:SM::Flow::H 
+    level: 1
+    text: Active Record Relation
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: JoinOperation
+    value: Struct.new(:relation, :join_class, :on)
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: ASSOCIATION_METHODS
+    value: "[:includes, :eager_load, :preload]"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: MULTI_VALUE_METHODS
+    value: "[:select, :group, :order, :joins, :where, :having]"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: SINGLE_VALUE_METHODS
+    value: "[:limit, :offset, :lock, :readonly, :create_with, :from]"
+full_name: ActiveRecord::Relation
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: FinderMethods
+  - !ruby/object:RI::IncludedModule 
+    name: Calculations
+  - !ruby/object:RI::IncludedModule 
+    name: SpawnMethods
+  - !ruby/object:RI::IncludedModule 
+    name: QueryMethods
+  - !ruby/object:RI::IncludedModule 
+    name: Batches
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: ==
+  - !ruby/object:RI::MethodSummary 
+    name: any?
+  - !ruby/object:RI::MethodSummary 
+    name: as_json
+  - !ruby/object:RI::MethodSummary 
+    name: build
+  - !ruby/object:RI::MethodSummary 
+    name: create
+  - !ruby/object:RI::MethodSummary 
+    name: create!
+  - !ruby/object:RI::MethodSummary 
+    name: delete
+  - !ruby/object:RI::MethodSummary 
+    name: delete_all
+  - !ruby/object:RI::MethodSummary 
+    name: destroy
+  - !ruby/object:RI::MethodSummary 
+    name: destroy_all
+  - !ruby/object:RI::MethodSummary 
+    name: eager_loading?
+  - !ruby/object:RI::MethodSummary 
+    name: empty?
+  - !ruby/object:RI::MethodSummary 
+    name: initialize_copy
+  - !ruby/object:RI::MethodSummary 
+    name: inspect
+  - !ruby/object:RI::MethodSummary 
+    name: many?
+  - !ruby/object:RI::MethodSummary 
+    name: method_missing
+  - !ruby/object:RI::MethodSummary 
+    name: new
+  - !ruby/object:RI::MethodSummary 
+    name: primary_key
+  - !ruby/object:RI::MethodSummary 
+    name: reload
+  - !ruby/object:RI::MethodSummary 
+    name: reset
+  - !ruby/object:RI::MethodSummary 
+    name: respond_to?
+  - !ruby/object:RI::MethodSummary 
+    name: scope_for_create
+  - !ruby/object:RI::MethodSummary 
+    name: scoping
+  - !ruby/object:RI::MethodSummary 
+    name: size
+  - !ruby/object:RI::MethodSummary 
+    name: to_a
+  - !ruby/object:RI::MethodSummary 
+    name: to_sql
+  - !ruby/object:RI::MethodSummary 
+    name: update
+  - !ruby/object:RI::MethodSummary 
+    name: update_all
+  - !ruby/object:RI::MethodSummary 
+    name: where_values_hash
+name: Relation
+superclass: Object

@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: ""
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Like #uniq, but determines uniqueness based on a given block."
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  a = (-5..5).to_a\n  a.uniq_by!{ |i| i*i }\n  a #=&gt; [-5, -4, -3, -2, -1, 0]\n"
+  - !ruby/struct:SM::Flow::P 
+    body: As can be seen in the example, order is significant.
+full_name: Array#uniq_by!
+is_singleton: false
+name: uniq_by!
+params: ( {|| ...}
+visibility: public

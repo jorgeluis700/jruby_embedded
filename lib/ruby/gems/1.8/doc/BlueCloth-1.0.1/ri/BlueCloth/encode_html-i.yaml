@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Return a copy of <tt>str</tt> with angle brackets and ampersands HTML-encoded.
+full_name: BlueCloth#encode_html
+is_singleton: false
+name: encode_html
+params: ( str )
+visibility: public

@@ -1,0 +1,26 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Pair of assertions to testing elements in the HTML output of the response.
+constants: []
+
+full_name: ActionDispatch::Assertions::TagAssertions
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: assert_no_tag
+  - !ruby/object:RI::MethodSummary 
+    name: assert_tag
+  - !ruby/object:RI::MethodSummary 
+    name: find_all_tag
+  - !ruby/object:RI::MethodSummary 
+    name: find_tag
+  - !ruby/object:RI::MethodSummary 
+    name: html_document
+name: TagAssertions
+superclass: 

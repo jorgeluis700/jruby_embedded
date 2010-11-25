@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>method_space (Module)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/tour/facets/module/method_space.rb, line 25</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">method_space</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">mod</span>=<span class="ruby-keyword kw">nil</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">blk</span>)
+
+    <span class="ruby-comment cmt">## If block is given then create a module, otherwise</span>
+    <span class="ruby-comment cmt">## get the name of the module.</span>
+    <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span>
+      <span class="ruby-identifier">name</span> = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">mod</span>
+      <span class="ruby-identifier">mod</span>  = <span class="ruby-constant">Module</span>.<span class="ruby-identifier">new</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">blk</span>)
+    <span class="ruby-keyword kw">else</span>
+      <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Module</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">name</span>
+        <span class="ruby-identifier">mod</span> = <span class="ruby-identifier">name</span>
+        <span class="ruby-identifier">name</span> = <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">basename</span>.<span class="ruby-identifier">downcase</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-identifier">mod</span>  = <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">dup</span>
+    <span class="ruby-keyword kw">end</span>
+
+    <span class="ruby-comment cmt">## Include the module. This is neccessary, otherwise</span>
+    <span class="ruby-comment cmt">## Ruby won't let us bind the instance methods.</span>
+    <span class="ruby-identifier">include</span> <span class="ruby-identifier">mod</span>
+
+    <span class="ruby-comment cmt">## Save the instance methods of the module and</span>
+    <span class="ruby-comment cmt">## replace them with a &quot;transparent&quot; version.</span>
+    <span class="ruby-identifier">methods</span> = {}
+    <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">instance_methods</span>(<span class="ruby-keyword kw">false</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">methods</span>[<span class="ruby-identifier">m</span>.<span class="ruby-identifier">to_sym</span>] = <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">instance_method</span>(<span class="ruby-identifier">m</span>)
+      <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">module_eval</span> <span class="ruby-node">%{
+        def #{m}(*a,&amp;b)
+          super(*a,&amp;b)
+        end
+      }</span>
+      <span class="ruby-comment cmt">##mod.instance_eval do</span>
+      <span class="ruby-comment cmt">##  define_method(m)</span>
+      <span class="ruby-comment cmt">##    super</span>
+      <span class="ruby-comment cmt">##  end</span>
+      <span class="ruby-comment cmt">##end</span>
+    <span class="ruby-keyword kw">end</span>
+
+    <span class="ruby-comment cmt">## Add a method for the namespace that delegates</span>
+    <span class="ruby-comment cmt">## via the Functor to the saved instance methods.</span>
+    <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">name</span>) <span class="ruby-keyword kw">do</span>
+      <span class="ruby-identifier">mtab</span> = <span class="ruby-identifier">methods</span>
+      <span class="ruby-constant">Functor</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">op</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span><span class="ruby-operator">|</span>
+        <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">meth</span> = <span class="ruby-identifier">mtab</span>[<span class="ruby-identifier">op</span>.<span class="ruby-identifier">to_sym</span>]
+          <span class="ruby-identifier">meth</span>.<span class="ruby-identifier">bind</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">call</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+        <span class="ruby-keyword kw">else</span>
+          <span class="ruby-comment cmt">#self.__send__(op, *args)</span>
+          <span class="ruby-identifier">raise</span> <span class="ruby-constant">NoMethodError</span>, <span class="ruby-node">&quot;undefined method `#{m}'&quot;</span>
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

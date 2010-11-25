@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Model.human_name is deprecated. Use Model.model_name.human instead.
+full_name: ActiveModel::Translation#human_name
+is_singleton: false
+name: human_name
+params: (*args)
+visibility: public

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: class_eval on an object acts like singleton_class.class_eval.
+full_name: Kernel#class_eval
+is_singleton: false
+name: class_eval
+params: (*args, &block)
+visibility: public

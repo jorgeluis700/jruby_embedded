@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Deflate a string.
+full_name: Zlib::deflate
+is_singleton: true
+name: deflate
+params: (string, level=DEFAULT_COMPRESSION)
+visibility: public

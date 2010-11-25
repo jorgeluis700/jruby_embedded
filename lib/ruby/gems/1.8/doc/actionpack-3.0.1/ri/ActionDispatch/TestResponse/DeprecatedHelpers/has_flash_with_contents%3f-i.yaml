@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Do we have a flash that has contents?
+full_name: ActionDispatch::TestResponse::DeprecatedHelpers#has_flash_with_contents?
+is_singleton: false
+name: has_flash_with_contents?
+params: ()
+visibility: public

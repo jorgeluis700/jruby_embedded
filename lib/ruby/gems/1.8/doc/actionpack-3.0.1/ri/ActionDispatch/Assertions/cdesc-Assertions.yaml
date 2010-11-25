@@ -1,0 +1,27 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: NO_STRIP
+    value: "%w{pre script style textarea}"
+full_name: ActionDispatch::Assertions
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: DomAssertions
+  - !ruby/object:RI::IncludedModule 
+    name: ResponseAssertions
+  - !ruby/object:RI::IncludedModule 
+    name: RoutingAssertions
+  - !ruby/object:RI::IncludedModule 
+    name: SelectorAssertions
+  - !ruby/object:RI::IncludedModule 
+    name: TagAssertions
+instance_methods: []
+
+name: Assertions
+superclass: 

@@ -1,0 +1,32 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Accumulate a set of a set. For example, in an ORM design where `Group has_many User` we might have something equivalent to the following.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  Group = Struct.new(:users)\n  User  = Struct.new(:name, :friends)\n\n  user1 = User.new('John', [])\n  user2 = User.new('Jane', ['Jill'])\n  user3 = User.new('Joe' , ['Jack', 'Jim'])\n\n  group1 = Group.new([user1, user2])\n  group2 = Group.new([user2, user3])\n\n  groups = [group1, group2]\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Now we can <b>accumulate</b> the users of all groups.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  groups.accumulate.users  #=&gt; [user1, user2, user3]\n"
+  - !ruby/struct:SM::Flow::P 
+    body: You may pass an argument to perform chains, e.g. the following returns the names of users from all groups.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  groups.accumulate(2).users.name  #=&gt; ['John','Jane','Joe']\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Or we can gather all the friends of all users in groups.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  groups.accumulate(2).users.friends  #=&gt; ['Jill','Jack','Jim']\n"
+  - !ruby/struct:SM::Flow::P 
+    body: This is more convenient then the equivalent.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  groups.accumulate.users.accumulate.friends  #=&gt; ['Jill','Jack','Jim']\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: George Moshchovitis, Daniel Emirikol"
+full_name: Enumerable#accumulate
+is_singleton: false
+name: accumulate
+params: (iterations=1)
+visibility: public

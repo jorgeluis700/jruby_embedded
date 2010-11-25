@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Erubis::OptimizedGenerator#add_expr_debug
+is_singleton: false
+name: add_expr_debug
+params: (src, code)
+visibility: protected

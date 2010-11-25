@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Does a directory contain a matching entry? Or if the pathname is a file, same as #fnmatch."
+full_name: Pathname#include?
+is_singleton: false
+name: include?
+params: (pattern,*opts)
+visibility: public

@@ -1,0 +1,24 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Set a bit.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  0.bit(4)  #=&gt; 16\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Using a negative figure will clear a bit.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  10.bit(-4)      #=&gt; 2\n"
+  - !ruby/struct:SM::Flow::P 
+    body: This is more easily seen using binary.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  0b0100.bit(-3)  #=&gt; 0\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Thomas Sawyer, George Moschovitis"
+full_name: Integer#bit
+is_singleton: false
+name: bit
+params: (bit)
+visibility: public

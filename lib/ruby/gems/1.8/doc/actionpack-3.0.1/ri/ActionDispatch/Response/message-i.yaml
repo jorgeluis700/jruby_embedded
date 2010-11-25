@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: status_message
+block_params: 
+comment: 
+full_name: ActionDispatch::Response#message
+is_singleton: false
+name: message
+params: ()
+visibility: public

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: AbstractController::Layouts#action_has_layout?
+is_singleton: false
+name: action_has_layout?
+params: ()
+visibility: public

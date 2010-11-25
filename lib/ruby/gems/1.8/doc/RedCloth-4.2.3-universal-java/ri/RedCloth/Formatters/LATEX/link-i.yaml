@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: links
+full_name: RedCloth::Formatters::LATEX#link
+is_singleton: false
+name: link
+params: (opts)
+visibility: public

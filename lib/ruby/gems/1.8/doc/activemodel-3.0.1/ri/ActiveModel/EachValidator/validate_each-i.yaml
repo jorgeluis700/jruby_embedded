@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Override this method in subclasses with the validation logic, adding errors to the records <tt>errors</tt> array where necessary.
+full_name: ActiveModel::EachValidator#validate_each
+is_singleton: false
+name: validate_each
+params: (record, attribute, value)
+visibility: public

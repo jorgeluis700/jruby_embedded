@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Upcase first letter.
+  - !ruby/struct:SM::Flow::P 
+    body: "NOTE: One might argue that this method should behave the same as +#upcase+ and rather this behavior should be in place of +#captialize+. Probably so, but since Matz has already defined +#captialize+ the way it is, this name seems most fitting to the missing behavior."
+full_name: String#uppercase
+is_singleton: false
+name: uppercase
+params: ()
+visibility: public

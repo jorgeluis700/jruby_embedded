@@ -1,0 +1,27 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Builder method to add a route to the set
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "<tt>app</tt>:"
+        body: A valid Rack app to call if the conditions are met.
+      - !ruby/struct:SM::Flow::LI 
+        label: "<tt>conditions</tt>:"
+        body: A hash of conditions to match against. Conditions may be expressed as strings or regexps to match against.
+      - !ruby/struct:SM::Flow::LI 
+        label: "<tt>defaults</tt>:"
+        body: A hash of values that always gets merged in
+      - !ruby/struct:SM::Flow::LI 
+        label: "<tt>name</tt>:"
+        body: Symbol identifier for the route used with named route generations
+    type: :NOTE
+full_name: Rack::Mount::RouteSet#add_route
+is_singleton: false
+name: add_route
+params: (app, conditions = {}, defaults = {}, name = nil)
+visibility: public

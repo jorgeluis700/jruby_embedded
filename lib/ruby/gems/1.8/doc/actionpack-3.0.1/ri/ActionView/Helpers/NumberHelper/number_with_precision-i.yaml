@@ -1,0 +1,41 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Formats a <tt>number</tt> with the specified level of <tt>:precision</tt> (e.g., 112.32 has a precision of 2 if +:significant+ is <tt>false</tt>, and 5 if +:significant+ is <tt>true</tt>). You can customize the format in the <tt>options</tt> hash.
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Options
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>:locale</tt> - Sets the locale to be used for formatting (defaults to current locale).
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>:precision</tt> - Sets the precision of the number (defaults to 3).
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: "<tt>:significant</tt> - If <tt>true</tt>, precision will be the # of significant_digits. If <tt>false</tt>, the # of fractional digits (defaults to <tt>false</tt>)"
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>:separator</tt> - Sets the separator between the fractional and integer digits (defaults to &quot;.&quot;).
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>:delimiter</tt> - Sets the thousands delimiter (defaults to &quot;&quot;).
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>:strip_insignificant_zeros</tt> - If <tt>true</tt> removes insignificant zeros after the decimal separator (defaults to <tt>false</tt>)
+    type: :BULLET
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Examples
+  - !ruby/struct:SM::Flow::VERB 
+    body: " number_with_precision(111.2345)                                            # =&gt; 111.235\n number_with_precision(111.2345, :precision =&gt; 2)                           # =&gt; 111.23\n number_with_precision(13, :precision =&gt; 5)                                 # =&gt; 13.00000\n number_with_precision(389.32314, :precision =&gt; 0)                          # =&gt; 389\n number_with_precision(111.2345, :significant =&gt; true)                      # =&gt; 111\n number_with_precision(111.2345, :precision =&gt; 1, :significant =&gt; true)     # =&gt; 100\n number_with_precision(13, :precision =&gt; 5, :significant =&gt; true)           # =&gt; 13.000\n number_with_precision(111.234, :locale =&gt; :fr)                             # =&gt; 111,234\n number_with_precision(13, :precision =&gt; 5, :significant =&gt; true, strip_insignificant_zeros =&gt; true)\n # =&gt; 13\n number_with_precision(389.32314, :precision =&gt; 4, :significant =&gt; true)    # =&gt; 389.3\n number_with_precision(1111.2345, :precision =&gt; 2, :separator =&gt; ',', :delimiter =&gt; '.')\n # =&gt; 1.111,23\n"
+full_name: ActionView::Helpers::NumberHelper#number_with_precision
+is_singleton: false
+name: number_with_precision
+params: (number, options = {})
+visibility: public

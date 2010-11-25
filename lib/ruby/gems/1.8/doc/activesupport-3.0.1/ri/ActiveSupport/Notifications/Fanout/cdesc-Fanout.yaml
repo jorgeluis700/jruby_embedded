@@ -1,0 +1,29 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: This is a default queue implementation that ships with Notifications. It just pushes events to all registered log subscribers.
+constants: []
+
+full_name: ActiveSupport::Notifications::Fanout
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: listeners_for
+  - !ruby/object:RI::MethodSummary 
+    name: listening?
+  - !ruby/object:RI::MethodSummary 
+    name: publish
+  - !ruby/object:RI::MethodSummary 
+    name: subscribe
+  - !ruby/object:RI::MethodSummary 
+    name: unsubscribe
+  - !ruby/object:RI::MethodSummary 
+    name: wait
+name: Fanout
+superclass: Object

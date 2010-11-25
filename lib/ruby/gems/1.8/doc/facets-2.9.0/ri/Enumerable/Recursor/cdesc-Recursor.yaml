@@ -1,0 +1,19 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Recursor is a specialized Functor for recurively iterating over Enumerables.
+constants: []
+
+full_name: Enumerable::Recursor
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: method_missing
+name: Recursor
+superclass: Object

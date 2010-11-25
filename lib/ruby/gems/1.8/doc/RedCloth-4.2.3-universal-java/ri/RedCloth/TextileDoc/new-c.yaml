@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns a new RedCloth object, based on <em>string</em>, observing any <em>restrictions</em> specified.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  r = RedCloth.new( &quot;h1. A <b>bold</b> man&quot; )\n    #=&gt; &quot;h1. A <b>bold</b> man&quot;\n  r.to_html\n    #=&gt;&quot;&lt;h1&gt;A <b>bold</b> man&lt;/h1&gt;&quot;\n"
+full_name: RedCloth::TextileDoc::new
+is_singleton: true
+name: new
+params: ( string, restrictions = [] )
+visibility: public

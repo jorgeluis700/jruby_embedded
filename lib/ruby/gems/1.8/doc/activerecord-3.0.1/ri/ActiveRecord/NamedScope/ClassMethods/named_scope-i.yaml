@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveRecord::NamedScope::ClassMethods#named_scope
+is_singleton: false
+name: named_scope
+params: (*args, &block)
+visibility: public

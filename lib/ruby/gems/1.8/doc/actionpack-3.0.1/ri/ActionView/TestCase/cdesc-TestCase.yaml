@@ -1,0 +1,19 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::H 
+    level: 1
+    text: Action View Test Case
+constants: []
+
+full_name: ActionView::TestCase
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Behavior
+instance_methods: []
+
+name: TestCase
+superclass: ActiveSupport::TestCase

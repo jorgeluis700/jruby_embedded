@@ -1,0 +1,19 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Permeator is a Functor for operating over each element of an Enumearble. (Note: This used to be called an Elementor.)"
+  - !ruby/struct:SM::Flow::P 
+    body: "TODO: With Ruby 1.9+ this would not be required, as it can be replaced by a generic Functor, becuase then lambda definitions can pass blocks."
+constants: []
+
+full_name: Enumerable::Permeator
+includes: []
+
+instance_methods: []
+
+name: Permeator
+superclass: Object

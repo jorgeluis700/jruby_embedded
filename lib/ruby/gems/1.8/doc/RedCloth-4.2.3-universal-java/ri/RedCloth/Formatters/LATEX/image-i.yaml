@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "FIXME: use includegraphics with security verification"
+  - !ruby/struct:SM::Flow::P 
+    body: Remember to use '\RequirePackage{graphicx}' in your LaTeX header
+  - !ruby/struct:SM::Flow::P 
+    body: "FIXME: Look at dealing with width / height gracefully as this should be specified in a unit like cm rather than px."
+full_name: RedCloth::Formatters::LATEX#image
+is_singleton: false
+name: image
+params: (opts)
+visibility: public

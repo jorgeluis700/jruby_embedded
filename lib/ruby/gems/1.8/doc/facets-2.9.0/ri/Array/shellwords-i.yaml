@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Convert an array into command line parameters. The array is accepted in the format of Ruby method arguments --ie. [arg1, arg2, ..., hash]
+full_name: Array#shellwords
+is_singleton: false
+name: shellwords
+params: ()
+visibility: public

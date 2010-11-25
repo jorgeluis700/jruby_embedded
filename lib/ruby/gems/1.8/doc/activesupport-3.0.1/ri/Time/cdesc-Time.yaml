@@ -1,0 +1,163 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: zone_default
+    rw: RW
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: ===
+  - !ruby/object:RI::MethodSummary 
+    name: _load
+  - !ruby/object:RI::MethodSummary 
+    name: _load
+  - !ruby/object:RI::MethodSummary 
+    name: current
+  - !ruby/object:RI::MethodSummary 
+    name: days_in_month
+  - !ruby/object:RI::MethodSummary 
+    name: local_time
+  - !ruby/object:RI::MethodSummary 
+    name: time_with_datetime_fallback
+  - !ruby/object:RI::MethodSummary 
+    name: use_zone
+  - !ruby/object:RI::MethodSummary 
+    name: utc_time
+  - !ruby/object:RI::MethodSummary 
+    name: zone
+  - !ruby/object:RI::MethodSummary 
+    name: zone=
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: COMMON_YEAR_DAYS_IN_MONTH
+    value: "[nil, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: DAYS_INTO_WEEK
+    value: "{ :monday => 0, :tuesday => 1, :wednesday => 2, :thursday => 3, :friday => 4, :saturday => 5, :sunday => 6 }"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: DATE_FORMATS
+    value: "{     :db           => \"%Y-%m-%d %H:%M:%S\",     :number       => \"%Y%m%d%H%M%S\",     :time         => \"%H:%M\",     :short        => \"%d %b %H:%M\",     :long         => \"%B %d, %Y %H:%M\",     :long_ordinal => lambda { |time| time.strftime(\"%B #{ActiveSupport::Inflector.ordinalize(time.day)}, %Y %H:%M\") },     :rfc822       => lambda { |time| time.strftime(\"%a, %d %b %Y %H:%M:%S #{time.formatted_offset(false)}\") }"
+full_name: Time
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: "-"
+  - !ruby/object:RI::MethodSummary 
+    name: <=>
+  - !ruby/object:RI::MethodSummary 
+    name: _dump
+  - !ruby/object:RI::MethodSummary 
+    name: _dump
+  - !ruby/object:RI::MethodSummary 
+    name: _dump_without_zone
+  - !ruby/object:RI::MethodSummary 
+    name: acts_like_time?
+  - !ruby/object:RI::MethodSummary 
+    name: advance
+  - !ruby/object:RI::MethodSummary 
+    name: ago
+  - !ruby/object:RI::MethodSummary 
+    name: at_beginning_of_day
+  - !ruby/object:RI::MethodSummary 
+    name: at_beginning_of_month
+  - !ruby/object:RI::MethodSummary 
+    name: at_beginning_of_quarter
+  - !ruby/object:RI::MethodSummary 
+    name: at_beginning_of_week
+  - !ruby/object:RI::MethodSummary 
+    name: at_beginning_of_year
+  - !ruby/object:RI::MethodSummary 
+    name: at_end_of_month
+  - !ruby/object:RI::MethodSummary 
+    name: at_end_of_quarter
+  - !ruby/object:RI::MethodSummary 
+    name: at_end_of_week
+  - !ruby/object:RI::MethodSummary 
+    name: at_end_of_year
+  - !ruby/object:RI::MethodSummary 
+    name: at_midnight
+  - !ruby/object:RI::MethodSummary 
+    name: beginning_of_day
+  - !ruby/object:RI::MethodSummary 
+    name: beginning_of_month
+  - !ruby/object:RI::MethodSummary 
+    name: beginning_of_quarter
+  - !ruby/object:RI::MethodSummary 
+    name: beginning_of_week
+  - !ruby/object:RI::MethodSummary 
+    name: beginning_of_year
+  - !ruby/object:RI::MethodSummary 
+    name: change
+  - !ruby/object:RI::MethodSummary 
+    name: compare_with_coercion
+  - !ruby/object:RI::MethodSummary 
+    name: end_of_day
+  - !ruby/object:RI::MethodSummary 
+    name: end_of_month
+  - !ruby/object:RI::MethodSummary 
+    name: end_of_quarter
+  - !ruby/object:RI::MethodSummary 
+    name: end_of_week
+  - !ruby/object:RI::MethodSummary 
+    name: end_of_year
+  - !ruby/object:RI::MethodSummary 
+    name: formatted_offset
+  - !ruby/object:RI::MethodSummary 
+    name: future?
+  - !ruby/object:RI::MethodSummary 
+    name: in
+  - !ruby/object:RI::MethodSummary 
+    name: in_time_zone
+  - !ruby/object:RI::MethodSummary 
+    name: midnight
+  - !ruby/object:RI::MethodSummary 
+    name: minus_with_coercion
+  - !ruby/object:RI::MethodSummary 
+    name: monday
+  - !ruby/object:RI::MethodSummary 
+    name: months_ago
+  - !ruby/object:RI::MethodSummary 
+    name: months_since
+  - !ruby/object:RI::MethodSummary 
+    name: next_month
+  - !ruby/object:RI::MethodSummary 
+    name: next_week
+  - !ruby/object:RI::MethodSummary 
+    name: next_year
+  - !ruby/object:RI::MethodSummary 
+    name: past?
+  - !ruby/object:RI::MethodSummary 
+    name: prev_month
+  - !ruby/object:RI::MethodSummary 
+    name: prev_year
+  - !ruby/object:RI::MethodSummary 
+    name: seconds_since_midnight
+  - !ruby/object:RI::MethodSummary 
+    name: since
+  - !ruby/object:RI::MethodSummary 
+    name: to_date
+  - !ruby/object:RI::MethodSummary 
+    name: to_datetime
+  - !ruby/object:RI::MethodSummary 
+    name: to_formatted_s
+  - !ruby/object:RI::MethodSummary 
+    name: to_s
+  - !ruby/object:RI::MethodSummary 
+    name: to_time
+  - !ruby/object:RI::MethodSummary 
+    name: today?
+  - !ruby/object:RI::MethodSummary 
+    name: tomorrow
+  - !ruby/object:RI::MethodSummary 
+    name: years_ago
+  - !ruby/object:RI::MethodSummary 
+    name: years_since
+  - !ruby/object:RI::MethodSummary 
+    name: yesterday
+name: Time
+superclass: Object

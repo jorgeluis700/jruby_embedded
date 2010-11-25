@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Boolean conversion for not empty?
+full_name: Array#to_b
+is_singleton: false
+name: to_b
+params: ()
+visibility: public

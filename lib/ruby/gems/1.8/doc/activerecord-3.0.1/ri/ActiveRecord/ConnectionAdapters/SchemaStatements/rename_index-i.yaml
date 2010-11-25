@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Rename an index.
+  - !ruby/struct:SM::Flow::P 
+    body: Rename the index_people_on_last_name index to index_users_on_last_name
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  rename_index :people, 'index_people_on_last_name', 'index_users_on_last_name'\n"
+full_name: ActiveRecord::ConnectionAdapters::SchemaStatements#rename_index
+is_singleton: false
+name: rename_index
+params: (table_name, old_name, new_name)
+visibility: public

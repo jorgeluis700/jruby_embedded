@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Overrides AbstractController::Base#action_methods to remove any methods that are listed as hidden methods.
+full_name: ActionController::HideActions::ClassMethods#action_methods
+is_singleton: false
+name: action_methods
+params: ()
+visibility: public

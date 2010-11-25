@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: "@instance"
+comment: 
+full_name: Arel::Session::start
+is_singleton: true
+name: start
+params: () {|@instance| ...}
+visibility: public

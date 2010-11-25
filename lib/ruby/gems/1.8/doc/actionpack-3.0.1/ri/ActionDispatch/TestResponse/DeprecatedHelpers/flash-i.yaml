@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: A shortcut to the flash. Returns an empty hash if no session flash exists.
+full_name: ActionDispatch::TestResponse::DeprecatedHelpers#flash
+is_singleton: false
+name: flash
+params: ()
+visibility: public

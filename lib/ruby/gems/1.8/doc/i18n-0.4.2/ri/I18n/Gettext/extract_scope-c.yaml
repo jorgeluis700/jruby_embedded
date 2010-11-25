@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: I18n::Gettext::extract_scope
+is_singleton: true
+name: extract_scope
+params: (msgid, separator)
+visibility: public

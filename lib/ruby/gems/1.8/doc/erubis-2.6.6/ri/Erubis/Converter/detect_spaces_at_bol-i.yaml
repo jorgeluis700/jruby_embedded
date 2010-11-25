@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: detect spaces at beginning of line
+full_name: Erubis::Converter#detect_spaces_at_bol
+is_singleton: false
+name: detect_spaces_at_bol
+params: (text, is_bol)
+visibility: protected

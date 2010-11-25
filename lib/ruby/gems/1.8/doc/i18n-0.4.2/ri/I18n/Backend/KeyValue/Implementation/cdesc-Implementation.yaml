@@ -1,0 +1,27 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: store
+    rw: RW
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: []
+
+full_name: I18n::Backend::KeyValue::Implementation
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Base
+  - !ruby/object:RI::IncludedModule 
+    name: Flatten
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: available_locales
+  - !ruby/object:RI::MethodSummary 
+    name: lookup
+  - !ruby/object:RI::MethodSummary 
+    name: store_translations
+name: Implementation
+superclass: 

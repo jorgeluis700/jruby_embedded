@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveSupport::Cache::MemoryStore#cleanup
+is_singleton: false
+name: cleanup
+params: (options = nil)
+visibility: public

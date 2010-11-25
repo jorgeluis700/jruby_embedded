@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: ( type, token )
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Break the HTML source in <tt>str</tt> into a series of tokens and return them. The tokens are just 2-element Array tuples with a type and the actual content. If this function is called with a block, the type and text parts of each token will be yielded to it one at a time as they are extracted.
+full_name: BlueCloth#tokenize_html
+is_singleton: false
+name: tokenize_html
+params: ( str ) {|type, token| ...}
+visibility: public

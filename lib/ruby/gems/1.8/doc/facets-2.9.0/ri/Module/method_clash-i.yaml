@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Detect method name clash between modules and/or classes, regardless of method visibility:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  module MethodClashExample\n\n    module A\n      def c; end\n    end\n\n    module B\n      private\n      def c; end\n    end\n\n    A.method_clash(B)  #=&gt; [:c]\n\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Thomas Sawyer, Robert Dober"
+full_name: Module#method_clash
+is_singleton: false
+name: method_clash
+params: (other)
+visibility: public

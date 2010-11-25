@@ -1,0 +1,39 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: abstract
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: abstract!
+  - !ruby/object:RI::MethodSummary 
+    name: action_methods
+  - !ruby/object:RI::MethodSummary 
+    name: clear_action_methods!
+  - !ruby/object:RI::MethodSummary 
+    name: controller_path
+  - !ruby/object:RI::MethodSummary 
+    name: hidden_actions
+  - !ruby/object:RI::MethodSummary 
+    name: internal_methods
+  - !ruby/object:RI::MethodSummary 
+    name: method_added
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: <tt>AbstractController::Base</tt> is a low-level API. Nobody should be using it directly, and subclasses (like ActionController::Base) are expected to provide their own <tt>render</tt> method, since rendering means different things depending on the context.
+constants: []
+
+full_name: AbstractController::Base
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: ActiveSupport::Configurable
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: action_methods
+  - !ruby/object:RI::MethodSummary 
+    name: controller_path
+  - !ruby/object:RI::MethodSummary 
+    name: process
+name: Base
+superclass: Object

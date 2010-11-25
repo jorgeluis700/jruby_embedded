@@ -1,0 +1,15 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Retrieves the <em>value</em> object corresponding to the <em>*keys</em> object.
+full_name: NestedMultimap#[]
+is_singleton: false
+name: "[]"
+params: |
+  multimap[*keys]               =>  value
+  multimap[key1, key2, key3]    =>  value
+
+visibility: public

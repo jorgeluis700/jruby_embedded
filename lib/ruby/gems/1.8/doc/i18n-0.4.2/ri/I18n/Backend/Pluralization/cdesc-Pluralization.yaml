@@ -1,0 +1,20 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: I18n::Backend::Pluralization
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: pluralize
+  - !ruby/object:RI::MethodSummary 
+    name: pluralizer
+  - !ruby/object:RI::MethodSummary 
+    name: pluralizers
+name: Pluralization
+superclass: 

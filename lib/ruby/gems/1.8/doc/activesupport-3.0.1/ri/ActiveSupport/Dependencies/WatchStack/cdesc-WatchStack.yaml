@@ -1,0 +1,27 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: The WatchStack keeps a stack of the modules being watched as files are loaded. If a file in the process of being loaded (parent.rb) triggers the load of another file (child.rb) the stack will ensure that child.rb handles the new constants.
+  - !ruby/struct:SM::Flow::P 
+    body: If child.rb is being autoloaded, its constants will be added to autoloaded_constants. If it was being `require`d, they will be discarded.
+  - !ruby/struct:SM::Flow::P 
+    body: This is handled by walking back up the watch stack and adding the constants found by child.rb to the list of original constants in parent.rb
+constants: []
+
+full_name: ActiveSupport::Dependencies::WatchStack
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new_constants
+  - !ruby/object:RI::MethodSummary 
+    name: pop_modules
+  - !ruby/object:RI::MethodSummary 
+    name: watch_namespaces
+name: WatchStack
+superclass: Hash

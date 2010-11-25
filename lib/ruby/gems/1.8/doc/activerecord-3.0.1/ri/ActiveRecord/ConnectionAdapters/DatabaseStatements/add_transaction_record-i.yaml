@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Register a record with the current transaction so that its after_commit and after_rollback callbacks can be called.
+full_name: ActiveRecord::ConnectionAdapters::DatabaseStatements#add_transaction_record
+is_singleton: false
+name: add_transaction_record
+params: (record)
+visibility: public

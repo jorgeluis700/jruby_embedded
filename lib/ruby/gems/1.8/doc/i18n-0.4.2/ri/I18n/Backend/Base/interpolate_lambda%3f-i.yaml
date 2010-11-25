@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: returns true when the given value responds to :call and the key is an interpolation placeholder in the given string
+full_name: I18n::Backend::Base#interpolate_lambda?
+is_singleton: false
+name: interpolate_lambda?
+params: (object, string, key)
+visibility: protected

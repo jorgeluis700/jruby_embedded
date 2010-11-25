@@ -1,0 +1,19 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: for preprocessing
+constants: []
+
+full_name: Erubis::PreprocessingEruby
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: add_expr_escaped
+name: PreprocessingEruby
+superclass: Erubis::Eruby

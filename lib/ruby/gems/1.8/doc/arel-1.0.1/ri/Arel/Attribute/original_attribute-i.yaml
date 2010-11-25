@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Arel::Attribute#original_attribute
+is_singleton: false
+name: original_attribute
+params: ()
+visibility: public

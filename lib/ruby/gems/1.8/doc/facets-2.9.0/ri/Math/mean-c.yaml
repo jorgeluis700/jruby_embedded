@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Mean average.
+full_name: Math::mean
+is_singleton: true
+name: mean
+params: (array, &blk)
+visibility: public

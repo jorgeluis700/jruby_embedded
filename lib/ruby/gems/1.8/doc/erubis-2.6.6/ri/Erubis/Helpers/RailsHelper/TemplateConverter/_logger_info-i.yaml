@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Erubis::Helpers::RailsHelper::TemplateConverter#_logger_info
+is_singleton: false
+name: _logger_info
+params: (message)
+visibility: public

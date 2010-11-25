@@ -1,0 +1,22 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: (abstract) base engine class for Eruby, Eperl, Ejava, and so on. subclass must include generator.
+constants: []
+
+full_name: Erubis::Basic::Engine
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Evaluator
+  - !ruby/object:RI::IncludedModule 
+    name: Basic::Converter
+  - !ruby/object:RI::IncludedModule 
+    name: Generator
+instance_methods: []
+
+name: Engine
+superclass: Engine

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveRecord::FinderMethods#construct_relation_for_association_calculations
+is_singleton: false
+name: construct_relation_for_association_calculations
+params: ()
+visibility: protected

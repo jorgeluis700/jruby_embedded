@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionController::HttpAuthentication::Token::ControllerMethods#request_http_token_authentication
+is_singleton: false
+name: request_http_token_authentication
+params: (realm = "Application")
+visibility: public

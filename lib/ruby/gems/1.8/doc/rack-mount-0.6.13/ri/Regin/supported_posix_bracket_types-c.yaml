@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns array of supported POSX bracket types
+full_name: Regin::supported_posix_bracket_types
+is_singleton: true
+name: supported_posix_bracket_types
+params: ()
+visibility: public

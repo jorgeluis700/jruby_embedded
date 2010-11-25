@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Does the specified flash object exist?
+full_name: ActionDispatch::TestResponse::DeprecatedHelpers#has_flash_object?
+is_singleton: false
+name: has_flash_object?
+params: (name=nil)
+visibility: public

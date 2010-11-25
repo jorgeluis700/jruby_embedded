@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionDispatch::Http::FilterParameters#parameter_filter
+is_singleton: false
+name: parameter_filter
+params: ()
+visibility: protected

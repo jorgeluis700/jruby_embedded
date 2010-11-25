@@ -1,0 +1,27 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: ActionDispatch::Integration::Runner
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: ActionDispatch::Assertions
+  - !ruby/object:RI::IncludedModule 
+    name: ActionDispatch::Routing::UrlFor
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: app
+  - !ruby/object:RI::MethodSummary 
+    name: method_missing
+  - !ruby/object:RI::MethodSummary 
+    name: open_session
+  - !ruby/object:RI::MethodSummary 
+    name: reset!
+  - !ruby/object:RI::MethodSummary 
+    name: url_options
+name: Runner
+superclass: 

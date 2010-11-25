@@ -1,0 +1,21 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Skip before, after, and around filters matching any of the names
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Parameters
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: "<tt>names</tt> - A list of valid names that could be used for callbacks. Note that skipping uses Ruby equality, so it's impossible to skip a callback defined using an anonymous proc using #skip_filter"
+    type: :BULLET
+full_name: AbstractController::Callbacks::ClassMethods#skip_filter
+is_singleton: false
+name: skip_filter
+params: (*names, &blk)
+visibility: public

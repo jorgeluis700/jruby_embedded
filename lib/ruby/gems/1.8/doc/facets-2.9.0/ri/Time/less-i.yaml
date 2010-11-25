@@ -1,0 +1,15 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: ago
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Returns a new Time representing the time a number of time-units ago. This is just like #shift, but reverses the direction."
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  t = Time.utc(2010,10,10,0,0,0)\n\n  t.less(4, :days)             #=&gt;  Time.utc(2010,10,6,0,0,0)\n"
+full_name: Time#less
+is_singleton: false
+name: less
+params: (*time_units)
+visibility: public

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: I18n::Backend::Chain::Implementation#namespace_lookup?
+is_singleton: false
+name: namespace_lookup?
+params: (result, options)
+visibility: protected

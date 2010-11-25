@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns a new multimap containing the contents of <em>other_map</em> and the contents of <em>map</em>.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  map1 = Multimap[&quot;a&quot; =&gt; 100, &quot;b&quot; =&gt; 200]\n  map2 = Multimap[&quot;a&quot; =&gt; 254, &quot;c&quot; =&gt; 300]\n  map2.merge(map2) #=&gt; Multimap[&quot;a&quot; =&gt; 100, &quot;b&quot; =&gt; [200, 254], &quot;c&quot; =&gt; 300]\n  map1             #=&gt; Multimap[&quot;a&quot; =&gt; 100, &quot;b&quot; =&gt; 200]\n"
+full_name: Multimap#merge
+is_singleton: false
+name: merge
+params: |
+  map.merge(other_map) => multimap
+
+visibility: public

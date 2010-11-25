@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: RedCloth::Formatters::LATEX#registered
+is_singleton: false
+name: registered
+params: (opts)
+visibility: public

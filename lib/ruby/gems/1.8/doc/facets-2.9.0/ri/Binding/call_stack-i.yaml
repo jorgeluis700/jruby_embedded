@@ -1,0 +1,13 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: callstack
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns the call stack, in array format.
+full_name: Binding#call_stack
+is_singleton: false
+name: call_stack
+params: (level=1)
+visibility: public

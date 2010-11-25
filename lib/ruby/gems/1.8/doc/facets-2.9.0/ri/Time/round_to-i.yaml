@@ -1,0 +1,18 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Round time at the nearest range (in seconds).
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  t1 = Time.now\n  t2 = t1.round_to(60*60)\n  t2.min #=&gt; 0\n  t2.sec #=&gt; 0\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "TODO: What about `round(:minute)`?"
+  - !ruby/struct:SM::Flow::P 
+    body: "TODO: Fractional seconds should round the usec."
+full_name: Time#round_to
+is_singleton: false
+name: round_to
+params: (seconds)
+visibility: public

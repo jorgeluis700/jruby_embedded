@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveSupport::FileUpdateChecker::new
+is_singleton: true
+name: new
+params: (paths, calculate=false, &block)
+visibility: public

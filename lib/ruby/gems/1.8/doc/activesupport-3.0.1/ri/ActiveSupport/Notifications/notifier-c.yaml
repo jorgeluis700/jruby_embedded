@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveSupport::Notifications::notifier
+is_singleton: true
+name: notifier
+params: ()
+visibility: public

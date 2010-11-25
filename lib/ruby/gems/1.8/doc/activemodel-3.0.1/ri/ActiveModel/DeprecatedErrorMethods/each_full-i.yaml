@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: error
+comment: 
+full_name: ActiveModel::DeprecatedErrorMethods#each_full
+is_singleton: false
+name: each_full
+params: () {|error| ...}
+visibility: public

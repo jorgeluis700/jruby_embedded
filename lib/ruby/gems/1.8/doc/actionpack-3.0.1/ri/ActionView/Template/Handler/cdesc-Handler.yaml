@@ -1,0 +1,17 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: call
+comment: 
+constants: []
+
+full_name: ActionView::Template::Handler
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: render
+name: Handler
+superclass: Object

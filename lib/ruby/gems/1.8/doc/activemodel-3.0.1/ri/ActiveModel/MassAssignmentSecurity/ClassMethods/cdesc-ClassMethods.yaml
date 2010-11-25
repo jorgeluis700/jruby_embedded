@@ -1,0 +1,36 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Mass assignment security provides an interface for protecting attributes from end-user assignment. For more complex permissions, mass assignment security may be handled outside the model by extending a non-ActiveRecord class, such as a controller, with this behavior.
+  - !ruby/struct:SM::Flow::P 
+    body: "For example, a logged in user may need to assign additional attributes depending on their role:"
+  - !ruby/struct:SM::Flow::P 
+    body: class AccountsController &lt; ApplicationController
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  include ActiveModel::MassAssignmentSecurity\n\n  attr_accessible :first_name, :last_name\n\n  def self.admin_accessible_attributes\n    accessible_attributes + [ :plan_id ]\n  end\n\n  def update\n    ...\n    @account.update_attributes(account_params)\n    ...\n  end\n\n  protected\n\n  def account_params\n    sanitize_for_mass_assignment(params[:account])\n  end\n\n  def mass_assignment_authorizer\n    admin ? admin_accessible_attributes : super\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: end
+constants: []
+
+full_name: ActiveModel::MassAssignmentSecurity::ClassMethods
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: accessible_attributes
+  - !ruby/object:RI::MethodSummary 
+    name: active_authorizer
+  - !ruby/object:RI::MethodSummary 
+    name: attr_accessible
+  - !ruby/object:RI::MethodSummary 
+    name: attr_protected
+  - !ruby/object:RI::MethodSummary 
+    name: attributes_protected_by_default
+  - !ruby/object:RI::MethodSummary 
+    name: protected_attributes
+name: ClassMethods
+superclass: 

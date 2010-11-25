@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Create an entry with internal attributes set. This method is intended to be used by implementations that store cache entries in a native format instead of as serialized Ruby objects.
+full_name: ActiveSupport::Cache::Entry::create
+is_singleton: true
+name: create
+params: (raw_value, created_at, options = {})
+visibility: public

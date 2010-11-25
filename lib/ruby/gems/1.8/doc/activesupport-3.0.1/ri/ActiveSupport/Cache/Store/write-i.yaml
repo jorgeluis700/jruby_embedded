@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Writes the value to the cache, with the key.
+  - !ruby/struct:SM::Flow::P 
+    body: Options are passed to the underlying cache implementation.
+full_name: ActiveSupport::Cache::Store#write
+is_singleton: false
+name: write
+params: (name, value, options = nil)
+visibility: public

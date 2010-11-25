@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Adjust DST
+  - !ruby/struct:SM::Flow::P 
+    body: "TODO: Can't seem to get this to pass ActiveSupport tests, even though it is essentially identical to the ActiveSupport code (see Time#since in time/calculations.rb). It handles all but 4 tests."
+full_name: Time#dst_adjustment
+is_singleton: false
+name: dst_adjustment
+params: (time)
+visibility: public

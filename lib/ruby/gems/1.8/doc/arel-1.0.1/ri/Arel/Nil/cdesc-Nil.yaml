@@ -1,0 +1,21 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: Arel::Nil
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Relation
+  - !ruby/object:RI::IncludedModule 
+    name: Singleton
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: name
+  - !ruby/object:RI::MethodSummary 
+    name: table_sql
+name: Nil
+superclass: Object

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveRecord::ConnectionAdapters::TableDefinition#xml_column_fallback
+is_singleton: false
+name: xml_column_fallback
+params: (*args)
+visibility: public

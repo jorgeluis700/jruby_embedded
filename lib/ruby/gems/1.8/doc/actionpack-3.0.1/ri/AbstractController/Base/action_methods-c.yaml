@@ -1,0 +1,21 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "A list of method names that should be considered actions. This includes all public instance methods on a controller, less any internal methods (see #internal_methods), adding back in any methods that are internal, but still exist on the class itself. Finally, #hidden_actions are removed."
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Returns
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>array</tt> - A list of all methods that should be considered actions.
+    type: :BULLET
+full_name: AbstractController::Base::action_methods
+is_singleton: true
+name: action_methods
+params: ()
+visibility: public

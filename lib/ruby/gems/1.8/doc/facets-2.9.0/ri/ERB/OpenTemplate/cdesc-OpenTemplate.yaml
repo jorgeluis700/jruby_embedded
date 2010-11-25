@@ -1,0 +1,26 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+  - !ruby/struct:SM::Flow::H 
+    level: 1
+    text: OpenTemplate
+  - !ruby/struct:SM::Flow::P 
+    body: The Erb OpenTemplate provides a quick and convenient way to create a clean rendering space with the desired responses.
+  - !ruby/struct:SM::Flow::P 
+    body: Ruby 1.8.6 or less can't handle object scope methods with blocks.
+  - !ruby/struct:SM::Flow::P 
+    body: "TODO: This might make a good addon library. Just add require 'erb' to the erb_result method? Call it OpenResponse?"
+constants: []
+
+full_name: ERB::OpenTemplate
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: erb_result
+name: OpenTemplate
+superclass: Object

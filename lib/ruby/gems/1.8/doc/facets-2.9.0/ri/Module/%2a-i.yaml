@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Rename methods.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  module AStar\n    def a; &quot;a&quot;; end\n  end\n\n  BStar = AStar * { :a =&gt; :b }\n\n  class XStar; include BStar; end\n\n  XStar.new.b    #=&gt; &quot;a&quot;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Thomas Sawyer, Robert Dober"
+full_name: Module#*
+is_singleton: false
+name: "*"
+params: (rename_map)
+visibility: public

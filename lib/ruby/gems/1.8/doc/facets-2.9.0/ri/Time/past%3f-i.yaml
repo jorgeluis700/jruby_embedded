@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: []
+
+full_name: Time#past?
+is_singleton: false
+name: past?
+params: (other=nil)
+visibility: public

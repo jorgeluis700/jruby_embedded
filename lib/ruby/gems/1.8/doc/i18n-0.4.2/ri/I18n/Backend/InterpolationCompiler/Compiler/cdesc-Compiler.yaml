@@ -1,0 +1,49 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: TOKENIZER
+    value: /(%%\{[^\}]+\}|%\{[^\}]+\})/
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: INTERPOLATION_SYNTAX_PATTERN
+    value: /(%)?(%\{([^\}]+)\})/
+full_name: I18n::Backend::InterpolationCompiler::Compiler
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: compile_if_an_interpolation
+  - !ruby/object:RI::MethodSummary 
+    name: compile_interpolation_token
+  - !ruby/object:RI::MethodSummary 
+    name: compiled_interpolation_body
+  - !ruby/object:RI::MethodSummary 
+    name: direct_key
+  - !ruby/object:RI::MethodSummary 
+    name: escape_key_sym
+  - !ruby/object:RI::MethodSummary 
+    name: escape_plain_str
+  - !ruby/object:RI::MethodSummary 
+    name: handle_interpolation_token
+  - !ruby/object:RI::MethodSummary 
+    name: interpolate_key
+  - !ruby/object:RI::MethodSummary 
+    name: interpolate_or_raise_missing
+  - !ruby/object:RI::MethodSummary 
+    name: interpolated_str?
+  - !ruby/object:RI::MethodSummary 
+    name: missing_key
+  - !ruby/object:RI::MethodSummary 
+    name: nil_key
+  - !ruby/object:RI::MethodSummary 
+    name: reserved_key
+  - !ruby/object:RI::MethodSummary 
+    name: tokenize
+name: Compiler
+superclass: 

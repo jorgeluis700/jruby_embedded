@@ -1,0 +1,19 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: wrap
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Creates a new method wrapping the previous of the same name. Reference to the old method is passed into the new definition block as the first parameter.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class WrapExample\n    def foo\n      &quot;foo&quot;\n    end\n\n    wrap_method(:foo) do |old_meth, *args|\n      old_meth.call + '!'\n    end\n  end\n\n  example = WrapExample.new\n  example.foo #=&gt; 'foo!'\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Keep in mind that this cannot be used to wrap methods that take a block.
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Trans"
+full_name: Module#wrap_method
+is_singleton: false
+name: wrap_method
+params: ( sym, &blk )
+visibility: public

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Alias for #on_characters"
+full_name: ActiveSupport::XmlMini_LibXMLSAX::HashBuilder#on_cdata_block
+is_singleton: false
+name: on_cdata_block
+params: (string)
+visibility: public

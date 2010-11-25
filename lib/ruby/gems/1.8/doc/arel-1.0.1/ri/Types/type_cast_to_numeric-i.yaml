@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Types#type_cast_to_numeric
+is_singleton: false
+name: type_cast_to_numeric
+params: (value, method)
+visibility: public

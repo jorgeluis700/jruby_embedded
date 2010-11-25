@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns all the namespaces of this module according ordered from nearest and moving outwards. The receiver is not contained within the result.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  module ::HouseExample\n    module M\n      module N\n      end\n    end\n  end\n\n  HouseExample.housing        #=&gt; [Object]\n  HouseExample::M.housing     #=&gt; [HouseExample, Object]\n  HouseExample::M::N.housing  #=&gt; [HouseExample::M, HouseExample, Object]\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Compare this to +Module.nesting+.
+full_name: Module#housing
+is_singleton: false
+name: housing
+params: ()
+visibility: public

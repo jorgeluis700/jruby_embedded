@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionView::Template::Handlers::ERB::handles_encoding?
+is_singleton: true
+name: handles_encoding?
+params: ()
+visibility: public

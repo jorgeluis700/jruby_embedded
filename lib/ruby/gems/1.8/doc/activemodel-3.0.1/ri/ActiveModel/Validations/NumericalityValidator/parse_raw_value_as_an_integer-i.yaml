@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveModel::Validations::NumericalityValidator#parse_raw_value_as_an_integer
+is_singleton: false
+name: parse_raw_value_as_an_integer
+params: (raw_value)
+visibility: protected

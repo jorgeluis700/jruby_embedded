@@ -1,0 +1,15 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: Responds to <tt>persisted?</tt>
+  - !ruby/struct:SM::Flow::P 
+    body: Returns a boolean that specifies whether the object has been persisted yet. This is used when calculating the URL for an object. If the object is not persisted, a form for that object, for instance, will be POSTed to the collection. If it is persisted, a form for the object will be PUT to the URL for the object.
+full_name: ActiveModel::Lint::Tests#test_persisted?
+is_singleton: false
+name: test_persisted?
+params: ()
+visibility: public

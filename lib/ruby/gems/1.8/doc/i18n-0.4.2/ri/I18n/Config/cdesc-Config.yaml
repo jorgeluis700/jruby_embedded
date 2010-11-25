@@ -1,0 +1,42 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: I18n::Config
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: available_locales
+  - !ruby/object:RI::MethodSummary 
+    name: available_locales=
+  - !ruby/object:RI::MethodSummary 
+    name: backend
+  - !ruby/object:RI::MethodSummary 
+    name: backend=
+  - !ruby/object:RI::MethodSummary 
+    name: default_locale
+  - !ruby/object:RI::MethodSummary 
+    name: default_locale=
+  - !ruby/object:RI::MethodSummary 
+    name: default_separator
+  - !ruby/object:RI::MethodSummary 
+    name: default_separator=
+  - !ruby/object:RI::MethodSummary 
+    name: exception_handler
+  - !ruby/object:RI::MethodSummary 
+    name: exception_handler=
+  - !ruby/object:RI::MethodSummary 
+    name: load_path
+  - !ruby/object:RI::MethodSummary 
+    name: load_path=
+  - !ruby/object:RI::MethodSummary 
+    name: locale
+  - !ruby/object:RI::MethodSummary 
+    name: locale=
+name: Config
+superclass: Object

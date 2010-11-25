@@ -1,0 +1,40 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: footer
+    rw: RW
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: header
+    rw: RW
+class_methods: []
+
+comment: 
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: experimental
+        body: allow header and footer in eRuby script
+    type: :LABELED
+  - !ruby/struct:SM::Flow::P 
+    body: ex.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  ====================\n  ## without header and footer\n  $ cat ex1.eruby\n  &lt;% def list_items(list) %&gt;\n  &lt;%   for item in list %&gt;\n  &lt;li&gt;&lt;%= item %&gt;&lt;/li&gt;\n  &lt;%   end %&gt;\n  &lt;% end %&gt;\n\n  $ erubis -s ex1.eruby\n  _buf = []; def list_items(list)\n  ;   for item in list\n  ; _buf &lt;&lt; '&lt;li&gt;'; _buf &lt;&lt; ( item ).to_s; _buf &lt;&lt; '&lt;/li&gt;\n  ';   end\n  ; end\n  ;\n  _buf.join\n\n  ## with header and footer\n  $ cat ex2.eruby\n  &lt;!--#header:\n  def list_items(list)\n   #--&gt;\n  &lt;%  for item in list %&gt;\n  &lt;li&gt;&lt;%= item %&gt;&lt;/li&gt;\n  &lt;%  end %&gt;\n  &lt;!--#footer:\n  end\n   #--&gt;\n\n  $ erubis -s -c HeaderFooterEruby ex4.eruby\n\n  def list_items(list)\n   _buf = []; _buf &lt;&lt; '\n  ';  for item in list\n  ; _buf &lt;&lt; '&lt;li&gt;'; _buf &lt;&lt; ( item ).to_s; _buf &lt;&lt; '&lt;/li&gt;\n  ';  end\n  ; _buf &lt;&lt; '\n  ';\n  _buf.join\n  end\n\n  ====================\n"
+  - !ruby/struct:SM::Flow::P 
+    body: this is language-independent.
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: HEADER_FOOTER_PATTERN
+    value: /(.*?)(^[ \t]*)?<!--\#(\w+):(.*?)\#-->([ \t]*\r?\n)?/m
+full_name: Erubis::HeaderFooterEnhancer
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: add_text
+  - !ruby/object:RI::MethodSummary 
+    name: convert
+name: HeaderFooterEnhancer
+superclass: 

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Raw rendering of a template to a Rack-compatible body. :api: plugin"
+full_name: AbstractController::Rendering#render_to_body
+is_singleton: false
+name: render_to_body
+params: (options = {})
+visibility: public

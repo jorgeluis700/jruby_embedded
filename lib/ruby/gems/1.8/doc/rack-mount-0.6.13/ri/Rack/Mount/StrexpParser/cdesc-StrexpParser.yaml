@@ -1,0 +1,80 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: anchor
+    rw: RW
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: filename
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: lineno
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: requirements
+    rw: RW
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: state
+    rw: RW
+class_methods: []
+
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: REGEXP_NAMED_CAPTURE
+    value: "'(?<%s>%s)'.freeze"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: REGEXP_NAMED_CAPTURE
+    value: "'(?:<%s>%s)'.freeze"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: Racc_arg
+    value: "[   racc_action_table,   racc_action_check,   racc_action_default,   racc_action_pointer,   racc_goto_table,   racc_goto_check,   racc_goto_default,   racc_goto_pointer,   racc_nt_base,   racc_reduce_table,   racc_token_table,   racc_shift_n,   racc_reduce_n,   racc_use_result_var ]"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: Racc_token_to_s_table
+    value: "[   \"$end\",   \"error\",   \"PARAM\",   \"GLOB\",   \"LPAREN\",   \"RPAREN\",   \"CHAR\",   \"$start\",   \"target\",   \"expr\",   \"token\" ]"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: Racc_debug_parser
+    value: "false"
+full_name: Rack::Mount::StrexpParser
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: _reduce_1
+  - !ruby/object:RI::MethodSummary 
+    name: _reduce_2
+  - !ruby/object:RI::MethodSummary 
+    name: _reduce_4
+  - !ruby/object:RI::MethodSummary 
+    name: _reduce_5
+  - !ruby/object:RI::MethodSummary 
+    name: _reduce_6
+  - !ruby/object:RI::MethodSummary 
+    name: _reduce_7
+  - !ruby/object:RI::MethodSummary 
+    name: _reduce_none
+  - !ruby/object:RI::MethodSummary 
+    name: action
+  - !ruby/object:RI::MethodSummary 
+    name: load_file
+  - !ruby/object:RI::MethodSummary 
+    name: next_token
+  - !ruby/object:RI::MethodSummary 
+    name: scan
+  - !ruby/object:RI::MethodSummary 
+    name: scan_file
+  - !ruby/object:RI::MethodSummary 
+    name: scan_setup
+  - !ruby/object:RI::MethodSummary 
+    name: scan_str
+name: StrexpParser
+superclass: Racc::Parser

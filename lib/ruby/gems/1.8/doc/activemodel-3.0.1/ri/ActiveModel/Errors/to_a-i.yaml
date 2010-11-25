@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns an array of error messages, with the attribute name included
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  p.errors.add(:name, &quot;can't be blank&quot;)\n  p.errors.add(:name, &quot;must be specified&quot;)\n  p.errors.to_a # =&gt; [&quot;name can't be blank&quot;, &quot;name must be specified&quot;]\n"
+full_name: ActiveModel::Errors#to_a
+is_singleton: false
+name: to_a
+params: ()
+visibility: public

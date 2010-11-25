@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionDispatch::RemoteIp::RemoteIpGetter#remote_addrs
+is_singleton: false
+name: remote_addrs
+params: ()
+visibility: public

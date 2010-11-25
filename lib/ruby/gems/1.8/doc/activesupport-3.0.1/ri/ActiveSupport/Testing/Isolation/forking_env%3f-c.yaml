@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveSupport::Testing::Isolation::forking_env?
+is_singleton: true
+name: forking_env?
+params: ()
+visibility: public

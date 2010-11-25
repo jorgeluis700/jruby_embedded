@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: I18n::Backend::InterpolationCompiler::Compiler#handle_interpolation_token
+is_singleton: false
+name: handle_interpolation_token
+params: (interpolation, matchdata)
+visibility: protected

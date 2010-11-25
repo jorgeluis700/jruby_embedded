@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Convert instatiation of a class into a Proc.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class Person\n    def initialize(name)\n      @name = name\n    end\n\n    def inspect\n      @name.to_str\n    end\n  end\n\n  persons = %w(john bob jane hans).map(&amp;Person)\n\n  persons.map{ |p| p.inspect }  #=&gt; ['john', 'bob', 'jane', 'hans']\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Daniel Schierbeck"
+full_name: Class#to_proc
+is_singleton: false
+name: to_proc
+params: ()
+visibility: public

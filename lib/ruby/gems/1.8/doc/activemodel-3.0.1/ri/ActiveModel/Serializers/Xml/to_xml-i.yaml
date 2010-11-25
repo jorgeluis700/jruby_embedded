@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns XML representing the model. Configuration can be passed through <tt>options</tt>.
+full_name: ActiveModel::Serializers::Xml#to_xml
+is_singleton: false
+name: to_xml
+params: (options = {}, &block)
+visibility: public

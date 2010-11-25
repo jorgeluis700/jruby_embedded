@@ -1,0 +1,18 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns the value previous to the given value. The value previous to the first is the last. Returns nil if the given value is not in the array.
+  - !ruby/struct:SM::Flow::P 
+    body: Examples
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  sequence = ['a', 'b', 'c']\n  sequence.before('a')           #=&gt; 'c'\n  sequence.before('b')           #=&gt; 'a'\n  sequence.before('c')           #=&gt; 'b'\n  sequence.before('d')           #=&gt; nil\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Tyler Rick"
+full_name: Array#before
+is_singleton: false
+name: before
+params: (value)
+visibility: public

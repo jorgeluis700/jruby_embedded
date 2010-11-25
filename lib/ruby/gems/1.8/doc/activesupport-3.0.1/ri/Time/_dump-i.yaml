@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: _dump_without_zone
+block_params: 
+comment: 
+full_name: Time#_dump
+is_singleton: false
+name: _dump
+params: (*args)
+visibility: public

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns the median for the array; nil if array is empty
+full_name: Array#median
+is_singleton: false
+name: median
+params: ()
+visibility: public

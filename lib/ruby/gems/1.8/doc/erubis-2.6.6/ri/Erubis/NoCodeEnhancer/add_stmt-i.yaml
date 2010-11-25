@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Erubis::NoCodeEnhancer#add_stmt
+is_singleton: false
+name: add_stmt
+params: (src, code)
+visibility: public

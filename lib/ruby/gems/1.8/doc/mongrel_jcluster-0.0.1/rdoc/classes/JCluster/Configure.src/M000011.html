@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>configure (JCluster::Configure)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/mongrel_jcluster/init.rb, line 131</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">configure</span> 
+      <span class="ruby-identifier">options</span> [
+        [<span class="ruby-value str">&quot;-e&quot;</span>, <span class="ruby-value str">&quot;--environment ENV&quot;</span>, <span class="ruby-value str">&quot;Rails environment to run as&quot;</span>, <span class="ruby-identifier">:@environment</span>, <span class="ruby-keyword kw">nil</span>],
+        [<span class="ruby-value str">'-p'</span>, <span class="ruby-value str">'--port PORT'</span>, <span class="ruby-value str">&quot;Starting port to bind to&quot;</span>, <span class="ruby-identifier">:@port</span>, <span class="ruby-value">3000</span>],
+        [<span class="ruby-value str">'-a'</span>, <span class="ruby-value str">'--address ADDR'</span>, <span class="ruby-value str">&quot;Address to bind to&quot;</span>, <span class="ruby-identifier">:@address</span>, <span class="ruby-keyword kw">nil</span>],
+        [<span class="ruby-value str">'-l'</span>, <span class="ruby-value str">'--log FILE'</span>, <span class="ruby-value str">&quot;Where to write log messages&quot;</span>, <span class="ruby-identifier">:@log_file</span>, <span class="ruby-keyword kw">nil</span>],
+        [<span class="ruby-value str">'-P'</span>, <span class="ruby-value str">'--pid FILE'</span>, <span class="ruby-value str">&quot;Where to write the PID&quot;</span>, <span class="ruby-identifier">:@pid_file</span>, <span class="ruby-value str">&quot;log/mongrel.pid&quot;</span>],
+        [<span class="ruby-value str">'-c'</span>, <span class="ruby-value str">'--chdir PATH'</span>, <span class="ruby-value str">&quot;Change to dir before starting (will be expanded)&quot;</span>, <span class="ruby-identifier">:@cwd</span>, <span class="ruby-keyword kw">nil</span>],
+        [<span class="ruby-value str">'-t'</span>, <span class="ruby-value str">'--timeout SECONDS'</span>, <span class="ruby-value str">&quot;Timeout all requests after SECONDS time&quot;</span>, <span class="ruby-identifier">:@timeout</span>, <span class="ruby-keyword kw">nil</span>],
+        [<span class="ruby-value str">'-m'</span>, <span class="ruby-value str">'--mime PATH'</span>, <span class="ruby-value str">&quot;A YAML file that lists additional MIME types&quot;</span>, <span class="ruby-identifier">:@mime_map</span>, <span class="ruby-keyword kw">nil</span>],
+        [<span class="ruby-value str">'-r'</span>, <span class="ruby-value str">'--root PATH'</span>, <span class="ruby-value str">&quot;Set the document root (default 'public')&quot;</span>, <span class="ruby-identifier">:@docroot</span>, <span class="ruby-keyword kw">nil</span>],
+        [<span class="ruby-value str">'-n'</span>, <span class="ruby-value str">'--num-procs INT'</span>, <span class="ruby-value str">&quot;Number of processor threads to use&quot;</span>, <span class="ruby-identifier">:@num_procs</span>, <span class="ruby-keyword kw">nil</span>],
+        [<span class="ruby-value str">'-B'</span>, <span class="ruby-value str">'--debug'</span>, <span class="ruby-value str">&quot;Enable debugging mode&quot;</span>, <span class="ruby-identifier">:@debug</span>, <span class="ruby-keyword kw">nil</span>],
+        [<span class="ruby-value str">'-S'</span>, <span class="ruby-value str">'--script PATH'</span>, <span class="ruby-value str">&quot;Load the given file as an extra config script.&quot;</span>, <span class="ruby-identifier">:@config_script</span>, <span class="ruby-keyword kw">nil</span>],
+        [<span class="ruby-value str">'-N'</span>, <span class="ruby-value str">'--num-servers INT'</span>, <span class="ruby-value str">&quot;Number of Mongrel servers&quot;</span>, <span class="ruby-identifier">:@servers</span>, <span class="ruby-value">2</span>],
+        [<span class="ruby-value str">'-C'</span>, <span class="ruby-value str">'--config PATH'</span>, <span class="ruby-value str">&quot;Path to cluster configuration file&quot;</span>, <span class="ruby-identifier">:@config_file</span>, <span class="ruby-value str">&quot;config/mongrel_jcluster.yml&quot;</span>],
+        [<span class="ruby-value str">'-R'</span>, <span class="ruby-value str">'--jport PORT'</span>, <span class="ruby-value str">&quot;Local port where JRuby server should run&quot;</span>, <span class="ruby-identifier">:@jport</span>, <span class="ruby-value">19222</span>],
+        [<span class="ruby-value str">'-K'</span>, <span class="ruby-value str">'--jkey KEY'</span>, <span class="ruby-value str">&quot;Key to use for connecting to JRuby server&quot;</span>, <span class="ruby-identifier">:@jkey</span>, <span class="ruby-keyword kw">nil</span>],
+        [<span class="ruby-value str">''</span>, <span class="ruby-value str">'--user USER'</span>, <span class="ruby-value str">&quot;User to run as&quot;</span>, <span class="ruby-identifier">:@user</span>, <span class="ruby-keyword kw">nil</span>],
+        [<span class="ruby-value str">''</span>, <span class="ruby-value str">'--group GROUP'</span>, <span class="ruby-value str">&quot;Group to run as&quot;</span>, <span class="ruby-identifier">:@group</span>, <span class="ruby-keyword kw">nil</span>],
+        [<span class="ruby-value str">''</span>, <span class="ruby-value str">'--prefix PREFIX'</span>, <span class="ruby-value str">&quot;Rails prefix to use&quot;</span>, <span class="ruby-identifier">:@prefix</span>, <span class="ruby-keyword kw">nil</span>]
+      ]
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

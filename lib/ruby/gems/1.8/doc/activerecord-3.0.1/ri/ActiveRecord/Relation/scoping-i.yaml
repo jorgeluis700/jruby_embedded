@@ -1,0 +1,19 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: ""
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Scope all queries to the current scope.
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Example
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  Comment.where(:post_id =&gt; 1).scoping do\n    Comment.first # SELECT * FROM comments WHERE post_id = 1\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Please check unscoped if you want to remove all previous scopes (including the default_scope) during the execution of a block.
+full_name: ActiveRecord::Relation#scoping
+is_singleton: false
+name: scoping
+params: () {|| ...}
+visibility: public

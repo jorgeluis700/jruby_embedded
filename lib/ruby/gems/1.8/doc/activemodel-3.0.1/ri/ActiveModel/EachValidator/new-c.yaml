@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns a new validator instance. All options will be available via the <tt>options</tt> reader, however the <tt>:attributes</tt> option will be removed and instead be made available through the <tt>attributes</tt> reader.
+full_name: ActiveModel::EachValidator::new
+is_singleton: true
+name: new
+params: (options)
+visibility: public

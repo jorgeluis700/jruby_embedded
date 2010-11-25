@@ -1,0 +1,46 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: ActionDispatch::Http::URL
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: domain
+  - !ruby/object:RI::MethodSummary 
+    name: host
+  - !ruby/object:RI::MethodSummary 
+    name: host_with_port
+  - !ruby/object:RI::MethodSummary 
+    name: port
+  - !ruby/object:RI::MethodSummary 
+    name: port_string
+  - !ruby/object:RI::MethodSummary 
+    name: protocol
+  - !ruby/object:RI::MethodSummary 
+    name: raw_host_with_port
+  - !ruby/object:RI::MethodSummary 
+    name: request_uri
+  - !ruby/object:RI::MethodSummary 
+    name: scheme
+  - !ruby/object:RI::MethodSummary 
+    name: server_port
+  - !ruby/object:RI::MethodSummary 
+    name: ssl?
+  - !ruby/object:RI::MethodSummary 
+    name: standard_port
+  - !ruby/object:RI::MethodSummary 
+    name: standard_port?
+  - !ruby/object:RI::MethodSummary 
+    name: subdomain
+  - !ruby/object:RI::MethodSummary 
+    name: subdomains
+  - !ruby/object:RI::MethodSummary 
+    name: url
+name: URL
+superclass: 

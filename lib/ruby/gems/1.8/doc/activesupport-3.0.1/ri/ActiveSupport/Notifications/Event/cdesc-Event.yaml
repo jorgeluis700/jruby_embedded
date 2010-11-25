@@ -1,0 +1,40 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: duration
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: end
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: name
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: payload
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: time
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: transaction_id
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: []
+
+full_name: ActiveSupport::Notifications::Event
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: parent_of?
+name: Event
+superclass: Object

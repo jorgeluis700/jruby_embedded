@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionDispatch::RemoteIp::new
+is_singleton: true
+name: new
+params: (app, check_ip_spoofing = true, trusted_proxies = nil)
+visibility: public

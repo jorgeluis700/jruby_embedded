@@ -1,0 +1,25 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Simple memory backed cache. This cache is not thread safe and is intended only for serving as a temporary memory cache for a single thread.
+constants: []
+
+full_name: ActiveSupport::Cache::Strategy::LocalCache::LocalStore
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: clear
+  - !ruby/object:RI::MethodSummary 
+    name: delete_entry
+  - !ruby/object:RI::MethodSummary 
+    name: read_entry
+  - !ruby/object:RI::MethodSummary 
+    name: write_entry
+name: LocalStore
+superclass: Store

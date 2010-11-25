@@ -1,0 +1,20 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: sources
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: []
+
+full_name: Arel::From
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: eval
+name: From
+superclass: Compound

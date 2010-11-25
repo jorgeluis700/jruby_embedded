@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Override AbstractController::Base's process_action to run the process_action callbacks around the normal behavior.
+full_name: AbstractController::Callbacks#process_action
+is_singleton: false
+name: process_action
+params: (method_name)
+visibility: public

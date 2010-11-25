@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: proxy
+comment: 
+full_name: ActiveSupport::Testing::Isolation::Forking#run_in_isolation
+is_singleton: false
+name: run_in_isolation
+params: (&blk) {|proxy| ...}
+visibility: public

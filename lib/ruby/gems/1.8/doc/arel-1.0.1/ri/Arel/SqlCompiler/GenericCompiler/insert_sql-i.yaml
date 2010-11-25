@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Arel::SqlCompiler::GenericCompiler#insert_sql
+is_singleton: false
+name: insert_sql
+params: (include_returning = true)
+visibility: public

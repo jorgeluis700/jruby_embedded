@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: ""
+comment: 
+full_name: ActionDispatch::Routing::Mapper::Scoping#constraints
+is_singleton: false
+name: constraints
+params: (constraints = {}) {|| ...}
+visibility: public

@@ -1,0 +1,47 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: output_buffer
+    rw: RW
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::H 
+    level: 1
+    text: Action View Context
+  - !ruby/struct:SM::Flow::P 
+    body: Action View contexts are supplied to Action Controller to render template. The default Action View context is ActionView::Base.
+  - !ruby/struct:SM::Flow::P 
+    body: "In order to work with ActionController, a Context must implement:"
+  - !ruby/struct:SM::Flow::P 
+    body: Context#render_partial[options]
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  - responsible for setting options[:_template]\n  - Returns String with the rendered partial\n  options&lt;Hash&gt;:: see _render_partial in ActionView::Base\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Context#render_template[template, layout, options, partial]
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  - Returns String with the rendered template\n  template&lt;ActionView::Template&gt;:: The template to render\n  layout&lt;ActionView::Template&gt;:: The layout to render around the template\n  options&lt;Hash&gt;:: See _render_template_with_layout in ActionView::Base\n  partial&lt;Boolean&gt;:: Whether or not the template to render is a partial\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "An Action View context can also mix in Action View's helpers. In order to mix in helpers, a context must implement:"
+  - !ruby/struct:SM::Flow::P 
+    body: Context#controller
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "-"
+        body: Returns an instance of AbstractController
+    type: :BULLET
+  - !ruby/struct:SM::Flow::P 
+    body: In any case, a context must mix in ActionView::Context, which stores compiled template and provides the output buffer.
+constants: []
+
+full_name: ActionView::Context
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: CompiledTemplates
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: convert_to_model
+name: Context
+superclass: 

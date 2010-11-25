@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: build
+block_params: 
+comment: 
+full_name: ActiveRecord::Relation#new
+is_singleton: false
+name: new
+params: (*args, &block)
+visibility: public

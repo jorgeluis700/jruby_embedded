@@ -1,0 +1,19 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: ActionView::Helpers::RecordTagHelper
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: ActionController::RecordIdentifier
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: content_tag_for
+  - !ruby/object:RI::MethodSummary 
+    name: div_for
+name: RecordTagHelper
+superclass: 

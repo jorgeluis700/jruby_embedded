@@ -1,0 +1,131 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: Array
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Indexable
+  - !ruby/object:RI::IncludedModule 
+    name: Random::ArrayExtensions
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: "**"
+  - !ruby/object:RI::MethodSummary 
+    name: after
+  - !ruby/object:RI::MethodSummary 
+    name: before
+  - !ruby/object:RI::MethodSummary 
+    name: collapse
+  - !ruby/object:RI::MethodSummary 
+    name: collisions
+  - !ruby/object:RI::MethodSummary 
+    name: combination
+  - !ruby/object:RI::MethodSummary 
+    name: commonality
+  - !ruby/object:RI::MethodSummary 
+    name: conjoin
+  - !ruby/object:RI::MethodSummary 
+    name: delete_unless
+  - !ruby/object:RI::MethodSummary 
+    name: delete_values
+  - !ruby/object:RI::MethodSummary 
+    name: delete_values_at
+  - !ruby/object:RI::MethodSummary 
+    name: divide
+  - !ruby/object:RI::MethodSummary 
+    name: duplicates
+  - !ruby/object:RI::MethodSummary 
+    name: entropy
+  - !ruby/object:RI::MethodSummary 
+    name: extract_options!
+  - !ruby/object:RI::MethodSummary 
+    name: from
+  - !ruby/object:RI::MethodSummary 
+    name: ideal_entropy
+  - !ruby/object:RI::MethodSummary 
+    name: index
+  - !ruby/object:RI::MethodSummary 
+    name: median
+  - !ruby/object:RI::MethodSummary 
+    name: merge!
+  - !ruby/object:RI::MethodSummary 
+    name: mode
+  - !ruby/object:RI::MethodSummary 
+    name: nonuniq
+  - !ruby/object:RI::MethodSummary 
+    name: nonuniq!
+  - !ruby/object:RI::MethodSummary 
+    name: not_empty?
+  - !ruby/object:RI::MethodSummary 
+    name: object_state
+  - !ruby/object:RI::MethodSummary 
+    name: only
+  - !ruby/object:RI::MethodSummary 
+    name: pad
+  - !ruby/object:RI::MethodSummary 
+    name: pad!
+  - !ruby/object:RI::MethodSummary 
+    name: peek
+  - !ruby/object:RI::MethodSummary 
+    name: percentile
+  - !ruby/object:RI::MethodSummary 
+    name: permutation
+  - !ruby/object:RI::MethodSummary 
+    name: poke
+  - !ruby/object:RI::MethodSummary 
+    name: power_set
+  - !ruby/object:RI::MethodSummary 
+    name: probability
+  - !ruby/object:RI::MethodSummary 
+    name: product
+  - !ruby/object:RI::MethodSummary 
+    name: recurse
+  - !ruby/object:RI::MethodSummary 
+    name: recurse!
+  - !ruby/object:RI::MethodSummary 
+    name: recursively
+  - !ruby/object:RI::MethodSummary 
+    name: rotate
+  - !ruby/object:RI::MethodSummary 
+    name: rotate!
+  - !ruby/object:RI::MethodSummary 
+    name: select!
+  - !ruby/object:RI::MethodSummary 
+    name: shelljoin
+  - !ruby/object:RI::MethodSummary 
+    name: shellwords
+  - !ruby/object:RI::MethodSummary 
+    name: splice
+  - !ruby/object:RI::MethodSummary 
+    name: split
+  - !ruby/object:RI::MethodSummary 
+    name: thru
+  - !ruby/object:RI::MethodSummary 
+    name: to_b
+  - !ruby/object:RI::MethodSummary 
+    name: to_h
+  - !ruby/object:RI::MethodSummary 
+    name: to_h_assoc
+  - !ruby/object:RI::MethodSummary 
+    name: to_h_auto
+  - !ruby/object:RI::MethodSummary 
+    name: to_h_flat
+  - !ruby/object:RI::MethodSummary 
+    name: to_h_multi
+  - !ruby/object:RI::MethodSummary 
+    name: to_h_splat
+  - !ruby/object:RI::MethodSummary 
+    name: to_t
+  - !ruby/object:RI::MethodSummary 
+    name: traverse
+  - !ruby/object:RI::MethodSummary 
+    name: traverse!
+  - !ruby/object:RI::MethodSummary 
+    name: uniq_by!
+name: Array
+superclass: Object

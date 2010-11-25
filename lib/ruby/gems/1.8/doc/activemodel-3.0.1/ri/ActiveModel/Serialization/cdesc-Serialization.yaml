@@ -1,0 +1,43 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: Active Model Serialization
+  - !ruby/struct:SM::Flow::P 
+    body: Provides a basic serialization to a serializable_hash for your object.
+  - !ruby/struct:SM::Flow::P 
+    body: "A minimal implementation could be:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class Person\n\n    include ActiveModel::Serialization\n\n    attr_accessor :name\n\n    def attributes\n      @attributes ||= {'name' =&gt; 'nil'}\n    end\n\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "Which would provide you with:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  person = Person.new\n  person.serializable_hash   # =&gt; {&quot;name&quot;=&gt;nil}\n  person.name = &quot;Bob&quot;\n  person.serializable_hash   # =&gt; {&quot;name&quot;=&gt;&quot;Bob&quot;}\n"
+  - !ruby/struct:SM::Flow::P 
+    body: You need to declare some sort of attributes hash which contains the attributes you want to serialize and their current value.
+  - !ruby/struct:SM::Flow::P 
+    body: Most of the time though, you will want to include the JSON or XML serializations. Both of these modules automatically include the ActiveModel::Serialization module, so there is no need to explicitly include it.
+  - !ruby/struct:SM::Flow::P 
+    body: "So a minimal implementation including XML and JSON would be:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class Person\n\n    include ActiveModel::Serializers::JSON\n    include ActiveModel::Serializers::Xml\n\n    attr_accessor :name\n\n    def attributes\n      @attributes ||= {'name' =&gt; 'nil'}\n    end\n\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "Which would provide you with:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  person = Person.new\n  person.serializable_hash   # =&gt; {&quot;name&quot;=&gt;nil}\n  person.to_json             # =&gt; &quot;{\\&quot;name\\&quot;:null}&quot;\n  person.to_xml              # =&gt; &quot;&lt;?xml version=\\&quot;1.0\\&quot; encoding=\\&quot;UTF-8\\&quot;?&gt;\\n&lt;serial-person...\n\n  person.name = &quot;Bob&quot;\n  person.serializable_hash   # =&gt; {&quot;name&quot;=&gt;&quot;Bob&quot;}\n  person.to_json             # =&gt; &quot;{\\&quot;name\\&quot;:\\&quot;Bob\\&quot;}&quot;\n  person.to_xml              # =&gt; &quot;&lt;?xml version=\\&quot;1.0\\&quot; encoding=\\&quot;UTF-8\\&quot;?&gt;\\n&lt;serial-person...\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Valid options are <tt>:only</tt>, <tt>:except</tt> and <tt>:methods</tt> .
+constants: []
+
+full_name: ActiveModel::Serialization
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: serializable_hash
+name: Serialization
+superclass: 

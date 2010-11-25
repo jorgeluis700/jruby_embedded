@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Sets the current locale tag implementation. Use this to set a different locale tag implementation.
+full_name: I18n::Locale::Tag::implementation=
+is_singleton: true
+name: implementation=
+params: (implementation)
+visibility: public

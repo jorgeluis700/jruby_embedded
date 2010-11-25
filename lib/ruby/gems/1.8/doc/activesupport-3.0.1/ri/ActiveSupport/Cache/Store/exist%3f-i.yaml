@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Return true if the cache contains an entry for the given key.
+  - !ruby/struct:SM::Flow::P 
+    body: Options are passed to the underlying cache implementation.
+full_name: ActiveSupport::Cache::Store#exist?
+is_singleton: false
+name: exist?
+params: (name, options = nil)
+visibility: public

@@ -1,0 +1,18 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: Routes
+    value: proxy
+full_name: ActionController::Railtie
+includes: []
+
+instance_methods: []
+
+name: Railtie
+superclass: Rails::Railtie

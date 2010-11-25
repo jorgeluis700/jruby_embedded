@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: add expression code to src
+full_name: Erubis::Basic::Converter#add_expr
+is_singleton: false
+name: add_expr
+params: (src, code, indicator)
+visibility: public

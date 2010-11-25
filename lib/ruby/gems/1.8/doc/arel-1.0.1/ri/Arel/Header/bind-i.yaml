@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Arel::Header#bind
+is_singleton: false
+name: bind
+params: (relation)
+visibility: public

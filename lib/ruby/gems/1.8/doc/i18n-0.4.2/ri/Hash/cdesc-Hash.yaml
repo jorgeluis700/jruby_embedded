@@ -1,0 +1,25 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: deep_merge_hash! by Stefan Rusterholz, see http://www.ruby-forum.com/topic/142809
+    name: MERGER
+    value: "proc do |key, v1, v2|     Hash === v1 && Hash === v2 ? v1.merge(v2, &MERGER) : v2"
+full_name: Hash
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: deep_symbolize_keys
+  - !ruby/object:RI::MethodSummary 
+    name: except
+  - !ruby/object:RI::MethodSummary 
+    name: slice
+name: Hash
+superclass: Object

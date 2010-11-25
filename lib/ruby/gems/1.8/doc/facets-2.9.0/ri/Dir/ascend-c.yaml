@@ -1,0 +1,18 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Ascend a directory path.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  a = []\n\n  Dir.ascend(&quot;/var/log&quot;) do |path|\n    a &lt;&lt; path\n  end\n\n  a  #=&gt; ['/var/log', '/var', '/']\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Daniel Berger, Jeffrey Schwab"
+  - !ruby/struct:SM::Flow::P 
+    body: "TODO: make it work with windows too use FileTest.root?"
+full_name: Dir::ascend
+is_singleton: true
+name: ascend
+params: (dir, inclusive=true, &blk)
+visibility: public

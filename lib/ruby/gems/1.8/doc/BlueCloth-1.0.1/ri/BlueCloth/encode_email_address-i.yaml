@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Transform a copy of the given email <tt>addr</tt> into an escaped version safer for posting publicly.
+full_name: BlueCloth#encode_email_address
+is_singleton: false
+name: encode_email_address
+params: ( addr )
+visibility: public

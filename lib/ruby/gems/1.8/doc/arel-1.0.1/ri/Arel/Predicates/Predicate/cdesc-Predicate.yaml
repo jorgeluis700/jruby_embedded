@@ -1,0 +1,22 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: Arel::Predicates::Predicate
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: and
+  - !ruby/object:RI::MethodSummary 
+    name: complement
+  - !ruby/object:RI::MethodSummary 
+    name: not
+  - !ruby/object:RI::MethodSummary 
+    name: or
+name: Predicate
+superclass: Object

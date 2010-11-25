@@ -1,0 +1,43 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: A fuzzy matching mechanism. Returns a score from 0-1, based on the number of shared edges. To be effective, the strings must be of length 2 or greater.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &quot;Alexsander&quot;.similarity(&quot;Aleksander&quot;)  #=&gt; 0.9\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "The way it works:"
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "1."
+        body: Converts each string into a &quot;graph like&quot; object, with edges ...
+      - !ruby/struct:SM::Flow::VERB 
+        body: " &quot;alexsander&quot; -&gt; [ alexsander, alexsand, alexsan ... lexsand ... san ... an, etc ]\n &quot;aleksander&quot; -&gt; [ aleksander, aleksand ... etc. ]\n"
+      - !ruby/struct:SM::Flow::LI 
+        label: "2."
+        body: Perform match, then remove any subsets from this matched set (i.e. a hit
+    type: :NUMBER
+  - !ruby/struct:SM::Flow::P 
+    body: on &quot;san&quot; is a subset of a hit on &quot;sander&quot;) ...
+  - !ruby/struct:SM::Flow::VERB 
+    body: "    Above example, once reduced -&gt; [ ale, sander ]\n"
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "3."
+        body: See's how many of the matches remain, and calculates a score based
+    type: :NUMBER
+  - !ruby/struct:SM::Flow::P 
+    body: on how many matches, their length, and compare to the length of the larger of the two words.
+  - !ruby/struct:SM::Flow::P 
+    body: Still a bit rough. Any suggestions for improvement are welcome.
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Derek Lewis."
+full_name: String#similarity
+is_singleton: false
+name: similarity
+params: (str_in)
+visibility: public

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: I18n::Backend::Cldr#raise_unspecified_currency!
+is_singleton: false
+name: raise_unspecified_currency!
+params: ()
+visibility: protected

@@ -1,0 +1,21 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: included
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Include Memoizable alone with an #initialize_copy method that will copy the memoization cache when #dup or #clone is used."
+  - !ruby/struct:SM::Flow::P 
+    body: "TODO: Is this best approach? Perhaps a method to easily create the #initialize_copy method would suffice?"
+constants: []
+
+full_name: Memoizable::Copy
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: initialize_copy
+name: Copy
+superclass: 

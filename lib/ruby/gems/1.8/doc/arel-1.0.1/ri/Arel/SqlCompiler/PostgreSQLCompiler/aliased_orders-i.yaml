@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Arel::SqlCompiler::PostgreSQLCompiler#aliased_orders
+is_singleton: false
+name: aliased_orders
+params: (orders)
+visibility: public

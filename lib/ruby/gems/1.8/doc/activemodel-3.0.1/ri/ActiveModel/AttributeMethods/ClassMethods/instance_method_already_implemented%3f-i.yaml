@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveModel::AttributeMethods::ClassMethods#instance_method_already_implemented?
+is_singleton: false
+name: instance_method_already_implemented?
+params: (method_name)
+visibility: protected

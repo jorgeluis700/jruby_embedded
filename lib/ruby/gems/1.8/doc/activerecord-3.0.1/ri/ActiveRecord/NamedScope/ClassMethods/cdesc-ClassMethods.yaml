@@ -1,0 +1,24 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: ActiveRecord::NamedScope::ClassMethods
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: named_scope
+  - !ruby/object:RI::MethodSummary 
+    name: scope
+  - !ruby/object:RI::MethodSummary 
+    name: scoped
+  - !ruby/object:RI::MethodSummary 
+    name: scopes
+  - !ruby/object:RI::MethodSummary 
+    name: valid_scope_name?
+name: ClassMethods
+superclass: 

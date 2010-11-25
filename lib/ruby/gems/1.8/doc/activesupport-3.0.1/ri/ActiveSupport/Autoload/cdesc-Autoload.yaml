@@ -1,0 +1,25 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: eager_autoload!
+comment: 
+constants: []
+
+full_name: ActiveSupport::Autoload
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: autoload
+  - !ruby/object:RI::MethodSummary 
+    name: autoload_at
+  - !ruby/object:RI::MethodSummary 
+    name: autoload_under
+  - !ruby/object:RI::MethodSummary 
+    name: autoloads
+  - !ruby/object:RI::MethodSummary 
+    name: eager_autoload
+name: Autoload
+superclass: 

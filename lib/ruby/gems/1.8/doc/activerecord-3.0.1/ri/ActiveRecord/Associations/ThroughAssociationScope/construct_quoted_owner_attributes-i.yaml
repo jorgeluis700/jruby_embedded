@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Associate attributes pointing to owner, quoted.
+full_name: ActiveRecord::Associations::ThroughAssociationScope#construct_quoted_owner_attributes
+is_singleton: false
+name: construct_quoted_owner_attributes
+params: (reflection)
+visibility: protected

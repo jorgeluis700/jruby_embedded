@@ -1,0 +1,60 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: extended
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: ignorecase
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: multiline
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: []
+
+full_name: Regin::Expression
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: +
+  - !ruby/object:RI::MethodSummary 
+    name: anchored?
+  - !ruby/object:RI::MethodSummary 
+    name: anchored_to_end?
+  - !ruby/object:RI::MethodSummary 
+    name: anchored_to_end_of_line?
+  - !ruby/object:RI::MethodSummary 
+    name: anchored_to_line?
+  - !ruby/object:RI::MethodSummary 
+    name: anchored_to_start?
+  - !ruby/object:RI::MethodSummary 
+    name: anchored_to_start_of_line?
+  - !ruby/object:RI::MethodSummary 
+    name: casefold?
+  - !ruby/object:RI::MethodSummary 
+    name: dup
+  - !ruby/object:RI::MethodSummary 
+    name: extended=
+  - !ruby/object:RI::MethodSummary 
+    name: flags
+  - !ruby/object:RI::MethodSummary 
+    name: ignorecase=
+  - !ruby/object:RI::MethodSummary 
+    name: literal?
+  - !ruby/object:RI::MethodSummary 
+    name: multiline=
+  - !ruby/object:RI::MethodSummary 
+    name: options
+  - !ruby/object:RI::MethodSummary 
+    name: options?
+  - !ruby/object:RI::MethodSummary 
+    name: to_s
+name: Expression
+superclass: Collection

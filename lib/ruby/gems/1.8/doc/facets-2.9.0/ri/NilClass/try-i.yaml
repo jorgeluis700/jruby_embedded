@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: See Kernel#try.
+full_name: NilClass#try
+is_singleton: false
+name: try
+params: (method=nil, *args)
+visibility: public

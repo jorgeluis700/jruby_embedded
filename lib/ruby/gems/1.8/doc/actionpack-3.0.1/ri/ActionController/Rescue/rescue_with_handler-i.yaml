@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionController::Rescue#rescue_with_handler
+is_singleton: false
+name: rescue_with_handler
+params: (exception)
+visibility: public

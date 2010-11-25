@@ -1,0 +1,47 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Formats the bytes in <tt>number</tt> into a more understandable representation (e.g., giving it 1500 yields 1.5 KB). This method is useful for reporting file sizes to users. You can customize the format in the <tt>options</tt> hash.
+  - !ruby/struct:SM::Flow::P 
+    body: See <tt>number_to_human</tt> if you want to pretty-print a generic number.
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Options
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>:locale</tt> - Sets the locale to be used for formatting (defaults to current locale).
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>:precision</tt> - Sets the precision of the number (defaults to 3).
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: "<tt>:significant</tt> - If <tt>true</tt>, precision will be the # of significant_digits. If <tt>false</tt>, the # of fractional digits (defaults to <tt>true</tt>)"
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>:separator</tt> - Sets the separator between the fractional and integer digits (defaults to &quot;.&quot;).
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>:delimiter</tt> - Sets the thousands delimiter (defaults to &quot;&quot;).
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>:strip_insignificant_zeros</tt> - If <tt>true</tt> removes insignificant zeros after the decimal separator (defaults to <tt>true</tt>)
+    type: :BULLET
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Examples
+  - !ruby/struct:SM::Flow::VERB 
+    body: " number_to_human_size(123)                                          # =&gt; 123 Bytes\n number_to_human_size(1234)                                         # =&gt; 1.21 KB\n number_to_human_size(12345)                                        # =&gt; 12.1 KB\n number_to_human_size(1234567)                                      # =&gt; 1.18 MB\n number_to_human_size(1234567890)                                   # =&gt; 1.15 GB\n number_to_human_size(1234567890123)                                # =&gt; 1.12 TB\n number_to_human_size(1234567, :precision =&gt; 2)                     # =&gt; 1.2 MB\n number_to_human_size(483989, :precision =&gt; 2)                      # =&gt; 470 KB\n number_to_human_size(1234567, :precision =&gt; 2, :separator =&gt; ',')  # =&gt; 1,2 MB\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "Non-significant zeros after the fractional separator are stripped out by default (set <tt>:strip_insignificant_zeros</tt> to <tt>false</tt> to change that):"
+  - !ruby/struct:SM::Flow::VERB 
+    body: " number_to_human_size(1234567890123, :precision =&gt; 5)        # =&gt; &quot;1.1229 TB&quot;\n number_to_human_size(524288000, :precision=&gt;5)              # =&gt; &quot;500 MB&quot;\n"
+full_name: ActionView::Helpers::NumberHelper#number_to_human_size
+is_singleton: false
+name: number_to_human_size
+params: (number, options = {})
+visibility: public

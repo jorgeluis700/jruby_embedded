@@ -1,0 +1,21 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: hash
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Use FixtureResolver in your tests to simulate the presence of files on the file system. This is used internally by Rails' own test suite, and is useful for testing extensions that have no way of knowing what the file system will look like at runtime.
+constants: []
+
+full_name: ActionView::FixtureResolver
+includes: []
+
+instance_methods: []
+
+name: FixtureResolver
+superclass: PathResolver

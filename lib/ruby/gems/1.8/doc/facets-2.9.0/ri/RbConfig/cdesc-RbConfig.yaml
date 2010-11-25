@@ -1,0 +1,44 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: big_endian?
+  - !ruby/object:RI::MethodSummary 
+    name: byte_order
+  - !ruby/object:RI::MethodSummary 
+    name: byteorder
+  - !ruby/object:RI::MethodSummary 
+    name: cpu
+  - !ruby/object:RI::MethodSummary 
+    name: datadir
+  - !ruby/object:RI::MethodSummary 
+    name: inspect
+  - !ruby/object:RI::MethodSummary 
+    name: java?
+  - !ruby/object:RI::MethodSummary 
+    name: jruby?
+  - !ruby/object:RI::MethodSummary 
+    name: linux?
+  - !ruby/object:RI::MethodSummary 
+    name: little_endian?
+  - !ruby/object:RI::MethodSummary 
+    name: method_missing
+  - !ruby/object:RI::MethodSummary 
+    name: os
+  - !ruby/object:RI::MethodSummary 
+    name: platform
+  - !ruby/object:RI::MethodSummary 
+    name: windows?
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: An extended rendition of the Ruby's standard RbConfig module.
+constants: []
+
+full_name: RbConfig
+includes: []
+
+instance_methods: []
+
+name: RbConfig
+superclass: 

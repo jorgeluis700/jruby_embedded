@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Checks whether the resource responds to the current format or not.
+full_name: ActionController::Responder#resourceful?
+is_singleton: false
+name: resourceful?
+params: ()
+visibility: protected

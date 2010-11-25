@@ -1,0 +1,28 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: operand2
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: []
+
+full_name: Arel::Predicates::Binary
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: ==
+  - !ruby/object:RI::MethodSummary 
+    name: bind
+  - !ruby/object:RI::MethodSummary 
+    name: eval
+  - !ruby/object:RI::MethodSummary 
+    name: to_sql
+  - !ruby/object:RI::MethodSummary 
+    name: value
+name: Binary
+superclass: Unary

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: helper method to convert and evaluate input text with context object. context may be Binding, Hash, or Object.
+full_name: Erubis::Engine#process
+is_singleton: false
+name: process
+params: (input, context=nil, filename=nil)
+visibility: public

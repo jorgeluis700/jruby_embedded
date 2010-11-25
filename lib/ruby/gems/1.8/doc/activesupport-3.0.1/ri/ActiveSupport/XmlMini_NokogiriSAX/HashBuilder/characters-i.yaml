@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: cdata_block
+block_params: 
+comment: 
+full_name: ActiveSupport::XmlMini_NokogiriSAX::HashBuilder#characters
+is_singleton: false
+name: characters
+params: (string)
+visibility: public

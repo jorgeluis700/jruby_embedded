@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: normalize_keys the flatten way. This method is significantly faster and creates way less objects than the one at I18n.normalize_keys. It also handles escaping the translation keys.
+full_name: I18n::Backend::Flatten::normalize_flat_keys
+is_singleton: true
+name: normalize_flat_keys
+params: (locale, key, scope, separator)
+visibility: public

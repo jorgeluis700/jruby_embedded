@@ -1,0 +1,30 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Provides some helpers to deal with testing log subscribers by setting up notifications. Take for instance Active Record subscriber tests:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class SyncLogSubscriberTest &lt; ActiveSupport::TestCase\n    include ActiveSupport::LogSubscriber::TestHelper\n\n    def setup\n      ActiveRecord::LogSubscriber.attach_to(:active_record)\n    end\n\n    def test_basic_query_logging\n      Developer.all\n      wait\n      assert_equal 1, @logger.logged(:debug).size\n      assert_match /Developer Load/, @logger.logged(:debug).last\n      assert_match /SELECT * FROM &quot;developers&quot;/, @logger.logged(:debug).last\n    end\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: All you need to do is to ensure that your log subscriber is added to Rails::Subscriber, as in the second line of the code above. The test helpers is reponsible for setting up the queue, subscriptions and turning colors in logs off.
+  - !ruby/struct:SM::Flow::P 
+    body: The messages are available in the @logger instance, which is a logger with limited powers (it actually do not send anything to your output), and you can collect them doing @logger.logged(level), where level is the level used in logging, like info, debug, warn and so on.
+constants: []
+
+full_name: ActiveSupport::LogSubscriber::TestHelper
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: set_logger
+  - !ruby/object:RI::MethodSummary 
+    name: setup
+  - !ruby/object:RI::MethodSummary 
+    name: teardown
+  - !ruby/object:RI::MethodSummary 
+    name: wait
+name: TestHelper
+superclass: 

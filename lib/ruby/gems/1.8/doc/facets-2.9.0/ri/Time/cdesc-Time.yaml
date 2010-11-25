@@ -1,0 +1,58 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: elapse
+  - !ruby/object:RI::MethodSummary 
+    name: local_time
+  - !ruby/object:RI::MethodSummary 
+    name: stamp
+  - !ruby/object:RI::MethodSummary 
+    name: time_with_datetime_fallback
+  - !ruby/object:RI::MethodSummary 
+    name: utc_time
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: FORMAT
+    value: "{       :db      => \"%Y-%m-%d %H:%M:%S\",       :dbase   => \"%Y-%m-%d %H:%M:%S\",       :datbase => \"%Y-%m-%d %H:%M:%S\",       :utc     => \"%Y-%m-%d %H:%M:%S\",       :number  => \"%Y%m%d%H%M%S\",       :short   => \"%d %b %H:%M\",       :time    => \"%H:%M\",       :long    => \"%B %d, %Y %H:%M\",       :day1st  => \"%d-%m-%Y %H:%M\",       :dmYHM   => \"%d-%m-%Y %H:%M\",       :rfc822  => \"%a, %d %b %Y %H:%M:%S %z\",       nil      => \"%a %b %d %H:%M:%S %Z %Y\""
+full_name: Time
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: ago
+  - !ruby/object:RI::MethodSummary 
+    name: change
+  - !ruby/object:RI::MethodSummary 
+    name: dst_adjustment
+  - !ruby/object:RI::MethodSummary 
+    name: future?
+  - !ruby/object:RI::MethodSummary 
+    name: hence
+  - !ruby/object:RI::MethodSummary 
+    name: in
+  - !ruby/object:RI::MethodSummary 
+    name: less
+  - !ruby/object:RI::MethodSummary 
+    name: past?
+  - !ruby/object:RI::MethodSummary 
+    name: round_to
+  - !ruby/object:RI::MethodSummary 
+    name: set
+  - !ruby/object:RI::MethodSummary 
+    name: shift
+  - !ruby/object:RI::MethodSummary 
+    name: stamp
+  - !ruby/object:RI::MethodSummary 
+    name: to_date
+  - !ruby/object:RI::MethodSummary 
+    name: to_datetime
+  - !ruby/object:RI::MethodSummary 
+    name: to_time
+  - !ruby/object:RI::MethodSummary 
+    name: trunc
+name: Time
+superclass: Object

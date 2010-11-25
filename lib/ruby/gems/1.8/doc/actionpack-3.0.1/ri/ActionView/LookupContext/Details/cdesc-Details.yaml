@@ -1,0 +1,28 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: ActionView::LookupContext::Details
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: _set_detail
+  - !ruby/object:RI::MethodSummary 
+    name: formats=
+  - !ruby/object:RI::MethodSummary 
+    name: locale
+  - !ruby/object:RI::MethodSummary 
+    name: locale=
+  - !ruby/object:RI::MethodSummary 
+    name: skip_default_locale!
+  - !ruby/object:RI::MethodSummary 
+    name: update_details
+  - !ruby/object:RI::MethodSummary 
+    name: with_layout_format
+name: Details
+superclass: 

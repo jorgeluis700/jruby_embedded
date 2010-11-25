@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: "&"
+block_params: 
+comment: 
+full_name: ActiveRecord::SpawnMethods#merge
+is_singleton: false
+name: merge
+params: (r)
+visibility: public

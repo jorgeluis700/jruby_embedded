@@ -1,0 +1,18 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: Arel::Sql::NilClassExtensions
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: equality_predicate_sql
+  - !ruby/object:RI::MethodSummary 
+    name: inequality_predicate_sql
+name: NilClassExtensions
+superclass: 

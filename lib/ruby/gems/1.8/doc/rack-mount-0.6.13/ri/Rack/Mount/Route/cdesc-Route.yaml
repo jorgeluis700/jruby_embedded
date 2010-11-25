@@ -1,0 +1,54 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: Valid rack application to call if conditions are met
+    name: app
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: A hash of conditions to match against. Conditions may be expressed as strings or regexps to match against.
+    name: conditions
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: A hash of values that always gets merged into the parameters hash
+    name: defaults
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: Symbol identifier for the route used with named route generations
+    name: name
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: named_captures
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Route is an internal class used to wrap a single route attributes.
+  - !ruby/struct:SM::Flow::P 
+    body: Plugins should not depend on any method on this class or instantiate new Route objects. Instead use the factory method, RouteSet#add_route to create new routes and add them to the set.
+constants: []
+
+full_name: Rack::Mount::Route
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: generate
+  - !ruby/object:RI::MethodSummary 
+    name: generation_keys
+  - !ruby/object:RI::MethodSummary 
+    name: prefix?
+  - !ruby/object:RI::MethodSummary 
+    name: significant_params?
+name: Route
+superclass: Object

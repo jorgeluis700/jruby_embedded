@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: load file, write cache file, and return engine object. this method create code cache file automatically. cachefile name can be specified with properties[:cachename], or filname + 'cache' is used as default.
+full_name: Erubis::Engine::load_file
+is_singleton: true
+name: load_file
+params: (filename, properties={})
+visibility: public

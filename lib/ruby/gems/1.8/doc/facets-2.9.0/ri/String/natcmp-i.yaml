@@ -1,0 +1,22 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "'Natural order' comparison of strings, e.g. ..."
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &quot;my_prog_v1.1.0&quot; &lt; &quot;my_prog_v1.2.0&quot; &lt; &quot;my_prog_v1.10.0&quot;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: which does not follow alphabetically. A secondary parameter, if set to <em>true</em>, makes the comparison case insensitive.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &quot;Hello.1&quot;.natcmp(&quot;Hello.10&quot;)  #=&gt; -1\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "TODO: Invert case flag?"
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Alan Davies, Martin Pool"
+full_name: String#natcmp
+is_singleton: false
+name: natcmp
+params: (str2, caseInsensitive=false)
+visibility: public

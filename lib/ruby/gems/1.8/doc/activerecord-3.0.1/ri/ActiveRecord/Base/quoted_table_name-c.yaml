@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns a quoted version of the table name, used to construct SQL statements.
+full_name: ActiveRecord::Base::quoted_table_name
+is_singleton: true
+name: quoted_table_name
+params: ()
+visibility: public

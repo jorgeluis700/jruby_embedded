@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: I18n::Locale::Fallbacks#compute
+is_singleton: false
+name: compute
+params: (tags, include_defaults = true)
+visibility: protected

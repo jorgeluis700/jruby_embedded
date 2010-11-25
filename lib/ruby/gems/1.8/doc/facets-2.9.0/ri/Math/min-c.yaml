@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: (min)
+comment: []
+
+full_name: Math::min
+is_singleton: true
+name: min
+params: (array, &block) {|min| ...}
+visibility: public

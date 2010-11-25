@@ -1,0 +1,20 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns the root name of the module/class.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  module ::BaseName\n    class Example\n    end\n  end\n\n  BaseName::Example.name       #=&gt; &quot;BaseName::Example&quot;\n  BaseName::Example.basename   #=&gt; &quot;Example&quot;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: For anonymous modules this will provide a basename based on Module#inspect.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  m = Module.new\n  m.inspect       # &quot;#&lt;Module:0xb7bb0434&gt;&quot;\n  m.basename      # &quot;Module_0xb7bb0434&quot;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Trans"
+full_name: Module#basename
+is_singleton: false
+name: basename
+params: ()
+visibility: public

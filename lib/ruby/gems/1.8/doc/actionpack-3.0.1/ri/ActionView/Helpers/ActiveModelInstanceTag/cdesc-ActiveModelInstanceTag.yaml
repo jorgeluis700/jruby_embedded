@@ -1,0 +1,22 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: ActionView::Helpers::ActiveModelInstanceTag
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: error_message
+  - !ruby/object:RI::MethodSummary 
+    name: error_wrapping
+  - !ruby/object:RI::MethodSummary 
+    name: object
+  - !ruby/object:RI::MethodSummary 
+    name: tag
+name: ActiveModelInstanceTag
+superclass: 

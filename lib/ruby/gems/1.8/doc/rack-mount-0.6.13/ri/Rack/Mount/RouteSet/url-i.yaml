@@ -1,0 +1,24 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Generates a url from Rack env and identifiers or significant keys.
+  - !ruby/struct:SM::Flow::P 
+    body: To generate a url by named route, pass the name in as a <tt>Symbol</tt>.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  url(env, :dashboard) # =&gt; &quot;/dashboard&quot;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Additional parameters can be passed in as a hash
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  url(env, :people, :id =&gt; &quot;1&quot;) # =&gt; &quot;/people/1&quot;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: If no name route is given, it will fall back to a slower generation search.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  url(env, :controller =&gt; &quot;people&quot;, :action =&gt; &quot;show&quot;, :id =&gt; &quot;1&quot;)\n    # =&gt; &quot;/people/1&quot;\n"
+full_name: Rack::Mount::RouteSet#url
+is_singleton: false
+name: url
+params: (env, *args)
+visibility: public

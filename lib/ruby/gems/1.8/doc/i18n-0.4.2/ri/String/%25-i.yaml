@@ -1,0 +1,44 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "% uses self (i.e. the String) as a format specification and returns the result of applying it to the given arguments. In other words it interpolates the given arguments to the string according to the formats the string defines."
+  - !ruby/struct:SM::Flow::P 
+    body: "There are three ways to use it:"
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: Using a single argument or Array of arguments.
+      - !ruby/struct:SM::Flow::P 
+        body: This is the default behaviour of the String class. See Kernel#sprintf for more details about the format string.
+      - !ruby/struct:SM::Flow::P 
+        body: "Example:"
+      - !ruby/struct:SM::Flow::VERB 
+        body: "  &quot;%d %s&quot; % [1, &quot;message&quot;]\n  # =&gt; &quot;1 message&quot;\n"
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: Using a Hash as an argument and unformatted, named placeholders.
+      - !ruby/struct:SM::Flow::P 
+        body: When you pass a Hash as an argument and specify placeholders with %{foo} it will interpret the hash values as named arguments.
+      - !ruby/struct:SM::Flow::P 
+        body: "Example:"
+      - !ruby/struct:SM::Flow::VERB 
+        body: "  &quot;%{firstname}, %{lastname}&quot; % {:firstname =&gt; &quot;Masao&quot;, :lastname =&gt; &quot;Mutoh&quot;}\n  # =&gt; &quot;Masao Mutoh&quot;\n"
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: Using a Hash as an argument and formatted, named placeholders.
+      - !ruby/struct:SM::Flow::P 
+        body: When you pass a Hash as an argument and specify placeholders with %&lt;foo&gt;d it will interpret the hash values as named arguments and format the value according to the formatting instruction appended to the closing &gt;.
+      - !ruby/struct:SM::Flow::P 
+        body: "Example:"
+      - !ruby/struct:SM::Flow::VERB 
+        body: "  &quot;%&lt;integer&gt;d, %&lt;float&gt;.1f&quot; % { :integer =&gt; 10, :float =&gt; 43.4 }\n  # =&gt; &quot;10, 43.3&quot;\n"
+    type: :BULLET
+full_name: String#%
+is_singleton: false
+name: "%"
+params: (args)
+visibility: public

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Kronecker symbol of <tt>i</tt> and <tt>j</tt> - 1 if <tt>i</tt> and <tt>j</tt> are equal, 0 otherwise.
+full_name: Math::delta
+is_singleton: true
+name: delta
+params: (i, j)
+visibility: public

@@ -1,0 +1,19 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: Arel::SqlLiteral
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Attribute::Expressions
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: relation
+  - !ruby/object:RI::MethodSummary 
+    name: to_sql
+name: SqlLiteral
+superclass: String

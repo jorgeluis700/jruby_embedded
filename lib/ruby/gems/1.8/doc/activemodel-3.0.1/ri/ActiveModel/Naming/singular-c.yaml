@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Returns the singular class name of a record or class. Examples:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  ActiveModel::Naming.singular(post)             # =&gt; &quot;post&quot;\n  ActiveModel::Naming.singular(Highrise::Person) # =&gt; &quot;highrise_person&quot;\n"
+full_name: ActiveModel::Naming::singular
+is_singleton: true
+name: singular
+params: (record_or_class)
+visibility: public

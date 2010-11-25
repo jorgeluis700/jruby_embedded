@@ -1,0 +1,21 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: migration_action
+    rw: R
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: ActiveRecord::Generators::MigrationGenerator
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: create_migration_file
+  - !ruby/object:RI::MethodSummary 
+    name: set_local_assigns!
+name: MigrationGenerator
+superclass: Base

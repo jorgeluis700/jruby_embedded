@@ -1,0 +1,21 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns an input tag of type &quot;range&quot;.
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Options
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: Accepts same options as range_field_tag
+    type: :BULLET
+full_name: ActionView::Helpers::FormHelper#range_field
+is_singleton: false
+name: range_field
+params: (object_name, method, options = {})
+visibility: public

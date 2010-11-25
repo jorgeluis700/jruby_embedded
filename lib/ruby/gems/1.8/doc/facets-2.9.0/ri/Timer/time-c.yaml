@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: ( timer = Timer.new.start )
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Takes a block and returns the total time it took to execute.
+full_name: Timer::time
+is_singleton: true
+name: time
+params: () {|timer = Timer.new.start| ...}
+visibility: public

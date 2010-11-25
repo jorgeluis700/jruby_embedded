@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Alias for #render_template"
+full_name: ActionView::LogSubscriber#render_collection
+is_singleton: false
+name: render_collection
+params: (event)
+visibility: public

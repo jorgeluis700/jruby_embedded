@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveSupport::Callbacks::Callback#_compile_per_key_options
+is_singleton: false
+name: _compile_per_key_options
+params: ()
+visibility: public

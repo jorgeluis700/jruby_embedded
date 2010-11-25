@@ -1,0 +1,23 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Calls the action going through the entire action dispatch stack.
+  - !ruby/struct:SM::Flow::P 
+    body: "The actual method that is called is determined by calling #method_for_action. If no method can handle the action, then an ActionNotFound error is raised."
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Returns
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>self</tt>
+    type: :BULLET
+full_name: AbstractController::Base#process
+is_singleton: false
+name: process
+params: (action, *args)
+visibility: public

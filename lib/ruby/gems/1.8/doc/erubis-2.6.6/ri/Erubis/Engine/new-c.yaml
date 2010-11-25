@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: include Evaluator include Converter include Generator
+full_name: Erubis::Engine::new
+is_singleton: true
+name: new
+params: (input=nil, properties={})
+visibility: public

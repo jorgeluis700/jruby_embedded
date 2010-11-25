@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: Enumerator</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">Enumerator</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/lib/core/facets/enumerator/fx_rb.html">
+                lib/core/facets/enumerator/fx.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/enumerator_rb.html">
+                lib/core/facets/enumerator.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/to_hash_rb.html">
+                lib/core/facets/to_hash.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                Object
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000233">fx</a>&nbsp;&nbsp;
+      <a href="#M000234">new</a>&nbsp;&nbsp;
+      <a href="#M000235">to_h</a>&nbsp;&nbsp;
+      <a href="#M000239">to_h_assoc</a>&nbsp;&nbsp;
+      <a href="#M000236">to_h_auto</a>&nbsp;&nbsp;
+      <a href="#M000238">to_h_flat</a>&nbsp;&nbsp;
+      <a href="#M000240">to_h_multi</a>&nbsp;&nbsp;
+      <a href="#M000237">to_h_splat</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+    <div id="aliases-list">
+      <h3 class="section-bar">External Aliases</h3>
+
+      <div class="name-list">
+                        <table summary="aliases">
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">initialize</td>
+          <td>-&gt;</td>
+          <td class="context-item-value">old_initialize</td>
+        </tr>
+                        </table>
+      </div>
+    </div>
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000234" class="method-detail">
+        <a name="M000234"></a>
+
+        <div class="method-heading">
+          <a href="Enumerator.src/M000234.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerator.src/M000234.html');return false;">
+          <span class="method-name">new</span><span class="method-args">(*args, &amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Provides the ruby-1.9 block form of <a
+href="Enumerator.html">Enumerator</a>, where you can write:
+</p>
+<pre>
+   obj = Enumerator.new do |yielder|
+     # ...
+     yielder.yield(data)  # or: yielder &lt;&lt; data
+     # ...
+   end
+</pre>
+<p>
+When obj.each is called, the block is run once. It should call
+yielder.yield with each item it wishes to generate.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  fib = Enumerator.new { |y|
+    a = b = 1
+    loop {
+      y &lt;&lt; a
+      a, b = b, a + b
+    }
+  }
+
+  fib.take(10)  #=&gt; [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+</pre>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000233" class="method-detail">
+        <a name="M000233"></a>
+
+        <div class="method-heading">
+          <a href="Enumerator.src/M000233.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerator.src/M000233.html');return false;">
+          <span class="method-name">fx</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000235" class="method-detail">
+        <a name="M000235"></a>
+
+        <div class="method-heading">
+          <a href="Enumerator.src/M000235.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerator.src/M000235.html');return false;">
+          <span class="method-name">to_h</span><span class="method-args">(mode=nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Convert an <a href="Enumerator.html">Enumerator</a> object into a hash.
+This is equivalent to <a href="Array.html#M000048">Array#to_h</a>.
+</p>
+<pre>
+  e1 = [[1,:a],[2,:b],[3,:c]].to_enum
+  e1.to_h #=&gt; { 1=&gt;:a, 2=&gt;:b, 3=&gt;:c }
+
+  e2 = [1,2,3,4,5].to_enum
+  e2.to_h  #=&gt; {5=&gt;nil, 1=&gt;2, 3=&gt;4}
+
+  e3 = [1,2,1,3,1,5].to_enum
+  e3.to_h #=&gt; {1=&gt;5}
+</pre>
+<p>
+CREDIT: Sandor Szücs
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000239" class="method-detail">
+        <a name="M000239"></a>
+
+        <div class="method-heading">
+          <a href="Enumerator.src/M000239.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerator.src/M000239.html');return false;">
+          <span class="method-name">to_h_assoc</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+This is equivalent to <a href="Array.html#M000052">Array#to_h_assoc</a>.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000236" class="method-detail">
+        <a name="M000236"></a>
+
+        <div class="method-heading">
+          <a href="Enumerator.src/M000236.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerator.src/M000236.html');return false;">
+          <span class="method-name">to_h_auto</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+This is equivalent to <a href="Array.html#M000049">Array#to_h_auto</a>.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000238" class="method-detail">
+        <a name="M000238"></a>
+
+        <div class="method-heading">
+          <a href="Enumerator.src/M000238.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerator.src/M000238.html');return false;">
+          <span class="method-name">to_h_flat</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+This is equivalent to <a href="Array.html#M000051">Array#to_h_flat</a>.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000240" class="method-detail">
+        <a name="M000240"></a>
+
+        <div class="method-heading">
+          <a href="Enumerator.src/M000240.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerator.src/M000240.html');return false;">
+          <span class="method-name">to_h_multi</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+This is equivalent to <a href="Array.html#M000053">Array#to_h_multi</a>.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000237" class="method-detail">
+        <a name="M000237"></a>
+
+        <div class="method-heading">
+          <a href="Enumerator.src/M000237.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerator.src/M000237.html');return false;">
+          <span class="method-name">to_h_splat</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+This is equivalent to <a href="Array.html#M000050">Array#to_h_splat</a>.
+</p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: to_s
+block_params: 
+comment: 
+full_name: BigDecimal#to_formatted_s
+is_singleton: false
+name: to_formatted_s
+params: (format = DEFAULT_STRING_FORMAT)
+visibility: public

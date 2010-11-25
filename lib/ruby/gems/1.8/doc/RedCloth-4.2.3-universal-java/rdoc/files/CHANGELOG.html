@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>File: CHANGELOG</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+  <div id="fileHeader">
+    <h1>CHANGELOG</h1>
+    <table class="header-table">
+    <tr class="top-aligned-row">
+      <td><strong>Path:</strong></td>
+      <td>CHANGELOG
+      </td>
+    </tr>
+    <tr class="top-aligned-row">
+      <td><strong>Last Update:</strong></td>
+      <td>Wed Oct 27 16:20:56 -0200 2010</td>
+    </tr>
+    </table>
+  </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <h3>4.2.3 / March 1, 2010</h3>
+<ul>
+<li>Allow quotes in styles so you can do things like listing font-families.
+[Jason Garber]
+
+</li>
+<li>Fix uninitialized constant Gem::Specification::PLATFORM_CROSS_TARGETS in
+Rails [Jason Garber]
+
+</li>
+<li>Allow uppercase letters in class and ID attributes even though it&#8216;s
+invalid [Jason Garber]
+
+</li>
+<li>Fix compatibility with newer Echoe, by using full-name for Platform
+[Flameeyes]
+
+</li>
+<li>Fixes for PPC/PPC64 [Flameeyes]
+
+</li>
+<li>Added a modified copy of &#8216;Textile Reference&#8217; to a doc folder
+[codesponge]
+
+</li>
+<li>Add footnote return links [Jonathan Rudenberg]
+
+</li>
+<li>Add bug report link to the README
+
+</li>
+</ul>
+<h3>4.2.2 / June 30, 2009</h3>
+<ul>
+<li>Fix regression where percent wasn&#8216;t accepted in style attribute.
+[Jason Garber]
+
+</li>
+</ul>
+<h3>4.2.1 / June 16, 2009</h3>
+<ul>
+<li>Fix regression where period wasn&#8216;t accepted in style attribute.
+[Jason Garber]
+
+</li>
+</ul>
+<h3>4.2.0 / June 10, 2009</h3>
+<ul>
+<li>Fixed image with title, href, and text afterward not being made a link.
+[Jason Garber]
+
+</li>
+<li>Pass string encoding through in Ruby 1.9. [Jason Garber]
+
+</li>
+<li>Allow two-letter acronyms. [Jason Garber]
+
+</li>
+<li>Removed vertical alignment in lists. It doesn&#8216;t make sense and it
+conflicts with other things. [Jason Garber]
+
+</li>
+<li>Allow table cells to be empty. [Jason Garber]
+
+</li>
+<li>Resolve conflict between table signature and blocks beginning with t.
+[Jason Garber]
+
+</li>
+<li>Enable code signature to capture trailing space when in square brackets.
+[Jason Garber]
+
+</li>
+<li>Allow emphasized phrases to include underscores. [Jason Garber]
+
+</li>
+<li>Include an ending question mark in a citation. [Jason Garber]
+
+</li>
+<li>Fix &lt;notextile&gt; blocks being included in following paragraph. [Jason
+Garber]
+
+</li>
+<li>Preserve leading whitespace in pre and bc blocks. [Jason Garber]
+
+</li>
+<li>Don&#8216;t add hard break after preexisting &lt;br /&gt;. [Jason Garber]
+
+</li>
+<li>Switched tests from Test::Unit to Rspec. [Jason Garber]
+
+</li>
+<li>Accept multiline content in table cells. [Jason Garber]
+
+</li>
+<li>Change to list attributes so you can give style/class to list items (taken
+from PyTextile). Breaks backwards compatibility.
+
+<p>
+Before, the style applied to the first list item applied to the entire
+list. Now, class/id/style placed before the list applies to the list
+element and after the hash or asterisk applies to the list item. For
+example:
+</p>
+<pre>
+                                 &lt;ul id=&quot;groceries&quot;&gt;
+  (#groceries)# Milk               &lt;li&gt;milk&lt;/li&gt;
+  # Eggs                           &lt;li&gt;eggs&lt;/li&gt;
+  #(optional) granola              &lt;li class=&quot;optional&quot;&gt;granola&lt;/li&gt;
+                                 &lt;/ul&gt;
+</pre>
+</li>
+<li>Separated attributes out to have their own mark/store variable and regs.
+This way, they won&#8216;t conflict with captured text or backtracked text.
+[Jason Garber]
+
+</li>
+<li>Added a RedCloth::EXTENSION_LANGUAGE constant so you can tell what version
+of the parser you are using. [Jason Garber]
+
+</li>
+<li>Added a NotCompiledError to give a friendlier message when people just
+unpack <a href="../classes/RedCloth.html">RedCloth</a> into their projects.
+[Jason Garber]
+
+</li>
+<li>Added a pure-ruby version of the parser for times when you can&#8216;t
+compile the C or Java extensions. You should avoid using it if at all
+possible because it is 32 times slower (and has some other problems, too)!
+[Jason Garber]
+
+</li>
+<li>Ignore spaces and tabs on blank lines between blocks. 120 [Jason Garber]
+
+</li>
+<li>Allow HTML tags with quoted attributes to be inside link text. To do this,
+I had to remove the possibility that attributes in HTML tags could have
+spaces around the equals sign or unquoted attributes. This change also
+greatly expands the complexity of the state machine, so compilation takes a
+long time. Sorry. [Jason Garber]
+
+</li>
+<li>Many improvements to the LaTeX formatter by Bil Kleb, a NASA scientist
+who&#8216;s been working with LaTeX for 20 years. Thanks, Bil!
+
+</li>
+</ul>
+<h3>4.1.9 / February 20, 2009</h3>
+<ul>
+<li>Make compatible with Ruby 1.9.
+
+</li>
+<li>Image URLs and image titles can now contain parentheses. 71
+
+</li>
+<li>Handle caps properly in link titles. 77
+
+</li>
+<li>Remove extra preformatted line breaks after extended block code. 79
+
+</li>
+<li>Fix inline &lt;notextile&gt; being recognized as block &lt;notextile&gt;.
+81
+
+</li>
+<li>Allow leading spaces on lists for backward compatibility with <a
+href="../classes/RedCloth.html">RedCloth</a> 3.x. 89
+
+</li>
+<li>Recognize deleted phrases when they start at the beginning of a line. 83
+
+</li>
+<li>Fix escaped &lt;code&gt; tag when it has the class attribute and is in a
+&lt;pre&gt; tag. 95
+
+</li>
+<li>Fix dimensions and primes for LaTeX. 103
+
+</li>
+<li>Don&#8216;t allow square brackets inside lang attribute so double square
+brackets are interpreted like Textile 2 and <a
+href="../classes/RedCloth.html">RedCloth</a> 3. 101
+
+</li>
+<li>Improve LaTeX output for tables. 96
+
+</li>
+<li>Fix bad parsing of bracketed image links (which would hang the interpreter
+in some cases). 97
+
+</li>
+<li>Handle links containing parentheses. Brackets are no longer required. 82
+[Ryan Alyea]
+
+</li>
+<li>Made italics use the correct LaTeX tag: textit rather than emph. 98
+
+</li>
+<li>Fixed custom block signatures calling built-in Ruby String methods. 92
+
+</li>
+<li>Mentioned the three supported platforms and what&#8216;s necessary to build
+<a href="../classes/RedCloth.html">RedCloth</a> in the README file.
+
+</li>
+<li>Fixed a require problem that caused an error when you would gem check
+&#8212;test <a href="../classes/RedCloth.html">RedCloth</a>. 91
+
+</li>
+</ul>
+<h3>4.1.1 / November 19, 2008</h3>
+<ul>
+<li>Added &#8216;lib/case_sensitive_require&#8217; back into gemspec. It got
+left out in the conversion to echoe, so &quot;require &#8216;<a
+href="../classes/RedCloth.html">RedCloth</a>&#8217;&quot; didn&#8216;t
+work. 88
+
+</li>
+<li>Fixed &lt;embed&gt; being recognized as a block-level element when using
+the twice-cooked method of flash embedding. 87
+
+</li>
+<li>Added horizontal rules from <a href="../classes/RedCloth.html">RedCloth</a>
+3. Three or more asterisks, dashes, or underscores between blocks triggers
+the HR tag.
+
+</li>
+<li>echoe was not being properly registered as a development dependency; a bug
+in RubyGems was making it a runtime dependency
+
+</li>
+<li>Fixed &quot;No definition for redcloth_to Installing RDoc
+documentation&quot;
+
+</li>
+<li>Fixed wrong platform names when cross-compiling java and win32 versions
+
+</li>
+</ul>
+<h3>4.1.0 / October 31, 2008</h3>
+<ul>
+<li>JRuby support! [olabini] To run the tests with JRuby, you only need to:
+jruby -S rake To compile the jruby version of the gem: jruby -S rake
+compile
+
+</li>
+<li>Added textilize <a href="../classes/ERB.html">ERB</a> utility method.
+[edraut] Use it in an <a href="../classes/ERB.html">ERB</a> template like
+this: &lt;%=t my_textile_string %&gt; or &lt;%=r %{Some <b>textile</b> if
+you please!} %&gt;
+
+</li>
+<li>Fix extended blockcode stripping whitespace following blank line. 78
+
+</li>
+</ul>
+<h3>4.0.4 / October 1, 2008</h3>
+<ul>
+<li>Added some very basic support for images in LaTeX. [virtualfunction]
+
+</li>
+<li>Fixed missed caps and inline modifiers wrapped in parentheses. 43, 45
+
+</li>
+<li>Removed indication of quotes explicitly with square brackets. Textile 2.0
+does not support this and it wasn&#8216;t in <a
+href="../classes/RedCloth.html">RedCloth</a> 3. 46
+
+</li>
+<li>Made percent signs less greedy. They must surround a phrase or else they
+must be surrounded with square brackets, just like sup, sub, and del
+phrases. 47
+
+</li>
+<li>Reduced link eagerness so it wouldn&#8216;t include preceding quoted
+phrases. 48
+
+</li>
+<li>Fixed compatibility issues with Ruby 1.9 [Keita Yamaguchi]. 52, 53, 54
+
+</li>
+<li>Fixed an error when a link was badly nested in parentheses. 55
+
+</li>
+<li>Fixed an error on superscript/subscript parenthetical phrase. 56
+
+</li>
+<li>Fixed bold phrases starting with a number being recognized as unordered
+lists. 60
+
+</li>
+<li>Fixed behavior of unclosed (multi-paragraph) quotes and incorrect handling
+of links inside double quotations. 59, 63
+
+</li>
+<li>Fixed empty block HTML disappearing. 64
+
+</li>
+</ul>
+<h3>4.0.3 / August 18, 2008</h3>
+<ul>
+<li>Fix NoMethodError: private method gsub!&#8217; called for nil:NilClass when
+two dimensions followed by a space. 38
+
+</li>
+<li>Fixed unititialized constant <a
+href="../classes/RedCloth/TextileDoc.html">RedCloth::TextileDoc</a> with
+Rails 2.1. Came from a workaround for Rails bug 320 that was applied even
+when not necessary. 42
+
+</li>
+</ul>
+<h3>4.0.2 / August 15, 2008</h3>
+<ul>
+<li>Fixed link references/aliases not being recognized when they include
+hyphens. 36
+
+</li>
+<li>Dimensions in feet and inches use correct typographic characters. 25
+
+</li>
+<li>Limit overzealous superscript and subscript. Sup/sub phrases must be
+surrounded by spaces or square brackets, as in Textile 2. 35
+
+</li>
+<li>Fixed HTML before tables causing the opening table tag to be emitted twice.
+33
+
+</li>
+<li>Cleaned up unused code that was causing a warning. 28
+
+</li>
+<li>Workaround for Rails 2.1 bug that loads a previous version of <a
+href="../classes/RedCloth.html">RedCloth</a> before loading the unpacked
+gem. Has since been fixed in edge rails. 30
+
+</li>
+<li>Added a RedCloth::VERSION.to_s and .== methods so you can puts and compare
+<a href="../classes/RedCloth/VERSION.html">RedCloth::VERSION</a> just like
+in previous <a href="../classes/RedCloth.html">RedCloth</a> releases. 26
+
+</li>
+<li>Fixed HTML block ending tags terminating blocks prematurely. 22
+
+</li>
+</ul>
+<h3>4.0.1 / July 24, 2008</h3>
+<ul>
+<li>Fixed lines starting with dashes being recognized as a definition list when
+there were no definitions.
+
+</li>
+<li>Created alias RedCloth.rb so Rails 2.1 gem dependency works on
+case-sensitive operating systems .
+
+</li>
+<li>Fixed parsing sentences that had two em dashes surrounded by spaces from
+becoming del phrases. 19
+
+</li>
+<li>Fixed links including prior quoted phrases. 17
+
+</li>
+</ul>
+<h3>4.0.0 / July 21, 2008</h3>
+<ul>
+<li>New SuperRedCloth (<a href="../classes/RedCloth.html">RedCloth</a> 4.0) is
+a total rewrite using Ragel for the parsing.
+
+</li>
+<li>Markdown support has been removed.
+
+</li>
+<li>Single newlines become &lt;br&gt; tags, just as in traditional <a
+href="../classes/RedCloth.html">RedCloth</a> and other Textile parsers.
+
+</li>
+<li>HTML special characters are automatically escaped inside code signatures,
+like Textile 2. This means you can simply write @&lt;br /&gt;@ and the
+symbols are escaped whereas in <a
+href="../classes/RedCloth.html">RedCloth</a> 3 you had to write @&amp;lt;br
+/&amp;gt;@ to make the code fragment readable.
+
+</li>
+<li>The restrictions parameter is observed just like previous versions (except
+:hard_breaks is now the default).
+
+</li>
+<li>Arguments to RedCloth#to_html are called so extensions made for prior
+versions can work. Note: extensions need to be included rather than defined
+directly within the <a href="../classes/RedCloth.html">RedCloth</a> class
+as was previously possible.
+
+</li>
+<li>Custom block tags can be implemented as in the previous version, though the
+means of implementing them differs.
+
+</li>
+<li>HTML embedded in the Textile input does not often need to be escaped from
+Textile parsing.
+
+</li>
+<li>The parser will not wrap lines that begin with a space in paragraph tags.
+
+</li>
+<li>Rudimentary support for LaTeX is built in.
+
+</li>
+<li><a href="../classes/RedCloth/VERSION.html">RedCloth::VERSION</a> on a line
+by itself inserts the version number into the output.
+
+</li>
+<li>Output (less newlines and tabs) is identical to Textile 2 except a few
+cases where the <a href="../classes/RedCloth.html">RedCloth</a> way was
+preferable.
+
+</li>
+<li>Over 500 tests prevent regression
+
+</li>
+<li>It&#8216;s 40 times faster than the previous version.
+
+</li>
+</ul>
+
+    </div>
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: Errors Testing
+  - !ruby/struct:SM::Flow::P 
+    body: Returns an object that has :[] and :full_messages defined on it. See below for more details.
+  - !ruby/struct:SM::Flow::P 
+    body: Returns an Array of Strings that are the errors for the attribute in question. If localization is used, the Strings should be localized for the current locale. If no error is present, this method should return an empty Array.
+full_name: ActiveModel::Lint::Tests#test_errors_aref
+is_singleton: false
+name: test_errors_aref
+params: ()
+visibility: public

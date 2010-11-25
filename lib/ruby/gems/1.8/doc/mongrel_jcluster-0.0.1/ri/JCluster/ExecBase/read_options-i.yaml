@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: JCluster::ExecBase#read_options
+is_singleton: false
+name: read_options
+params: ()
+visibility: public

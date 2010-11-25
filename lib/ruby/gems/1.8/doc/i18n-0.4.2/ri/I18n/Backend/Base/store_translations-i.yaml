@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: This method receives a locale, a data hash and options for storing translations. Should be implemented
+full_name: I18n::Backend::Base#store_translations
+is_singleton: false
+name: store_translations
+params: (locale, data, options = {})
+visibility: public

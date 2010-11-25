@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Save the new record state and id of a record so it can be restored later if a transaction fails.
+full_name: ActiveRecord::Transactions#remember_transaction_record_state
+is_singleton: false
+name: remember_transaction_record_state
+params: (
+visibility: protected

@@ -1,0 +1,17 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Raised when a record cannot be inserted because it would violate a uniqueness constraint.
+constants: []
+
+full_name: ActiveRecord::RecordNotUnique
+includes: []
+
+instance_methods: []
+
+name: RecordNotUnique
+superclass: WrappedDatabaseException

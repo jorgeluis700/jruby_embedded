@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveRecord::LogSubscriber#sql
+is_singleton: false
+name: sql
+params: (event)
+visibility: public

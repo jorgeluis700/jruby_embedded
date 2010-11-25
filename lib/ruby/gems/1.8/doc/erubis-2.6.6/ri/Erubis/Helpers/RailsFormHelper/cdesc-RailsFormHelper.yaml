@@ -1,0 +1,64 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: Erubis::Helpers::RailsFormHelper
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: _pp_check_box_checked?
+  - !ruby/object:RI::MethodSummary 
+    name: _pp_error_tags
+  - !ruby/object:RI::MethodSummary 
+    name: _pp_radio_button_checked?
+  - !ruby/object:RI::MethodSummary 
+    name: _pp_remove_error_div
+  - !ruby/object:RI::MethodSummary 
+    name: _pp_select
+  - !ruby/object:RI::MethodSummary 
+    name: _pp_select_options
+  - !ruby/object:RI::MethodSummary 
+    name: pp_check_box
+  - !ruby/object:RI::MethodSummary 
+    name: pp_collection_select
+  - !ruby/object:RI::MethodSummary 
+    name: pp_country_select
+  - !ruby/object:RI::MethodSummary 
+    name: pp_error_on
+  - !ruby/object:RI::MethodSummary 
+    name: pp_file_field
+  - !ruby/object:RI::MethodSummary 
+    name: pp_form_tag
+  - !ruby/object:RI::MethodSummary 
+    name: pp_hidden_field
+  - !ruby/object:RI::MethodSummary 
+    name: pp_image_submit_tag
+  - !ruby/object:RI::MethodSummary 
+    name: pp_password_field
+  - !ruby/object:RI::MethodSummary 
+    name: pp_radio_button
+  - !ruby/object:RI::MethodSummary 
+    name: pp_render_partial
+  - !ruby/object:RI::MethodSummary 
+    name: pp_select
+  - !ruby/object:RI::MethodSummary 
+    name: pp_submit_tag
+  - !ruby/object:RI::MethodSummary 
+    name: pp_tag_helper
+  - !ruby/object:RI::MethodSummary 
+    name: pp_template_filename
+  - !ruby/object:RI::MethodSummary 
+    name: pp_template_filename
+  - !ruby/object:RI::MethodSummary 
+    name: pp_text_area
+  - !ruby/object:RI::MethodSummary 
+    name: pp_text_field
+  - !ruby/object:RI::MethodSummary 
+    name: pp_time_zone_select
+name: RailsFormHelper
+superclass: 

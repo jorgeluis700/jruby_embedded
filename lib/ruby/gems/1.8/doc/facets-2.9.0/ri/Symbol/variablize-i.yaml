@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Prepend an &quot;@&quot; to the beginning of a symbol to make a instance variable name. This also replaces non-valid characters with underscores.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  :a.variablize  #=&gt; :&quot;@a&quot;\n"
+full_name: Symbol#variablize
+is_singleton: false
+name: variablize
+params: ()
+visibility: public

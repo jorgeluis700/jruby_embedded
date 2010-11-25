@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Alias for #ewise"
+full_name: Enumerable#elementwise
+is_singleton: false
+name: elementwise
+params: (count=1)
+visibility: public

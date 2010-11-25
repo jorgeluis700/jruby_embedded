@@ -1,0 +1,20 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Parses the token and options out of the token authorization header. If the header looks like this:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  Authorization: Token token=&quot;abc&quot;, nonce=&quot;def&quot;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Then the returned token is &quot;abc&quot;, and the options is {:nonce =&gt; &quot;def&quot;}
+  - !ruby/struct:SM::Flow::P 
+    body: request - ActionController::Request instance with the current headers.
+  - !ruby/struct:SM::Flow::P 
+    body: Returns an Array of [String, Hash] if a token is present. Returns nil if no token is found.
+full_name: ActionController::HttpAuthentication::Token#token_and_options
+is_singleton: false
+name: token_and_options
+params: (request)
+visibility: public

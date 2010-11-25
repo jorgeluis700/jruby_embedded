@@ -1,0 +1,29 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: tag
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+  - !ruby/object:RI::MethodSummary 
+    name: tag
+comment: 
+constants: []
+
+full_name: I18n::Locale::Tag::Simple
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Parents
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: subtags
+  - !ruby/object:RI::MethodSummary 
+    name: to_a
+  - !ruby/object:RI::MethodSummary 
+    name: to_s
+  - !ruby/object:RI::MethodSummary 
+    name: to_sym
+name: Simple
+superclass: Object

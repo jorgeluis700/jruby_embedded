@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Turn image markup into image tags.
+full_name: BlueCloth#transform_images
+is_singleton: false
+name: transform_images
+params: ( str, rs )
+visibility: public

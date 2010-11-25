@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Increment an integer value in the cache.
+  - !ruby/struct:SM::Flow::P 
+    body: Options are passed to the underlying cache implementation.
+  - !ruby/struct:SM::Flow::P 
+    body: All implementations may not support this method.
+full_name: ActiveSupport::Cache::Store#increment
+is_singleton: false
+name: increment
+params: (name, amount = 1, options = nil)
+visibility: public

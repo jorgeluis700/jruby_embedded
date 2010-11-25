@@ -1,0 +1,20 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Alignment method dispatches to #align_right, #align_left or #align_center, accorging to the first <tt>direction</tt> parameter."
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  s = &lt;&lt;-EOS\n  This is a test\n    and\n    so on\n  EOS\n\n  s.align(:right, 14)\n"
+  - !ruby/struct:SM::Flow::P 
+    body: <em>produces</em> ...
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  This is a test\n             and\n           so on\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Returns a String aligned right, left or center.
+full_name: String#align
+is_singleton: false
+name: align
+params: (direction, n, sep="\n", c=' ')
+visibility: public

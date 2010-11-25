@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns this record's primary key value wrapped in an Array or nil if the record is a new_record?
+full_name: ActiveRecord::AttributeMethods::PrimaryKey#to_key
+is_singleton: false
+name: to_key
+params: ()
+visibility: public

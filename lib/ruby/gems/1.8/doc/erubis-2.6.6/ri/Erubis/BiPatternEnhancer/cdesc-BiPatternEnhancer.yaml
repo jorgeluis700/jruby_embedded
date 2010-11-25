@@ -1,0 +1,27 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: enable to use other embedded expression pattern (default is '\[= =\]').
+  - !ruby/struct:SM::Flow::P 
+    body: notice! this is an experimental. spec may change in the future.
+  - !ruby/struct:SM::Flow::P 
+    body: ex.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  input = &lt;&lt;END\n  &lt;% for item in list %&gt;\n    &lt;%= item %&gt; : &lt;%== item %&gt;\n    [= item =] : [== item =]\n  &lt;% end %&gt;\n  END\n\n  class BiPatternEruby\n    include BiPatternEnhancer\n  end\n  eruby = BiPatternEruby.new(input, :bipattern=&gt;'\\[= =\\]')\n  list = ['&lt;a&gt;', 'b&amp;b', '&quot;c&quot;']\n  print eruby.result(binding())\n\n  ## output\n    &lt;a&gt; : &amp;lt;a&amp;gt;\n    &lt;a&gt; : &amp;lt;a&amp;gt;\n    b&amp;b : b&amp;amp;b\n    b&amp;b : b&amp;amp;b\n    &quot;c&quot; : &amp;quot;c&amp;quot;\n    &quot;c&quot; : &amp;quot;c&amp;quot;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: this is language independent.
+constants: []
+
+full_name: Erubis::BiPatternEnhancer
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: add_text
+name: BiPatternEnhancer
+superclass: 

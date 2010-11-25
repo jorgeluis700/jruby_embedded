@@ -1,0 +1,17 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: define class for backward-compatibility
+constants: []
+
+full_name: Erubis::Helpers::RailsHelper::PreprocessingEruby
+includes: []
+
+instance_methods: []
+
+name: PreprocessingEruby
+superclass: Erubis::PreprocessingEruby

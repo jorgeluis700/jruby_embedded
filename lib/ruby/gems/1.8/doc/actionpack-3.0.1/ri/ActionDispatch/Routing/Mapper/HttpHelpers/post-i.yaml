@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionDispatch::Routing::Mapper::HttpHelpers#post
+is_singleton: false
+name: post
+params: (*args, &block)
+visibility: public

@@ -1,0 +1,26 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: A stackable dynamic tree based Rack router.
+  - !ruby/struct:SM::Flow::P 
+    body: Rack::Mount supports Rack's Cascade style of trying several routes until it finds one that is not a 404. This allows multiple routes to be nested or stacked on top of each other. Since the application endpoint can trigger the router to continue matching, middleware can be used to add arbitrary conditions to any route. This allows you to route based on other request attributes, session information, or even data dynamically pulled from a database.
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: RegexpWithNamedGroups
+    value: Regexp
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: Version
+    value: "'0.6.13'"
+full_name: Rack::Mount
+includes: []
+
+instance_methods: []
+
+name: Mount
+superclass: 

@@ -1,0 +1,1996 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: Array</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">Array</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/lib/core/facets/array/before_rb.html">
+                lib/core/facets/array/before.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/collapse_rb.html">
+                lib/core/facets/array/collapse.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/combination_rb.html">
+                lib/core/facets/array/combination.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/commonality_rb.html">
+                lib/core/facets/array/commonality.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/conjoin_rb.html">
+                lib/core/facets/array/conjoin.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/contains_rb.html">
+                lib/core/facets/array/contains.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/delete_unless_rb.html">
+                lib/core/facets/array/delete_unless.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/delete_values_rb.html">
+                lib/core/facets/array/delete_values.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/divide_rb.html">
+                lib/core/facets/array/divide.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/entropy_rb.html">
+                lib/core/facets/array/entropy.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/extract_options_rb.html">
+                lib/core/facets/array/extract_options.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/from_rb.html">
+                lib/core/facets/array/from.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/index_rb.html">
+                lib/core/facets/array/index.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/indexable_rb.html">
+                lib/core/facets/array/indexable.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/merge_rb.html">
+                lib/core/facets/array/merge.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/mode_rb.html">
+                lib/core/facets/array/mode.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/nonuniq_rb.html">
+                lib/core/facets/array/nonuniq.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/not_empty_rb.html">
+                lib/core/facets/array/not_empty.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/only_rb.html">
+                lib/core/facets/array/only.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/pad_rb.html">
+                lib/core/facets/array/pad.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/permutation_rb.html">
+                lib/core/facets/array/permutation.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/probability_rb.html">
+                lib/core/facets/array/probability.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/product_rb.html">
+                lib/core/facets/array/product.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/pull_rb.html">
+                lib/core/facets/array/pull.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/recurse_rb.html">
+                lib/core/facets/array/recurse.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/recursively_rb.html">
+                lib/core/facets/array/recursively.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/rotate_rb.html">
+                lib/core/facets/array/rotate.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/select_rb.html">
+                lib/core/facets/array/select.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/splice_rb.html">
+                lib/core/facets/array/splice.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/split_rb.html">
+                lib/core/facets/array/split.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/store_rb.html">
+                lib/core/facets/array/store.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/traverse_rb.html">
+                lib/core/facets/array/traverse.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/array/uniq_by_rb.html">
+                lib/core/facets/array/uniq_by.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/boolean_rb.html">
+                lib/core/facets/boolean.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/enumerable/count_rb.html">
+                lib/core/facets/enumerable/count.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/kernel/blank_rb.html">
+                lib/core/facets/kernel/blank.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/object/object_state_rb.html">
+                lib/core/facets/object/object_state.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/to_hash_rb.html">
+                lib/core/facets/to_hash.rb
+                </a>
+        <br />
+                <a href="../files/lib/more/facets/random_rb.html">
+                lib/more/facets/random.rb
+                </a>
+        <br />
+                <a href="../files/lib/more/facets/set_rb.html">
+                lib/more/facets/set.rb
+                </a>
+        <br />
+                <a href="../files/lib/more/facets/shellwords_rb.html">
+                lib/more/facets/shellwords.rb
+                </a>
+        <br />
+                <a href="../files/lib/more/facets/tuple_rb.html">
+                lib/more/facets/tuple.rb
+                </a>
+        <br />
+                <a href="../files/lib/tour/facets/array/median_rb.html">
+                lib/tour/facets/array/median.rb
+                </a>
+        <br />
+                <a href="../files/lib/tour/facets/array/op_pow_rb.html">
+                lib/tour/facets/array/op_pow.rb
+                </a>
+        <br />
+                <a href="../files/lib/tour/facets/array/percentile_rb.html">
+                lib/tour/facets/array/percentile.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                Object
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000059">**</a>&nbsp;&nbsp;
+      <a href="#M000005">after</a>&nbsp;&nbsp;
+      <a href="#M000004">before</a>&nbsp;&nbsp;
+      <a href="#M000006">collapse</a>&nbsp;&nbsp;
+      <a href="#M000009">collisions</a>&nbsp;&nbsp;
+      <a href="#M000007">combination</a>&nbsp;&nbsp;
+      <a href="#M000008">commonality</a>&nbsp;&nbsp;
+      <a href="#M000010">conjoin</a>&nbsp;&nbsp;
+      <a href="#M000011">delete_unless</a>&nbsp;&nbsp;
+      <a href="#M000012">delete_values</a>&nbsp;&nbsp;
+      <a href="#M000013">delete_values_at</a>&nbsp;&nbsp;
+      <a href="#M000014">divide</a>&nbsp;&nbsp;
+      <a href="#M000025">duplicates</a>&nbsp;&nbsp;
+      <a href="#M000015">entropy</a>&nbsp;&nbsp;
+      <a href="#M000017">extract_options!</a>&nbsp;&nbsp;
+      <a href="#M000018">from</a>&nbsp;&nbsp;
+      <a href="#M000016">ideal_entropy</a>&nbsp;&nbsp;
+      <a href="#M000020">index</a>&nbsp;&nbsp;
+      <a href="#M000058">median</a>&nbsp;&nbsp;
+      <a href="#M000021">merge!</a>&nbsp;&nbsp;
+      <a href="#M000022">mode</a>&nbsp;&nbsp;
+      <a href="#M000023">nonuniq</a>&nbsp;&nbsp;
+      <a href="#M000024">nonuniq!</a>&nbsp;&nbsp;
+      <a href="#M000026">not_empty?</a>&nbsp;&nbsp;
+      <a href="#M000047">object_state</a>&nbsp;&nbsp;
+      <a href="#M000027">only</a>&nbsp;&nbsp;
+      <a href="#M000028">pad</a>&nbsp;&nbsp;
+      <a href="#M000029">pad!</a>&nbsp;&nbsp;
+      <a href="#M000033">peek</a>&nbsp;&nbsp;
+      <a href="#M000060">percentile</a>&nbsp;&nbsp;
+      <a href="#M000030">permutation</a>&nbsp;&nbsp;
+      <a href="#M000034">poke</a>&nbsp;&nbsp;
+      <a href="#M000054">power_set</a>&nbsp;&nbsp;
+      <a href="#M000031">probability</a>&nbsp;&nbsp;
+      <a href="#M000032">product</a>&nbsp;&nbsp;
+      <a href="#M000035">recurse</a>&nbsp;&nbsp;
+      <a href="#M000036">recurse!</a>&nbsp;&nbsp;
+      <a href="#M000037">recursively</a>&nbsp;&nbsp;
+      <a href="#M000038">rotate</a>&nbsp;&nbsp;
+      <a href="#M000039">rotate!</a>&nbsp;&nbsp;
+      <a href="#M000040">select!</a>&nbsp;&nbsp;
+      <a href="#M000056">shelljoin</a>&nbsp;&nbsp;
+      <a href="#M000055">shellwords</a>&nbsp;&nbsp;
+      <a href="#M000041">splice</a>&nbsp;&nbsp;
+      <a href="#M000042">split</a>&nbsp;&nbsp;
+      <a href="#M000019">thru</a>&nbsp;&nbsp;
+      <a href="#M000046">to_b</a>&nbsp;&nbsp;
+      <a href="#M000048">to_h</a>&nbsp;&nbsp;
+      <a href="#M000052">to_h_assoc</a>&nbsp;&nbsp;
+      <a href="#M000049">to_h_auto</a>&nbsp;&nbsp;
+      <a href="#M000051">to_h_flat</a>&nbsp;&nbsp;
+      <a href="#M000053">to_h_multi</a>&nbsp;&nbsp;
+      <a href="#M000050">to_h_splat</a>&nbsp;&nbsp;
+      <a href="#M000057">to_t</a>&nbsp;&nbsp;
+      <a href="#M000043">traverse</a>&nbsp;&nbsp;
+      <a href="#M000044">traverse!</a>&nbsp;&nbsp;
+      <a href="#M000045">uniq_by!</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+    <div id="includes">
+      <h3 class="section-bar">Included Modules</h3>
+
+      <div id="includes-list">
+        <span class="include-name"><a href="Indexable.html">Indexable</a></span>
+        <span class="include-name"><a href="Random/ArrayExtensions.html">Random::ArrayExtensions</a></span>
+      </div>
+    </div>
+
+    <div id="section">
+
+
+
+    <div id="aliases-list">
+      <h3 class="section-bar">External Aliases</h3>
+
+      <div class="name-list">
+                        <table summary="aliases">
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">include?</td>
+          <td>-&gt;</td>
+          <td class="context-item-value">contains?</td>
+        </tr>
+      <tr class="top-aligned-row context-row">
+        <td>&nbsp;</td>
+        <td colspan="2" class="context-item-desc">
+Alias for include?.
+
+</td>
+      </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">shift</td>
+          <td>-&gt;</td>
+          <td class="context-item-value">first!</td>
+        </tr>
+      <tr class="top-aligned-row context-row">
+        <td>&nbsp;</td>
+        <td colspan="2" class="context-item-desc">
+Alias for shift, which removes and returns the first element in an array.
+
+<pre>
+  a = [&quot;a&quot;,&quot;y&quot;,&quot;z&quot;]
+  a.first!      #=&gt; &quot;a&quot;
+  a             #=&gt; [&quot;y&quot;,&quot;z&quot;]
+</pre>
+<p>
+CREDIT: Trans
+</p>
+</td>
+      </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">pop</td>
+          <td>-&gt;</td>
+          <td class="context-item-value">last!</td>
+        </tr>
+      <tr class="top-aligned-row context-row">
+        <td>&nbsp;</td>
+        <td colspan="2" class="context-item-desc">
+Alias for pop, which removes and returns the last element in an array.
+
+<pre>
+  a = [1,2,3]
+  a.last!       #=&gt; 3
+  a             #=&gt; [1,2]
+</pre>
+<p>
+CREDIT: Trans
+</p>
+</td>
+      </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">|</td>
+          <td>-&gt;</td>
+          <td class="context-item-value">merge</td>
+        </tr>
+      <tr class="top-aligned-row context-row">
+        <td>&nbsp;</td>
+        <td colspan="2" class="context-item-desc">
+Alias for <tt>|</tt>.
+
+<pre>
+  [1,2].merge([2,3])  #=&gt; [1,2,3]
+</pre>
+</td>
+      </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">shift</td>
+          <td>-&gt;</td>
+          <td class="context-item-value">pull</td>
+        </tr>
+      <tr class="top-aligned-row context-row">
+        <td>&nbsp;</td>
+        <td colspan="2" class="context-item-desc">
+Alias for shift which removes an object off first slot of an array. This is
+the opposite of pop.
+
+</td>
+      </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">[]=</td>
+          <td>-&gt;</td>
+          <td class="context-item-value">store</td>
+        </tr>
+      <tr class="top-aligned-row context-row">
+        <td>&nbsp;</td>
+        <td colspan="2" class="context-item-desc">
+Store a value at a given <a href="Array.html#M000020">index</a>. Store is
+an alias for #[]=.
+
+<pre>
+  a = []
+  a.store(1, &quot;A&quot;)
+  a[1] #=&gt; &quot;A&quot;
+</pre>
+</td>
+      </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">empty?</td>
+          <td>-&gt;</td>
+          <td class="context-item-value">blank?</td>
+        </tr>
+                        </table>
+      </div>
+    </div>
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000059" class="method-detail">
+        <a name="M000059"></a>
+
+        <div class="method-heading">
+          <span class="method-name">**</span><span class="method-args">(*enums)</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="Array.html#M000032">product</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000005" class="method-detail">
+        <a name="M000005"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000005.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000005.html');return false;">
+          <span class="method-name">after</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the value <a href="Array.html#M000005">after</a> the given value.
+The value <a href="Array.html#M000004">before</a> the last is the first.
+Returns nil if the given value is not in the array.
+</p>
+<p>
+Examples
+</p>
+<pre>
+  sequence = ['a', 'b', 'c']
+  sequence.after('a')           #=&gt; 'b'
+  sequence.after('b')           #=&gt; 'c'
+  sequence.after('c')           #=&gt; 'a'
+  sequence.after('d')           #=&gt; nil
+</pre>
+<p>
+CREDIT: Tyler Rick
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000004" class="method-detail">
+        <a name="M000004"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000004.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000004.html');return false;">
+          <span class="method-name">before</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the value previous to the given value. The value previous to the
+first is the last. Returns nil if the given value is not in the array.
+</p>
+<p>
+Examples
+</p>
+<pre>
+  sequence = ['a', 'b', 'c']
+  sequence.before('a')           #=&gt; 'c'
+  sequence.before('b')           #=&gt; 'a'
+  sequence.before('c')           #=&gt; 'b'
+  sequence.before('d')           #=&gt; nil
+</pre>
+<p>
+CREDIT: Tyler Rick
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000006" class="method-detail">
+        <a name="M000006"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000006.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000006.html');return false;">
+          <span class="method-name">collapse</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Simplify an array by flattening it then compacting it.
+</p>
+<pre>
+  [1,[2,nil,[3]],nil,4].collapse  #=&gt; [1,2,3,4]
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000009" class="method-detail">
+        <a name="M000009"></a>
+
+        <div class="method-heading">
+          <span class="method-name">collisions</span><span class="method-args">(&amp;block)</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="Array.html#M000008">commonality</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000007" class="method-detail">
+        <a name="M000007"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000007.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000007.html');return false;">
+          <span class="method-name">combination</span><span class="method-args">(k=2) {|s.values_at(*idx)| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Yields the block to each unique <a
+href="Array.html#M000007">combination</a> of <em>n</em> elements.
+</p>
+<pre>
+  a = %w|a b c d|
+  a.combination(3)
+</pre>
+<p>
+produces
+</p>
+<pre>
+  [[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;],
+   [&quot;a&quot;, &quot;b&quot;, &quot;d&quot;],
+   [&quot;a&quot;, &quot;c&quot;, &quot;d&quot;],
+   [&quot;b&quot;, &quot;c&quot;, &quot;d&quot;]]
+</pre>
+<p>
+CREDIT: Florian Gross
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000008" class="method-detail">
+        <a name="M000008"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000008.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000008.html');return false;">
+          <span class="method-name">commonality</span><span class="method-args">(&amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns all items that are equal in terms of the supplied block. If no
+block is given objects are considered to be equal if they return the same
+value for Object#hash and if obj1 == obj2.
+</p>
+<pre>
+  [1, 2, 2, 3, 4, 4].commonality  #=&gt; { 2 =&gt; [2, 2], 4 =&gt; [4, 4] }
+
+  [&quot;foo&quot;, &quot;bar&quot;, &quot;a&quot;].commonality { |str| str.length }
+  #=&gt; { 3 =&gt; [&quot;foo&quot;, &quot;bar&quot;] }
+</pre>
+<p>
+This can be useful, for instance, in determining all persons that share
+their last name with another person &#8230;
+</p>
+<pre>
+  persons.collisions { |person| person.last_name }
+</pre>
+<p>
+CREDIT: Florian Gross
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000010" class="method-detail">
+        <a name="M000010"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000010.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000010.html');return false;">
+          <span class="method-name">conjoin</span><span class="method-args">(*args) {|i, *slice(i,2)| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+This is more advanced form of join. It allows for fine control of
+separators.
+</p>
+<p>
+NOTE: The old version used to default its separator to &quot;, &quot; and
+default the terminating separator to &quot; and &quot;. This is no longer
+the case. You must specifically provide these parameters.
+</p>
+<p>
+If no paramters are given, it acts like join but will a space separator.
+</p>
+<pre>
+  [1,2,3].conjoin
+  #=&gt; &quot;1 2 3&quot;
+</pre>
+<p>
+Use comma+space and &#8216;and&#8217; on tail.
+</p>
+<pre>
+  [1,2,3].conjoin(', ', ' and ')
+  #=&gt; &quot;1, 2 and 3&quot;
+</pre>
+<p>
+Use comma+space and &#8216;or&#8217; on tail using :last option.
+</p>
+<pre>
+  [1,2,3].conjoin(', ', :last =&gt; ' or ')
+  #=&gt; &quot;1, 2 or 3&quot;
+</pre>
+<p>
+Use semicolon+space and ampersand on tail using <a
+href="Array.html#M000020">index</a>.
+</p>
+<pre>
+  [1,2,3].conjoin('; ', -1 =&gt; ' &amp; ')
+  #=&gt; &quot;1; 2 &amp; 3&quot;
+</pre>
+<p>
+Can take a block to determine separator.
+</p>
+<pre>
+  [1,2,3,4].conjoin{ |i, a, b| i % 2 == 0 ? '.' : '-' }
+  #=&gt; &quot;1.2-3.4&quot;
+</pre>
+<p>
+This makes very esoteric transformation possible.
+</p>
+<pre>
+  [1,1,2,2].conjoin{ |i, a, b| a == b ? '=' : ' != ' }
+  #=&gt; &quot;1=1 != 2=2&quot;
+
+  [1,2,3,4].conjoin{ |i, x, y| &quot;&lt;#{i} #{x} #{y}&gt;&quot; }
+  #=&gt; &quot;1&lt;0 1 2&gt;2&lt;1 2 3&gt;3&lt;2 3 4&gt;4&quot;
+</pre>
+<p>
+There are also spacing options. Providing the :space option pads the
+separators.
+</p>
+<pre>
+  [1,2,3].conjoin(',', '&amp;', :space=&gt;2)
+  #=&gt; &quot;1  ,  2  &amp;  3&quot;
+</pre>
+<p>
+And the :spacer option can set an alternate spacing string.
+</p>
+<pre>
+  [1,2,3].conjoin('|', '&gt;', :space=&gt;2, :spacer=&gt;'-')
+  #=&gt; &quot;1--|--2--&gt;--3&quot;
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000011" class="method-detail">
+        <a name="M000011"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000011.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000011.html');return false;">
+          <span class="method-name">delete_unless</span><span class="method-args">(&amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Inverse of delete_if.
+</p>
+<pre>
+  [1,2,3].delete_unless{ |x| x &lt; 2 }
+  #=&gt; [1]
+</pre>
+<p>
+CREDIT: Daniel Schierbeck
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000012" class="method-detail">
+        <a name="M000012"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000012.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000012.html');return false;">
+          <span class="method-name">delete_values</span><span class="method-args">(*values)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Delete multiple values <a href="Array.html#M000018">from</a> array.
+</p>
+<pre>
+  a = [1,2,3,4]
+  a.delete_values(1,2)   #=&gt; [1,2]
+  a                      #=&gt; [3,4]
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000013" class="method-detail">
+        <a name="M000013"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000013.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000013.html');return false;">
+          <span class="method-name">delete_values_at</span><span class="method-args">(*selectors)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Delete multiple values <a href="Array.html#M000018">from</a> array given
+indexes or <a href="Array.html#M000020">index</a> range.
+</p>
+<pre>
+  a = [1,2,3,4]
+  a.delete_values_at(1,2)   #=&gt; [2,3]
+  a                         #=&gt; [1,4]
+  a = [1,2,3,4]
+  a.delete_values_at(0..2)  #=&gt; [1,2,3]
+  a                         #=&gt; [4]
+</pre>
+<p>
+NOTE: It would be nice to see delete_at incorporate this funcitonaility.
+</p>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000014" class="method-detail">
+        <a name="M000014"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000014.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000014.html');return false;">
+          <span class="method-name">divide</span><span class="method-args">(pattern)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Divide on matching pattern.
+</p>
+<pre>
+  ['a1','b1','a2','b2'].divide(/^a/)
+  #=&gt; [['a1','b1'],['a2','b2']]
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000025" class="method-detail">
+        <a name="M000025"></a>
+
+        <div class="method-heading">
+          <span class="method-name">duplicates</span><span class="method-args">()</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="Array.html#M000023">nonuniq</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000015" class="method-detail">
+        <a name="M000015"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000015.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000015.html');return false;">
+          <span class="method-name">entropy</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Shannon&#8216;s <a href="Array.html#M000015">entropy</a> for an array -
+returns the average bits per symbol required to encode the array. Lower
+values mean less &quot;<a href="Array.html#M000015">entropy</a>&quot; -
+i.e. less unique information in the array.
+</p>
+<pre>
+  e = %w{ a b c d e e e }.entropy
+
+  (&quot;%.3f&quot; % e)  #=&gt; &quot;2.128&quot;
+</pre>
+<p>
+CREDIT: Derek
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000017" class="method-detail">
+        <a name="M000017"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000017.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000017.html');return false;">
+          <span class="method-name">extract_options!</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Extracts options <a href="Array.html#M000018">from</a> a set of arguments.
+Removes and returns the last element in the array if it&#8216;s a hash,
+otherwise returns a blank hash.
+</p>
+<pre>
+  def options(*args)
+    args.extract_options!
+  end
+
+  options(1, 2)           # =&gt; {}
+  options(1, 2, :a =&gt; :b) # =&gt; {:a=&gt;:b}
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000018" class="method-detail">
+        <a name="M000018"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000018.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000018.html');return false;">
+          <span class="method-name">from</span><span class="method-args">(i)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns last <em>n</em> elements.
+</p>
+<pre>
+  %w{W o r l d}.from(3)  #=&gt; %w{l d}
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000016" class="method-detail">
+        <a name="M000016"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000016.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000016.html');return false;">
+          <span class="method-name">ideal_entropy</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the maximum possible Shannon <a
+href="Array.html#M000015">entropy</a> of the array with given size assuming
+that it is an &quot;order-0&quot; source (each element is selected
+independently of the next).
+</p>
+<p>
+CREDIT: Derek
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000020" class="method-detail">
+        <a name="M000020"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000020.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000020.html');return false;">
+          <span class="method-name">index</span><span class="method-args">(obj=nil, &amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Allows <a href="Array.html#M000020">index</a> to accept a block.
+</p>
+<pre>
+  ['a', 'b', 'c'].index{ |x| x.upcase == 'C' } #=&gt; 2
+</pre>
+<p>
+IMPORTANT: This is one of the few core overrides in Facets.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000058" class="method-detail">
+        <a name="M000058"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000058.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000058.html');return false;">
+          <span class="method-name">median</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the <a href="Array.html#M000058">median</a> for the array; nil if
+array is empty
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000021" class="method-detail">
+        <a name="M000021"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000021.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000021.html');return false;">
+          <span class="method-name">merge!</span><span class="method-args">( other )</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+In place merge.
+</p>
+<pre>
+  a = [1,2]
+  a.merge! [2,3]
+  a #=&gt; [1,2,3]
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000022" class="method-detail">
+        <a name="M000022"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000022.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000022.html');return false;">
+          <span class="method-name">mode</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+In Statistics <a href="Array.html#M000022">mode</a> is the value that
+occurs most frequently in a given set of data. This method returns an array
+in case their is a tie.
+</p>
+<pre>
+  [:a, :b, :c, :b, :d].mode  #=&gt; [:b]
+  [:a, :b, :c, :b, :a].mode  #=&gt; [:a, :b]
+</pre>
+<p>
+Returns an <a href="Array.html">Array</a> of most common elements.
+</p>
+<p>
+CREDIT: Robert Klemme
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000023" class="method-detail">
+        <a name="M000023"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000023.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000023.html');return false;">
+          <span class="method-name">nonuniq</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns a list of non-unique elements
+</p>
+<pre>
+  [1,1,2,2,3,4,5].nonuniq  #=&gt; [1,2]
+</pre>
+<p>
+CREDIT: Martin DeMello
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000024" class="method-detail">
+        <a name="M000024"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000024.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000024.html');return false;">
+          <span class="method-name">nonuniq!</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000026" class="method-detail">
+        <a name="M000026"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000026.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000026.html');return false;">
+          <span class="method-name">not_empty?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Not empty?
+</p>
+<pre>
+  [].not_empty?     #=&gt; false
+  [1,2].not_empty?  #=&gt; true
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000047" class="method-detail">
+        <a name="M000047"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000047.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000047.html');return false;">
+          <span class="method-name">object_state</span><span class="method-args">(data=nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000027" class="method-detail">
+        <a name="M000027"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000027.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000027.html');return false;">
+          <span class="method-name">only</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the <em><a href="Array.html#M000027">only</a></em> element in the
+array. Raises an IndexError if the array&#8216;s size is not 1.
+</p>
+<pre>
+  [5].only      # =&gt; 5
+
+  expect IndexError do
+    [1,2,3].only
+  end
+
+  expect IndexError do
+    [].only
+  end
+</pre>
+<p>
+CREDIT: Gavin Sinclair, Noah Gibbs
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000028" class="method-detail">
+        <a name="M000028"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000028.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000028.html');return false;">
+          <span class="method-name">pad</span><span class="method-args">(len, val=nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Pad an array with a given <tt>value</tt> up to a given <tt>length</tt>.
+</p>
+<pre>
+  [0,1,2].pad(6,&quot;a&quot;)  #=&gt; [0,1,2,&quot;a&quot;,&quot;a&quot;,&quot;a&quot;]
+</pre>
+<p>
+If <tt>length</tt> is a negative number padding will be added to the
+beginning of the array.
+</p>
+<pre>
+  [0,1,2].pad(-6,&quot;a&quot;)  #=&gt; [&quot;a&quot;,&quot;a&quot;,&quot;a&quot;,0,1,2]
+</pre>
+<p>
+CREDIT: Richard Laugesen
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000029" class="method-detail">
+        <a name="M000029"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000029.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000029.html');return false;">
+          <span class="method-name">pad!</span><span class="method-args">(len, val=nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Like <a href="Array.html#M000028">pad</a> but changes the array in place.
+</p>
+<pre>
+   a = [0,1,2]
+   a.pad!(6,&quot;x&quot;)
+   a  #=&gt; [0,1,2,&quot;x&quot;,&quot;x&quot;,&quot;x&quot;]
+</pre>
+<p>
+CREDIT: Richard Laugesen
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000033" class="method-detail">
+        <a name="M000033"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000033.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000033.html');return false;">
+          <span class="method-name">peek</span><span class="method-args">(i=0)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Peek at the top of the stack (the end of the array).
+</p>
+<pre>
+  a = [1, 2, 3]
+  a.peek          #=&gt; 3
+  a               #=&gt; [1, 2, 3]
+</pre>
+<p>
+Or provide an <a href="Array.html#M000020">index</a> to inspect the array
+<a href="Array.html#M000018">from</a> back to front.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000060" class="method-detail">
+        <a name="M000060"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000060.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000060.html');return false;">
+          <span class="method-name">percentile</span><span class="method-args">(p)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the <a href="Array.html#M000060">percentile</a> value for <a
+href="Array.html#M000060">percentile</a> <em>p</em>; nil if array is empty.
+</p>
+<p>
+<tt>p</tt> should be expressed as an integer; <tt><a
+href="Array.html#M000060">percentile</a>(90)</tt> returns the 90th <a
+href="Array.html#M000060">percentile</a> of the array.
+</p>
+<p>
+Algorithm <a href="Array.html#M000018">from</a> <a
+href="http://www.itl.nist.gov/div898/handbook/prc/section2/prc252.htm">NIST</a>
+</p>
+<p>
+CREDT: ?
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000030" class="method-detail">
+        <a name="M000030"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000030.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000030.html');return false;">
+          <span class="method-name">permutation</span><span class="method-args">(n=size) {|[]| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Permutation provids the possible orders of an enumerable. Each is indexed
+by a <a href="Array.html#M000030">permutation</a> number. The maximum
+number of arrangements is the factorial of the size of the array.
+</p>
+<pre>
+   [1,2].permutation(2).to_a #=&gt; [[1,2], [2,1]]
+</pre>
+<p>
+CREDIT: Shin-ichiro Hara
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000034" class="method-detail">
+        <a name="M000034"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000034.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000034.html');return false;">
+          <span class="method-name">poke</span><span class="method-args">(x, i=0)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Put an object on the bottom of the stack (front of the array).
+</p>
+<pre>
+  a = [2, 3]
+  a.poke(1)
+  a               #=&gt; [1, 2, 3]
+</pre>
+<p>
+Or supply an <a href="Array.html#M000020">index</a> and <a
+href="Array.html#M000034">poke</a> works like insert.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000054" class="method-detail">
+        <a name="M000054"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000054.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000054.html');return false;">
+          <span class="method-name">power_set</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000031" class="method-detail">
+        <a name="M000031"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000031.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000031.html');return false;">
+          <span class="method-name">probability</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Generates a hash mapping each unique element in the array to the relative
+frequency, i.e. the probablity, of it appearence.
+</p>
+<pre>
+  [:a, :b, :c, :c].probability  #=&gt; {:a=&gt; 0.25, :b=&gt;0.25, :c=&gt;0.5}
+</pre>
+<p>
+CREDIT: Brian Schröder
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000032" class="method-detail">
+        <a name="M000032"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000032.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000032.html');return false;">
+          <span class="method-name">product</span><span class="method-args">(*enums)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Provides the cartesian <a href="Array.html#M000032">product</a> of two or
+more arrays.
+</p>
+<pre>
+  a = [1,2].product([4,5])
+  a  #=&gt; [[1, 4],[1, 5],[2, 4],[2, 5]]
+</pre>
+<p>
+CREDIT: Thomas Hafner
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000035" class="method-detail">
+        <a name="M000035"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000035.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000035.html');return false;">
+          <span class="method-name">recurse</span><span class="method-args">(*types) {|a| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Apply a block to array, and <a href="Array.html#M000037">recursively</a>
+apply that block to each sub-array or <tt>types</tt>.
+</p>
+<pre>
+  arr = [&quot;a&quot;, [&quot;b&quot;, &quot;c&quot;, nil], nil]
+  arr.recurse{ |a| a.compact! }
+  #=&gt; [&quot;a&quot;, [&quot;b&quot;, &quot;c&quot;]]
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000036" class="method-detail">
+        <a name="M000036"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000036.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000036.html');return false;">
+          <span class="method-name">recurse!</span><span class="method-args">(&amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+In place form of <a href="Array.html#M000035">recurse</a>.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000037" class="method-detail">
+        <a name="M000037"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000037.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000037.html');return false;">
+          <span class="method-name">recursively</span><span class="method-args">(*types, &amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Apply a method to array, and <a href="Array.html#M000037">recursively</a>
+apply that method to each sub-array or <tt>types</tt>.
+</p>
+<pre>
+  arr = [&quot;a&quot;, [&quot;b&quot;, &quot;c&quot;]]
+  arr.recursively.map{ |v| v.to_sym }
+  #=&gt; [:a, [:b, :c]]
+</pre>
+<p>
+By default the sub-types are passed <a href="Array.html#M000019">thru</a>
+uneffected. Passing a block to <a href="Array.html#M000037">recursively</a>
+changes this.
+</p>
+<pre>
+  arr = [&quot;a&quot;, [&quot;b&quot;, &quot;c&quot;]]
+  arr.recursively{ |a| a.reverse }.map{ |v| v.to_sym }
+  #=&gt; [:a, [:c, :b]]
+</pre>
+<p>
+TODO: Return <a href="Enumerator.html">Enumerator</a> if no <tt>yld</tt>
+block is given ?
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000038" class="method-detail">
+        <a name="M000038"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000038.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000038.html');return false;">
+          <span class="method-name">rotate</span><span class="method-args">(n=1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Rotates an array&#8216;s elements <a href="Array.html#M000018">from</a>
+back to front n times.
+</p>
+<pre>
+  [1,2,3].rotate      #=&gt; [2,3,1]
+  [2,3,1].rotate      #=&gt; [3,1,2]
+  [3,1,2].rotate      #=&gt; [1,2,3]
+
+  [1,2,3].rotate(3)   #=&gt; [1,2,3]
+</pre>
+<p>
+A negative parameter reverses the order <a
+href="Array.html#M000018">from</a> front to back.
+</p>
+<pre>
+  [1,2,3].rotate(-1)  #=&gt; [3,1,2]
+</pre>
+<p>
+CREDIT: Florian Gross, Thomas Sawyer
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000039" class="method-detail">
+        <a name="M000039"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000039.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000039.html');return false;">
+          <span class="method-name">rotate!</span><span class="method-args">(n=1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Same as <a href="Array.html#M000038">rotate</a>, but acts in place.
+</p>
+<pre>
+  a = [1,2,3]
+  a.rotate!
+  a  #=&gt; [2,3,1]
+</pre>
+<p>
+CREDIT: Florian Gross, Thomas Sawyer
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000040" class="method-detail">
+        <a name="M000040"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000040.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000040.html');return false;">
+          <span class="method-name">select!</span><span class="method-args">( {|| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+As with select but modifies the <a href="Array.html">Array</a> in place.
+</p>
+<pre>
+  a = [1,2,3,4,5,6,7,8,9,10]
+  a.select!{ |e| e % 2 == 0 }
+  a  #=&gt; [2,4,6,8,10]
+</pre>
+<p>
+CREDIT: Gavin Sinclair
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000056" class="method-detail">
+        <a name="M000056"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000056.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000056.html');return false;">
+          <span class="method-name">shelljoin</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000055" class="method-detail">
+        <a name="M000055"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000055.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000055.html');return false;">
+          <span class="method-name">shellwords</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Convert an array into command line parameters. The array is accepted in the
+format of Ruby method arguments &#8212;ie. [arg1, arg2, &#8230;, hash]
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000041" class="method-detail">
+        <a name="M000041"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000041.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000041.html');return false;">
+          <span class="method-name">splice</span><span class="method-args">(*args)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Splice acts a <a href="Array.html#M000007">combination</a> of slice! and
+store. If two arguments are given it calls store. If a single argument is
+given it calls slice!.
+</p>
+<pre>
+  a = [1,2,3]
+  a.splice(1)    #=&gt; 2
+  a              #=&gt; [1,3]
+
+  a = [1,2,3]
+  a.splice(1,4)  #=&gt; 4
+  a              #=&gt;[1,4,3]
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000042" class="method-detail">
+        <a name="M000042"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000042.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000042.html');return false;">
+          <span class="method-name">split</span><span class="method-args">(pattern)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Split on matching pattern. Unlike <a href="Array.html#M000014">divide</a>
+this does not include matching elements.
+</p>
+<pre>
+  ['a1','a2','b1','a3','b2','a4'].split(/^b/)
+  #=&gt; [['a1','a2'],['a3'],['a4']]
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000019" class="method-detail">
+        <a name="M000019"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000019.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000019.html');return false;">
+          <span class="method-name">thru</span><span class="method-args">(from, to=nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Fetch values <a href="Array.html#M000018">from</a> a start <a
+href="Array.html#M000020">index</a> <a href="Array.html#M000019">thru</a>
+an end <a href="Array.html#M000020">index</a>.
+</p>
+<pre>
+  [1,2,3,4,5].thru(0,2)  #=&gt; [1,2,3]
+  [1,2,3,4,5].thru(2,4)  #=&gt; [3,4,5]
+
+  [1,2,3,4,5].thru(2)  #=&gt; [1,2,3]
+  [1,2,3,4,5].thru(4)  #=&gt; [1,2,3,4,5]
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000046" class="method-detail">
+        <a name="M000046"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000046.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000046.html');return false;">
+          <span class="method-name">to_b</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Boolean conversion for not empty?
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000048" class="method-detail">
+        <a name="M000048"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000048.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000048.html');return false;">
+          <span class="method-name">to_h</span><span class="method-args">(mode=nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Converts an array into a hash. Converting an array into a hash is not a
+one-to-one conversion, for this reason <a
+href="Array.html#M000048">to_h</a> examines at the array being converted
+and then dispatches the conversion to the most sutiable specialized
+function. There are three possiblities for this.
+</p>
+<p>
+If the array is a collection of perfect pairs, like that which Hash#to_a
+generates, then conversion is handled by <a
+href="Array.html#M000051">to_h_flat</a>.
+</p>
+<pre>
+  a = [ [:a,1], [:b,2] ]
+  a.to_h  #=&gt; { :a=&gt;1, :b=&gt;2 }
+</pre>
+<p>
+If the array contains <a href="Array.html#M000027">only</a> arrays, but are
+not perfect pairs, then <a href="Array.html#M000053">to_h_multi</a> is
+called.
+</p>
+<pre>
+  a = [ [:a,1,2], [:b,2], [:c], [:d] ]
+  a.to_h  #=&gt; { :a=&gt;[1,2], :b=&gt;[2], :c=&gt;[], :d=&gt;[] }
+</pre>
+<p>
+If the array contians objects other then arrays then the <a
+href="Array.html#M000050">to_h_splat</a> method is called.
+</p>
+<pre>
+  a = [ [:a,1,2], 2, :b, [:c,3], 9 ]
+  a.to_h  #=&gt; { [:a,1,2]=&gt;2, :b=&gt;[:c,3], 9=&gt;nil }
+</pre>
+<p>
+Finally, a particular dispatch can be forced by specifying the <tt><a
+href="Array.html#M000022">mode</a></tt> of conversion, eg. +:multi+,
++:splat+, +:flat+, +:assoc+, etc.
+</p>
+<p>
+Setting <tt><a href="Array.html#M000022">mode</a></tt> to <tt>true</tt> is
+the same as setting it +:multi+. This has been left in for backward
+compatability.
+</p>
+<p>
+NOTE: The use of a <tt>values</tt> parameter has been deprecated because
+that functionality is as simple as &#8230;
+</p>
+<pre>
+  array1.zip(array2).to_h
+</pre>
+<p>
+CREDIT: Robert Klemme, Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000052" class="method-detail">
+        <a name="M000052"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000052.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000052.html');return false;">
+          <span class="method-name">to_h_assoc</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+When a mixed or multi-element accociative array is used, the result is as
+follows:
+</p>
+<pre>
+  a = [ [:a,1,2], [:b,2], [:c], :d ]
+  a.to_h  #=&gt; { :a=&gt;[1,2], :b=&gt;[2], :c=&gt;[], :d=&gt;[] }
+</pre>
+<p>
+If the first entry of any subelements are the same, then the value will be
+set to the last occuring value.
+</p>
+<pre>
+  a = [ :x, [:x], [:x,1,2], [:x,3], [:x,4] ]
+  a.to_h_assoc  #=&gt; { :x=&gt;[4] }
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000049" class="method-detail">
+        <a name="M000049"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000049.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000049.html');return false;">
+          <span class="method-name">to_h_auto</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Converts an array into a hash. Converting an array into a hash is not a
+one-to-one conversion, for this reason <a
+href="Array.html#M000048">to_h</a> examines at the array being converted
+and then dispatches the conversion to the most sutiable specialized
+function. There are three possiblities for this.
+</p>
+<p>
+If the array is a collection of perfect pairs, like that which Hash#to_a
+generates, then conversion is handled by <a
+href="Array.html#M000051">to_h_flat</a>.
+</p>
+<pre>
+  a = [ [:a,1], [:b,2] ]
+  a.to_h_auto  #=&gt; { :a=&gt;1, :b=&gt;2 }
+</pre>
+<p>
+If the array contains <a href="Array.html#M000027">only</a> arrays, but are
+not perfect pairs, then <a href="Array.html#M000053">to_h_multi</a> is
+called.
+</p>
+<pre>
+  a = [ [:a,1,2], [:b,2], [:c], [:d] ]
+  a.to_h_auto  #=&gt; { :a=&gt;[1,2], :b=&gt;[2], :c=&gt;[], :d=&gt;[] }
+</pre>
+<p>
+If the array contians objects other then arrays then the <a
+href="Array.html#M000050">to_h_splat</a> method is called.
+</p>
+<pre>
+  a = [ [:a,1,2], 2, :b, [:c,3], 9 ]
+  a.to_h_auto  #=&gt; { [:a,1,2]=&gt;2, :b=&gt;[:c,3], 9=&gt;nil }
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000051" class="method-detail">
+        <a name="M000051"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000051.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000051.html');return false;">
+          <span class="method-name">to_h_flat</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+This is equivalent to <a href="http://*array.flatten">Hash</a>, but it will
+<a href="Array.html#M000028">pad</a> the array with a <tt>nil</tt> object
+if there are not an even number of elements.
+</p>
+<pre>
+  a = [:a,1,[:b,2,:c]]
+  a.to_h_flat  #=&gt; { :a=&gt;1, :b=&gt;2, :c=&gt;nil }
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000053" class="method-detail">
+        <a name="M000053"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000053.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000053.html');return false;">
+          <span class="method-name">to_h_multi</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+When a mixed or multi-element accociative array is used, the result is as
+follows:
+</p>
+<pre>
+  a = [ [:a,1,2], [:b,2], [:c], :d ]
+  a.to_h  #=&gt; { :a=&gt;[1,2], :b=&gt;[2], :c=&gt;[], :d=&gt;[] }
+</pre>
+<p>
+If the first entry of the subelements is the same, then the values will be
+merged using concat.
+</p>
+<pre>
+  a = [ [:a,1,2], [:a,3], [:a,4], [:a], :a ]
+  a.to_h_multi  #=&gt; { :a=&gt;[1,2,3,4] }
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000050" class="method-detail">
+        <a name="M000050"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000050.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000050.html');return false;">
+          <span class="method-name">to_h_splat</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+This is equivalent to Hash[*array], but it will <a
+href="Array.html#M000028">pad</a> the array with a <tt>nil</tt> object if
+there are not an even number of elements.
+</p>
+<pre>
+  a = [:a,1,:b,2,:c]
+  a.to_h_splat  #=&gt; { :a=&gt;1, :b=&gt;2, :c=&gt;nil }
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000057" class="method-detail">
+        <a name="M000057"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000057.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000057.html');return false;">
+          <span class="method-name">to_t</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Convert an array into a tuple.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000043" class="method-detail">
+        <a name="M000043"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000043.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000043.html');return false;">
+          <span class="method-name">traverse</span><span class="method-args">(&amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns a new array created by traversing the array and its sub-arrays,
+executing the given block on the elements.
+</p>
+<pre>
+  h = [&quot;A&quot;, &quot;B&quot;, [&quot;X&quot;, &quot;Y&quot;]]
+
+  g = h.traverse{ |e| e.downcase }
+
+  g  #=&gt; [&quot;a&quot;, &quot;b&quot;, [&quot;x&quot;, &quot;y&quot;]]
+</pre>
+<p>
+This is the same as <tt>recursive.map</tt> and will likely be deprecated in
+the future because of it.
+</p>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000044" class="method-detail">
+        <a name="M000044"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000044.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000044.html');return false;">
+          <span class="method-name">traverse!</span><span class="method-args">(&amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Like recursive_map, but will change the array in place.
+</p>
+<pre>
+  h = [&quot;A&quot;, &quot;B&quot;, [&quot;X&quot;, &quot;Y&quot;]]
+
+  h.traverse!{ |e| e.downcase }
+
+  h  #=&gt; [&quot;a&quot;, &quot;b&quot;, [&quot;x&quot;, &quot;y&quot;]]
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000045" class="method-detail">
+        <a name="M000045"></a>
+
+        <div class="method-heading">
+          <a href="Array.src/M000045.html" target="Code" class="method-signature"
+            onclick="popupCode('Array.src/M000045.html');return false;">
+          <span class="method-name">uniq_by!</span><span class="method-args">( {|| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Like uniq, but determines uniqueness based on a given block.
+</p>
+<pre>
+  a = (-5..5).to_a
+  a.uniq_by!{ |i| i*i }
+  a #=&gt; [-5, -4, -3, -2, -1, 0]
+</pre>
+<p>
+As can be seen in the example, order is significant.
+</p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

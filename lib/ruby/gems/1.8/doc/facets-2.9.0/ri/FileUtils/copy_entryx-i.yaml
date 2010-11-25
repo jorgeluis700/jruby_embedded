@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Like FileUtils.copy_entry, but takes a filter proc that can return false to skip a file.
+  - !ruby/struct:SM::Flow::P 
+    body: Note that if the filter rejects a subdirectory then everything within that subdirectory is automatically skipped as well.
+full_name: FileUtils#copy_entryx
+is_singleton: false
+name: copy_entryx
+params: (src, dest, filter, preserve = false, dereference_root = false, remove_destination = false)
+visibility: public

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>parse_preoptions (Argvector)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/more/facets/argvector.rb, line 253</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse_preoptions</span>(<span class="ruby-identifier">args</span>)
+    <span class="ruby-comment cmt">##args = args.dup</span>
+    <span class="ruby-identifier">args</span> = <span class="ruby-identifier">multi_flag</span>(<span class="ruby-identifier">args</span>) <span class="ruby-comment cmt">#unless opts.include?(:simple)</span>
+
+    <span class="ruby-identifier">flags</span> = []
+    <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^-/</span>
+      <span class="ruby-identifier">key</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+      <span class="ruby-identifier">key</span>.<span class="ruby-identifier">sub!</span>(<span class="ruby-regexp re">/^-{1,2}/</span>,<span class="ruby-value str">''</span>)
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">index</span>(<span class="ruby-value str">'='</span>)
+        <span class="ruby-identifier">key</span>, <span class="ruby-identifier">val</span> = <span class="ruby-identifier">key</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">'='</span>)
+      <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">a</span> = <span class="ruby-identifier">arity</span>[<span class="ruby-identifier">key</span>]
+        <span class="ruby-identifier">val</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">slice!</span>(<span class="ruby-value">0</span>,<span class="ruby-identifier">a</span>)
+        <span class="ruby-identifier">val</span> = <span class="ruby-identifier">val</span>.<span class="ruby-identifier">first</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">a</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-identifier">val</span> = <span class="ruby-keyword kw">true</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-identifier">flags</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">key</span>, <span class="ruby-identifier">val</span>]
+    <span class="ruby-keyword kw">end</span>
+
+    <span class="ruby-identifier">flags</span> = <span class="ruby-identifier">format_options</span>(<span class="ruby-identifier">flags</span>)
+
+    <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">flags</span>, <span class="ruby-identifier">args</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

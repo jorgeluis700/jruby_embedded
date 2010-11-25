@@ -1,0 +1,19 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: thin wrapper around Hash that allows us to lazily load session id into session_options
+constants: []
+
+full_name: ActionDispatch::Session::AbstractStore::OptionsHash
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: "[]"
+name: OptionsHash
+superclass: Hash

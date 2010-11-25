@@ -1,0 +1,36 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Passes the record off to the class or classes specified and allows them to add errors based on more complex conditions.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class Person\n    include ActiveModel::Validations\n    validates_with MyValidator\n  end\n\n  class MyValidator &lt; ActiveModel::Validator\n    def validate(record)\n      if some_complex_logic\n        record.errors[:base] &lt;&lt; &quot;This record is invalid&quot;\n      end\n    end\n\n    private\n      def some_complex_logic\n        # ...\n      end\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "You may also pass it multiple classes, like so:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class Person\n    include ActiveModel::Validations\n    validates_with MyValidator, MyOtherValidator, :on =&gt; :create\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "Configuration options:"
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>on</tt> - Specifies when this validation is active (<tt>:create</tt> or <tt>:update</tt>
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>if</tt> - Specifies a method, proc or string to call to determine if the validation should occur (e.g. <tt>:if =&gt; :allow_validation</tt>, or <tt>:if =&gt; Proc.new { |user| user.signup_step &gt; 2 }</tt>). The method, proc or string should return or evaluate to a true or false value.
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>unless</tt> - Specifies a method, proc or string to call to determine if the validation should not occur (e.g. <tt>:unless =&gt; :skip_validation</tt>, or <tt>:unless =&gt; Proc.new { |user| user.signup_step &lt;= 2 }</tt>). The method, proc or string should return or evaluate to a true or false value.
+    type: :BULLET
+  - !ruby/struct:SM::Flow::P 
+    body: "If you pass any additional configuration options, they will be passed to the class and available as <tt>options</tt>:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class Person\n    include ActiveModel::Validations\n    validates_with MyValidator, :my_custom_key =&gt; &quot;my custom value&quot;\n  end\n\n  class MyValidator &lt; ActiveModel::Validator\n    def validate(record)\n      options[:my_custom_key] # =&gt; &quot;my custom value&quot;\n    end\n  end\n"
+full_name: ActiveModel::Validations::ClassMethods#validates_with
+is_singleton: false
+name: validates_with
+params: (*args, &block)
+visibility: public

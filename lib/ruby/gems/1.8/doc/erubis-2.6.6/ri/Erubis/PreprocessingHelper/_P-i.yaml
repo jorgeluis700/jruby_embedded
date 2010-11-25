@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: _?
+block_params: 
+comment: 
+full_name: Erubis::PreprocessingHelper#_p
+is_singleton: false
+name: _p
+params: (arg)
+visibility: public

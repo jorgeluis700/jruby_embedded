@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: the maximum number of elements in an IN (x,y,z) clause
+full_name: ActiveRecord::ConnectionAdapters::DatabaseLimits#in_clause_length
+is_singleton: false
+name: in_clause_length
+params: ()
+visibility: public

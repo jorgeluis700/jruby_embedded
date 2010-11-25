@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: returns an array of plural keys for the given locale so that we can convert from gettext's integer-index based style TODO move this information to the pluralization module
+full_name: I18n::Gettext::plural_keys
+is_singleton: true
+name: plural_keys
+params: (locale)
+visibility: public

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: A convenience method for creating a new TextileDoc. See RedCloth::TextileDoc.
+full_name: RedCloth::new
+is_singleton: true
+name: new
+params: ( *args, &block )
+visibility: public

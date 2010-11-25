@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Produce time stamp for Time.now. See #stamp."
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Trans"
+full_name: Time::stamp
+is_singleton: true
+name: stamp
+params: (*args)
+visibility: public

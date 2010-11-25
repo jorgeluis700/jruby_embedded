@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveSupport::LogSubscriber::attach_to
+is_singleton: true
+name: attach_to
+params: (namespace, log_subscriber=new, notifier=ActiveSupport::Notifications)
+visibility: public

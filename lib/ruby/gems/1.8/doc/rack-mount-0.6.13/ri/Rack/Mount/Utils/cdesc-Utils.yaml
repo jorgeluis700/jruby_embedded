@@ -1,0 +1,55 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Private utility methods used throughout Rack::Mount.
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: RESERVED_PCHAR
+    value: "':@&=+$,;%'"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: SAFE_PCHAR
+    value: "\"#{URI::REGEXP::PATTERN::UNRESERVED}#{RESERVED_PCHAR}\""
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: UNSAFE_PCHAR
+    value: Regexp.new("[^#{SAFE_PCHAR}]", false).freeze
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: UNSAFE_PCHAR
+    value: Regexp.new("[^#{SAFE_PCHAR}]", false, 'N').freeze
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: Parser
+    value: "URI.const_defined?(:Parser) ? URI::Parser.new : URI"
+full_name: Rack::Mount::Utils
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: debug
+  - !ruby/object:RI::MethodSummary 
+    name: escape_uri
+  - !ruby/object:RI::MethodSummary 
+    name: normalize_extended_expression
+  - !ruby/object:RI::MethodSummary 
+    name: normalize_path
+  - !ruby/object:RI::MethodSummary 
+    name: parse_regexp
+  - !ruby/object:RI::MethodSummary 
+    name: pop_trailing_blanks!
+  - !ruby/object:RI::MethodSummary 
+    name: regexp_anchored?
+  - !ruby/object:RI::MethodSummary 
+    name: silence_debug
+  - !ruby/object:RI::MethodSummary 
+    name: unescape_uri
+  - !ruby/object:RI::MethodSummary 
+    name: unescape_uri
+name: Utils
+superclass: 

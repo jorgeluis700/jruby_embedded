@@ -1,0 +1,24 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: If :only or :except are used, convert the options into the primitive form (:per_key) used by ActiveSupport::Callbacks. The basic idea is that :only =&gt; :index gets converted to :if =&gt; proc {|c| c.action_name == &quot;index&quot; }, but that the proc is only evaluated once per action for the lifetime of a Rails process.
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Options
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>only</tt> - The callback should be run only for this action
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: "&lt;tt&gt;except&lt;tt&gt; - The callback should be run for all actions except this action"
+    type: :BULLET
+full_name: AbstractController::Callbacks::ClassMethods#_normalize_callback_options
+is_singleton: false
+name: _normalize_callback_options
+params: (options)
+visibility: public

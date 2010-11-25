@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Since Symbol is immutable it cannot be duplicated. For this reason #try_dup returns <tt>self</tt>."
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  :a.dup!  #=&gt; :a\n"
+full_name: Symbol#dup!
+is_singleton: false
+name: dup!
+params: ()
+visibility: public

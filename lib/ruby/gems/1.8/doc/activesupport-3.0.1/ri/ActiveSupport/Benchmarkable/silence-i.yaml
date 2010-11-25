@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: ""
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Silence the logger during the execution of the block.
+full_name: ActiveSupport::Benchmarkable#silence
+is_singleton: false
+name: silence
+params: () {|| ...}
+visibility: public

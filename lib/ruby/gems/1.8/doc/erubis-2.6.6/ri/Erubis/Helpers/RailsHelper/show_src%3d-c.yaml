@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Erubis::Helpers::RailsHelper::show_src=
+is_singleton: true
+name: show_src=
+params: (flag)
+visibility: public

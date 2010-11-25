@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: All other formats follow the procedure below. First we try to render a template, if the template is not available, we verify if the resource responds to :to_format and display it.
+full_name: ActionController::Responder#to_format
+is_singleton: false
+name: to_format
+params: ()
+visibility: public

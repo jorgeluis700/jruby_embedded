@@ -1,0 +1,30 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Return a rack endpoint for the given action. Memoize the endpoint, so multiple calls into MyController.action will return the same object for the same action.
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Parameters
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "action<#to_s>:"
+        body: An action name
+    type: :NOTE
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Returns
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "Proc:"
+        body: A rack application
+    type: :NOTE
+full_name: ActionController::Metal::action
+is_singleton: true
+name: action
+params: (name, klass = ActionDispatch::Request)
+visibility: public

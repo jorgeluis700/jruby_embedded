@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Returns an Enumerator for iterating over each line of the string, void of the termining newline character, in contrast to #lines which retains it."
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &quot;a\\nb\\nc&quot;.newlines.class.assert == Enumerator\n  &quot;a\\nb\\nc&quot;.newlines.to_a.assert == %w{a b c}\n\n  a = []\n  &quot;a\\nb\\nc&quot;.newlines{|nl| a &lt;&lt; nl}\n  a.assert == %w{a b c}\n"
+full_name: String#newlines
+is_singleton: false
+name: newlines
+params: (&block)
+visibility: public

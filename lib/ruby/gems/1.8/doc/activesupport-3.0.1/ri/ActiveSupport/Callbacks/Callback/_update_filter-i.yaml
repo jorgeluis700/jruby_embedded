@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveSupport::Callbacks::Callback#_update_filter
+is_singleton: false
+name: _update_filter
+params: (filter_options, new_options)
+visibility: public

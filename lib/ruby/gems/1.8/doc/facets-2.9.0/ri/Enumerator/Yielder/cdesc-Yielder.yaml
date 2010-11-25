@@ -1,0 +1,19 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Wrapper to allow yielder.yield(output) or yielder &lt;&lt; output in the same way as ruby-1.9
+  - !ruby/struct:SM::Flow::P 
+    body: "TODO: Why can't Yielder take a block instead of a proc argument?"
+constants: []
+
+full_name: Enumerator::Yielder
+includes: []
+
+instance_methods: []
+
+name: Yielder
+superclass: Object

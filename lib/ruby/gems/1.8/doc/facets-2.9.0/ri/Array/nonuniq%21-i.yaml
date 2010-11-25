@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: []
+
+full_name: Array#nonuniq!
+is_singleton: false
+name: nonuniq!
+params: ()
+visibility: public

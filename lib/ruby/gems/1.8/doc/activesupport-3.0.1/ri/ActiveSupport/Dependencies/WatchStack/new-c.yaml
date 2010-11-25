@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "@watching is a stack of lists of constants being watched. For instance, if parent.rb is autoloaded, the stack will look like [[Object]]. If parent.rb then requires namespace/child.rb, the stack will look like [[Object], [Namespace]]."
+full_name: ActiveSupport::Dependencies::WatchStack::new
+is_singleton: true
+name: new
+params: ()
+visibility: public

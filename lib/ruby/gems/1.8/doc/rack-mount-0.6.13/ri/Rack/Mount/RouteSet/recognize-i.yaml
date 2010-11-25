@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: route, matches, params
+comment: 
+full_name: Rack::Mount::RouteSet#recognize
+is_singleton: false
+name: recognize
+params: (obj) {|route, matches, params| ...}
+visibility: public

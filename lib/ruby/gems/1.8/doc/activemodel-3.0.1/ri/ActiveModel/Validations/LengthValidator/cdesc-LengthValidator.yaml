@@ -1,0 +1,34 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: MESSAGES
+    value: "{ :is => :wrong_length, :minimum => :too_short, :maximum => :too_long }.freeze"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: CHECKS
+    value: "{ :is => :==, :minimum => :>=, :maximum => :<= }.freeze"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: DEFAULT_TOKENIZER
+    value: lambda { |value| value.split(//) }
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: RESERVED_OPTIONS
+    value: "[:minimum, :maximum, :within, :is, :tokenizer, :too_short, :too_long]"
+full_name: ActiveModel::Validations::LengthValidator
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: check_validity!
+  - !ruby/object:RI::MethodSummary 
+    name: validate_each
+name: LengthValidator
+superclass: EachValidator

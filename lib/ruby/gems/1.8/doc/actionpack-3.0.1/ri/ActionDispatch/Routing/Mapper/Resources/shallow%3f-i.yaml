@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionDispatch::Routing::Mapper::Resources#shallow?
+is_singleton: false
+name: shallow?
+params: ()
+visibility: public

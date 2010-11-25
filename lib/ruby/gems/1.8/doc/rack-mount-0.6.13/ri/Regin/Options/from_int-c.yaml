@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Regin::Options::from_int
+is_singleton: true
+name: from_int
+params: (flags)
+visibility: public

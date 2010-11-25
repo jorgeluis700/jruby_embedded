@@ -1,0 +1,24 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Passes the record off to the class or classes specified and allows them to add errors based on more complex conditions.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class Person\n    include ActiveModel::Validations\n\n    validates :instance_validations\n\n    def instance_validations\n      validates_with MyValidator\n    end\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Please consult the class method documentation for more information on creating your own validator.
+  - !ruby/struct:SM::Flow::P 
+    body: "You may also pass it multiple classes, like so:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class Person\n    include ActiveModel::Validations\n\n    validates :instance_validations, :on =&gt; :create\n\n    def instance_validations\n      validates_with MyValidator, MyOtherValidator\n    end\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Standard configuration options (:on, :if and :unless), which are available on the class version of validates_with, should instead be placed on the <tt>validates</tt> method as these are applied and tested in the callback
+  - !ruby/struct:SM::Flow::P 
+    body: If you pass any additional configuration options, they will be passed to the class and available as <tt>options</tt>, please refer to the class version of this method for more information
+full_name: ActiveModel::Validations#validates_with
+is_singleton: false
+name: validates_with
+params: (*args, &block)
+visibility: public

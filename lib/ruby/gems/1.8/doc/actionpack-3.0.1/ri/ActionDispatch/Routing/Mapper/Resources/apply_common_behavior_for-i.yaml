@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionDispatch::Routing::Mapper::Resources#apply_common_behavior_for
+is_singleton: false
+name: apply_common_behavior_for
+params: (method, resources, options, &block)
+visibility: protected

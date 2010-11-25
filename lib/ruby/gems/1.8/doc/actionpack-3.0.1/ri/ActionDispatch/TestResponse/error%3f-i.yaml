@@ -1,0 +1,13 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: server_error?
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Was there a server-side error?
+full_name: ActionDispatch::TestResponse#error?
+is_singleton: false
+name: error?
+params: ()
+visibility: public

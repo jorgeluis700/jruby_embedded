@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionController::Flash#redirect_to
+is_singleton: false
+name: redirect_to
+params: (options = {}, response_status_and_flash = {})
+visibility: protected

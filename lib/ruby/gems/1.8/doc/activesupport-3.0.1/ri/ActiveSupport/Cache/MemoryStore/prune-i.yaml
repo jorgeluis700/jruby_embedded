@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: To ensure entries fit within the specified memory prune the cache by removing the least recently accessed entries.
+full_name: ActiveSupport::Cache::MemoryStore#prune
+is_singleton: false
+name: prune
+params: (target_size, max_time = nil)
+visibility: public

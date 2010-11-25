@@ -1,0 +1,39 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: Numeric
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Multipliers
+  - !ruby/object:RI::IncludedModule 
+    name: Random::NumericExtensions
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: approx?
+  - !ruby/object:RI::MethodSummary 
+    name: blank?
+  - !ruby/object:RI::MethodSummary 
+    name: clone?
+  - !ruby/object:RI::MethodSummary 
+    name: distance
+  - !ruby/object:RI::MethodSummary 
+    name: dup!
+  - !ruby/object:RI::MethodSummary 
+    name: dup?
+  - !ruby/object:RI::MethodSummary 
+    name: length
+  - !ruby/object:RI::MethodSummary 
+    name: round_at
+  - !ruby/object:RI::MethodSummary 
+    name: round_to
+  - !ruby/object:RI::MethodSummary 
+    name: spacing
+  - !ruby/object:RI::MethodSummary 
+    name: to_b
+name: Numeric
+superclass: Object

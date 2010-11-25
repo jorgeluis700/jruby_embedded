@@ -1,0 +1,21 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: handles_encoding?
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: ENCODING_TAG
+    value: Regexp.new("\\A(<%#{ENCODING_FLAG}-?%>)[ \\t]*")
+full_name: ActionView::Template::Handlers::ERB
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Compilable
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: compile
+name: ERB
+superclass: Handler

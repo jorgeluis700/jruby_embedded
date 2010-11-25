@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionController::TestCase::Behavior::ClassMethods#determine_default_controller_class
+is_singleton: false
+name: determine_default_controller_class
+params: (name)
+visibility: public

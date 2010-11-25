@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveRecord::Generators::MigrationGenerator#set_local_assigns!
+is_singleton: false
+name: set_local_assigns!
+params: ()
+visibility: protected

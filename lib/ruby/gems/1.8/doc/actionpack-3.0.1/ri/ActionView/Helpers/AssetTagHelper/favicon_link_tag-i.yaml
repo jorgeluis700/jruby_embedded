@@ -1,0 +1,32 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Web browsers cache favicons. If you just throw a <tt>favicon.ico</tt> into the document root of your application and it changes later, clients that have it in their cache won't see the update. Using this helper prevents that because it appends an asset ID:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &lt;%= favicon_link_tag %&gt;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: generates
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &lt;link href=&quot;/favicon.ico?4649789979&quot; rel=&quot;shortcut icon&quot; type=&quot;image/vnd.microsoft.icon&quot; /&gt;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "You may specify a different file in the first argument:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &lt;%= favicon_link_tag 'favicon.ico' %&gt;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: That's passed to <tt>path_to_image</tt> as is, so it gives
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &lt;link href=&quot;/images/favicon.ico?4649789979&quot; rel=&quot;shortcut icon&quot; type=&quot;image/vnd.microsoft.icon&quot; /&gt;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: The helper accepts an additional options hash where you can override &quot;rel&quot; and &quot;type&quot;.
+  - !ruby/struct:SM::Flow::P 
+    body: "For example, Mobile Safari looks for a different LINK tag, pointing to an image that will be used if you add the page to the home screen of an iPod Touch, iPhone, or iPad. The following call would generate such a tag:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &lt;%= favicon_link_tag 'mb-icon.png', :rel =&gt; 'apple-touch-icon', :type =&gt; 'image/png' %&gt;\n"
+full_name: ActionView::Helpers::AssetTagHelper#favicon_link_tag
+is_singleton: false
+name: favicon_link_tag
+params: (source='/favicon.ico', options={})
+visibility: public

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveSupport::HashWithIndifferentAccess::new_from_hash_copying_default
+is_singleton: true
+name: new_from_hash_copying_default
+params: (hash)
+visibility: public

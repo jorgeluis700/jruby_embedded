@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveSupport::Testing::ProxyTestResult#__replay__
+is_singleton: false
+name: __replay__
+params: (result)
+visibility: public

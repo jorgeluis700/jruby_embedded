@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: I18n::Backend::Memoize#lookup
+is_singleton: false
+name: lookup
+params: (locale, key, scope = nil, options = {})
+visibility: protected

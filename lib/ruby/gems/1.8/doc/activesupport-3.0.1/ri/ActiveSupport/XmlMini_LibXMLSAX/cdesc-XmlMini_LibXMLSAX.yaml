@@ -1,0 +1,19 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: document_class
+    rw: RW
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: ActiveSupport::XmlMini_LibXMLSAX
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: parse
+name: XmlMini_LibXMLSAX
+superclass: 

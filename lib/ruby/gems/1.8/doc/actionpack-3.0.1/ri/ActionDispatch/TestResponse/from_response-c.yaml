@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionDispatch::TestResponse::from_response
+is_singleton: true
+name: from_response
+params: (response)
+visibility: public

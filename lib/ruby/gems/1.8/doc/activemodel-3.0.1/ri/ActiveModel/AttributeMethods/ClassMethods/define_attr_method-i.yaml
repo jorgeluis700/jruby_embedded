@@ -1,0 +1,22 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Defines an &quot;attribute&quot; method (like <tt>inheritance_column</tt> or <tt>table_name</tt>). A new (class) method will be created with the given name. If a value is specified, the new method will return that value (as a string). Otherwise, the given block will be used to compute the value of the method.
+  - !ruby/struct:SM::Flow::P 
+    body: The original method will be aliased, with the new name being prefixed with &quot;original_&quot;. This allows the new method to access the original value.
+  - !ruby/struct:SM::Flow::P 
+    body: "Example:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class Person\n\n    include ActiveModel::AttributeMethods\n\n    cattr_accessor :primary_key\n    cattr_accessor :inheritance_column\n\n    define_attr_method :primary_key, &quot;sysid&quot;\n    define_attr_method( :inheritance_column ) do\n      original_inheritance_column + &quot;_id&quot;\n    end\n\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "Provides you with:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  AttributePerson.primary_key\n  # =&gt; &quot;sysid&quot;\n  AttributePerson.inheritance_column = 'address'\n  AttributePerson.inheritance_column\n  # =&gt; 'address_id'\n"
+full_name: ActiveModel::AttributeMethods::ClassMethods#define_attr_method
+is_singleton: false
+name: define_attr_method
+params: (name, value=nil, &block)
+visibility: public

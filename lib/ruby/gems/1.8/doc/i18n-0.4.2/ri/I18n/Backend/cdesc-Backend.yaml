@@ -1,0 +1,21 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: "In Ruby &lt; 1.9 the following is true: { :foo =&gt; 1, :bar =&gt; 2 }.hash == { :foo =&gt; 2, :bar =&gt; 1 }.hash Therefore we must use the hash of the inspect string instead to avoid cache key colisions."
+    name: USE_INSPECT_HASH
+    value: RUBY_VERSION <= "1.9"
+full_name: I18n::Backend
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: cache_key
+name: Backend
+superclass: 

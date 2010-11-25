@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: default_url_options
+block_params: 
+comment: 
+full_name: ActionDispatch::Routing::Mapper::Base#default_url_options=
+is_singleton: false
+name: default_url_options=
+params: (options)
+visibility: public

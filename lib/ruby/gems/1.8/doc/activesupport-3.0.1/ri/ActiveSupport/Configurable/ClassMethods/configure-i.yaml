@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: config
+comment: 
+full_name: ActiveSupport::Configurable::ClassMethods#configure
+is_singleton: false
+name: configure
+params: () {|config| ...}
+visibility: public

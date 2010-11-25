@@ -1,0 +1,30 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: separators
+    rw: W
+class_methods: []
+
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: "NULL"
+    value: "\"\\0\".freeze"
+full_name: Rack::Mount::Analysis::Splitting
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: "<<"
+  - !ruby/object:RI::MethodSummary 
+    name: clear
+  - !ruby/object:RI::MethodSummary 
+    name: lookup_separators
+  - !ruby/object:RI::MethodSummary 
+    name: process_key
+  - !ruby/object:RI::MethodSummary 
+    name: separators
+name: Splitting
+superclass: Frequency

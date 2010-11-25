@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: .tap do |result|             I18n.cache_store.write(cache_key, result) unless result.is_a?(Proc)
+comment: 
+full_name: I18n::Backend::Cache#fetch_ignoring_procs
+is_singleton: false
+name: fetch_ignoring_procs
+params: (cache_key, &block) {|.tap do |result| I18n.cache_store.write(cache_key, result) unless result.is_a?(Proc)| ...}
+visibility: protected

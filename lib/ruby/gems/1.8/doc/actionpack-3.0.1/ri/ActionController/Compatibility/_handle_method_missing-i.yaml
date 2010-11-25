@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionController::Compatibility#_handle_method_missing
+is_singleton: false
+name: _handle_method_missing
+params: ()
+visibility: public

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Can this adapter determine the primary key for tables not attached to an Active Record class, such as join tables? Backend specific, as the abstract adapter always returns <tt>false</tt>.
+full_name: ActiveRecord::ConnectionAdapters::AbstractAdapter#supports_primary_key?
+is_singleton: false
+name: supports_primary_key?
+params: ()
+visibility: public

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "TODO: Clean this up"
+full_name: ActionController::Testing#process_with_new_base_test
+is_singleton: false
+name: process_with_new_base_test
+params: (request, response)
+visibility: public

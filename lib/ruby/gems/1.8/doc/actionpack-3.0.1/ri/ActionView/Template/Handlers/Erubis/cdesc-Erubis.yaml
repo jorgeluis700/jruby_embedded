@@ -1,0 +1,29 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: BLOCK_EXPR
+    value: /\s+(do|\{)(\s*\|[^|]*\|)?\s*\Z/
+full_name: ActionView::Template::Handlers::Erubis
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: add_expr_escaped
+  - !ruby/object:RI::MethodSummary 
+    name: add_expr_literal
+  - !ruby/object:RI::MethodSummary 
+    name: add_postamble
+  - !ruby/object:RI::MethodSummary 
+    name: add_preamble
+  - !ruby/object:RI::MethodSummary 
+    name: add_stmt
+  - !ruby/object:RI::MethodSummary 
+    name: add_text
+name: Erubis
+superclass: "::Erubis::Eruby"

@@ -1,0 +1,21 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: collisions
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns all items that are equal in terms of the supplied block. If no block is given objects are considered to be equal if they return the same value for Object#hash and if obj1 == obj2.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  [1, 2, 2, 3, 4, 4].commonality  #=&gt; { 2 =&gt; [2, 2], 4 =&gt; [4, 4] }\n\n  [&quot;foo&quot;, &quot;bar&quot;, &quot;a&quot;].commonality { |str| str.length }\n  #=&gt; { 3 =&gt; [&quot;foo&quot;, &quot;bar&quot;] }\n"
+  - !ruby/struct:SM::Flow::P 
+    body: This can be useful, for instance, in determining all persons that share their last name with another person ...
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  persons.collisions { |person| person.last_name }\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Florian Gross"
+full_name: Array#commonality
+is_singleton: false
+name: commonality
+params: (&block)
+visibility: public

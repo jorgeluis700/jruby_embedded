@@ -1,0 +1,16 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: Erubis::ErboutEruby
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: ErboutEnhancer
+instance_methods: []
+
+name: ErboutEruby
+superclass: Eruby

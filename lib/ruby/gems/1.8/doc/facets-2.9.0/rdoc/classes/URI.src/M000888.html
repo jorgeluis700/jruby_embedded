@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>update_request_uri (URI)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/more/facets/uri.rb, line 170</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">update_request_uri</span>(<span class="ruby-identifier">request</span>, <span class="ruby-identifier">parameters</span>)
+    <span class="ruby-identifier">hash</span> = <span class="ruby-identifier">request</span>.<span class="ruby-identifier">parameters</span>.<span class="ruby-identifier">dup</span>()
+    <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">parameters</span>)
+
+    <span class="ruby-comment cmt">## use this in hash_to_querystring.</span>
+    <span class="ruby-identifier">query_string</span> = <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+      <span class="ruby-node">&quot;#{k}=#{v}&quot;</span>
+    }.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;;&quot;</span>)
+
+    <span class="ruby-comment cmt">## return &quot;#{request.translated_uri}?#{query_string}&quot;</span>
+    <span class="ruby-keyword kw">return</span> <span class="ruby-node">&quot;#{request.path}?#{query_string}&quot;</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

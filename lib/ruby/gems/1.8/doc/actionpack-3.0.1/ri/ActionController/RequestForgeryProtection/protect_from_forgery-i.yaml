@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionController::RequestForgeryProtection#protect_from_forgery
+is_singleton: false
+name: protect_from_forgery
+params: (options = {})
+visibility: protected

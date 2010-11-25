@@ -1,0 +1,30 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: NestedMultimap allows values to be assoicated with a nested set of keys.
+constants: []
+
+full_name: NestedMultimap
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: "<<"
+  - !ruby/object:RI::MethodSummary 
+    name: "[]"
+  - !ruby/object:RI::MethodSummary 
+    name: "[]="
+  - !ruby/object:RI::MethodSummary 
+    name: containers_with_default
+  - !ruby/object:RI::MethodSummary 
+    name: each_association
+  - !ruby/object:RI::MethodSummary 
+    name: each_container_with_default
+  - !ruby/object:RI::MethodSummary 
+    name: store
+name: NestedMultimap
+superclass: Multimap

@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Test if an expression is not blank. Passes if object.present? is true.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  assert_present {:data =&gt; 'x' } # =&gt; true\n"
+full_name: ActiveSupport::Testing::Assertions#assert_present
+is_singleton: false
+name: assert_present
+params: (object, message=nil)
+visibility: public

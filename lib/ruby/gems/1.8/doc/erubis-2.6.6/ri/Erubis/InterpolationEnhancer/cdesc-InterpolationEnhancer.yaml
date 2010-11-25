@@ -1,0 +1,28 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: convert &quot;&lt;h1&gt;&lt;%=title%&gt;&lt;/h1&gt;&quot; into &quot;_buf &lt;&lt; %Q`&lt;h1&gt;#{title}&lt;/h1&gt;`&quot;
+  - !ruby/struct:SM::Flow::P 
+    body: this is only for Eruby.
+constants: []
+
+full_name: Erubis::InterpolationEnhancer
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: _add_text_to_str
+  - !ruby/object:RI::MethodSummary 
+    name: add_expr_escaped
+  - !ruby/object:RI::MethodSummary 
+    name: add_expr_literal
+  - !ruby/object:RI::MethodSummary 
+    name: add_text
+  - !ruby/object:RI::MethodSummary 
+    name: convert_input
+name: InterpolationEnhancer
+superclass: 

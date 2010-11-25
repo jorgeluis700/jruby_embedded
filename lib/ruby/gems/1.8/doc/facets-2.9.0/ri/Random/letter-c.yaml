@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Module method to generate a random letter.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  Random.letter  #~&gt; &quot;q&quot;\n  Random.letter  #~&gt; &quot;r&quot;\n  Random.letter  #~&gt; &quot;a&quot;\n"
+full_name: Random::letter
+is_singleton: true
+name: letter
+params: ()
+visibility: public

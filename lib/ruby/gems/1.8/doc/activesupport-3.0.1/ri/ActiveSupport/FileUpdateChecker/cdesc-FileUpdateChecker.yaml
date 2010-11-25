@@ -1,0 +1,30 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: last_update_at
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: paths
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: This class is responsible to track files and invoke the given block whenever one of these files are changed. For example, this class is used by Rails to reload the I18n framework whenever they are changed upon a new request.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  i18n_reloader = ActiveSupport::FileUpdateChecker.new(paths) do\n    I18n.reload!\n  end\n\n  ActionDispatch::Callbacks.to_prepare do\n    i18n_reloader.execute_if_updated\n  end\n"
+constants: []
+
+full_name: ActiveSupport::FileUpdateChecker
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: execute_if_updated
+  - !ruby/object:RI::MethodSummary 
+    name: updated_at
+name: FileUpdateChecker
+superclass: Object

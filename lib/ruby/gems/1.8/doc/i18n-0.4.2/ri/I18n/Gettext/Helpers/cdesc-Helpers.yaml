@@ -1,0 +1,42 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Implements classical Gettext style accessors. To use this include the module to the global namespace or wherever you want to use it.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  include I18n::Gettext::Helpers\n"
+constants: []
+
+full_name: I18n::Gettext::Helpers
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: _
+  - !ruby/object:RI::MethodSummary 
+    name: gettext
+  - !ruby/object:RI::MethodSummary 
+    name: n_
+  - !ruby/object:RI::MethodSummary 
+    name: ngettext
+  - !ruby/object:RI::MethodSummary 
+    name: np_
+  - !ruby/object:RI::MethodSummary 
+    name: npgettext
+  - !ruby/object:RI::MethodSummary 
+    name: ns_
+  - !ruby/object:RI::MethodSummary 
+    name: nsgettext
+  - !ruby/object:RI::MethodSummary 
+    name: p_
+  - !ruby/object:RI::MethodSummary 
+    name: pgettext
+  - !ruby/object:RI::MethodSummary 
+    name: s_
+  - !ruby/object:RI::MethodSummary 
+    name: sgettext
+name: Helpers
+superclass: 

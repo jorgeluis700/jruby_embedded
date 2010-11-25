@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Deletes an entry in the cache. Returns <tt>true</tt> if an entry is deleted.
+  - !ruby/struct:SM::Flow::P 
+    body: Options are passed to the underlying cache implementation.
+full_name: ActiveSupport::Cache::Store#delete
+is_singleton: false
+name: delete
+params: (name, options = nil)
+visibility: public

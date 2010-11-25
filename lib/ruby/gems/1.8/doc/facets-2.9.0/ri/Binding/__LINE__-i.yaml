@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Return the line number on which the binding was created.
+full_name: Binding#__LINE__
+is_singleton: false
+name: __LINE__
+params: ()
+visibility: public

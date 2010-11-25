@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveSupport::XmlMini#rename_key
+is_singleton: false
+name: rename_key
+params: (key, options = {})
+visibility: public

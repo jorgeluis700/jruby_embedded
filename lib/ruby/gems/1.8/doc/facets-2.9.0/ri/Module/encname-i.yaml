@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Eclosure name.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  module ::EncExample\n    module M\n      module N\n      end\n    end\n  end\n\n  EncExample::M::N.encname  #=&gt; &quot;EncExample::M&quot;\n"
+full_name: Module#encname
+is_singleton: false
+name: encname
+params: ()
+visibility: public

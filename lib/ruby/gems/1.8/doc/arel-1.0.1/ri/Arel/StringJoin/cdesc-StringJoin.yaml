@@ -1,0 +1,22 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: Arel::StringJoin
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: attributes
+  - !ruby/object:RI::MethodSummary 
+    name: engine
+  - !ruby/object:RI::MethodSummary 
+    name: externalizable?
+  - !ruby/object:RI::MethodSummary 
+    name: joins
+name: StringJoin
+superclass: Join

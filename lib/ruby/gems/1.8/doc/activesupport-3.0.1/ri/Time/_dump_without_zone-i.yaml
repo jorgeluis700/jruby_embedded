@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Alias for #_dump"
+full_name: Time#_dump_without_zone
+is_singleton: false
+name: _dump_without_zone
+params: (*args)
+visibility: public

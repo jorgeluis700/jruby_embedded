@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Enumerable::Recursor::new
+is_singleton: true
+name: new
+params: (enum, *types, &block)
+visibility: public

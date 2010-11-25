@@ -1,0 +1,21 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Determines whether the current action has a layout by checking the action name against the :only and :except conditions set on the layout.
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Returns
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt> Boolean</tt> - True if the action has a layout, false otherwise.
+    type: :BULLET
+full_name: AbstractController::Layouts::ClassMethods::LayoutConditions#action_has_layout?
+is_singleton: false
+name: action_has_layout?
+params: ()
+visibility: public

@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: []
+
+full_name: Math::gamma
+is_singleton: true
+name: gamma
+params: (x)
+visibility: public

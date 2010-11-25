@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: []
+
+full_name: Math::median
+is_singleton: true
+name: median
+params: (array)
+visibility: public

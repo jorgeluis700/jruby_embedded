@@ -1,0 +1,32 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: ActiveModel::AttributeMethods::ClassMethods
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: alias_attribute
+  - !ruby/object:RI::MethodSummary 
+    name: attribute_method_affix
+  - !ruby/object:RI::MethodSummary 
+    name: attribute_method_prefix
+  - !ruby/object:RI::MethodSummary 
+    name: attribute_method_suffix
+  - !ruby/object:RI::MethodSummary 
+    name: attribute_methods_generated?
+  - !ruby/object:RI::MethodSummary 
+    name: define_attr_method
+  - !ruby/object:RI::MethodSummary 
+    name: define_attribute_methods
+  - !ruby/object:RI::MethodSummary 
+    name: instance_method_already_implemented?
+  - !ruby/object:RI::MethodSummary 
+    name: undefine_attribute_methods
+name: ClassMethods
+superclass: 

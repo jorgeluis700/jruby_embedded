@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>each (Interval)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/more/facets/interval.rb, line 241</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">each</span>(<span class="ruby-identifier">n</span>=<span class="ruby-value">1</span>, <span class="ruby-identifier">d</span>=<span class="ruby-keyword kw">nil</span>)  <span class="ruby-comment cmt"># :yield:</span>
+    <span class="ruby-keyword kw">return</span> (<span class="ruby-identifier">n</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@last</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@first</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">degenerate?</span>  <span class="ruby-comment cmt"># is this right for all values of n ?</span>
+    <span class="ruby-identifier">s</span> = <span class="ruby-identifier">d</span> <span class="ruby-value">? </span><span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">length</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">*</span> (<span class="ruby-identifier">n</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">d</span>.<span class="ruby-identifier">to_f</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">n</span>.<span class="ruby-identifier">abs</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;Cannot iterate over zero length steps.&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">s</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">s</span> = <span class="ruby-identifier">s</span> <span class="ruby-operator">*</span> <span class="ruby-ivar">@direction</span>
+    <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+      <span class="ruby-identifier">e</span> = <span class="ruby-ivar">@exclude_last</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@last</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">s</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@last</span>
+      <span class="ruby-comment cmt">#e = @exclude_last ? @last.pred(s) : @last</span>
+      <span class="ruby-identifier">t</span> = <span class="ruby-ivar">@exclude_last</span> <span class="ruby-operator">?</span> <span class="ruby-value">1</span> <span class="ruby-operator">:</span> <span class="ruby-value">0</span>
+      <span class="ruby-comment cmt">#while e.cmp(@first) &gt;= t</span>
+      <span class="ruby-keyword kw">while</span> (<span class="ruby-identifier">e</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-ivar">@first</span>) <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">t</span>
+        <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">e</span>)
+        <span class="ruby-identifier">e</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">s</span>
+        <span class="ruby-comment cmt">#e = e.pred(s)</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">else</span>
+      <span class="ruby-identifier">e</span> = <span class="ruby-ivar">@exclude_first</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@first</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">s</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@first</span>
+      <span class="ruby-comment cmt">#e = @exclude_first ? @first.succ(s) : @first</span>
+      <span class="ruby-identifier">t</span> = <span class="ruby-ivar">@exclude_last</span> <span class="ruby-operator">?</span> <span class="ruby-value">-1</span> <span class="ruby-operator">:</span> <span class="ruby-value">0</span>
+      <span class="ruby-comment cmt">#while e.cmp(@last) &lt;= t</span>
+      <span class="ruby-keyword kw">while</span> (<span class="ruby-identifier">e</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-ivar">@last</span>) <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">t</span>
+        <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">e</span>)
+        <span class="ruby-identifier">e</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">s</span>
+        <span class="ruby-comment cmt">#e = e.succ(s)</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

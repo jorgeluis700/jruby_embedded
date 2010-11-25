@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Successor method for symobol. This simply converts the symbol to a string uses String#succ and then converts it back to a symbol.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  :a.succ  #=&gt; :b\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "TODO: Make this work more like a simple character dial?"
+full_name: Symbol#succ
+is_singleton: false
+name: succ
+params: (n=1)
+visibility: public

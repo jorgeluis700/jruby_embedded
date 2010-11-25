@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns an array with the direct children of <tt>self</tt>.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  Integer.subclasses # =&gt; [Fixnum, Bignum]\n"
+full_name: Class#subclasses
+is_singleton: false
+name: subclasses
+params: ()
+visibility: public

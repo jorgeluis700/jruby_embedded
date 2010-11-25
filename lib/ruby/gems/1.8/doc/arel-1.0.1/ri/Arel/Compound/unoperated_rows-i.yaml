@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Arel::Compound#unoperated_rows
+is_singleton: false
+name: unoperated_rows
+params: ()
+visibility: public

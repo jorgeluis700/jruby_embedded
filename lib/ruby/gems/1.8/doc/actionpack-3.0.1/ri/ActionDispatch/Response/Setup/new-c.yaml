@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: self if block_given?
+comment: 
+full_name: ActionDispatch::Response::Setup::new
+is_singleton: true
+name: new
+params: (status = 200, header = {}, body = []) {|self if block_given?| ...}
+visibility: public

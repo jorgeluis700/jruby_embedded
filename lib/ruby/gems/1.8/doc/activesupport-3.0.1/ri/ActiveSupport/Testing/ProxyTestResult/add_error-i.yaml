@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveSupport::Testing::ProxyTestResult#add_error
+is_singleton: false
+name: add_error
+params: (e)
+visibility: public

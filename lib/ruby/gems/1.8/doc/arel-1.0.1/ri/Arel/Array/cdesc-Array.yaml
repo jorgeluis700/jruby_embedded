@@ -1,0 +1,33 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: array
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: attribute_names_and_types
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: []
+
+full_name: Arel::Array
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Relation
+  - !ruby/object:RI::IncludedModule 
+    name: Recursion::BaseCase
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: attributes
+  - !ruby/object:RI::MethodSummary 
+    name: engine
+  - !ruby/object:RI::MethodSummary 
+    name: eval
+  - !ruby/object:RI::MethodSummary 
+    name: format
+name: Array
+superclass: Object

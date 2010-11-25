@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveRecord::Base::arel_engine
+is_singleton: true
+name: arel_engine
+params: ()
+visibility: public

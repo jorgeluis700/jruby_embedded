@@ -1,0 +1,28 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: after
+  - !ruby/object:RI::MethodSummary 
+    name: before
+  - !ruby/object:RI::MethodSummary 
+    name: new
+  - !ruby/object:RI::MethodSummary 
+    name: to_prepare
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Provide callbacks to be executed before and after the request dispatch.
+  - !ruby/struct:SM::Flow::P 
+    body: It also provides a to_prepare callback, which is performed in all requests in development by only once in production and notification callback for async operations.
+constants: []
+
+full_name: ActionDispatch::Callbacks
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: ActiveSupport::Callbacks
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: call
+name: Callbacks
+superclass: Object

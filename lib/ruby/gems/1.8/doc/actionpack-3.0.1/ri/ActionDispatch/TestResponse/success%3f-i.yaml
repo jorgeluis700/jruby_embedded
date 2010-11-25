@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Was the response successful?
+full_name: ActionDispatch::TestResponse#success?
+is_singleton: false
+name: success?
+params: ()
+visibility: public

@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Allows #index to accept a block."
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  ['a', 'b', 'c'].index{ |x| x.upcase == 'C' } #=&gt; 2\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "IMPORTANT: This is one of the few core overrides in Facets."
+full_name: Array#index
+is_singleton: false
+name: index
+params: (obj=nil, &block)
+visibility: public

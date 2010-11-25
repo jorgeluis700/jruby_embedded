@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Extract the name of the missing constant from the exception message.
+full_name: NameError#missing_name
+is_singleton: false
+name: missing_name
+params: ()
+visibility: public

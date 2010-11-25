@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Takes the specified layout and creates a _layout method to be called by _default_layout
+  - !ruby/struct:SM::Flow::P 
+    body: "If there is no explicit layout specified: If a layout is found in the view paths with the controller's name, return that string. Otherwise, use the superclass' layout (which might also be implied)"
+full_name: AbstractController::Layouts::ClassMethods#_write_layout_method
+is_singleton: false
+name: _write_layout_method
+params: ()
+visibility: public

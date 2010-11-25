@@ -1,0 +1,27 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: VALID_FIND_OPTIONS
+    value: "[ :conditions, :include, :joins, :limit, :offset, :extend,                            :order, :select, :readonly, :group, :having, :from, :lock ]"
+full_name: ActiveRecord::SpawnMethods
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: "&"
+  - !ruby/object:RI::MethodSummary 
+    name: apply_finder_options
+  - !ruby/object:RI::MethodSummary 
+    name: except
+  - !ruby/object:RI::MethodSummary 
+    name: merge
+  - !ruby/object:RI::MethodSummary 
+    name: only
+name: SpawnMethods
+superclass: 

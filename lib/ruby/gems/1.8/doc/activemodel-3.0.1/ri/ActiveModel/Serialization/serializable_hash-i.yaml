@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveModel::Serialization#serializable_hash
+is_singleton: false
+name: serializable_hash
+params: (options = nil)
+visibility: public

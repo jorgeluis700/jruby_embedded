@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: ""
+comment: 
+full_name: Rack::Mount::Utils#silence_debug
+is_singleton: false
+name: silence_debug
+params: () {|| ...}
+visibility: public

@@ -1,0 +1,20 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::H 
+    level: 1
+    text: Action View Lookup Context
+  - !ruby/struct:SM::Flow::P 
+    body: LookupContext is the object responsible to hold all information required to lookup templates, i.e. view paths and details. The LookupContext is also responsible to generate a key, given to view paths, used in the resolver cache lookup. Since this key is generated just once during the request, it speeds up all cache accesses.
+constants: []
+
+full_name: ActionView::LookupContext
+includes: []
+
+instance_methods: []
+
+name: LookupContext
+superclass: Object

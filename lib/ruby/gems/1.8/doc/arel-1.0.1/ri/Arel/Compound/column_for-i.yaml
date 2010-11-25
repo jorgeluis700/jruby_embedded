@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Arel::Compound#column_for
+is_singleton: false
+name: column_for
+params: (attr;)
+visibility: public

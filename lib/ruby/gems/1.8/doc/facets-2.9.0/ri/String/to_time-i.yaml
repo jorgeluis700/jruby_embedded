@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: []
+
+full_name: String#to_time
+is_singleton: false
+name: to_time
+params: (form = :utc)
+visibility: public

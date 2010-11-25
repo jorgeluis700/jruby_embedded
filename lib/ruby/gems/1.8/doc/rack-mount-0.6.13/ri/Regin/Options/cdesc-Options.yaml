@@ -1,0 +1,34 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: extended
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: ignorecase
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: multiline
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: from_int
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: []
+
+full_name: Regin::Options
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: any?
+  - !ruby/object:RI::MethodSummary 
+    name: to_h
+  - !ruby/object:RI::MethodSummary 
+    name: to_i
+name: Options
+superclass: Object

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Erubis::Helpers::RailsFormHelper#pp_file_field
+is_singleton: false
+name: pp_file_field
+params: (object_name, method, options={})
+visibility: public

@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Like FileUtils.cp_r, but takes a filter proc that can return false to skip a file:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  cp_rx &quot;bigDirectoryTree&quot;, &quot;dest&quot;, {:noop =&gt; true} do |name|\n    /dontCopyThis$/.match(name)\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Note that if the filter rejects a subdirectory then everything within that subdirectory is automatically skipped as well.
+full_name: FileUtils#cp_rx
+is_singleton: false
+name: cp_rx
+params: (src, dest, options = {}, &filter)
+visibility: public

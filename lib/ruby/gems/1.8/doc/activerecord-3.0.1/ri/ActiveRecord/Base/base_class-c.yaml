@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns the base AR subclass that this class descends from. If A extends AR::Base, A.base_class will return A. If B descends from A through some arbitrarily deep hierarchy, B.base_class will return A.
+  - !ruby/struct:SM::Flow::P 
+    body: If B &lt; A and C &lt; B and if A is an abstract_class then both B.base_class and C.base_class would return B as the answer since A is an abstract_class.
+full_name: ActiveRecord::Base::base_class
+is_singleton: true
+name: base_class
+params: ()
+visibility: public

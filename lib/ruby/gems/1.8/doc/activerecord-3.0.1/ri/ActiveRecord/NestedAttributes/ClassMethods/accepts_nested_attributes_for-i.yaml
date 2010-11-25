@@ -1,0 +1,33 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Defines an attributes writer for the specified association(s). If you are using <tt>attr_protected</tt> or <tt>attr_accessible</tt>, then you will need to add the attribute writer to the allowed list.
+  - !ruby/struct:SM::Flow::P 
+    body: "Supported options:"
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: ":allow_destroy"
+        body: If true, destroys any members from the attributes hash with a <tt>_destroy</tt> key and a value that evaluates to <tt>true</tt> (eg. 1, '1', true, or 'true'). This option is off by default.
+      - !ruby/struct:SM::Flow::LI 
+        label: ":reject_if"
+        body: Allows you to specify a Proc or a Symbol pointing to a method that checks whether a record should be built for a certain attribute hash. The hash is passed to the supplied Proc or the method and it should return either <tt>true</tt> or <tt>false</tt>. When no :reject_if is specified, a record will be built for all attribute hashes that do not have a <tt>_destroy</tt> value that evaluates to true. Passing <tt>:all_blank</tt> instead of a Proc will create a proc that will reject a record where all the attributes are blank.
+      - !ruby/struct:SM::Flow::LI 
+        label: ":limit"
+        body: Allows you to specify the maximum number of the associated records that can be processed with the nested attributes. If the size of the nested attributes array exceeds the specified limit, NestedAttributes::TooManyRecords exception is raised. If omitted, any number associations can be processed. Note that the :limit option is only applicable to one-to-many associations.
+      - !ruby/struct:SM::Flow::LI 
+        label: ":update_only"
+        body: Allows you to specify that an existing record may only be updated. A new record may only be created when there is no existing record. This option only works for one-to-one associations and is ignored for collection associations. This option is off by default.
+    type: :LABELED
+  - !ruby/struct:SM::Flow::P 
+    body: "Examples:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  # creates avatar_attributes=\n  accepts_nested_attributes_for :avatar, :reject_if =&gt; proc { |attributes| attributes['name'].blank? }\n  # creates avatar_attributes=\n  accepts_nested_attributes_for :avatar, :reject_if =&gt; :all_blank\n  # creates avatar_attributes= and posts_attributes=\n  accepts_nested_attributes_for :avatar, :posts, :allow_destroy =&gt; true\n"
+full_name: ActiveRecord::NestedAttributes::ClassMethods#accepts_nested_attributes_for
+is_singleton: false
+name: accepts_nested_attributes_for
+params: (*attr_names)
+visibility: public

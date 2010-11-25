@@ -1,0 +1,32 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Updates all records with details given if they match a set of conditions supplied, limits and order can also be supplied. This method constructs a single SQL UPDATE statement and sends it straight to the database. It does not instantiate the involved models and it does not trigger Active Record callbacks or validations.
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Parameters
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>updates</tt> - A string, array, or hash representing the SET part of an SQL statement.
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>conditions</tt> - A string, array, or hash representing the WHERE part of an SQL statement. See conditions in the intro.
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>options</tt> - Additional options are <tt>:limit</tt> and <tt>:order</tt>, see the examples for usage.
+    type: :BULLET
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Examples
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  # Update all customers with the given attributes\n  Customer.update_all :wants_email =&gt; true\n\n  # Update all books with 'Rails' in their title\n  Book.update_all &quot;author = 'David'&quot;, &quot;title LIKE '%Rails%'&quot;\n\n  # Update all avatars migrated more than a week ago\n  Avatar.update_all ['migrated_at = ?', Time.now.utc], ['migrated_at &gt; ?', 1.week.ago]\n\n  # Update all books that match conditions, but limit it to 5 ordered by date\n  Book.update_all &quot;author = 'David'&quot;, &quot;title LIKE '%Rails%'&quot;, :order =&gt; 'created_at', :limit =&gt; 5\n"
+full_name: ActiveRecord::Relation#update_all
+is_singleton: false
+name: update_all
+params: (updates, conditions = nil, options = {})
+visibility: public

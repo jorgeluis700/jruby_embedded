@@ -1,0 +1,27 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: implementation
+  - !ruby/object:RI::MethodSummary 
+    name: implementation=
+  - !ruby/object:RI::MethodSummary 
+    name: tag
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: RFC4646_SUBTAGS
+    value: "[ :language, :script, :region, :variant, :extension, :privateuse, :grandfathered ]"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: RFC4646_FORMATS
+    value: "{ :language => :downcase, :script => :capitalize, :region => :upcase, :variant => :downcase }"
+full_name: I18n::Locale::Tag
+includes: []
+
+instance_methods: []
+
+name: Tag
+superclass: 

@@ -1,0 +1,20 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: id
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: []
+
+full_name: ActiveSupport::Notifications::Instrumenter
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: instrument
+name: Instrumenter
+superclass: Object

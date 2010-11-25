@@ -1,0 +1,20 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "String#slice is essentially the same as #store."
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  a = &quot;HELLO&quot;\n  a.splice(1, &quot;X&quot;)\n  a                #=&gt; &quot;HXLLO&quot;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "But it acts like #slice! when given a single argument."
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  a = &quot;HELLO&quot;\n  a.splice(1)    #=&gt; &quot;E&quot;\n  a              #=&gt; &quot;HLLO&quot;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Trans"
+full_name: String#splice
+is_singleton: false
+name: splice
+params: (idx, sub=nil)
+visibility: public

@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: The Kullback-Leibler divergence from this array to that of <tt>q</tt>.
+  - !ruby/struct:SM::Flow::P 
+    body: "NB: You will possibly want to sort both P and Q before calling this depending on what you're actually trying to measure."
+  - !ruby/struct:SM::Flow::P 
+    body: http://en.wikipedia.org/wiki/Kullback-Leibler_divergence
+full_name: Math::kldivergence
+is_singleton: true
+name: kldivergence
+params: (array, q)
+visibility: public

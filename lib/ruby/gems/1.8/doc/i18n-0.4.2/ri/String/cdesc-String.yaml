@@ -1,0 +1,27 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Extension for String class. This feature is included in Ruby 1.9 or later but not occur TypeError.
+  - !ruby/struct:SM::Flow::P 
+    body: String#% method which accept &quot;named argument&quot;. The translator can know the meaning of the msgids using &quot;named argument&quot; instead of %s/%d style.
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: INTERPOLATION_PATTERN
+    value: "Regexp.union(       /%\\{(\\w+)\\}/,                               # matches placeholders like \"%{foo}\"       /%<(\\w+)>(.*?\\d*\\.?\\d*[bBdiouxXeEfgGcps])/  # matches placeholders like \"%<foo>.d\""
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: INTERPOLATION_PATTERN_WITH_ESCAPE
+    value: Regexp.union(       /%%/,       INTERPOLATION_PATTERN
+full_name: String
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: "%"
+name: String
+superclass: Object

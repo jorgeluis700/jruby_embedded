@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Reads multiple values from the cache using a single call to the servers for all keys. Options can be passed in the last argument.
+full_name: ActiveSupport::Cache::MemCacheStore#read_multi
+is_singleton: false
+name: read_multi
+params: (*names)
+visibility: public

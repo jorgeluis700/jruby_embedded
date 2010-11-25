@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Arel::Predicates::Any#compounder
+is_singleton: false
+name: compounder
+params: ()
+visibility: public

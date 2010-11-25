@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: the maximum length of an index name
+full_name: ActiveRecord::ConnectionAdapters::DatabaseLimits#index_name_length
+is_singleton: false
+name: index_name_length
+params: ()
+visibility: public

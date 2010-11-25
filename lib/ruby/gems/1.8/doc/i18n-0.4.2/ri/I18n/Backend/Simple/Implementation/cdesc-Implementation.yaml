@@ -1,0 +1,29 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: I18n::Backend::Simple::Implementation
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Base
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: available_locales
+  - !ruby/object:RI::MethodSummary 
+    name: init_translations
+  - !ruby/object:RI::MethodSummary 
+    name: initialized?
+  - !ruby/object:RI::MethodSummary 
+    name: lookup
+  - !ruby/object:RI::MethodSummary 
+    name: reload!
+  - !ruby/object:RI::MethodSummary 
+    name: store_translations
+  - !ruby/object:RI::MethodSummary 
+    name: translations
+name: Implementation
+superclass: 

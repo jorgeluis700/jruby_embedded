@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns a new Time where one or more of the elements have been changed according to the <tt>options</tt> parameter. The time options (hour, minute, sec, usec) reset cascadingly, so if only the hour is passed, then minute, sec, and usec is set to 0. If the hour and minute is passed, then sec and usec is set to 0.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  t1 = Time.at(10000)\n  t1.ctime   #=&gt; &quot;Wed Dec 31 21:46:40 1969&quot;\n\n  t2 = t1.change(:hour =&gt; 11)\n  t2.ctime   #=&gt; &quot;Wed Dec 31 11:00:00 1969&quot;\n"
+full_name: Time#change
+is_singleton: false
+name: change
+params: (options)
+visibility: public

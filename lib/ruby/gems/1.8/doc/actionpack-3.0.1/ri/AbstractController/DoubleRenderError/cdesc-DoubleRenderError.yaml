@@ -1,0 +1,19 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: DEFAULT_MESSAGE
+    value: "\"Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like \\\"redirect_to(...) and return\\\".\""
+full_name: AbstractController::DoubleRenderError
+includes: []
+
+instance_methods: []
+
+name: DoubleRenderError
+superclass: Error

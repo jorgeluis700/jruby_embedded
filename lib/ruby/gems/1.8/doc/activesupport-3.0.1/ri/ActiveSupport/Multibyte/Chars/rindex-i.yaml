@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns the position <em>needle</em> in the string, counting in codepoints, searching backward from <em>offset</em> or the end of the string. Returns <tt>nil</tt> if <em>needle</em> isn't found.
+  - !ruby/struct:SM::Flow::P 
+    body: "Example:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  'Caf\xC3\xA9 p\xC3\xA9rifer\xC3\xB4l'.mb_chars.rindex('\xC3\xA9')   # =&gt; 6\n  'Caf\xC3\xA9 p\xC3\xA9rifer\xC3\xB4l'.mb_chars.rindex(/\\w/u) # =&gt; 13\n"
+full_name: ActiveSupport::Multibyte::Chars#rindex
+is_singleton: false
+name: rindex
+params: (needle, offset=nil)
+visibility: public

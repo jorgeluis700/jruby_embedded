@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Arel::Externalization#table_sql
+is_singleton: false
+name: table_sql
+params: (formatter = Sql::TableReference.new(relation))
+visibility: public

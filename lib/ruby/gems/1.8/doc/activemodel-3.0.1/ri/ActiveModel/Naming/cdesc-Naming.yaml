@@ -1,0 +1,32 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: plural
+  - !ruby/object:RI::MethodSummary 
+    name: singular
+  - !ruby/object:RI::MethodSummary 
+    name: uncountable?
+comment: 
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: Active Model Naming
+  - !ruby/struct:SM::Flow::P 
+    body: Creates a <tt>model_name</tt> method on your object.
+  - !ruby/struct:SM::Flow::P 
+    body: "To implement, just extend ActiveModel::Naming in your object:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class BookCover\n    extend ActiveModel::Naming\n  end\n\n  BookCover.model_name        # =&gt; &quot;BookCover&quot;\n  BookCover.model_name.human  # =&gt; &quot;Book cover&quot;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Providing the functionality that ActiveModel::Naming provides in your object is required to pass the Active Model Lint test. So either extending the provided method below, or rolling your own is required..
+constants: []
+
+full_name: ActiveModel::Naming
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: model_name
+name: Naming
+superclass: 

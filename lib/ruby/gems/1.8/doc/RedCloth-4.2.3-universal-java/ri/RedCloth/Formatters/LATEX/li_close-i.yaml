@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: RedCloth::Formatters::LATEX#li_close
+is_singleton: false
+name: li_close
+params: (opts=nil)
+visibility: public

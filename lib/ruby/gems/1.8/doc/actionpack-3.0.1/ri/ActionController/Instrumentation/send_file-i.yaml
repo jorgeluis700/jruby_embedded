@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionController::Instrumentation#send_file
+is_singleton: false
+name: send_file
+params: (path, options={})
+visibility: public

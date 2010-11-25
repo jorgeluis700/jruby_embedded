@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: []
+
+full_name: RbConfig::windows?
+is_singleton: true
+name: windows?
+params: ()
+visibility: public

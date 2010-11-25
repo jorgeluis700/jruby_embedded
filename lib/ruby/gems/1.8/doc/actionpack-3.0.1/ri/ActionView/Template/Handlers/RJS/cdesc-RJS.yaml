@@ -1,0 +1,19 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: ActionView::Template::Handlers::RJS
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Compilable
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: compile
+  - !ruby/object:RI::MethodSummary 
+    name: default_format
+name: RJS
+superclass: Template::Handler

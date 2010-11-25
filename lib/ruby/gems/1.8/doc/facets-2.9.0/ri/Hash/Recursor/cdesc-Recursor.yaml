@@ -1,0 +1,15 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: Hash::Recursor
+includes: []
+
+instance_methods: []
+
+name: Recursor
+superclass: Enumerable::Recursor

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: List all validators that being used to validate a specific attribute.
+full_name: ActiveModel::Validations::ClassMethods#validators_on
+is_singleton: false
+name: validators_on
+params: (attribute)
+visibility: public

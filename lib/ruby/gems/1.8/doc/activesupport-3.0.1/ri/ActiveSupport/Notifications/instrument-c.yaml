@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: payload if block_given?
+comment: 
+full_name: ActiveSupport::Notifications::instrument
+is_singleton: true
+name: instrument
+params: (name, payload = {}) {|payload if block_given?| ...}
+visibility: public

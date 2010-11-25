@@ -1,0 +1,43 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Provides methods for converting numbers into formatted strings. Methods are provided for phone numbers, currency, percentage, precision, positional notation, file size and pretty printing.
+  - !ruby/struct:SM::Flow::P 
+    body: Most methods expect a <tt>number</tt> argument, and will return it unchanged if can't be converted into a valid number.
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: DEFAULT_CURRENCY_VALUES
+    value: "{ :format => \"%u%n\", :unit => \"$\", :separator => \".\", :delimiter => \",\",                                   :precision => 2, :significant => false, :strip_insignificant_zeros => false }"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: STORAGE_UNITS
+    value: "[:byte, :kb, :mb, :gb, :tb].freeze"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: DECIMAL_UNITS
+    value: "{0 => :unit, 1 => :ten, 2 => :hundred, 3 => :thousand, 6 => :million, 9 => :billion, 12 => :trillion, 15 => :quadrillion,         -1 => :deci, -2 => :centi, -3 => :mili, -6 => :micro, -9 => :nano, -12 => :pico, -15 => :femto}.freeze"
+full_name: ActionView::Helpers::NumberHelper
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: number_to_currency
+  - !ruby/object:RI::MethodSummary 
+    name: number_to_human
+  - !ruby/object:RI::MethodSummary 
+    name: number_to_human_size
+  - !ruby/object:RI::MethodSummary 
+    name: number_to_percentage
+  - !ruby/object:RI::MethodSummary 
+    name: number_to_phone
+  - !ruby/object:RI::MethodSummary 
+    name: number_with_delimiter
+  - !ruby/object:RI::MethodSummary 
+    name: number_with_precision
+name: NumberHelper
+superclass: 

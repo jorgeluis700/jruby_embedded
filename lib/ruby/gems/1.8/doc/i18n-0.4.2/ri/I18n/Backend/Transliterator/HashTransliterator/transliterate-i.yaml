@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: I18n::Backend::Transliterator::HashTransliterator#transliterate
+is_singleton: false
+name: transliterate
+params: (string, replacement = nil)
+visibility: public

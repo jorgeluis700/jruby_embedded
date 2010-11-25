@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Basic implementations for content_type=, location=, and headers are provided to reduce the dependency on the RackDelegation module in Renderer and Redirector.
+full_name: ActionController::Metal#content_type=
+is_singleton: false
+name: content_type=
+params: (type)
+visibility: public

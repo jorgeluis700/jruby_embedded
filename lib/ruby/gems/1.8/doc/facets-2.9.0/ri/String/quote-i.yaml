@@ -1,0 +1,30 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Return a new string embraced by given <tt>type</tt> and <tt>count</tt> of quotes. The arguments can be given in any order.
+  - !ruby/struct:SM::Flow::P 
+    body: If no type is given, double quotes are assumed.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &quot;quote me&quot;.quote     #=&gt; '&quot;quote me&quot;'\n"
+  - !ruby/struct:SM::Flow::P 
+    body: If no type but a count is given then :mixed is assumed.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &quot;quote me&quot;.quote(1)  #=&gt; %q{'quote me'}\n  &quot;quote me&quot;.quote(2)  #=&gt; %q{&quot;quote me&quot;}\n  &quot;quote me&quot;.quote(3)  #=&gt; %q{'&quot;quote me&quot;'}\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Symbols can be used to describe the type.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &quot;quote me&quot;.quote(:single)    #=&gt; %q{'quote me'}\n  &quot;quote me&quot;.quote(:double)    #=&gt; %q{&quot;quote me&quot;}\n  &quot;quote me&quot;.quote(:back)      #=&gt; %q{`quote me`}\n  &quot;quote me&quot;.quote(:bracket)   #=&gt; %q{`quote me'}\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Or the character itself.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &quot;quote me&quot;.quote(&quot;'&quot;)     #=&gt; %q{'quote me'}\n  &quot;quote me&quot;.quote('&quot;')     #=&gt; %q{&quot;quote me&quot;}\n  &quot;quote me&quot;.quote(&quot;`&quot;)     #=&gt; %q{`quote me`}\n  &quot;quote me&quot;.quote(&quot;`'&quot;)    #=&gt; %q{`quote me'}\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Trans"
+full_name: String#quote
+is_singleton: false
+name: quote
+params: (type=:double, count=nil)
+visibility: public

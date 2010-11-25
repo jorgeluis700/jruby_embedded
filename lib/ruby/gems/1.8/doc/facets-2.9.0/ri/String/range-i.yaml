@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Like #index but returns a Range."
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &quot;This is a test!&quot;.range('test')  #=&gt; (10..13)\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Trans"
+full_name: String#range
+is_singleton: false
+name: range
+params: (pattern, offset=0)
+visibility: public

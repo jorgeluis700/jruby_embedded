@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns an Enumerator for iterating over each line of the string, stripped of whitespace on either side.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &quot;this\\nthat\\nother\\n&quot;.cleanlines.to_a  #=&gt; ['this', 'that', 'other']\n"
+full_name: String#cleanlines
+is_singleton: false
+name: cleanlines
+params: (&block)
+visibility: public

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionController::Instrumentation#send_data
+is_singleton: false
+name: send_data
+params: (data, options = {})
+visibility: public

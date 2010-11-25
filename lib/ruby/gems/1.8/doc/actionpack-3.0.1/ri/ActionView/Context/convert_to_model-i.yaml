@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionView::Context#convert_to_model
+is_singleton: false
+name: convert_to_model
+params: (object)
+visibility: public

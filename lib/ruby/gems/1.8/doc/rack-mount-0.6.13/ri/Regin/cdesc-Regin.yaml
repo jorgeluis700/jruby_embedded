@@ -1,0 +1,29 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: compile
+  - !ruby/object:RI::MethodSummary 
+    name: parse
+  - !ruby/object:RI::MethodSummary 
+    name: regexp_supports_named_captures?
+  - !ruby/object:RI::MethodSummary 
+    name: supported_posix_bracket_types
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: Version
+    value: "'0.3.7'"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: POSIX_BRACKET_TYPES
+    value: "%w(     alnum alpha ascii blank cntrl digit graph     lower print punct space upper word xdigit     foo   )"
+full_name: Regin
+includes: []
+
+instance_methods: []
+
+name: Regin
+superclass: 

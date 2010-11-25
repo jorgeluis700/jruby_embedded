@@ -1,0 +1,21 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Append a path to the list of view paths for this controller.
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Parameters
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>path</tt> - If a String is provided, it gets converted into the default view path. You may also provide a custom view path (see ActionView::ViewPathSet for more information)
+    type: :BULLET
+full_name: AbstractController::ViewPaths::ClassMethods#append_view_path
+is_singleton: false
+name: append_view_path
+params: (path)
+visibility: public

@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Parses segmented string expression and converts it into a Regexp
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  Strexp.compile('foo')\n    # =&gt; %r{\\Afoo\\Z}\n\n  Strexp.compile('foo/:bar', {}, ['/'])\n    # =&gt; %r{\\Afoo/(?&lt;bar&gt;[^/]+)\\Z}\n\n  Strexp.compile(':foo.example.com')\n    # =&gt; %r{\\A(?&lt;foo&gt;.+)\\.example\\.com\\Z}\n\n  Strexp.compile('foo/:bar', {:bar =&gt; /[a-z]+/}, ['/'])\n    # =&gt; %r{\\Afoo/(?&lt;bar&gt;[a-z]+)\\Z}\n\n  Strexp.compile('foo(.:extension)')\n    # =&gt; %r{\\Afoo(\\.(?&lt;extension&gt;.+))?\\Z}\n\n  Strexp.compile('src/*files')\n    # =&gt; %r{\\Asrc/(?&lt;files&gt;.+)\\Z}\n"
+full_name: Rack::Mount::Strexp::compile
+is_singleton: true
+name: compile
+params: (str, requirements = {}, separators = [], anchor = true)
+visibility: public

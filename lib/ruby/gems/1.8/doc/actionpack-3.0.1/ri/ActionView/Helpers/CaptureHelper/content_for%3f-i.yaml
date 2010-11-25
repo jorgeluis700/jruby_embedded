@@ -1,0 +1,19 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: content_for? simply checks whether any content has been captured yet using content_for Useful to render parts of your layout differently based on what is in your views.
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Examples
+  - !ruby/struct:SM::Flow::P 
+    body: Perhaps you will use different css in you layout if no content_for :right_column
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &lt;%# This is the layout %&gt;\n  &lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;en&quot; lang=&quot;en&quot;&gt;\n  &lt;head&gt;\n    &lt;title&gt;My Website&lt;/title&gt;\n    &lt;%= yield :script %&gt;\n  &lt;/head&gt;\n  &lt;body class=&quot;&lt;%= content_for?(:right_col) ? 'one-column' : 'two-column' %&gt;&quot;&gt;\n    &lt;%= yield %&gt;\n    &lt;%= yield :right_col %&gt;\n  &lt;/body&gt;\n  &lt;/html&gt;\n"
+full_name: ActionView::Helpers::CaptureHelper#content_for?
+is_singleton: false
+name: content_for?
+params: (name)
+visibility: public

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Standard deviation of a sample.
+full_name: Math::std
+is_singleton: true
+name: std
+params: (array, &block)
+visibility: public

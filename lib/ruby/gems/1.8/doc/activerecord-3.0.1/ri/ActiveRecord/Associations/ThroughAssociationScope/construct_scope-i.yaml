@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveRecord::Associations::ThroughAssociationScope#construct_scope
+is_singleton: false
+name: construct_scope
+params: ()
+visibility: protected

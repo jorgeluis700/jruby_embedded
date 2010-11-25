@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionDispatch::MiddlewareStack::Middleware::new
+is_singleton: true
+name: new
+params: (klass_or_name, *args, &block)
+visibility: public

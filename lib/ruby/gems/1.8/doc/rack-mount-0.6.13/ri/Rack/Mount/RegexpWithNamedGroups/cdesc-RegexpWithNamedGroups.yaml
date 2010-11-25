@@ -1,0 +1,33 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: A wrapper that adds shim named capture support to older versions of Ruby.
+  - !ruby/struct:SM::Flow::P 
+    body: Because the named capture syntax causes a parse error, an alternate syntax is used to indicate named captures.
+  - !ruby/struct:SM::Flow::P 
+    body: "Ruby 1.9+ named capture syntax:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  /(?&lt;foo&gt;[a-z]+)/\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "Ruby 1.8 shim syntax:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  /(?:&lt;foo&gt;[a-z]+)/\n"
+constants: []
+
+full_name: Rack::Mount::RegexpWithNamedGroups
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: eql?
+  - !ruby/object:RI::MethodSummary 
+    name: named_captures
+  - !ruby/object:RI::MethodSummary 
+    name: names
+name: RegexpWithNamedGroups
+superclass: Regexp

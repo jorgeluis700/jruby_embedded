@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Regin::Expression#anchored?
+is_singleton: false
+name: anchored?
+params: ()
+visibility: public

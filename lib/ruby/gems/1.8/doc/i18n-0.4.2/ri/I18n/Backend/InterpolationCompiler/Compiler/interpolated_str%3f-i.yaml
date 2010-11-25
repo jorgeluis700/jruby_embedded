@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: I18n::Backend::InterpolationCompiler::Compiler#interpolated_str?
+is_singleton: false
+name: interpolated_str?
+params: (str)
+visibility: public

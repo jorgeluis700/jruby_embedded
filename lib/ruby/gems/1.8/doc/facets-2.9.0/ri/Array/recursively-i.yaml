@@ -1,0 +1,20 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Apply a method to array, and recursively apply that method to each sub-array or <tt>types</tt>.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  arr = [&quot;a&quot;, [&quot;b&quot;, &quot;c&quot;]]\n  arr.recursively.map{ |v| v.to_sym }\n  #=&gt; [:a, [:b, :c]]\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "By default the sub-types are passed thru uneffected. Passing a block to #recursively changes this."
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  arr = [&quot;a&quot;, [&quot;b&quot;, &quot;c&quot;]]\n  arr.recursively{ |a| a.reverse }.map{ |v| v.to_sym }\n  #=&gt; [:a, [:c, :b]]\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "TODO: Return Enumerator if no <tt>yld</tt> block is given ?"
+full_name: Array#recursively
+is_singleton: false
+name: recursively
+params: (*types, &block)
+visibility: public

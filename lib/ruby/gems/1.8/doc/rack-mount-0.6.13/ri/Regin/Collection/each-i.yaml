@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: item
+comment: 
+full_name: Regin::Collection#each
+is_singleton: false
+name: each
+params: () {|item| ...}
+visibility: public

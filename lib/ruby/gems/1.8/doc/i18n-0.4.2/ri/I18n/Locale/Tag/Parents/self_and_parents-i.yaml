@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: I18n::Locale::Tag::Parents#self_and_parents
+is_singleton: false
+name: self_and_parents
+params: ()
+visibility: public

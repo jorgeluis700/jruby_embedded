@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Escape special characters in the given <tt>str</tt>
+full_name: BlueCloth#escape_special_chars
+is_singleton: false
+name: escape_special_chars
+params: ( str )
+visibility: public

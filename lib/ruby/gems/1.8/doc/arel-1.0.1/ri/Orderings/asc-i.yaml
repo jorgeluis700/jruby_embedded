@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: to_ordering
+block_params: 
+comment: 
+full_name: Orderings#asc
+is_singleton: false
+name: asc
+params: ()
+visibility: public

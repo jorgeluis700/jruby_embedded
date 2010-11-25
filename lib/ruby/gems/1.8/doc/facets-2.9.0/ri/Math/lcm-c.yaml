@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Least common multiple of <tt>m</tt> and <tt>n</tt>, computed by multiplying <tt>m</tt> and <tt>n</tt> and dividing the product by the gcd of <tt>m</tt> and <tt>n</tt>, <tt>nil</tt> for non-positive numbers.
+full_name: Math::lcm
+is_singleton: true
+name: lcm
+params: (m, n)
+visibility: public

@@ -1,0 +1,22 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Word wrap a string not exceeding max width.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &quot;this is a test&quot;.word_wrap(4)\n"
+  - !ruby/struct:SM::Flow::P 
+    body: <em>produces</em> ...
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  this\n  is a\n  test\n"
+  - !ruby/struct:SM::Flow::P 
+    body: This is basic implementation of word wrap, but smart enough to suffice for most use cases.
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Gavin Kistner, Dayne Broderson"
+full_name: String#word_wrap
+is_singleton: false
+name: word_wrap
+params: ( col_width=80 )
+visibility: public

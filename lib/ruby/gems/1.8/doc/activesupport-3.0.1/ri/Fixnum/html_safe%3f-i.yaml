@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Fixnum#html_safe?
+is_singleton: false
+name: html_safe?
+params: ()
+visibility: public

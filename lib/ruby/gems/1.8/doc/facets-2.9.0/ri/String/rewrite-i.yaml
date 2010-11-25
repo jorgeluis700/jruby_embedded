@@ -1,0 +1,24 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Apply a set of rules in the form of regular expression matches to the string.
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: rules - The array containing rule-pairs (match, write).
+    type: :BULLET
+  - !ruby/struct:SM::Flow::P 
+    body: Keep in mind that the order of rules is significant.
+  - !ruby/struct:SM::Flow::P 
+    body: Returns the rewritten String.
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: George Moschovitis"
+full_name: String#rewrite
+is_singleton: false
+name: rewrite
+params: (rules)
+visibility: public

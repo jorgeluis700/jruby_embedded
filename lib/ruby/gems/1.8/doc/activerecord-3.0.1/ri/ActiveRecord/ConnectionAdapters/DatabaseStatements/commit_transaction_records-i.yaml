@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Send a commit message to all records after they have been committed.
+full_name: ActiveRecord::ConnectionAdapters::DatabaseStatements#commit_transaction_records
+is_singleton: false
+name: commit_transaction_records
+params: (
+visibility: protected

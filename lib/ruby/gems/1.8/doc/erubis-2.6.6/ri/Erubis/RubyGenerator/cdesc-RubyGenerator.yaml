@@ -1,0 +1,35 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: code generator for Ruby
+constants: []
+
+full_name: Erubis::RubyGenerator
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Generator
+  - !ruby/object:RI::IncludedModule 
+    name: StringBufferEnhancer
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: add_expr_debug
+  - !ruby/object:RI::MethodSummary 
+    name: add_expr_escaped
+  - !ruby/object:RI::MethodSummary 
+    name: add_expr_literal
+  - !ruby/object:RI::MethodSummary 
+    name: add_stmt
+  - !ruby/object:RI::MethodSummary 
+    name: add_text
+  - !ruby/object:RI::MethodSummary 
+    name: escape_text
+  - !ruby/object:RI::MethodSummary 
+    name: escaped_expr
+  - !ruby/object:RI::MethodSummary 
+    name: init_generator
+name: RubyGenerator
+superclass: 

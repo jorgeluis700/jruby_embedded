@@ -1,0 +1,19 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: ORIG_ARGV
+    value: ARGV.dup unless defined?(ORIG_ARGV)
+full_name: ActiveSupport::Testing::Isolation::Subprocess
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: run_in_isolation
+name: Subprocess
+superclass: 

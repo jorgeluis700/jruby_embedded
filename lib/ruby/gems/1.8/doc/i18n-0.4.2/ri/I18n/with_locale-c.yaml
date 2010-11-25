@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: ""
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Executes block with given I18n.locale set.
+full_name: I18n::with_locale
+is_singleton: true
+name: with_locale
+params: (tmp_locale = nil) {|| ...}
+visibility: public

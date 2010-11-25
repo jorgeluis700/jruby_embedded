@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: The average absolute difference of two independent values drawn from the sample. Equal to the RMD * mean.
+full_name: Math::amd
+is_singleton: true
+name: amd
+params: (array)
+visibility: public

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Erubis::Helpers::RailsHelper::init_properties=
+is_singleton: true
+name: init_properties=
+params: (hash)
+visibility: public

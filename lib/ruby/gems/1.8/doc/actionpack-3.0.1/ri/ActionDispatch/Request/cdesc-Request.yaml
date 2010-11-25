@@ -1,0 +1,109 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: LOCALHOST
+    value: "[/^127\\.0\\.0\\.\\d{1,3}$/, \"::1\", /^0:0:0:0:0:0:0:1(%.*)?$/].freeze"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: HTTP_METHODS
+    value: "%w(get head put post delete options)"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: HTTP_METHOD_LOOKUP
+    value: HTTP_METHODS.inject({}) { |h, m| h[m] = h[m.upcase] = m.to_sym;
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: Which IP addresses are &quot;trusted proxies&quot; that can be stripped from the right-hand-side of X-Forwarded-For
+    name: TRUSTED_PROXIES
+    value: /^127\.0\.0\.1$|^(10|172\.(1[6-9]|2[0-9]|30|31)|192\.168)\./i
+full_name: ActionDispatch::Request
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: ActionDispatch::Http::Cache::Request
+  - !ruby/object:RI::IncludedModule 
+    name: ActionDispatch::Http::MimeNegotiation
+  - !ruby/object:RI::IncludedModule 
+    name: ActionDispatch::Http::Parameters
+  - !ruby/object:RI::IncludedModule 
+    name: ActionDispatch::Http::FilterParameters
+  - !ruby/object:RI::IncludedModule 
+    name: ActionDispatch::Http::Upload
+  - !ruby/object:RI::IncludedModule 
+    name: ActionDispatch::Http::URL
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: GET
+  - !ruby/object:RI::MethodSummary 
+    name: POST
+  - !ruby/object:RI::MethodSummary 
+    name: authorization
+  - !ruby/object:RI::MethodSummary 
+    name: body
+  - !ruby/object:RI::MethodSummary 
+    name: content_length
+  - !ruby/object:RI::MethodSummary 
+    name: cookie_jar
+  - !ruby/object:RI::MethodSummary 
+    name: delete?
+  - !ruby/object:RI::MethodSummary 
+    name: flash
+  - !ruby/object:RI::MethodSummary 
+    name: forgery_whitelisted?
+  - !ruby/object:RI::MethodSummary 
+    name: form_data?
+  - !ruby/object:RI::MethodSummary 
+    name: fullpath
+  - !ruby/object:RI::MethodSummary 
+    name: get?
+  - !ruby/object:RI::MethodSummary 
+    name: head?
+  - !ruby/object:RI::MethodSummary 
+    name: headers
+  - !ruby/object:RI::MethodSummary 
+    name: ip
+  - !ruby/object:RI::MethodSummary 
+    name: key?
+  - !ruby/object:RI::MethodSummary 
+    name: local?
+  - !ruby/object:RI::MethodSummary 
+    name: media_type
+  - !ruby/object:RI::MethodSummary 
+    name: method
+  - !ruby/object:RI::MethodSummary 
+    name: method_symbol
+  - !ruby/object:RI::MethodSummary 
+    name: post?
+  - !ruby/object:RI::MethodSummary 
+    name: put?
+  - !ruby/object:RI::MethodSummary 
+    name: query_parameters
+  - !ruby/object:RI::MethodSummary 
+    name: raw_post
+  - !ruby/object:RI::MethodSummary 
+    name: remote_ip
+  - !ruby/object:RI::MethodSummary 
+    name: request_method
+  - !ruby/object:RI::MethodSummary 
+    name: request_method_symbol
+  - !ruby/object:RI::MethodSummary 
+    name: request_parameters
+  - !ruby/object:RI::MethodSummary 
+    name: reset_session
+  - !ruby/object:RI::MethodSummary 
+    name: server_software
+  - !ruby/object:RI::MethodSummary 
+    name: session_options=
+  - !ruby/object:RI::MethodSummary 
+    name: xhr?
+  - !ruby/object:RI::MethodSummary 
+    name: xml_http_request?
+name: Request
+superclass: Rack::Request

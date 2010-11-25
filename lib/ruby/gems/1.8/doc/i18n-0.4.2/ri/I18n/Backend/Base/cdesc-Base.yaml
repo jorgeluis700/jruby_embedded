@@ -1,0 +1,56 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: RESERVED_KEYS
+    value: "[:scope, :default, :separator, :resolve, :object, :fallback]"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: RESERVED_KEYS_PATTERN
+    value: /%\{(#{RESERVED_KEYS.join("|")})\}/
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: DEPRECATED_INTERPOLATION_SYNTAX_PATTERN
+    value: /(\\)?\{\{([^\}]+)\}\}/
+full_name: I18n::Backend::Base
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: I18n::Backend::Transliterator
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: available_locales
+  - !ruby/object:RI::MethodSummary 
+    name: default
+  - !ruby/object:RI::MethodSummary 
+    name: interpolate
+  - !ruby/object:RI::MethodSummary 
+    name: interpolate_lambda?
+  - !ruby/object:RI::MethodSummary 
+    name: load_file
+  - !ruby/object:RI::MethodSummary 
+    name: load_rb
+  - !ruby/object:RI::MethodSummary 
+    name: load_translations
+  - !ruby/object:RI::MethodSummary 
+    name: load_yml
+  - !ruby/object:RI::MethodSummary 
+    name: localize
+  - !ruby/object:RI::MethodSummary 
+    name: lookup
+  - !ruby/object:RI::MethodSummary 
+    name: pluralize
+  - !ruby/object:RI::MethodSummary 
+    name: reload!
+  - !ruby/object:RI::MethodSummary 
+    name: resolve
+  - !ruby/object:RI::MethodSummary 
+    name: store_translations
+  - !ruby/object:RI::MethodSummary 
+    name: translate
+name: Base
+superclass: 

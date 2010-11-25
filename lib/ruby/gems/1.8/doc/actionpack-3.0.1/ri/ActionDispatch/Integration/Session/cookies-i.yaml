@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: A map of the cookies returned by the last response, and which will be sent with the next request.
+full_name: ActionDispatch::Integration::Session#cookies
+is_singleton: false
+name: cookies
+params: ()
+visibility: public

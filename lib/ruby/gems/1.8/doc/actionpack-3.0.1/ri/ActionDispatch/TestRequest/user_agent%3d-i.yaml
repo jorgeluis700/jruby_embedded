@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionDispatch::TestRequest#user_agent=
+is_singleton: false
+name: user_agent=
+params: (user_agent)
+visibility: public

@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Recompiles Regexp by parsing it and turning it back into a Regexp.
+  - !ruby/struct:SM::Flow::P 
+    body: (In the future Regin will perform some Regexp optimizations such as removing unnecessary captures and options)
+full_name: Regin::compile
+is_singleton: true
+name: compile
+params: (source)
+visibility: public

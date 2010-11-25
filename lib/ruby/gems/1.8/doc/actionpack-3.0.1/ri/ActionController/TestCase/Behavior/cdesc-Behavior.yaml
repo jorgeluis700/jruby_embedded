@@ -1,0 +1,48 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: request
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: response
+    rw: R
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: ActionController::TestCase::Behavior
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: ActionDispatch::TestProcess
+  - !ruby/object:RI::IncludedModule 
+    name: Testing
+  - !ruby/object:RI::IncludedModule 
+    name: ActionController::TemplateAssertions
+  - !ruby/object:RI::IncludedModule 
+    name: ActionDispatch::Assertions
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: delete
+  - !ruby/object:RI::MethodSummary 
+    name: get
+  - !ruby/object:RI::MethodSummary 
+    name: head
+  - !ruby/object:RI::MethodSummary 
+    name: post
+  - !ruby/object:RI::MethodSummary 
+    name: process
+  - !ruby/object:RI::MethodSummary 
+    name: put
+  - !ruby/object:RI::MethodSummary 
+    name: rescue_action_in_public!
+  - !ruby/object:RI::MethodSummary 
+    name: setup_controller_request_and_response
+  - !ruby/object:RI::MethodSummary 
+    name: xhr
+  - !ruby/object:RI::MethodSummary 
+    name: xml_http_request
+name: Behavior
+superclass: 

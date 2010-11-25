@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Binary XOR of two strings.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  a = &quot;\\000\\000\\001\\001&quot; ^ &quot;\\000\\001\\000\\001&quot;\n  b = &quot;\\003\\003\\003&quot; ^ &quot;\\000\\001\\002&quot;\n\n  a  #=&gt; &quot;\\000\\001\\001\\000&quot;\n  b  #=&gt; &quot;\\003\\002\\001&quot;\n"
+full_name: String#^
+is_singleton: false
+name: ^
+params: (aString)
+visibility: public

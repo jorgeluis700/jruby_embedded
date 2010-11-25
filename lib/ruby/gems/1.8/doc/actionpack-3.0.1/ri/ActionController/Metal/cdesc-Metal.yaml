@@ -1,0 +1,55 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: action
+  - !ruby/object:RI::MethodSummary 
+    name: call
+  - !ruby/object:RI::MethodSummary 
+    name: controller_name
+  - !ruby/object:RI::MethodSummary 
+    name: inherited
+  - !ruby/object:RI::MethodSummary 
+    name: middleware
+  - !ruby/object:RI::MethodSummary 
+    name: new
+  - !ruby/object:RI::MethodSummary 
+    name: use
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: ActionController::Metal provides a way to get a valid Rack application from a controller.
+  - !ruby/struct:SM::Flow::P 
+    body: "In AbstractController, dispatching is triggered directly by calling #process on a new controller. ActionController::Metal provides an #action method that returns a valid Rack application for a given action. Other rack builders, such as Rack::Builder, Rack::URLMap, and the Rails router, can dispatch directly to the action returned by FooController.action(:index)."
+constants: []
+
+full_name: ActionController::Metal
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: content_type
+  - !ruby/object:RI::MethodSummary 
+    name: content_type=
+  - !ruby/object:RI::MethodSummary 
+    name: controller_name
+  - !ruby/object:RI::MethodSummary 
+    name: dispatch
+  - !ruby/object:RI::MethodSummary 
+    name: location
+  - !ruby/object:RI::MethodSummary 
+    name: location=
+  - !ruby/object:RI::MethodSummary 
+    name: params
+  - !ruby/object:RI::MethodSummary 
+    name: params=
+  - !ruby/object:RI::MethodSummary 
+    name: response_body=
+  - !ruby/object:RI::MethodSummary 
+    name: status
+  - !ruby/object:RI::MethodSummary 
+    name: status=
+  - !ruby/object:RI::MethodSummary 
+    name: to_a
+name: Metal
+superclass: AbstractController::Base

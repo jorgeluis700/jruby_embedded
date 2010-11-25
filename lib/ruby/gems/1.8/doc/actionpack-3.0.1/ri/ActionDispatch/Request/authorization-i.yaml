@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns the authorization header regardless of whether it was specified directly or through one of the proxy alternatives.
+full_name: ActionDispatch::Request#authorization
+is_singleton: false
+name: authorization
+params: ()
+visibility: public

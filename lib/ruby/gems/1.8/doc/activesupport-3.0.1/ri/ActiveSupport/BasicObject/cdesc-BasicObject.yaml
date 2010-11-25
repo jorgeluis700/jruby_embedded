@@ -1,0 +1,17 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: A class with no predefined methods that behaves similarly to Builder's BlankSlate. Used for proxy classes.
+constants: []
+
+full_name: ActiveSupport::BasicObject
+includes: []
+
+instance_methods: []
+
+name: BasicObject
+superclass: "::BasicObject"

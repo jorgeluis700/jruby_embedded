@@ -1,0 +1,19 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: []
+
+full_name: ActiveRecord::Validations::UniquenessValidator
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: setup
+  - !ruby/object:RI::MethodSummary 
+    name: validate_each
+name: UniquenessValidator
+superclass: ActiveModel::EachValidator

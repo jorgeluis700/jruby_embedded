@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Removes trailing nils from array.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  pop_trailing_blanks!([1, 2, 3])           # =&gt; [1, 2, 3]\n  pop_trailing_blanks!([1, 2, 3, nil, &quot;&quot;])  # =&gt; [1, 2, 3]\n  pop_trailing_blanks!([nil])               # =&gt; []\n  pop_trailing_blanks!([&quot;&quot;])                # =&gt; []\n"
+full_name: Rack::Mount::Utils#pop_trailing_blanks!
+is_singleton: false
+name: pop_trailing_blanks!
+params: (ary)
+visibility: public

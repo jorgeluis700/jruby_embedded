@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionController::Testing::ClassMethods#before_filters
+is_singleton: false
+name: before_filters
+params: ()
+visibility: public

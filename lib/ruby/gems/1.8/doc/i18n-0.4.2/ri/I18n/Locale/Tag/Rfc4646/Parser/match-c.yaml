@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: I18n::Locale::Tag::Rfc4646::Parser::match
+is_singleton: true
+name: match
+params: (tag)
+visibility: public

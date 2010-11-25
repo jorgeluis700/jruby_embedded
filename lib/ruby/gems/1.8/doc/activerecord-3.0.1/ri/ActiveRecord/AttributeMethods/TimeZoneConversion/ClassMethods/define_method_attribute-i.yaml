@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Defined for all <tt>datetime</tt> and <tt>timestamp</tt> attributes when <tt>time_zone_aware_attributes</tt> are enabled. This enhanced read method automatically converts the UTC time stored in the database to the time zone stored in Time.zone.
+full_name: ActiveRecord::AttributeMethods::TimeZoneConversion::ClassMethods#define_method_attribute
+is_singleton: false
+name: define_method_attribute
+params: (attr_name)
+visibility: protected

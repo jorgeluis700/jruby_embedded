@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: AbstractController::Collector::generate_method_for_mime
+is_singleton: true
+name: generate_method_for_mime
+params: (mime)
+visibility: public

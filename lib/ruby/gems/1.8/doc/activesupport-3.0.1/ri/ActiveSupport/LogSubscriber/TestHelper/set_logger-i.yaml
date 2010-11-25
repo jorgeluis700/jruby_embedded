@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Overwrite if you use another logger in your log subscriber:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  def logger\n    ActiveRecord::Base.logger = @logger\n  end\n"
+full_name: ActiveSupport::LogSubscriber::TestHelper#set_logger
+is_singleton: false
+name: set_logger
+params: (logger)
+visibility: public

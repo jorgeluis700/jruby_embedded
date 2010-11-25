@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns the Cumulative Density Function of this sample (normalised to a fraction of 1.0).
+full_name: Math::cdf
+is_singleton: true
+name: cdf
+params: (array, normalised=1.0)
+visibility: public

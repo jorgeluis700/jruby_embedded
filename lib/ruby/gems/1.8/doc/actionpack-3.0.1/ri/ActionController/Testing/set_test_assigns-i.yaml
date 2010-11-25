@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionController::Testing#set_test_assigns
+is_singleton: false
+name: set_test_assigns
+params: ()
+visibility: public

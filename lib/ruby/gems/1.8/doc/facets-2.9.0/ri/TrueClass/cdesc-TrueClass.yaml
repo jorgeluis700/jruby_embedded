@@ -1,0 +1,24 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: TrueClass
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: blank?
+  - !ruby/object:RI::MethodSummary 
+    name: clone?
+  - !ruby/object:RI::MethodSummary 
+    name: dup!
+  - !ruby/object:RI::MethodSummary 
+    name: dup?
+  - !ruby/object:RI::MethodSummary 
+    name: to_bool
+name: TrueClass
+superclass: Object

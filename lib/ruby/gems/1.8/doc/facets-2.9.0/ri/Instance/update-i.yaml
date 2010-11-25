@@ -1,0 +1,19 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: assign
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Set instance variables given a <tt>hash</tt>.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  instance.update('@a'=&gt;1, '@b'=&gt;2)\n  @a   #=&gt; 1\n  @b   #=&gt; 2\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Also, +@+ sign is not neccessary.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  instance.update(:a=&gt;1, :b=&gt;2)\n  @a   #=&gt; 1\n  @b   #=&gt; 2\n"
+full_name: Instance#update
+is_singleton: false
+name: update
+params: (hash)
+visibility: public

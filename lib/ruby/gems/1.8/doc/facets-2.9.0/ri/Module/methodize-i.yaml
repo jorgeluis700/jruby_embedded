@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Translate a module name to a suitable method name.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  module ::EgMethodize\n    module Eg\n    end\n  end\n\n  EgMethodize.methodize      #=&gt; &quot;eg_methodize&quot;\n  EgMethodize::Eg.methodize  #=&gt; &quot;eg_methodize__eg&quot;\n"
+full_name: Module#methodize
+is_singleton: false
+name: methodize
+params: ()
+visibility: public

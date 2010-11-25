@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: find_template
+block_params: 
+comment: 
+full_name: ActionView::LookupContext::ViewPaths#find
+is_singleton: false
+name: find
+params: (name, prefix = nil, partial = false)
+visibility: public

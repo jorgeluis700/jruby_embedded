@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Regin::Options#to_h
+is_singleton: false
+name: to_h
+params: (explicit = false)
+visibility: public

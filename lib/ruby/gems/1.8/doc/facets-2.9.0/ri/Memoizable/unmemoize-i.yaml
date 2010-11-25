@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: []
+
+full_name: Memoizable#unmemoize
+is_singleton: false
+name: unmemoize
+params: (*method_names)
+visibility: public

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: I18n::Backend::ActiveRecord::Missing#store_default_translation
+is_singleton: false
+name: store_default_translation
+params: (locale, key, interpolations)
+visibility: public

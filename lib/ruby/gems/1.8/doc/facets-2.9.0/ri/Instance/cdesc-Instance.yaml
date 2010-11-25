@@ -1,0 +1,49 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+  - !ruby/struct:SM::Flow::H 
+    level: 1
+    text: Instance Class
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class Friend\n    attr_accessor :name, :age, :phone\n    def initialize(name, age, phone)\n      @name, @age, @phone = name, age, phone\n    end\n  end\n\n  f1 = Friend.new(&quot;John&quot;, 30, &quot;555-1212&quot;)\n  f1.instance\n\n  f1.instance.update({:name=&gt;'Jerry'})\n  f1.instance\n"
+constants: []
+
+full_name: Instance
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Enumerable
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: "<<"
+  - !ruby/object:RI::MethodSummary 
+    name: "[]"
+  - !ruby/object:RI::MethodSummary 
+    name: "[]="
+  - !ruby/object:RI::MethodSummary 
+    name: assign
+  - !ruby/object:RI::MethodSummary 
+    name: each
+  - !ruby/object:RI::MethodSummary 
+    name: eval
+  - !ruby/object:RI::MethodSummary 
+    name: instance_delegate
+  - !ruby/object:RI::MethodSummary 
+    name: keys
+  - !ruby/object:RI::MethodSummary 
+    name: names
+  - !ruby/object:RI::MethodSummary 
+    name: to_h
+  - !ruby/object:RI::MethodSummary 
+    name: to_hash
+  - !ruby/object:RI::MethodSummary 
+    name: update
+  - !ruby/object:RI::MethodSummary 
+    name: values
+  - !ruby/object:RI::MethodSummary 
+    name: variables
+name: Instance
+superclass: Object

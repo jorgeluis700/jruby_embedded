@@ -1,0 +1,18 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: If token Authorization header is present, call the login procedure with the present token and options.
+  - !ruby/struct:SM::Flow::P 
+    body: controller - ActionController::Base instance for the current request. login_procedure - Proc to call if a token is present. The Proc should
+  - !ruby/struct:SM::Flow::VERB 
+    body: "                  take 2 arguments:\n                    authenticate(controller) { |token, options| ... }\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Returns the return value of `&amp;login_procedure` if a token is found. Returns nil if no token is found.
+full_name: ActionController::HttpAuthentication::Token#authenticate
+is_singleton: false
+name: authenticate
+params: (controller, &login_procedure)
+visibility: public

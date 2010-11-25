@@ -1,0 +1,81 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Pretty prints (formats and approximates) a number in a way it is more readable by humans (eg.: 1200000000 becomes &quot;1.2 Billion&quot;). This is useful for numbers that can get very large (and too hard to read)."
+  - !ruby/struct:SM::Flow::P 
+    body: See <tt>number_to_human_size</tt> if you want to print a file size.
+  - !ruby/struct:SM::Flow::P 
+    body: "You can also define you own unit-quantifier names if you want to use other decimal units (eg.: 1500 becomes &quot;1.5 kilometers&quot;, 0.150 becomes &quot;150 mililiters&quot;, etc). You may define a wide range of unit quantifiers, even fractional ones (centi, deci, mili, etc)."
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Options
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>:locale</tt> - Sets the locale to be used for formatting (defaults to current locale).
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>:precision</tt> - Sets the precision of the number (defaults to 3).
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: "<tt>:significant</tt> - If <tt>true</tt>, precision will be the # of significant_digits. If <tt>false</tt>, the # of fractional digits (defaults to <tt>true</tt>)"
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>:separator</tt> - Sets the separator between the fractional and integer digits (defaults to &quot;.&quot;).
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>:delimiter</tt> - Sets the thousands delimiter (defaults to &quot;&quot;).
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>:strip_insignificant_zeros</tt> - If <tt>true</tt> removes insignificant zeros after the decimal separator (defaults to <tt>true</tt>)
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: "<tt>:units</tt> - A Hash of unit quantifier names. Or a string containing an i18n scope where to find this hash. It might have the following keys:"
+      - !ruby/object:SM::Flow::LIST 
+        contents: 
+          - !ruby/struct:SM::Flow::LI 
+            label: "*"
+            body: "<b>integers</b>: <tt>:unit</tt>, <tt>:ten</tt>, <tt>:hundred</tt>, <tt>:thousand</tt>, <tt>:million</tt>, <tt>:billion</tt>, <tt>:trillion</tt>, <tt>:quadrillion</tt>"
+          - !ruby/struct:SM::Flow::LI 
+            label: "*"
+            body: "<b>fractionals</b>: <tt>:deci</tt>, <tt>:centi</tt>, <tt>:mili</tt>, <tt>:micro</tt>, <tt>:nano</tt>, <tt>:pico</tt>, <tt>:femto</tt>"
+        type: :BULLET
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: "<tt>:format</tt> - Sets the format of the output string (defaults to &quot;%n %u&quot;). The field types are:"
+      - !ruby/struct:SM::Flow::VERB 
+        body: "  %u  The quantifier (ex.: 'thousand')\n  %n  The number\n"
+    type: :BULLET
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Examples
+  - !ruby/struct:SM::Flow::VERB 
+    body: " number_to_human(123)                                          # =&gt; &quot;123&quot;\n number_to_human(1234)                                         # =&gt; &quot;1.23 Thousand&quot;\n number_to_human(12345)                                        # =&gt; &quot;12.3 Thousand&quot;\n number_to_human(1234567)                                      # =&gt; &quot;1.23 Million&quot;\n number_to_human(1234567890)                                   # =&gt; &quot;1.23 Billion&quot;\n number_to_human(1234567890123)                                # =&gt; &quot;1.23 Trillion&quot;\n number_to_human(1234567890123456)                             # =&gt; &quot;1.23 Quadrillion&quot;\n number_to_human(1234567890123456789)                          # =&gt; &quot;1230 Quadrillion&quot;\n number_to_human(489939, :precision =&gt; 2)                      # =&gt; &quot;490 Thousand&quot;\n number_to_human(489939, :precision =&gt; 4)                      # =&gt; &quot;489.9 Thousand&quot;\n number_to_human(1234567, :precision =&gt; 4,\n                          :significant =&gt; false)               # =&gt; &quot;1.2346 Million&quot;\n number_to_human(1234567, :precision =&gt; 1,\n                          :separator =&gt; ',',\n                          :significant =&gt; false)               # =&gt; &quot;1,2 Million&quot;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "Unsignificant zeros after the decimal separator are stripped out by default (set <tt>:strip_insignificant_zeros</tt> to <tt>false</tt> to change that):"
+  - !ruby/struct:SM::Flow::VERB 
+    body: " number_to_human(12345012345, :significant_digits =&gt; 6)       # =&gt; &quot;12.345 Billion&quot;\n number_to_human(500000000, :precision=&gt;5)                    # =&gt; &quot;500 Million&quot;\n"
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Custom Unit Quantifiers
+  - !ruby/struct:SM::Flow::P 
+    body: "You can also use your own custom unit quantifiers:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: " number_to_human(500000, :units =&gt; {:unit =&gt; &quot;ml&quot;, :thousand =&gt; &quot;lt&quot;})  # =&gt; &quot;500 lt&quot;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "If in your I18n locale you have:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  distance:\n    centi:\n      one: &quot;centimeter&quot;\n      other: &quot;centimeters&quot;\n    unit:\n      one: &quot;meter&quot;\n      other: &quot;meters&quot;\n    thousand:\n      one: &quot;kilometer&quot;\n      other: &quot;kilometers&quot;\n    billion: &quot;gazilion-distance&quot;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "Then you could do:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: " number_to_human(543934, :units =&gt; :distance)                              # =&gt; &quot;544 kilometers&quot;\n number_to_human(54393498, :units =&gt; :distance)                            # =&gt; &quot;54400 kilometers&quot;\n number_to_human(54393498000, :units =&gt; :distance)                         # =&gt; &quot;54.4 gazilion-distance&quot;\n number_to_human(343, :units =&gt; :distance, :precision =&gt; 1)                # =&gt; &quot;300 meters&quot;\n number_to_human(1, :units =&gt; :distance)                                   # =&gt; &quot;1 meter&quot;\n number_to_human(0.34, :units =&gt; :distance)                                # =&gt; &quot;34 centimeters&quot;\n"
+full_name: ActionView::Helpers::NumberHelper#number_to_human
+is_singleton: false
+name: number_to_human
+params: (number, options = {})
+visibility: public

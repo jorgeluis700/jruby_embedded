@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: DateTime::civil_from_format
+is_singleton: true
+name: civil_from_format
+params: (utc_or_local, year, month=1, day=1, hour=0, min=0, sec=0)
+visibility: public

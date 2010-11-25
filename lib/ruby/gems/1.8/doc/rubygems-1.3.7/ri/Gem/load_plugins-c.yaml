@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Find all 'rubygems_plugin' files and load them
+full_name: Gem::load_plugins
+is_singleton: true
+name: load_plugins
+params: ()
+visibility: public

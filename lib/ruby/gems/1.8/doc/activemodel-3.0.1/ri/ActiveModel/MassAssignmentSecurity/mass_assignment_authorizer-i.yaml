@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveModel::MassAssignmentSecurity#mass_assignment_authorizer
+is_singleton: false
+name: mass_assignment_authorizer
+params: ()
+visibility: protected

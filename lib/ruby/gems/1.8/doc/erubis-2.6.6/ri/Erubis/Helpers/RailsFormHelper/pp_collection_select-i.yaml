@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Erubis::Helpers::RailsFormHelper#pp_collection_select
+is_singleton: false
+name: pp_collection_select
+params: (object, method, collection, value_method, text_method, options={}, html_options={})
+visibility: public

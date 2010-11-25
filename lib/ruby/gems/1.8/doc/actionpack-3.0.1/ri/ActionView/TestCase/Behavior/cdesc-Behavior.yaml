@@ -1,0 +1,51 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: controller
+    rw: RW
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: output_buffer
+    rw: RW
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: rendered
+    rw: RW
+class_methods: []
+
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: EXCLUDE_IVARS
+    value: "%w{         @_assertion_wrapped         @_result         @controller         @layouts         @locals         @method_name         @output_buffer         @partials         @rendered         @request         @routes         @templates         @test_passed         @view         @view_context_class       }"
+full_name: ActionView::TestCase::Behavior
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: ActionDispatch::Assertions
+  - !ruby/object:RI::IncludedModule 
+    name: ActionDispatch::TestProcess
+  - !ruby/object:RI::IncludedModule 
+    name: ActionController::TemplateAssertions
+  - !ruby/object:RI::IncludedModule 
+    name: ActionView::Context
+  - !ruby/object:RI::IncludedModule 
+    name: ActionDispatch::Routing::PolymorphicRoutes
+  - !ruby/object:RI::IncludedModule 
+    name: ActionController::RecordIdentifier
+  - !ruby/object:RI::IncludedModule 
+    name: AbstractController::Helpers
+  - !ruby/object:RI::IncludedModule 
+    name: ActionView::Helpers
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: config
+  - !ruby/object:RI::MethodSummary 
+    name: locals
+  - !ruby/object:RI::MethodSummary 
+    name: render
+  - !ruby/object:RI::MethodSummary 
+    name: setup_with_controller
+name: Behavior
+superclass: 

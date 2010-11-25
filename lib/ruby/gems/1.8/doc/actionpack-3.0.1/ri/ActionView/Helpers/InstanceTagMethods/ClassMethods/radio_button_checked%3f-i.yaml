@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionView::Helpers::InstanceTagMethods::ClassMethods#radio_button_checked?
+is_singleton: false
+name: radio_button_checked?
+params: (value, checked_value)
+visibility: public

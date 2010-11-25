@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Do not use the default locale on template lookup.
+full_name: ActionView::LookupContext::Details#skip_default_locale!
+is_singleton: false
+name: skip_default_locale!
+params: ()
+visibility: public

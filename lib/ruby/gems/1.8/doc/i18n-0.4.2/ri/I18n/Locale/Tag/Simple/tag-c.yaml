@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: I18n::Locale::Tag::Simple::tag
+is_singleton: true
+name: tag
+params: (tag)
+visibility: public

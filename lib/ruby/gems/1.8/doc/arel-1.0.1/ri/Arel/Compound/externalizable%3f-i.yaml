@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Arel::Compound#externalizable?
+is_singleton: false
+name: externalizable?
+params: ()
+visibility: public

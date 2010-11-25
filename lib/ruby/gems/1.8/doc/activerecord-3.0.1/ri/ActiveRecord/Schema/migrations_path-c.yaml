@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveRecord::Schema::migrations_path
+is_singleton: true
+name: migrations_path
+params: ()
+visibility: public

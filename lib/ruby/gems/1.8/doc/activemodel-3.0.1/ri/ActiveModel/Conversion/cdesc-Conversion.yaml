@@ -1,0 +1,32 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: Active Model Conversions
+  - !ruby/struct:SM::Flow::P 
+    body: "Handles default conversions: to_model, to_key and to_param."
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: Example
+  - !ruby/struct:SM::Flow::P 
+    body: Let's take for example this non persisted object.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class ContactMessage\n    include ActiveModel::Conversion\n\n    # ContactMessage are never persisted in the DB\n    def persisted?\n      false\n    end\n  end\n\n  cm = ContactMessage.new\n  cm.to_model == self # =&gt; true\n  cm.to_key           # =&gt; nil\n  cm.to_param         # =&gt; nil\n"
+constants: []
+
+full_name: ActiveModel::Conversion
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: to_key
+  - !ruby/object:RI::MethodSummary 
+    name: to_model
+  - !ruby/object:RI::MethodSummary 
+    name: to_param
+name: Conversion
+superclass: 

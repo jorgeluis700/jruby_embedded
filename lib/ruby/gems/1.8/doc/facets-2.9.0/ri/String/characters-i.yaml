@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns an array of characters.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &quot;abc&quot;.characters.to_a  #=&gt; [&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "TODO: Probably should make this an enumerator. With #scan?"
+full_name: String#characters
+is_singleton: false
+name: characters
+params: ()
+visibility: public

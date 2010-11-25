@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionView::Helpers::AssetTagHelper::register_javascript_include_default
+is_singleton: true
+name: register_javascript_include_default
+params: (*args)
+visibility: public

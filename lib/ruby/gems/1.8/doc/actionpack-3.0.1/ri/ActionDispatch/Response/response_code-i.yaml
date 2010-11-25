@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: The response code of the request
+full_name: ActionDispatch::Response#response_code
+is_singleton: false
+name: response_code
+params: ()
+visibility: public

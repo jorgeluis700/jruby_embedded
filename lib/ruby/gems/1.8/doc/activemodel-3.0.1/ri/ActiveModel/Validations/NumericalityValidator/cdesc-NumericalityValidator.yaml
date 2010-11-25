@@ -1,0 +1,32 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: CHECKS
+    value: "{ :greater_than => :>, :greater_than_or_equal_to => :>=,                  :equal_to => :==, :less_than => :<, :less_than_or_equal_to => :<=,                  :odd => :odd?, :even => :even? }.freeze"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: RESERVED_OPTIONS
+    value: CHECKS.keys + [:only_integer]
+full_name: ActiveModel::Validations::NumericalityValidator
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: check_validity!
+  - !ruby/object:RI::MethodSummary 
+    name: filtered_options
+  - !ruby/object:RI::MethodSummary 
+    name: parse_raw_value_as_a_number
+  - !ruby/object:RI::MethodSummary 
+    name: parse_raw_value_as_an_integer
+  - !ruby/object:RI::MethodSummary 
+    name: validate_each
+name: NumericalityValidator
+superclass: EachValidator

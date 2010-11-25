@@ -1,0 +1,22 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: options
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: []
+
+full_name: ActiveSupport::JSON::Encoding::Encoder
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: encode
+  - !ruby/object:RI::MethodSummary 
+    name: escape
+name: Encoder
+superclass: Object

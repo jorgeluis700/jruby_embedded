@@ -1,0 +1,24 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Remove excessive indentation. Useful for multi-line strings embeded in already indented code.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &lt;&lt;-END.unindent\n      ohaie\n        wurld\n  END\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Outputs ...
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  ohaie\n    wurld\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Instead of ...
+  - !ruby/struct:SM::Flow::VERB 
+    body: "      ohaie\n        wurld\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Noah Gibbs, mynyml"
+full_name: String#unindent
+is_singleton: false
+name: unindent
+params: (size=nil)
+visibility: public

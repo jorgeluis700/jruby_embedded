@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveRecord::Relation#where_values_hash
+is_singleton: false
+name: where_values_hash
+params: ()
+visibility: public

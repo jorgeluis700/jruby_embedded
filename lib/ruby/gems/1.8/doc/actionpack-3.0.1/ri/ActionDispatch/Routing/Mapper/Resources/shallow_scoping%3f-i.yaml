@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionDispatch::Routing::Mapper::Resources#shallow_scoping?
+is_singleton: false
+name: shallow_scoping?
+params: ()
+visibility: protected

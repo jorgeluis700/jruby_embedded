@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveSupport::Cache::Strategy::LocalCache::LocalStore#clear
+is_singleton: false
+name: clear
+params: (options = nil)
+visibility: public

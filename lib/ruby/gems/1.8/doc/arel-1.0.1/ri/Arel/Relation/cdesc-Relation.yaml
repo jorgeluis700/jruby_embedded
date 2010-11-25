@@ -1,0 +1,83 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: count
+    rw: R
+class_methods: []
+
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: JoinOperation
+    value: Struct.new(:join_class, :relation1, :relation2) do       def on(*predicates)
+full_name: Arel::Relation
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Enumerable
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: alias
+  - !ruby/object:RI::MethodSummary 
+    name: bind
+  - !ruby/object:RI::MethodSummary 
+    name: call
+  - !ruby/object:RI::MethodSummary 
+    name: christener
+  - !ruby/object:RI::MethodSummary 
+    name: compiler
+  - !ruby/object:RI::MethodSummary 
+    name: delete
+  - !ruby/object:RI::MethodSummary 
+    name: each
+  - !ruby/object:RI::MethodSummary 
+    name: exclusion_predicate_sql
+  - !ruby/object:RI::MethodSummary 
+    name: externalizable?
+  - !ruby/object:RI::MethodSummary 
+    name: externalize
+  - !ruby/object:RI::MethodSummary 
+    name: from
+  - !ruby/object:RI::MethodSummary 
+    name: from_clauses
+  - !ruby/object:RI::MethodSummary 
+    name: group_clauses
+  - !ruby/object:RI::MethodSummary 
+    name: having_clauses
+  - !ruby/object:RI::MethodSummary 
+    name: inclusion_predicate_sql
+  - !ruby/object:RI::MethodSummary 
+    name: insert
+  - !ruby/object:RI::MethodSummary 
+    name: join
+  - !ruby/object:RI::MethodSummary 
+    name: join?
+  - !ruby/object:RI::MethodSummary 
+    name: lock
+  - !ruby/object:RI::MethodSummary 
+    name: order_clauses
+  - !ruby/object:RI::MethodSummary 
+    name: outer_join
+  - !ruby/object:RI::MethodSummary 
+    name: primary_key
+  - !ruby/object:RI::MethodSummary 
+    name: project
+  - !ruby/object:RI::MethodSummary 
+    name: select_clauses
+  - !ruby/object:RI::MethodSummary 
+    name: session
+  - !ruby/object:RI::MethodSummary 
+    name: skip
+  - !ruby/object:RI::MethodSummary 
+    name: take
+  - !ruby/object:RI::MethodSummary 
+    name: to_sql
+  - !ruby/object:RI::MethodSummary 
+    name: update
+  - !ruby/object:RI::MethodSummary 
+    name: where
+  - !ruby/object:RI::MethodSummary 
+    name: where_clauses
+name: Relation
+superclass: 

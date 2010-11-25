@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionController::Base::without_modules
+is_singleton: true
+name: without_modules
+params: (*modules)
+visibility: public

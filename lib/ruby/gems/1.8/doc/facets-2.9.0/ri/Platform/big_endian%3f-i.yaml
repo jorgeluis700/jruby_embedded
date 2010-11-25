@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: []
+
+full_name: Platform#big_endian?
+is_singleton: false
+name: big_endian?
+params: ()
+visibility: public

@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Read multiple values at once from the cache. Options can be passed in the last argument.
+  - !ruby/struct:SM::Flow::P 
+    body: Some cache implementation may optimize this method.
+  - !ruby/struct:SM::Flow::P 
+    body: Returns a hash mapping the names provided to the values found.
+full_name: ActiveSupport::Cache::Store#read_multi
+is_singleton: false
+name: read_multi
+params: (*names)
+visibility: public

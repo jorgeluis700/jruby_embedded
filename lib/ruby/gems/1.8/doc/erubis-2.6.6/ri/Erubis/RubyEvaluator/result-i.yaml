@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: eval(@src) with binding object
+full_name: Erubis::RubyEvaluator#result
+is_singleton: false
+name: result
+params: (_binding_or_hash=TOPLEVEL_BINDING)
+visibility: public

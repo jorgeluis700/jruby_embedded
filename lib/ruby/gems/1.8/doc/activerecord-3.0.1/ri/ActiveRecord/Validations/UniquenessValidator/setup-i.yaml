@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Unfortunately, we have to tie Uniqueness validators to a class.
+full_name: ActiveRecord::Validations::UniquenessValidator#setup
+is_singleton: false
+name: setup
+params: (klass)
+visibility: public

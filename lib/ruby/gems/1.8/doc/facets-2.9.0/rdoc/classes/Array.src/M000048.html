@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>to_h (Array)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/core/facets/to_hash.rb, line 51</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_h</span>(<span class="ruby-identifier">mode</span>=<span class="ruby-keyword kw">nil</span>)
+    <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">mode</span>
+    <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">:splat</span>
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">to_h_splat</span>
+    <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">:flat</span>
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">to_h_flat</span>
+    <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">:multi</span>, <span class="ruby-keyword kw">true</span>
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">to_h_multi</span>
+    <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">:assoc</span>
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">to_h_assoc</span>
+    <span class="ruby-keyword kw">else</span>
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">to_h_auto</span>
+    <span class="ruby-keyword kw">end</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

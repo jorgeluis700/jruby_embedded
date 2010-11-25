@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: I18n::Backend::Cldr#detect_type
+is_singleton: false
+name: detect_type
+params: (object, options)
+visibility: protected

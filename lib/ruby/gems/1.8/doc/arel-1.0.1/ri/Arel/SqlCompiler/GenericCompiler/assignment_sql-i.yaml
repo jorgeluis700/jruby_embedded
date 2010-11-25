@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Arel::SqlCompiler::GenericCompiler#assignment_sql
+is_singleton: false
+name: assignment_sql
+params: ()
+visibility: protected

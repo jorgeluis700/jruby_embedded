@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: template_exists?
+block_params: 
+comment: 
+full_name: ActionView::LookupContext::ViewPaths#exists?
+is_singleton: false
+name: exists?
+params: (name, prefix = nil, partial = false)
+visibility: public

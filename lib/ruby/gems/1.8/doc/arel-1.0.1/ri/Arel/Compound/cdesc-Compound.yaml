@@ -1,0 +1,49 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: engine
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: relation
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: []
+
+full_name: Arel::Compound
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Relation
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: attributes
+  - !ruby/object:RI::MethodSummary 
+    name: column_for
+  - !ruby/object:RI::MethodSummary 
+    name: externalizable?
+  - !ruby/object:RI::MethodSummary 
+    name: join?
+  - !ruby/object:RI::MethodSummary 
+    name: joins
+  - !ruby/object:RI::MethodSummary 
+    name: name
+  - !ruby/object:RI::MethodSummary 
+    name: skipped
+  - !ruby/object:RI::MethodSummary 
+    name: sources
+  - !ruby/object:RI::MethodSummary 
+    name: table
+  - !ruby/object:RI::MethodSummary 
+    name: table_alias
+  - !ruby/object:RI::MethodSummary 
+    name: table_sql
+  - !ruby/object:RI::MethodSummary 
+    name: taken
+  - !ruby/object:RI::MethodSummary 
+    name: unoperated_rows
+name: Compound
+superclass: Object

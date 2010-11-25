@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Arel::SqlCompiler::IBM_DBCompiler#add_limit_on_delete
+is_singleton: false
+name: add_limit_on_delete
+params: (taken)
+visibility: public

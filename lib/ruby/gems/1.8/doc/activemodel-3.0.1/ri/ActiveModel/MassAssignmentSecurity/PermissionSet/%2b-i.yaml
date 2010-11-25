@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveModel::MassAssignmentSecurity::PermissionSet#+
+is_singleton: false
+name: +
+params: (values)
+visibility: public

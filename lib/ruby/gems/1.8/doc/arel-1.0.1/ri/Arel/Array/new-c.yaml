@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Arel::Array::new
+is_singleton: true
+name: new
+params: (array, attribute_names_and_types)
+visibility: public

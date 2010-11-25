@@ -1,0 +1,28 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns array of real solution of <tt>ax**2 + bx + c = d</tt> or <tt>nil</tt> if no or an infinite number of solutions exist. If <tt>d</tt> is missing it is assumed to be 0.
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: Solving second order equations
+  - !ruby/struct:SM::Flow::P 
+    body: "In order to solve <tt>ax**2 + bx + c = d</tt> +Extmath.sqsolve+ identifies several cases:"
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: "<tt>a == 0:</tt> The equation to be solved is the linear equation <tt>bx + c = d</tt>. #sqsolve&gt; delegates the computation to #linsolve&gt;. If it results in <tt>nil</tt>, <tt>nil</tt> is returned (not <tt>[nil]</tt>!). Otherwise a one-element array containing result of #linsolve is returned."
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>a != 0:</tt>
+      - !ruby/struct:SM::Flow::VERB 
+        body: " The equation to be solved actually is a second order one.\n * <tt>c == d</tt>\n   The equation to be solved is <tt>ax**2 + bx = 0</tt>. One solution of this equation obviously is\n   <tt>x = 0</tt>, the second one solves <tt>ax + b = 0</tt>. The solution of the latter is\n   delegated to +Extmath.linsolve+. An array containing both results in ascending order is returned.\n * <tt>c != d</tt>\n   The equation cannot be separated into <tt>x</tt> times some factor.\n   * <tt>b == 0</tt>\n     The equation to be solved is <tt>ax**2 + c = d</tt>. This can be written as the linear equation\n     <tt>ay + c = d</tt> with <tt>y = x ** 2</tt>. The solution of the linear equation is delegated\n     to +Extmath.linsolve+. If the returned value for <tt>y</tt> is <tt>nil</tt>, that becomes the overall return value.\n     Otherwise an array containing the negative and positive squareroot of <tt>y</tt> is returned\n   * <tt>b != 0 </tt>\n     The equation cannot be reduced to simpler cases. We now first have to compute what is called the\n     discriminant <tt>x = b**2 + 4a(d - c)</tt> (that's what we need to compute the square root of).\n     If the descriminant is negative no real solution exists and <tt>nil</tt> is returned. The ternary\n     operator checking whether <tt>b</tt> is negative does ensure better numerical stability --only one\n     of the two solutions is computed using the widely know formula for solving second order equations.\n     The second one is computed from the fact that the product of both solutions is <tt>(c - d) / a</tt>.\n     Take a look at a book on numerical mathematics if you don't understand why this should be done.\n"
+    type: :BULLET
+full_name: Math::sqsolve
+is_singleton: true
+name: sqsolve
+params: (a, b, c, d = 0.0)
+visibility: public

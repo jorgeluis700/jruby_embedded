@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Arel::Join::new
+is_singleton: true
+name: new
+params: (relation1, relation2 = Nil.instance, *predicates)
+visibility: public

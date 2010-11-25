@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveSupport::Callbacks#run_callbacks
+is_singleton: false
+name: run_callbacks
+params: (kind, *args, &block)
+visibility: public

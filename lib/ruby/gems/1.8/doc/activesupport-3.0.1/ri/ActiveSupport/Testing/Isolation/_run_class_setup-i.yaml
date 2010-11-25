@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveSupport::Testing::Isolation#_run_class_setup
+is_singleton: false
+name: _run_class_setup
+params: (
+visibility: public

@@ -1,0 +1,15 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: np_
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Method signatures:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  npgettext('Fruits', 'apple', 'apples', 2)\n  npgettext('Fruits', ['apple', 'apples'], 2)\n"
+full_name: I18n::Gettext::Helpers#npgettext
+is_singleton: false
+name: npgettext
+params: (msgctxt, msgid, msgid_plural, n = 1)
+visibility: public

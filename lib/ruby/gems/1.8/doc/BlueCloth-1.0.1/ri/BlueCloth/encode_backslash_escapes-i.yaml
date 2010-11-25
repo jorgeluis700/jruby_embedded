@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Return a copy of the given <tt>str</tt> with any backslashed special character in it replaced with MD5 placeholders.
+full_name: BlueCloth#encode_backslash_escapes
+is_singleton: false
+name: encode_backslash_escapes
+params: ( str )
+visibility: public

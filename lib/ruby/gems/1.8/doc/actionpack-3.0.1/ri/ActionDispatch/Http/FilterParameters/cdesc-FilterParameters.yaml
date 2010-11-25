@@ -1,0 +1,30 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Allows you to specify sensitive parameters which will be replaced from the request log by looking in all subhashes of the param hash for keys to filter. If a block is given, each key and value of the parameter hash and all subhashes is passed to it, the value or key can be replaced using String#replace or similar method.
+  - !ruby/struct:SM::Flow::P 
+    body: "Examples:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  env[&quot;action_dispatch.parameter_filter&quot;] = [:password]\n  =&gt; replaces the value to all keys matching /password/i with &quot;[FILTERED]&quot;\n\n  env[&quot;action_dispatch.parameter_filter&quot;] = [:foo, &quot;bar&quot;]\n  =&gt; replaces the value to all keys matching /foo|bar/i with &quot;[FILTERED]&quot;\n\n  env[&quot;action_dispatch.parameter_filter&quot;] = lambda do |k,v|\n    v.reverse! if k =~ /secret/i\n  end\n  =&gt; reverses the value to all keys matching /secret/i\n"
+constants: []
+
+full_name: ActionDispatch::Http::FilterParameters
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: env_filter
+  - !ruby/object:RI::MethodSummary 
+    name: filtered_env
+  - !ruby/object:RI::MethodSummary 
+    name: filtered_parameters
+  - !ruby/object:RI::MethodSummary 
+    name: parameter_filter
+  - !ruby/object:RI::MethodSummary 
+    name: parameter_filter_for
+name: FilterParameters
+superclass: 

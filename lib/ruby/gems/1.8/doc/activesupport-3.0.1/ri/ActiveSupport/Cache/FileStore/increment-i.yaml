@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveSupport::Cache::FileStore#increment
+is_singleton: false
+name: increment
+params: (name, amount = 1, options = nil)
+visibility: public

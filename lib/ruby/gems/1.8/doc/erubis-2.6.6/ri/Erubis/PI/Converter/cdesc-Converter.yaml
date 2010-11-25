@@ -1,0 +1,30 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: pi
+    rw: RW
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: prefix
+    rw: RW
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Processing Instructions (PI) converter for XML. this class converts '&lt;?rb ... ?&gt;' and '${...}' notation.
+constants: []
+
+full_name: Erubis::PI::Converter
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Erubis::Converter
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: convert
+  - !ruby/object:RI::MethodSummary 
+    name: convert_input
+  - !ruby/object:RI::MethodSummary 
+    name: init_converter
+name: Converter
+superclass: 

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionController::Caching#caching_allowed?
+is_singleton: false
+name: caching_allowed?
+params: ()
+visibility: public

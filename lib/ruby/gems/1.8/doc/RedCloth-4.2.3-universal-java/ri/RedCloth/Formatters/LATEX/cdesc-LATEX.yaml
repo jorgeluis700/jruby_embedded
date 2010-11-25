@@ -1,0 +1,148 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: ENTITIES
+    value: YAML::load(File.read(File.dirname(__FILE__)+'/latex_entities.yml'))
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: ENTITIES
+    value: YAML::load(File.read(File.dirname(__FILE__)+'/latex_entities.yml'))
+full_name: RedCloth::Formatters::LATEX
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: RedCloth::Formatters::Base
+  - !ruby/object:RI::IncludedModule 
+    name: RedCloth::Formatters::Base
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: acronym
+  - !ruby/object:RI::MethodSummary 
+    name: acronym
+  - !ruby/object:RI::MethodSummary 
+    name: arrow
+  - !ruby/object:RI::MethodSummary 
+    name: arrow
+  - !ruby/object:RI::MethodSummary 
+    name: bc_close
+  - !ruby/object:RI::MethodSummary 
+    name: bc_close
+  - !ruby/object:RI::MethodSummary 
+    name: bc_open
+  - !ruby/object:RI::MethodSummary 
+    name: bc_open
+  - !ruby/object:RI::MethodSummary 
+    name: bq_close
+  - !ruby/object:RI::MethodSummary 
+    name: bq_close
+  - !ruby/object:RI::MethodSummary 
+    name: bq_open
+  - !ruby/object:RI::MethodSummary 
+    name: bq_open
+  - !ruby/object:RI::MethodSummary 
+    name: code
+  - !ruby/object:RI::MethodSummary 
+    name: code
+  - !ruby/object:RI::MethodSummary 
+    name: copyright
+  - !ruby/object:RI::MethodSummary 
+    name: copyright
+  - !ruby/object:RI::MethodSummary 
+    name: dim
+  - !ruby/object:RI::MethodSummary 
+    name: dim
+  - !ruby/object:RI::MethodSummary 
+    name: ellipsis
+  - !ruby/object:RI::MethodSummary 
+    name: ellipsis
+  - !ruby/object:RI::MethodSummary 
+    name: emdash
+  - !ruby/object:RI::MethodSummary 
+    name: emdash
+  - !ruby/object:RI::MethodSummary 
+    name: endash
+  - !ruby/object:RI::MethodSummary 
+    name: endash
+  - !ruby/object:RI::MethodSummary 
+    name: entity
+  - !ruby/object:RI::MethodSummary 
+    name: entity
+  - !ruby/object:RI::MethodSummary 
+    name: fn
+  - !ruby/object:RI::MethodSummary 
+    name: fn
+  - !ruby/object:RI::MethodSummary 
+    name: footno
+  - !ruby/object:RI::MethodSummary 
+    name: footno
+  - !ruby/object:RI::MethodSummary 
+    name: image
+  - !ruby/object:RI::MethodSummary 
+    name: image
+  - !ruby/object:RI::MethodSummary 
+    name: inline_html
+  - !ruby/object:RI::MethodSummary 
+    name: inline_html
+  - !ruby/object:RI::MethodSummary 
+    name: li_close
+  - !ruby/object:RI::MethodSummary 
+    name: li_close
+  - !ruby/object:RI::MethodSummary 
+    name: li_open
+  - !ruby/object:RI::MethodSummary 
+    name: li_open
+  - !ruby/object:RI::MethodSummary 
+    name: link
+  - !ruby/object:RI::MethodSummary 
+    name: link
+  - !ruby/object:RI::MethodSummary 
+    name: p
+  - !ruby/object:RI::MethodSummary 
+    name: p
+  - !ruby/object:RI::MethodSummary 
+    name: quote1
+  - !ruby/object:RI::MethodSummary 
+    name: quote1
+  - !ruby/object:RI::MethodSummary 
+    name: quote2
+  - !ruby/object:RI::MethodSummary 
+    name: quote2
+  - !ruby/object:RI::MethodSummary 
+    name: registered
+  - !ruby/object:RI::MethodSummary 
+    name: registered
+  - !ruby/object:RI::MethodSummary 
+    name: snip
+  - !ruby/object:RI::MethodSummary 
+    name: snip
+  - !ruby/object:RI::MethodSummary 
+    name: table_close
+  - !ruby/object:RI::MethodSummary 
+    name: table_close
+  - !ruby/object:RI::MethodSummary 
+    name: table_open
+  - !ruby/object:RI::MethodSummary 
+    name: table_open
+  - !ruby/object:RI::MethodSummary 
+    name: td
+  - !ruby/object:RI::MethodSummary 
+    name: td
+  - !ruby/object:RI::MethodSummary 
+    name: tr_close
+  - !ruby/object:RI::MethodSummary 
+    name: tr_close
+  - !ruby/object:RI::MethodSummary 
+    name: tr_open
+  - !ruby/object:RI::MethodSummary 
+    name: tr_open
+  - !ruby/object:RI::MethodSummary 
+    name: trademark
+  - !ruby/object:RI::MethodSummary 
+    name: trademark
+name: LATEX
+superclass: 

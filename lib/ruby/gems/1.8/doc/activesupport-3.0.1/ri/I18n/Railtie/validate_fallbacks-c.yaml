@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: I18n::Railtie::validate_fallbacks
+is_singleton: true
+name: validate_fallbacks
+params: (fallbacks)
+visibility: protected

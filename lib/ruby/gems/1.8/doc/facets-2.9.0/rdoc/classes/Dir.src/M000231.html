@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>recurse (Dir)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/core/facets/dir/recurse.rb, line 14</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">recurse</span>(<span class="ruby-identifier">path</span>=<span class="ruby-value str">'.'</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+    <span class="ruby-identifier">list</span> = []
+    <span class="ruby-identifier">stoplist</span> = [<span class="ruby-value str">'.'</span>, <span class="ruby-value str">'..'</span>]
+    <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">foreach</span>(<span class="ruby-identifier">path</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">stoplist</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">f</span>)
+      <span class="ruby-identifier">filename</span> = (<span class="ruby-identifier">path</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'.'</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">f</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">path</span> <span class="ruby-operator">+</span> <span class="ruby-value str">'/'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">f</span>)
+      <span class="ruby-identifier">list</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">filename</span>
+      <span class="ruby-identifier">block</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">filename</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block</span>
+      <span class="ruby-keyword kw">if</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">directory?</span>(<span class="ruby-identifier">filename</span>) <span class="ruby-keyword kw">and</span> <span class="ruby-keyword kw">not</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">symlink?</span>(<span class="ruby-identifier">filename</span>)
+        <span class="ruby-identifier">list</span>.<span class="ruby-identifier">concat</span>(<span class="ruby-constant">Dir</span>.<span class="ruby-identifier">recurse</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>))
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span>
+    <span class="ruby-identifier">list</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

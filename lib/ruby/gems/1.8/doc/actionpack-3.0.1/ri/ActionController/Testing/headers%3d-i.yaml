@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "TODO : Rewrite tests using controller.headers= to use Rack env"
+full_name: ActionController::Testing#headers=
+is_singleton: false
+name: headers=
+params: (new_headers)
+visibility: public

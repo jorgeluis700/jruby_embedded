@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>modulize (String)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/core/facets/string/modulize.rb, line 23</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">modulize</span>
+    <span class="ruby-identifier">gsub</span>(<span class="ruby-value str">'__'</span>,<span class="ruby-value str">'/'</span>).
+    <span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\/(.?)/</span>){ <span class="ruby-node">&quot;::#{$1.upcase}&quot;</span> }.
+    <span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/(?:_+|-+)([a-z])/</span>){ <span class="ruby-identifier">$1</span>.<span class="ruby-identifier">upcase</span> }.
+    <span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/(\A|\s)([a-z])/</span>){ <span class="ruby-identifier">$1</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">$2</span>.<span class="ruby-identifier">upcase</span> }
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

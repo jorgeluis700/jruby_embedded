@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: This will supply contents for before and around filters, and no contents for after filters (for the forward pass).
+full_name: ActiveSupport::Callbacks::Callback#start
+is_singleton: false
+name: start
+params: (key=nil, object=nil)
+visibility: public

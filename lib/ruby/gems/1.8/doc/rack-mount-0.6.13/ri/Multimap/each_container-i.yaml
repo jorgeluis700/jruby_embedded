@@ -1,0 +1,20 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: container
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Calls <em>block</em> for each container in <em>map</em>, passing the container as a parameter.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  map = Multimap[&quot;a&quot; =&gt; 100, &quot;b&quot; =&gt; [200, 300]]\n  map.each_container { |container| puts container }\n"
+  - !ruby/struct:SM::Flow::P 
+    body: <em>produces:</em>
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  [100]\n  [200, 300]\n"
+full_name: Multimap#each_container
+is_singleton: false
+name: each_container
+params: |
+  map.each_container { |container| block } => map
+
+visibility: public

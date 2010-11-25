@@ -1,0 +1,34 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: Active Model Translation
+  - !ruby/struct:SM::Flow::P 
+    body: Provides integration between your object and the Rails internationalization (i18n) framework.
+  - !ruby/struct:SM::Flow::P 
+    body: "A minimal implementation could be:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class TranslatedPerson\n    extend ActiveModel::Translation\n  end\n\n  TranslatedPerson.human_attribute_name('my_attribute')\n  # =&gt; &quot;My attribute&quot;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: This also provides the required class methods for hooking into the Rails internationalization API, including being able to define a class based i18n_scope and lookup_ancestors to find translations in parent classes.
+constants: []
+
+full_name: ActiveModel::Translation
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: ActiveModel::Naming
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: human_attribute_name
+  - !ruby/object:RI::MethodSummary 
+    name: human_name
+  - !ruby/object:RI::MethodSummary 
+    name: i18n_scope
+  - !ruby/object:RI::MethodSummary 
+    name: lookup_ancestors
+name: Translation
+superclass: 

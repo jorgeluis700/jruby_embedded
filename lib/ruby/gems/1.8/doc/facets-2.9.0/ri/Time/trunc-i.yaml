@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Truncate time at give range (in seconds).
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  t = Time.now\n  t = t.trunc(60*60)\n  t.min #=&gt; 0\n  t.sec #=&gt; 0\n"
+full_name: Time#trunc
+is_singleton: false
+name: trunc
+params: (amount)
+visibility: public

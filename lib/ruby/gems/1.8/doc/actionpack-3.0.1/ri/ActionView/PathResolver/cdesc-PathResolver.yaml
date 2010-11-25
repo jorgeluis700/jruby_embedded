@@ -1,0 +1,21 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: EXTENSION_ORDER
+    value: "[:locale, :formats, :handlers]"
+full_name: ActionView::PathResolver
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: to_path
+  - !ruby/object:RI::MethodSummary 
+    name: to_s
+name: PathResolver
+superclass: Resolver

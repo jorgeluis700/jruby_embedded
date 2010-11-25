@@ -1,0 +1,18 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: path_to_audio
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Computes the path to an audio asset in the public audios directory. Full paths from the document root will be passed through. Used internally by <tt>audio_tag</tt> to build the audio path.
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Examples
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  audio_path(&quot;horse&quot;)                                            # =&gt; /audios/horse\n  audio_path(&quot;horse.wav&quot;)                                        # =&gt; /audios/horse.avi\n  audio_path(&quot;sounds/horse.wav&quot;)                                 # =&gt; /audios/sounds/horse.avi\n  audio_path(&quot;/sounds/horse.wav&quot;)                                # =&gt; /sounds/horse.avi\n  audio_path(&quot;http://www.railsapplication.com/sounds/horse.wav&quot;) # =&gt; http://www.railsapplication.com/sounds/horse.wav\n"
+full_name: ActionView::Helpers::AssetTagHelper#audio_path
+is_singleton: false
+name: audio_path
+params: (source)
+visibility: public

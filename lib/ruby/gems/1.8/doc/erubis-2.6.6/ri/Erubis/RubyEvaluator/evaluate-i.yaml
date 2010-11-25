@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: invoke context.instance_eval(@src)
+full_name: Erubis::RubyEvaluator#evaluate
+is_singleton: false
+name: evaluate
+params: (_context=Context.new)
+visibility: public

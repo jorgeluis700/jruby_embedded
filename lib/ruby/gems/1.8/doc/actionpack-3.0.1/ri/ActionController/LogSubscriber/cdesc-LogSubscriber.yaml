@@ -1,0 +1,29 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: INTERNAL_PARAMS
+    value: "%w(controller action format _method only_path)"
+full_name: ActionController::LogSubscriber
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: logger
+  - !ruby/object:RI::MethodSummary 
+    name: process_action
+  - !ruby/object:RI::MethodSummary 
+    name: redirect_to
+  - !ruby/object:RI::MethodSummary 
+    name: send_data
+  - !ruby/object:RI::MethodSummary 
+    name: send_file
+  - !ruby/object:RI::MethodSummary 
+    name: start_processing
+name: LogSubscriber
+superclass: ActiveSupport::LogSubscriber

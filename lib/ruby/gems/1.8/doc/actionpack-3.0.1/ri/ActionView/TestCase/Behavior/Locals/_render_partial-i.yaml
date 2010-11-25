@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionView::TestCase::Behavior::Locals#_render_partial
+is_singleton: false
+name: _render_partial
+params: (options)
+visibility: public

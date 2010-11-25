@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveSupport::Cache::FileStore#decrement
+is_singleton: false
+name: decrement
+params: (name, amount = 1, options = nil)
+visibility: public

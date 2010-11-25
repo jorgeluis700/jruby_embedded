@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: (abstract) add expression code to src for debug. this is called by add_expr().
+full_name: Erubis::Generator#add_expr_debug
+is_singleton: false
+name: add_expr_debug
+params: (src, code)
+visibility: public

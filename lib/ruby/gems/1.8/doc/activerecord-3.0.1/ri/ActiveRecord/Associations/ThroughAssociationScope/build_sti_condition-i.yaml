@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveRecord::Associations::ThroughAssociationScope#build_sti_condition
+is_singleton: false
+name: build_sti_condition
+params: ()
+visibility: protected

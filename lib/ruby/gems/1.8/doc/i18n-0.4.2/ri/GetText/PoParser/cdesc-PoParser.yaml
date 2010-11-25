@@ -1,0 +1,29 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: Racc_arg
+    value: "[  racc_action_table,  racc_action_check,  racc_action_default,  racc_action_pointer,  racc_goto_table,  racc_goto_check,  racc_goto_default,  racc_goto_pointer,  racc_nt_base,  racc_reduce_table,  racc_token_table,  racc_shift_n,  racc_reduce_n,  racc_use_result_var ]"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: Racc_token_to_s_table
+    value: "[ '$end', 'error', 'COMMENT', 'MSGID', 'MSGCTXT', 'MSGID_PLURAL', 'MSGSTR', 'STRING', 'PLURAL_NUM', '$start', 'msgfmt', 'comment', 'msgctxt', 'message', 'string_list', 'single_message', 'plural_message', 'msgstr_plural', 'msgstr_plural_line']"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: Racc_debug_parser
+    value: "true"
+full_name: GetText::PoParser
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: _
+  - !ruby/object:RI::MethodSummary 
+    name: _reduce_none
+name: PoParser
+superclass: Racc::Parser

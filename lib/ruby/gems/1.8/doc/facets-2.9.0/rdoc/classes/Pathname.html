@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: Pathname</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">Pathname</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/lib/more/facets/pathname_rb.html">
+                lib/more/facets/pathname.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                Object
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000567">/</a>&nbsp;&nbsp;
+      <a href="#M000566">[]</a>&nbsp;&nbsp;
+      <a href="#M000577">empty?</a>&nbsp;&nbsp;
+      <a href="#M000574">glob</a>&nbsp;&nbsp;
+      <a href="#M000575">glob_first</a>&nbsp;&nbsp;
+      <a href="#M000576">glob_relative</a>&nbsp;&nbsp;
+      <a href="#M000569">home</a>&nbsp;&nbsp;
+      <a href="#M000581">include?</a>&nbsp;&nbsp;
+      <a href="#M000571">null</a>&nbsp;&nbsp;
+      <a href="#M000579">outofdate?</a>&nbsp;&nbsp;
+      <a href="#M000568">root</a>&nbsp;&nbsp;
+      <a href="#M000572">rootname</a>&nbsp;&nbsp;
+      <a href="#M000573">split_root</a>&nbsp;&nbsp;
+      <a href="#M000578">uptodate?</a>&nbsp;&nbsp;
+      <a href="#M000580">visit</a>&nbsp;&nbsp;
+      <a href="#M000570">work</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+    <div id="aliases-list">
+      <h3 class="section-bar">External Aliases</h3>
+
+      <div class="name-list">
+                        <table summary="aliases">
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">to_s</td>
+          <td>-&gt;</td>
+          <td class="context-item-value">to_str</td>
+        </tr>
+      <tr class="top-aligned-row context-row">
+        <td>&nbsp;</td>
+        <td colspan="2" class="context-item-desc">
+Alias to_s to to_str when to_str is not defined.
+
+</td>
+      </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">+</td>
+          <td>-&gt;</td>
+          <td class="context-item-value">/</td>
+        </tr>
+      <tr class="top-aligned-row context-row">
+        <td>&nbsp;</td>
+        <td colspan="2" class="context-item-desc">
+Try to get this into standard <a href="Pathname.html">Pathname</a> class.
+
+</td>
+      </tr>
+                        </table>
+      </div>
+    </div>
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000567" class="method-detail">
+        <a name="M000567"></a>
+
+        <div class="method-heading">
+          <a href="Pathname.src/M000567.html" target="Code" class="method-signature"
+            onclick="popupCode('Pathname.src/M000567.html');return false;">
+          <span class="method-name">/</span><span class="method-args">(path)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Start a path. Another alias for new.
+</p>
+<pre>
+  Pathname / 'usr'
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000566" class="method-detail">
+        <a name="M000566"></a>
+
+        <div class="method-heading">
+          <a href="Pathname.src/M000566.html" target="Code" class="method-signature"
+            onclick="popupCode('Pathname.src/M000566.html');return false;">
+          <span class="method-name">[]</span><span class="method-args">(path)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alternate to Pathname#new.
+</p>
+<pre>
+  Pathname['/usr/share']
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000569" class="method-detail">
+        <a name="M000569"></a>
+
+        <div class="method-heading">
+          <a href="Pathname.src/M000569.html" target="Code" class="method-signature"
+            onclick="popupCode('Pathname.src/M000569.html');return false;">
+          <span class="method-name">home</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Home constant for building paths from <a
+href="Pathname.html#M000568">root</a> directory onward.
+</p>
+<p>
+TODO: <a href="Pathname.html#M000569">Pathname#home</a> needs to be more
+robust.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000571" class="method-detail">
+        <a name="M000571"></a>
+
+        <div class="method-heading">
+          <a href="Pathname.src/M000571.html" target="Code" class="method-signature"
+            onclick="popupCode('Pathname.src/M000571.html');return false;">
+          <span class="method-name">null</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<a href="Platform.html">Platform</a> dependent <a
+href="Pathname.html#M000571">null</a> device.
+</p>
+<p>
+CREDIT Daniel Burger
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000568" class="method-detail">
+        <a name="M000568"></a>
+
+        <div class="method-heading">
+          <a href="Pathname.src/M000568.html" target="Code" class="method-signature"
+            onclick="popupCode('Pathname.src/M000568.html');return false;">
+          <span class="method-name">root</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Root constant for building paths from <a
+href="Pathname.html#M000568">root</a> directory onward.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000570" class="method-detail">
+        <a name="M000570"></a>
+
+        <div class="method-heading">
+          <a href="Pathname.src/M000570.html" target="Code" class="method-signature"
+            onclick="popupCode('Pathname.src/M000570.html');return false;">
+          <span class="method-name">work</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Work constant for building paths from <a
+href="Pathname.html#M000568">root</a> directory onward.
+</p>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000577" class="method-detail">
+        <a name="M000577"></a>
+
+        <div class="method-heading">
+          <a href="Pathname.src/M000577.html" target="Code" class="method-signature"
+            onclick="popupCode('Pathname.src/M000577.html');return false;">
+          <span class="method-name">empty?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000574" class="method-detail">
+        <a name="M000574"></a>
+
+        <div class="method-heading">
+          <a href="Pathname.src/M000574.html" target="Code" class="method-signature"
+            onclick="popupCode('Pathname.src/M000574.html');return false;">
+          <span class="method-name">glob</span><span class="method-args">(match, *opts)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Glob pathnames.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000575" class="method-detail">
+        <a name="M000575"></a>
+
+        <div class="method-heading">
+          <a href="Pathname.src/M000575.html" target="Code" class="method-signature"
+            onclick="popupCode('Pathname.src/M000575.html');return false;">
+          <span class="method-name">glob_first</span><span class="method-args">(match, *opts)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return the first <a href="Pathname.html#M000574">glob</a> match.
+</p>
+<p>
+DEPRECATE: While slightly faster then <a
+href="Pathname.html#M000574">glob</a>().first, not really worth it unless
+this can be rewritten to shortcut on first match (using fnmatch?). In wich
+case, is there a better name for this method?
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000576" class="method-detail">
+        <a name="M000576"></a>
+
+        <div class="method-heading">
+          <a href="Pathname.src/M000576.html" target="Code" class="method-signature"
+            onclick="popupCode('Pathname.src/M000576.html');return false;">
+          <span class="method-name">glob_relative</span><span class="method-args">(match, *opts)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return globbed matches with pathnames relative to the current pathname.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000581" class="method-detail">
+        <a name="M000581"></a>
+
+        <div class="method-heading">
+          <a href="Pathname.src/M000581.html" target="Code" class="method-signature"
+            onclick="popupCode('Pathname.src/M000581.html');return false;">
+          <span class="method-name">include?</span><span class="method-args">(pattern,*opts)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Does a directory contain a matching entry? Or if the pathname is a file,
+same as fnmatch.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000579" class="method-detail">
+        <a name="M000579"></a>
+
+        <div class="method-heading">
+          <a href="Pathname.src/M000579.html" target="Code" class="method-signature"
+            onclick="popupCode('Pathname.src/M000579.html');return false;">
+          <span class="method-name">outofdate?</span><span class="method-args">(*sources)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000572" class="method-detail">
+        <a name="M000572"></a>
+
+        <div class="method-heading">
+          <a href="Pathname.src/M000572.html" target="Code" class="method-signature"
+            onclick="popupCode('Pathname.src/M000572.html');return false;">
+          <span class="method-name">rootname</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000573" class="method-detail">
+        <a name="M000573"></a>
+
+        <div class="method-heading">
+          <a href="Pathname.src/M000573.html" target="Code" class="method-signature"
+            onclick="popupCode('Pathname.src/M000573.html');return false;">
+          <span class="method-name">split_root</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000578" class="method-detail">
+        <a name="M000578"></a>
+
+        <div class="method-heading">
+          <a href="Pathname.src/M000578.html" target="Code" class="method-signature"
+            onclick="popupCode('Pathname.src/M000578.html');return false;">
+          <span class="method-name">uptodate?</span><span class="method-args">(*sources)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000580" class="method-detail">
+        <a name="M000580"></a>
+
+        <div class="method-heading">
+          <a href="Pathname.src/M000580.html" target="Code" class="method-signature"
+            onclick="popupCode('Pathname.src/M000580.html');return false;">
+          <span class="method-name">visit => yield each file<br />
+visit(all: true) => yield visited directories as well<br />
+visit(hidden: true) => yield hidden files and directories as well<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Recursively <a href="Pathname.html#M000580">visit</a> a directory located
+by its path, yielding each resource as its full matching pathname object.
+If called on a file, yield the file.
+</p>
+<p>
+Example use case:
+</p>
+<pre>
+  # Locate any file but *.haml within app/**/*
+  Pathname.new(&quot;app&quot;).visit do |f|
+    next unless f.to_s =~ /\.haml$/
+    f
+  end
+</pre>
+<p>
+TODO: Use map instead of each ?
+</p>
+<p>
+CREDIT: Jean-Denis Vauguet
+</p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

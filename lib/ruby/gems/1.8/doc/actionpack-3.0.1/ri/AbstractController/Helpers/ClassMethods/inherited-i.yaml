@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: When a class is inherited, wrap its helper module in a new module. This ensures that the parent class's module can be changed independently of the child class's.
+full_name: AbstractController::Helpers::ClassMethods#inherited
+is_singleton: false
+name: inherited
+params: (klass)
+visibility: public

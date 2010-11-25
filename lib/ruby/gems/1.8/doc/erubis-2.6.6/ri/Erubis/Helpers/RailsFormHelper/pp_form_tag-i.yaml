@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Erubis::Helpers::RailsFormHelper#pp_form_tag
+is_singleton: false
+name: pp_form_tag
+params: (url_for_options={}, options={}, *parameters_for_url, &block)
+visibility: public

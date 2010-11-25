@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Hook method that gets called by the initializer allowing verification that the arguments supplied are valid. You could for example raise an ArgumentError when invalid options are supplied.
+full_name: ActiveModel::EachValidator#check_validity!
+is_singleton: false
+name: check_validity!
+params: ()
+visibility: public

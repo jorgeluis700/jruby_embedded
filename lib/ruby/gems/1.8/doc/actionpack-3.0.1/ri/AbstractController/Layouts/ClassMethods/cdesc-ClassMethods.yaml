@@ -1,0 +1,23 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: AbstractController::Layouts::ClassMethods
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: LayoutConditions
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: _implied_layout_name
+  - !ruby/object:RI::MethodSummary 
+    name: _write_layout_method
+  - !ruby/object:RI::MethodSummary 
+    name: inherited
+  - !ruby/object:RI::MethodSummary 
+    name: layout
+name: ClassMethods
+superclass: 

@@ -1,0 +1,16 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: ActiveRecord::Generators::ObserverGenerator
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: create_observer_file
+name: ObserverGenerator
+superclass: Base

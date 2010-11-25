@@ -1,0 +1,24 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: (entry)
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Recursively visit a directory located by its path, yielding each resource as its full matching pathname object. If called on a file, yield the file.
+  - !ruby/struct:SM::Flow::P 
+    body: "Example use case:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  # Locate any file but *.haml within app/**/*\n  Pathname.new(&quot;app&quot;).visit do |f|\n    next unless f.to_s =~ /\\.haml$/\n    f\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "TODO: Use #map instead of #each ?"
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Jean-Denis Vauguet"
+full_name: Pathname#visit
+is_singleton: false
+name: visit
+params: |
+  visit => yield each file
+  visit(all: true) => yield visited directories as well
+  visit(hidden: true) => yield hidden files and directories as well
+
+visibility: public

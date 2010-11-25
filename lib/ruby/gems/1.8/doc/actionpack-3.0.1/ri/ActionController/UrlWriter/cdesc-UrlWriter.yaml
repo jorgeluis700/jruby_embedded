@@ -1,0 +1,17 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: included
+comment: 
+constants: []
+
+full_name: ActionController::UrlWriter
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Rails
+instance_methods: []
+
+name: UrlWriter
+superclass: 

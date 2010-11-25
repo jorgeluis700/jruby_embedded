@@ -1,0 +1,26 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: parser
+  - !ruby/object:RI::MethodSummary 
+    name: parser=
+  - !ruby/object:RI::MethodSummary 
+    name: tag
+comment: 
+constants: []
+
+full_name: I18n::Locale::Tag::Rfc4646
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Parents
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: to_a
+  - !ruby/object:RI::MethodSummary 
+    name: to_s
+  - !ruby/object:RI::MethodSummary 
+    name: to_sym
+name: Rfc4646
+superclass: Struct.new(*RFC4646_SUBTAGS)

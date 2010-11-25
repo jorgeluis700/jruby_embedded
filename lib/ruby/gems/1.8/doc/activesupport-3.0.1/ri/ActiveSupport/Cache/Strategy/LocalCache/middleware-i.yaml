@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Middleware class can be inserted as a Rack handler to be local cache for the duration of request.
+full_name: ActiveSupport::Cache::Strategy::LocalCache#middleware
+is_singleton: false
+name: middleware
+params: ()
+visibility: public

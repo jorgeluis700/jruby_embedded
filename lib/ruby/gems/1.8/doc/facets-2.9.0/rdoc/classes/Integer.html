@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: Integer</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">Integer</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/lib/core/facets/integer/bitmask_rb.html">
+                lib/core/facets/integer/bitmask.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/integer/factorial_rb.html">
+                lib/core/facets/integer/factorial.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/integer/multiple_rb.html">
+                lib/core/facets/integer/multiple.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/integer/odd_rb.html">
+                lib/core/facets/integer/odd.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/integer/of_rb.html">
+                lib/core/facets/integer/of.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/integer/ordinal_rb.html">
+                lib/core/facets/integer/ordinal.rb
+                </a>
+        <br />
+                <a href="../files/lib/more/facets/random_rb.html">
+                lib/more/facets/random.rb
+                </a>
+        <br />
+                <a href="../files/lib/tour/facets/integer/roman_rb.html">
+                lib/tour/facets/integer/roman.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                Object
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000276">bit</a>&nbsp;&nbsp;
+      <a href="#M000278">bit?</a>&nbsp;&nbsp;
+      <a href="#M000277">bit_clear</a>&nbsp;&nbsp;
+      <a href="#M000279">bitmask</a>&nbsp;&nbsp;
+      <a href="#M000280">bitmask?</a>&nbsp;&nbsp;
+      <a href="#M000285">even?</a>&nbsp;&nbsp;
+      <a href="#M000282">fac</a>&nbsp;&nbsp;
+      <a href="#M000281">factorial</a>&nbsp;&nbsp;
+      <a href="#M000283">multiple?</a>&nbsp;&nbsp;
+      <a href="#M000284">odd?</a>&nbsp;&nbsp;
+      <a href="#M000286">of</a>&nbsp;&nbsp;
+      <a href="#M000289">ordinal</a>&nbsp;&nbsp;
+      <a href="#M000290">ordinalize</a>&nbsp;&nbsp;
+      <a href="#M000291">roman</a>&nbsp;&nbsp;
+      <a href="#M000287">times_collect</a>&nbsp;&nbsp;
+      <a href="#M000288">times_map</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+    <div id="includes">
+      <h3 class="section-bar">Included Modules</h3>
+
+      <div id="includes-list">
+        <span class="include-name"><a href="Random/IntegerExtensions.html">Random::IntegerExtensions</a></span>
+      </div>
+    </div>
+
+    <div id="section">
+
+
+    <div id="constants-list">
+      <h3 class="section-bar">Constants</h3>
+
+      <div class="name-list">
+        <table summary="Constants">
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">ROMAN_MAX</td>
+          <td>=</td>
+          <td class="context-item-value">3999 unless const_defined?(:ROMAN_MAX)</td>
+          <td width="3em">&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">ROMAN_VALUES</td>
+          <td>=</td>
+          <td class="context-item-value">[     [&quot;M&quot;, 1000],     [&quot;CM&quot;, 900],     [&quot;D&quot;,  500],     [&quot;CD&quot;, 400],     [&quot;C&quot;,  100],     [&quot;XC&quot;,  90],     [&quot;L&quot;,   50],     [&quot;XL&quot;,  40],     [&quot;X&quot;,   10],     [&quot;IX&quot;,   9],     [&quot;V&quot;,    5],     [&quot;IV&quot;,   4],     [&quot;I&quot;,    1]</td>
+          <td width="3em">&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        </table>
+      </div>
+    </div>
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000276" class="method-detail">
+        <a name="M000276"></a>
+
+        <div class="method-heading">
+          <a href="Integer.src/M000276.html" target="Code" class="method-signature"
+            onclick="popupCode('Integer.src/M000276.html');return false;">
+          <span class="method-name">bit</span><span class="method-args">(bit)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<a href="Set.html">Set</a> a <a href="Integer.html#M000276">bit</a>.
+</p>
+<pre>
+  0.bit(4)  #=&gt; 16
+</pre>
+<p>
+Using a negative figure will clear a <a
+href="Integer.html#M000276">bit</a>.
+</p>
+<pre>
+  10.bit(-4)      #=&gt; 2
+</pre>
+<p>
+This is more easily seen using binary.
+</p>
+<pre>
+  0b0100.bit(-3)  #=&gt; 0
+</pre>
+<p>
+CREDIT: Thomas Sawyer, George Moschovitis
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000278" class="method-detail">
+        <a name="M000278"></a>
+
+        <div class="method-heading">
+          <a href="Integer.src/M000278.html" target="Code" class="method-signature"
+            onclick="popupCode('Integer.src/M000278.html');return false;">
+          <span class="method-name">bit?</span><span class="method-args">(bit)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Is a <a href="Integer.html#M000276">bit</a> set?
+</p>
+<pre>
+  8.bit?(3)  #=&gt; true
+  8.bit?(2)  #=&gt; false
+</pre>
+<p>
+CREDIT: Thomas Sawyer, George Moschovitis
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000277" class="method-detail">
+        <a name="M000277"></a>
+
+        <div class="method-heading">
+          <a href="Integer.src/M000277.html" target="Code" class="method-signature"
+            onclick="popupCode('Integer.src/M000277.html');return false;">
+          <span class="method-name">bit_clear</span><span class="method-args">(bit)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Clear <a href="Integer.html#M000276">bit</a>.
+</p>
+<p>
+CREDIT: George Moschovitis
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000279" class="method-detail">
+        <a name="M000279"></a>
+
+        <div class="method-heading">
+          <a href="Integer.src/M000279.html" target="Code" class="method-signature"
+            onclick="popupCode('Integer.src/M000279.html');return false;">
+          <span class="method-name">bitmask</span><span class="method-args">(mask)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Apply a <a href="Integer.html#M000279">bitmask</a>.
+</p>
+<pre>
+  1.bitmask(6) #=&gt; 7
+</pre>
+<p>
+Using a inverted <a href="Integer.html#M000279">bitmask</a> clears bits.
+</p>
+<pre>
+  7.bitmask(~2) #=&gt; 5
+  5.bitmask(~2) #=&gt; 5
+</pre>
+<p>
+CREDIT: George Moschovitis
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000280" class="method-detail">
+        <a name="M000280"></a>
+
+        <div class="method-heading">
+          <a href="Integer.src/M000280.html" target="Code" class="method-signature"
+            onclick="popupCode('Integer.src/M000280.html');return false;">
+          <span class="method-name">bitmask?</span><span class="method-args">(mask)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Is <a href="Integer.html#M000279">bitmask</a> set?
+</p>
+<pre>
+  7.bitmask?(7) #=&gt; true
+  7.bitmask?(5) #=&gt; true
+  8.bitmask?(3) #=&gt; false
+</pre>
+<p>
+CREDIT: George Moschovitis
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000285" class="method-detail">
+        <a name="M000285"></a>
+
+        <div class="method-heading">
+          <a href="Integer.src/M000285.html" target="Code" class="method-signature"
+            onclick="popupCode('Integer.src/M000285.html');return false;">
+          <span class="method-name">even?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns true if this integer is even, false otherwise.
+</p>
+<pre>
+  2.even?  #=&gt; true
+  3.even?  #=&gt; false
+</pre>
+<p>
+CREDIT: Daniel Schierbeck
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000282" class="method-detail">
+        <a name="M000282"></a>
+
+        <div class="method-heading">
+          <span class="method-name">fac</span><span class="method-args">()</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="Integer.html#M000281">factorial</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000281" class="method-detail">
+        <a name="M000281"></a>
+
+        <div class="method-heading">
+          <a href="Integer.src/M000281.html" target="Code" class="method-signature"
+            onclick="popupCode('Integer.src/M000281.html');return false;">
+          <span class="method-name">factorial</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Calculate the <a href="Integer.html#M000281">factorial</a> <a
+href="Integer.html#M000286">of</a> an integer.
+</p>
+<pre>
+  2.factorial  #=&gt; 2
+  3.factorial  #=&gt; 6
+  4.factorial  #=&gt; 24
+</pre>
+<p>
+CREDIT: Malte Milatz
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000283" class="method-detail">
+        <a name="M000283"></a>
+
+        <div class="method-heading">
+          <a href="Integer.src/M000283.html" target="Code" class="method-signature"
+            onclick="popupCode('Integer.src/M000283.html');return false;">
+          <span class="method-name">multiple?</span><span class="method-args">(number)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Is <tt>self</tt> a multiple <a href="Integer.html#M000286">of</a> a given
+number?
+</p>
+<pre>
+  7.multiple?(2)  #=&gt; false
+  8.multiple?(2)  #=&gt; true
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000284" class="method-detail">
+        <a name="M000284"></a>
+
+        <div class="method-heading">
+          <a href="Integer.src/M000284.html" target="Code" class="method-signature"
+            onclick="popupCode('Integer.src/M000284.html');return false;">
+          <span class="method-name">odd?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns true if this integer is odd, false otherwise.
+</p>
+<pre>
+  2.odd?            #=&gt; false
+  3.odd?            #=&gt; true
+
+  -99.odd?          # -&gt; true
+  -98.odd?          # -&gt; false
+</pre>
+<p>
+CREDIT: Daniel Schierbeck
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000286" class="method-detail">
+        <a name="M000286"></a>
+
+        <div class="method-heading">
+          <a href="Integer.src/M000286.html" target="Code" class="method-signature"
+            onclick="popupCode('Integer.src/M000286.html');return false;">
+          <span class="method-name">of</span><span class="method-args">(&amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Like times but returns a collection <a href="Integer.html#M000286">of</a>
+the yield results.
+</p>
+<pre>
+  a = 3.of { |i| &quot;#{i+1}&quot; }
+  a #=&gt; [ &quot;1&quot;, &quot;2&quot;, &quot;3&quot; ]
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000289" class="method-detail">
+        <a name="M000289"></a>
+
+        <div class="method-heading">
+          <a href="Integer.src/M000289.html" target="Code" class="method-signature"
+            onclick="popupCode('Integer.src/M000289.html');return false;">
+          <span class="method-name">ordinal</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000290" class="method-detail">
+        <a name="M000290"></a>
+
+        <div class="method-heading">
+          <span class="method-name">ordinalize</span><span class="method-args">()</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="Integer.html#M000289">ordinal</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000291" class="method-detail">
+        <a name="M000291"></a>
+
+        <div class="method-heading">
+          <a href="Integer.src/M000291.html" target="Code" class="method-signature"
+            onclick="popupCode('Integer.src/M000291.html');return false;">
+          <span class="method-name">roman</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Converts this integer to a <a href="Integer.html#M000291">roman</a>
+numeral.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000287" class="method-detail">
+        <a name="M000287"></a>
+
+        <div class="method-heading">
+          <span class="method-name">times_collect</span><span class="method-args">(&amp;block)</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="Integer.html#M000286">of</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000288" class="method-detail">
+        <a name="M000288"></a>
+
+        <div class="method-heading">
+          <span class="method-name">times_map</span><span class="method-args">(&amp;block)</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="Integer.html#M000286">of</a>
+</p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

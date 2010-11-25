@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveRecord::Base#clone_attributes
+is_singleton: false
+name: clone_attributes
+params: (reader_method = :read_attribute, attributes = {})
+visibility: protected

@@ -1,0 +1,25 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: main
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: main class of command
+  - !ruby/struct:SM::Flow::P 
+    body: ex.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  Main.main(ARGV)\n"
+constants: []
+
+full_name: Erubis::Main
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: execute
+name: Main
+superclass: Object

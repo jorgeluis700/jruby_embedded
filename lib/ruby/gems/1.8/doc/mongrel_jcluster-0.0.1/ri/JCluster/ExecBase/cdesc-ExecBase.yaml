@@ -1,0 +1,23 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: JCluster::ExecBase
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Mongrel::Command::Base
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: read_options
+  - !ruby/object:RI::MethodSummary 
+    name: start
+  - !ruby/object:RI::MethodSummary 
+    name: stop
+  - !ruby/object:RI::MethodSummary 
+    name: validate
+name: ExecBase
+superclass: 

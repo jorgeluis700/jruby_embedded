@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveModel::Validations#run_validations!
+is_singleton: false
+name: run_validations!
+params: ()
+visibility: protected

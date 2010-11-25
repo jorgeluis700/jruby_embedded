@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Normalize arguments, options and then delegates render_to_body and sticks the result in self.response_body.
+full_name: AbstractController::Rendering#render
+is_singleton: false
+name: render
+params: (*args, &block)
+visibility: public

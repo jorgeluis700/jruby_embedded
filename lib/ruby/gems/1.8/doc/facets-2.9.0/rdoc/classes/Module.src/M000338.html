@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>cattr (Module)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/tour/facets/module/cattr.rb, line 15</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cattr</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">syms</span>)
+    <span class="ruby-identifier">writers</span>, <span class="ruby-identifier">readers</span> = <span class="ruby-identifier">syms</span>.<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">partition</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/=$/</span> }
+    <span class="ruby-identifier">writers</span> = <span class="ruby-identifier">writers</span>.<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">chomp</span>(<span class="ruby-value str">'='</span>).<span class="ruby-identifier">to_sym</span> }
+    <span class="ruby-comment cmt">##readers.concat( writers ) # writers also get readers</span>
+
+    <span class="ruby-identifier">cattr_reader</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">readers</span>)
+    <span class="ruby-identifier">cattr_writer</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">writers</span>)
+
+    <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">readers</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">writers</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

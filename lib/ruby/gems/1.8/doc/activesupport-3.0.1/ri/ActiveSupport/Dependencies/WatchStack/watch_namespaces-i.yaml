@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Add a set of modules to the watch stack, remembering the initial constants
+full_name: ActiveSupport::Dependencies::WatchStack#watch_namespaces
+is_singleton: false
+name: watch_namespaces
+params: (namespaces)
+visibility: public

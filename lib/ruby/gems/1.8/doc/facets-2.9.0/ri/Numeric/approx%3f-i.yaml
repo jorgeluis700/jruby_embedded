@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Determines if another number is approximately equal within a given _n_th degree. Defaults to 100ths if the degree is not specified.
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Trans"
+full_name: Numeric#approx?
+is_singleton: false
+name: approx?
+params: (x, n=0.01)
+visibility: public

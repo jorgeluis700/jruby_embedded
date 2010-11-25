@@ -1,0 +1,30 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Replaces non-ASCII characters with an ASCII approximation, or if none exists, a replacement character which defaults to &quot;?&quot;.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "   transliterate(&quot;\xC3\x86r\xC3\xB8sk\xC3\xB8bing&quot;)\n   # =&gt; &quot;AEroskobing&quot;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "Default approximations are provided for Western/Latin characters, e.g, &quot;\xC3\xB8&quot;, &quot;\xC3\xB1&quot;, &quot;\xC3\xA9&quot;, &quot;\xC3\x9F&quot;, etc."
+  - !ruby/struct:SM::Flow::P 
+    body: "This method is I18n aware, so you can set up custom approximations for a locale. This can be useful, for example, to transliterate German's &quot;\xC3\xBC&quot; and &quot;\xC3\xB6&quot; to &quot;ue&quot; and &quot;oe&quot;, or to add support for transliterating Russian to ASCII."
+  - !ruby/struct:SM::Flow::P 
+    body: "In order to make your custom transliterations available, you must set them as the <tt>i18n.transliterate.rule</tt> i18n key:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  # Store the transliterations in locales/de.yml\n  i18n:\n    transliterate:\n      rule:\n        \xC3\xBC: &quot;ue&quot;\n        \xC3\xB6: &quot;oe&quot;\n\n  # Or set them using Ruby\n  I18n.backend.store_translations(:de, :i18n =&gt; {\n    :transliterate =&gt; {\n      :rule =&gt; {\n        &quot;\xC3\xBC&quot; =&gt; &quot;ue&quot;,\n        &quot;\xC3\xB6&quot; =&gt; &quot;oe&quot;\n      }\n    }\n  })\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "The value for <tt>i18n.transliterate.rule</tt> can be a simple Hash that maps characters to ASCII approximations as shown above, or, for more complex requirements, a Proc:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  I18n.backend.store_translations(:de, :i18n =&gt; {\n    :transliterate =&gt; {\n      :rule =&gt; lambda {|string| MyTransliterator.transliterate(string)}\n    }\n  })\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "Now you can have different transliterations for each locale:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  I18n.locale = :en\n  transliterate(&quot;J\xC3\xBCrgen&quot;)\n  # =&gt; &quot;Jurgen&quot;\n\n  I18n.locale = :de\n  transliterate(&quot;J\xC3\xBCrgen&quot;)\n  # =&gt; &quot;Juergen&quot;\n"
+full_name: ActiveSupport::Inflector#transliterate
+is_singleton: false
+name: transliterate
+params: (string, replacement = "?")
+visibility: public

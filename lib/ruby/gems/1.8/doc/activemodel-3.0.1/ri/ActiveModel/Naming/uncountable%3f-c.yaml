@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Identifies whether the class name of a record or class is uncountable. Examples:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  ActiveModel::Naming.uncountable?(Sheep) # =&gt; true\n  ActiveModel::Naming.uncountable?(Post) =&gt; false\n"
+full_name: ActiveModel::Naming::uncountable?
+is_singleton: true
+name: uncountable?
+params: (record_or_class)
+visibility: public

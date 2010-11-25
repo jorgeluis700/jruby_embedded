@@ -1,0 +1,31 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: helper for xml
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: ESCAPE_TABLE
+    value: "{       '&' => '&amp;',       '<' => '&lt;',       '>' => '&gt;',       '\"' => '&quot;',       \"'\" => '&#039;',     }"
+full_name: Erubis::XmlHelper
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: escape_xml
+  - !ruby/object:RI::MethodSummary 
+    name: escape_xml2
+  - !ruby/object:RI::MethodSummary 
+    name: h
+  - !ruby/object:RI::MethodSummary 
+    name: html_escape
+  - !ruby/object:RI::MethodSummary 
+    name: u
+  - !ruby/object:RI::MethodSummary 
+    name: url_encode
+name: XmlHelper
+superclass: 

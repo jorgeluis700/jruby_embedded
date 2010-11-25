@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Overload locale= to also set the I18n.locale. If the current I18n.config object responds to i18n_config, it means that it's has a copy of the original I18n configuration and it's acting as proxy, which we need to skip.
+full_name: ActionView::LookupContext::Details#locale=
+is_singleton: false
+name: locale=
+params: (value)
+visibility: public

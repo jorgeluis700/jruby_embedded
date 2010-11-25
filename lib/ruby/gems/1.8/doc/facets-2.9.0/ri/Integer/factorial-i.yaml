@@ -1,0 +1,17 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: fac
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Calculate the factorial of an integer.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  2.factorial  #=&gt; 2\n  3.factorial  #=&gt; 6\n  4.factorial  #=&gt; 24\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Malte Milatz"
+full_name: Integer#factorial
+is_singleton: false
+name: factorial
+params: ()
+visibility: public

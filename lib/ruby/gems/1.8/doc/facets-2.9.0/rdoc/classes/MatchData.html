@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: MatchData</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">MatchData</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/lib/core/facets/matchdata/match_rb.html">
+                lib/core/facets/matchdata/match.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/matchdata/matchset_rb.html">
+                lib/core/facets/matchdata/matchset.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                Object
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000292">match</a>&nbsp;&nbsp;
+      <a href="#M000293">matchset</a>&nbsp;&nbsp;
+      <a href="#M000294">matchtree</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000292" class="method-detail">
+        <a name="M000292"></a>
+
+        <div class="method-heading">
+          <a href="MatchData.src/M000292.html" target="Code" class="method-signature"
+            onclick="popupCode('MatchData.src/M000292.html');return false;">
+          <span class="method-name">match</span><span class="method-args">(index=0)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return the primary <a href="MatchData.html#M000292">match</a> string. This
+is equivalent to +md[0]+.
+</p>
+<pre>
+  md = /123/.match &quot;123456&quot;
+  md.match  #=&gt; &quot;123&quot;
+</pre>
+<p>
+CREDIT: Martin DeMello
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000293" class="method-detail">
+        <a name="M000293"></a>
+
+        <div class="method-heading">
+          <a href="MatchData.src/M000293.html" target="Code" class="method-signature"
+            onclick="popupCode('MatchData.src/M000293.html');return false;">
+          <span class="method-name">matchset</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns [ pre_match, <a href="MatchData.html#M000294">matchtree</a>,
+post_match ]. (see <a href="MatchData.html#M000294">matchtree</a>)
+</p>
+<pre>
+  md = /(bb)(cc(dd))(ee)/.match &quot;XXaabbccddeeffXX&quot;
+  md.to_a      #=&gt; [&quot;bbccddee&quot;, &quot;bb&quot;, &quot;ccdd&quot;, &quot;dd&quot;, &quot;ee&quot;]
+  md.matchset  #=&gt; [&quot;XXaa&quot;, [[&quot;bb&quot;], [&quot;cc&quot;, [&quot;dd&quot;]], [&quot;ee&quot;]], &quot;ffXX&quot;]
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000294" class="method-detail">
+        <a name="M000294"></a>
+
+        <div class="method-heading">
+          <a href="MatchData.src/M000294.html" target="Code" class="method-signature"
+            onclick="popupCode('MatchData.src/M000294.html');return false;">
+          <span class="method-name">matchtree</span><span class="method-args">(index=0)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+An alternate to to_a which returns the matches in order corresponding with
+the regular expression.
+</p>
+<pre>
+  md = /(bb)(cc(dd))(ee)/.match &quot;XXaabbccddeeffXX&quot;
+  md.to_a       #=&gt; [&quot;bbccddee&quot;, &quot;bb&quot;, &quot;ccdd&quot;, &quot;dd&quot;, &quot;ee&quot;]
+  md.matchtree  #=&gt; [[&quot;bb&quot;], [&quot;cc&quot;, [&quot;dd&quot;]], [&quot;ee&quot;]]
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

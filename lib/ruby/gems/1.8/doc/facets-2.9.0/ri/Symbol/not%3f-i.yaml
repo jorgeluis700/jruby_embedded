@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Does a symbol have a &quot;not&quot; sign?
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &quot;friend&quot;.to_sym.not?   #=&gt; false\n  &quot;~friend&quot;.to_sym.not?  #=&gt; true\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Trans"
+full_name: Symbol#not?
+is_singleton: false
+name: not?
+params: ()
+visibility: public

@@ -1,0 +1,24 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Declares a method available for all attributes with the given prefix and suffix. Uses <tt>method_missing</tt> and <tt>respond_to?</tt> to rewrite the method.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  #{prefix}#{attr}#{suffix}(*args, &amp;block)\n"
+  - !ruby/struct:SM::Flow::P 
+    body: to
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  #{prefix}attribute#{suffix}(#{attr}, *args, &amp;block)\n"
+  - !ruby/struct:SM::Flow::P 
+    body: An <tt>#{prefix}attribute#{suffix}</tt> instance method must exist and accept at least the <tt>attr</tt> argument.
+  - !ruby/struct:SM::Flow::P 
+    body: "For example:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class Person\n\n    include ActiveModel::AttributeMethods\n    attr_accessor :name\n    attribute_method_affix :prefix =&gt; 'reset_', :suffix =&gt; '_to_default!'\n    define_attribute_methods [:name]\n\n    private\n\n    def reset_attribute_to_default!(attr)\n      ...\n    end\n  end\n\n  person = Person.new\n  person.name                         # =&gt; 'Gem'\n  person.reset_name_to_default!\n  person.name                         # =&gt; 'Gemma'\n"
+full_name: ActiveModel::AttributeMethods::ClassMethods#attribute_method_affix
+is_singleton: false
+name: attribute_method_affix
+params: (*affixes)
+visibility: public

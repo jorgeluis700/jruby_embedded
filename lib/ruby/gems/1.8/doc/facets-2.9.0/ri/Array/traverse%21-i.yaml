@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Like #recursive_map, but will change the array in place."
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  h = [&quot;A&quot;, &quot;B&quot;, [&quot;X&quot;, &quot;Y&quot;]]\n\n  h.traverse!{ |e| e.downcase }\n\n  h  #=&gt; [&quot;a&quot;, &quot;b&quot;, [&quot;x&quot;, &quot;y&quot;]]\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Trans"
+full_name: Array#traverse!
+is_singleton: false
+name: traverse!
+params: (&block)
+visibility: public

@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Operator form of `Regexp.union`:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  /a/ | /b/  #=&gt; /(a|b)/\n"
+full_name: Regexp#|
+is_singleton: false
+name: "|"
+params: (arg)
+visibility: public

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Erubis::Helpers::RailsFormHelper#pp_check_box
+is_singleton: false
+name: pp_check_box
+params: (object_name, method, options={}, checked_value="1", unchecked_value="0")
+visibility: public

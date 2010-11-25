@@ -1,0 +1,44 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: formats
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: handler
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: identifier
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: original_encoding
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: source
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: virtual_path
+    rw: R
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::H 
+    level: 1
+    text: Action View Template
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: Finalizer
+    value: proc do |method_name, mod|       proc do         mod.module_eval do           remove_possible_method method_name
+full_name: ActionView::Template
+includes: []
+
+instance_methods: []
+
+name: Template
+superclass: Object

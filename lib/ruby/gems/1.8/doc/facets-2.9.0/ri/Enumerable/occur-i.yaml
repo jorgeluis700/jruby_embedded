@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: ""
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns an array of elements for the elements that occur n times. Or according to the results of a given block.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  a = [1,1,2,3,3,4,5,5]\n\n  a.occur(1).sort               #=&gt; [2,4]\n  a.occur(2).sort               #=&gt; [1,3,5]\n  a.occur(3).sort               #=&gt; []\n\n  a.occur(1..1).sort            #=&gt; [2,4]\n  a.occur(2..3).sort            #=&gt; [1,3,5]\n\n  a.occur { |n| n == 1 }.sort   #=&gt; [2,4]\n  a.occur { |n| n &gt; 1 }.sort    #=&gt; [1,3,5]\n"
+full_name: Enumerable#occur
+is_singleton: false
+name: occur
+params: (n=nil) {|| ...}
+visibility: public

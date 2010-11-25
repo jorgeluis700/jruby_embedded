@@ -1,0 +1,133 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: abs
+  - !ruby/object:RI::MethodSummary 
+    name: acot
+  - !ruby/object:RI::MethodSummary 
+    name: acoth
+  - !ruby/object:RI::MethodSummary 
+    name: acsc
+  - !ruby/object:RI::MethodSummary 
+    name: amd
+  - !ruby/object:RI::MethodSummary 
+    name: approx_equal
+  - !ruby/object:RI::MethodSummary 
+    name: asec
+  - !ruby/object:RI::MethodSummary 
+    name: atkinson_index
+  - !ruby/object:RI::MethodSummary 
+    name: beta
+  - !ruby/object:RI::MethodSummary 
+    name: cdf
+  - !ruby/object:RI::MethodSummary 
+    name: ceil
+  - !ruby/object:RI::MethodSummary 
+    name: cot
+  - !ruby/object:RI::MethodSummary 
+    name: coth
+  - !ruby/object:RI::MethodSummary 
+    name: csc
+  - !ruby/object:RI::MethodSummary 
+    name: csch
+  - !ruby/object:RI::MethodSummary 
+    name: delta
+  - !ruby/object:RI::MethodSummary 
+    name: epsilon
+  - !ruby/object:RI::MethodSummary 
+    name: exp10
+  - !ruby/object:RI::MethodSummary 
+    name: exp2
+  - !ruby/object:RI::MethodSummary 
+    name: factorial
+  - !ruby/object:RI::MethodSummary 
+    name: floor
+  - !ruby/object:RI::MethodSummary 
+    name: gamma
+  - !ruby/object:RI::MethodSummary 
+    name: gcd
+  - !ruby/object:RI::MethodSummary 
+    name: gini_coefficient
+  - !ruby/object:RI::MethodSummary 
+    name: kldivergence
+  - !ruby/object:RI::MethodSummary 
+    name: lcm
+  - !ruby/object:RI::MethodSummary 
+    name: lgamma
+  - !ruby/object:RI::MethodSummary 
+    name: linsolve
+  - !ruby/object:RI::MethodSummary 
+    name: log2
+  - !ruby/object:RI::MethodSummary 
+    name: max
+  - !ruby/object:RI::MethodSummary 
+    name: mean
+  - !ruby/object:RI::MethodSummary 
+    name: median
+  - !ruby/object:RI::MethodSummary 
+    name: min
+  - !ruby/object:RI::MethodSummary 
+    name: pow
+  - !ruby/object:RI::MethodSummary 
+    name: pstd
+  - !ruby/object:RI::MethodSummary 
+    name: pvariance
+  - !ruby/object:RI::MethodSummary 
+    name: rmd
+  - !ruby/object:RI::MethodSummary 
+    name: root
+  - !ruby/object:RI::MethodSummary 
+    name: sec
+  - !ruby/object:RI::MethodSummary 
+    name: sech
+  - !ruby/object:RI::MethodSummary 
+    name: sign
+  - !ruby/object:RI::MethodSummary 
+    name: sinc
+  - !ruby/object:RI::MethodSummary 
+    name: sqr
+  - !ruby/object:RI::MethodSummary 
+    name: sqsolve
+  - !ruby/object:RI::MethodSummary 
+    name: std
+  - !ruby/object:RI::MethodSummary 
+    name: stderr
+  - !ruby/object:RI::MethodSummary 
+    name: sum
+  - !ruby/object:RI::MethodSummary 
+    name: summed_sqdevs
+  - !ruby/object:RI::MethodSummary 
+    name: theil_index
+  - !ruby/object:RI::MethodSummary 
+    name: variance
+  - !ruby/object:RI::MethodSummary 
+    name: variance2
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: []
+
+    name: EPSILON
+    value: "0.000000001"
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: First 16 factorials.
+    name: FACTORIALS
+    value: "[     1,     1,     2,     6,     24,     120,     720,     5_040,     40_320,     362_880,     3_628_800,     39_916_800,     479_001_600,     6_227_020_800,     87_178_291_200,     1_307_674_368_000"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: INVERSE_LN_2
+    value: 1.0 / ::Math.log(2.0)
+full_name: Math
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: acsch
+  - !ruby/object:RI::MethodSummary 
+    name: asech
+name: Math
+superclass: 

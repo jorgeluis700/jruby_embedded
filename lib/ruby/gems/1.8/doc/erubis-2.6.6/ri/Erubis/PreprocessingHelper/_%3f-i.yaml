@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Alias for #_p"
+full_name: Erubis::PreprocessingHelper#_?
+is_singleton: false
+name: _?
+params: (arg)
+visibility: public

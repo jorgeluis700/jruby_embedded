@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: I18n::Backend::ActiveRecord::Translation::locale
+is_singleton: true
+name: locale
+params: (locale)
+visibility: public

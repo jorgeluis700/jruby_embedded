@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>wc (FileUtils)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/more/facets/fileutils/wc.rb, line 17</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">wc</span>(<span class="ruby-identifier">filename</span>,<span class="ruby-identifier">option</span>=<span class="ruby-value str">'all'</span>)
+    <span class="ruby-identifier">option</span>.<span class="ruby-identifier">downcase!</span>
+    <span class="ruby-identifier">valid</span> = <span class="ruby-node">%w/all bytes characters chars lines words/</span>
+
+    <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">valid</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">option</span>)
+        <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Invalid option: '#{option}'&quot;</span>
+    <span class="ruby-keyword kw">end</span>
+
+    <span class="ruby-identifier">n</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">option</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'lines'</span>
+        <span class="ruby-constant">IO</span>.<span class="ruby-identifier">foreach</span>(<span class="ruby-identifier">filename</span>){ <span class="ruby-identifier">n</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> }
+        <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">n</span>
+    <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">option</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'bytes'</span>
+        <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>){ <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">f</span>.<span class="ruby-identifier">each_byte</span>{ <span class="ruby-identifier">n</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> }
+        }
+        <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">n</span>
+    <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">option</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'characters'</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">option</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'chars'</span>
+        <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>){ <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+          <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">getc</span>
+              <span class="ruby-identifier">n</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+          <span class="ruby-keyword kw">end</span>
+        }
+        <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">n</span>
+    <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">option</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'words'</span>
+        <span class="ruby-constant">IO</span>.<span class="ruby-identifier">foreach</span>(<span class="ruby-identifier">filename</span>){ <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">n</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">split</span>.<span class="ruby-identifier">length</span>
+        }
+        <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">n</span>
+    <span class="ruby-keyword kw">else</span>
+        <span class="ruby-identifier">bytes</span>,<span class="ruby-identifier">chars</span>,<span class="ruby-identifier">lines</span>,<span class="ruby-identifier">words</span> = <span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>
+        <span class="ruby-constant">IO</span>.<span class="ruby-identifier">foreach</span>(<span class="ruby-identifier">filename</span>){ <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">lines</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+          <span class="ruby-identifier">words</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">split</span>.<span class="ruby-identifier">length</span>
+          <span class="ruby-identifier">chars</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">''</span>).<span class="ruby-identifier">length</span>
+        }
+        <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>){ <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+          <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">getc</span>
+              <span class="ruby-identifier">bytes</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+          <span class="ruby-keyword kw">end</span>
+        }
+        <span class="ruby-keyword kw">return</span> [<span class="ruby-identifier">bytes</span>,<span class="ruby-identifier">chars</span>,<span class="ruby-identifier">words</span>,<span class="ruby-identifier">lines</span>]
+    <span class="ruby-keyword kw">end</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

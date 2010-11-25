@@ -1,0 +1,34 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: See ActiveRecord::Transactions::ClassMethods for documentation.
+constants: []
+
+full_name: ActiveRecord::Transactions
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: add_to_transaction
+  - !ruby/object:RI::MethodSummary 
+    name: clear_transaction_record_state
+  - !ruby/object:RI::MethodSummary 
+    name: remember_transaction_record_state
+  - !ruby/object:RI::MethodSummary 
+    name: restore_transaction_record_state
+  - !ruby/object:RI::MethodSummary 
+    name: rollback_active_record_state!
+  - !ruby/object:RI::MethodSummary 
+    name: transaction
+  - !ruby/object:RI::MethodSummary 
+    name: transaction_include_action?
+  - !ruby/object:RI::MethodSummary 
+    name: transaction_record_state
+  - !ruby/object:RI::MethodSummary 
+    name: with_transaction_returning_status
+name: Transactions
+superclass: 

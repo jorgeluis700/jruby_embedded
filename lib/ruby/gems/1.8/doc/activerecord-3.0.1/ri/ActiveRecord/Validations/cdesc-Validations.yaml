@@ -1,0 +1,23 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: ActiveRecord::Validations
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: ActiveModel::Validations
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: perform_validations
+  - !ruby/object:RI::MethodSummary 
+    name: save
+  - !ruby/object:RI::MethodSummary 
+    name: save!
+  - !ruby/object:RI::MethodSummary 
+    name: valid?
+name: Validations
+superclass: 

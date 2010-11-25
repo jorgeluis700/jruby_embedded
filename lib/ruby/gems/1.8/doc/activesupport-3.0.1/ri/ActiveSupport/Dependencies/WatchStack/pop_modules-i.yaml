@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveSupport::Dependencies::WatchStack#pop_modules
+is_singleton: false
+name: pop_modules
+params: (modules)
+visibility: public

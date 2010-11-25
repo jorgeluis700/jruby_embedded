@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionDispatch::Routing::Mapper::Resources#action_options?
+is_singleton: false
+name: action_options?
+params: (options)
+visibility: protected

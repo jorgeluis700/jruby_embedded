@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Clear all mime types in <tt>respond_to</tt>.
+full_name: ActionController::MimeResponds::ClassMethods#clear_respond_to
+is_singleton: false
+name: clear_respond_to
+params: ()
+visibility: public

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Beta function of <tt>x</tt> and <tt>y</tt> - <tt>beta(x, y) = tgamma(x) * tgamma(y) / tgamma(x + y)</tt>
+full_name: Math::beta
+is_singleton: true
+name: beta
+params: (x, y)
+visibility: public

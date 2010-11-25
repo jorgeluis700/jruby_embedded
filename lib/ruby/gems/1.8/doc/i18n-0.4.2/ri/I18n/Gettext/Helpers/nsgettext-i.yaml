@@ -1,0 +1,15 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: ns_
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Method signatures:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  nsgettext('Fruits|apple', 'apples', 2)\n  nsgettext(['Fruits|apple', 'apples'], 2)\n"
+full_name: I18n::Gettext::Helpers#nsgettext
+is_singleton: false
+name: nsgettext
+params: (msgid, msgid_plural, n = 1, separator = '|')
+visibility: public

@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Delete all entries with keys matching the pattern.
+  - !ruby/struct:SM::Flow::P 
+    body: Options are passed to the underlying cache implementation.
+  - !ruby/struct:SM::Flow::P 
+    body: All implementations may not support this method.
+full_name: ActiveSupport::Cache::Store#delete_matched
+is_singleton: false
+name: delete_matched
+params: (matcher, options = nil)
+visibility: public

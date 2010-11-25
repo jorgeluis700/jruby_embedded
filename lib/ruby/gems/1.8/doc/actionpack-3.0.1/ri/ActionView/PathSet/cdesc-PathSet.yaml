@@ -1,0 +1,18 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::H 
+    level: 1
+    text: Action View PathSet
+constants: []
+
+full_name: ActionView::PathSet
+includes: []
+
+instance_methods: []
+
+name: PathSet
+superclass: Array

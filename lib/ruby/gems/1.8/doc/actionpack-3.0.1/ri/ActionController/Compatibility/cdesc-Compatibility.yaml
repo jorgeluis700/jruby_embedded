@@ -1,0 +1,37 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: UnknownAction
+    value: "::AbstractController::ActionNotFound"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: DoubleRenderError
+    value: "::AbstractController::DoubleRenderError"
+full_name: ActionController::Compatibility
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: _handle_method_missing
+  - !ruby/object:RI::MethodSummary 
+    name: _normalize_options
+  - !ruby/object:RI::MethodSummary 
+    name: assign_shortcuts
+  - !ruby/object:RI::MethodSummary 
+    name: initialize_template_class
+  - !ruby/object:RI::MethodSummary 
+    name: method_for_action
+  - !ruby/object:RI::MethodSummary 
+    name: performed?
+  - !ruby/object:RI::MethodSummary 
+    name: render_to_body
+  - !ruby/object:RI::MethodSummary 
+    name: rescue_action
+name: Compatibility
+superclass: 

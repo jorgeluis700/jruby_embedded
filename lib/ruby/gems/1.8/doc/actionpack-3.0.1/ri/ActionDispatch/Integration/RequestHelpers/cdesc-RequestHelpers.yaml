@@ -1,0 +1,40 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: ActionDispatch::Integration::RequestHelpers
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: delete
+  - !ruby/object:RI::MethodSummary 
+    name: delete_via_redirect
+  - !ruby/object:RI::MethodSummary 
+    name: follow_redirect!
+  - !ruby/object:RI::MethodSummary 
+    name: get
+  - !ruby/object:RI::MethodSummary 
+    name: get_via_redirect
+  - !ruby/object:RI::MethodSummary 
+    name: head
+  - !ruby/object:RI::MethodSummary 
+    name: post
+  - !ruby/object:RI::MethodSummary 
+    name: post_via_redirect
+  - !ruby/object:RI::MethodSummary 
+    name: put
+  - !ruby/object:RI::MethodSummary 
+    name: put_via_redirect
+  - !ruby/object:RI::MethodSummary 
+    name: request_via_redirect
+  - !ruby/object:RI::MethodSummary 
+    name: xhr
+  - !ruby/object:RI::MethodSummary 
+    name: xml_http_request
+name: RequestHelpers
+superclass: 

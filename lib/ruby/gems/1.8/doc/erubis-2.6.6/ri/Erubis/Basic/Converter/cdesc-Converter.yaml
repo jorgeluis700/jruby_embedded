@@ -1,0 +1,37 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: pattern
+    rw: RW
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: trim
+    rw: RW
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: basic converter which supports '&lt;% ... %&gt;' notation.
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: DEFAULT_REGEXP = /(.*?)(^[ \t]*)?&lt;%(=+|\#)?(.*?)-?%&gt;([ \t]*\r?\n)?/m DEFAULT_REGEXP = /(^[ \t]*)?&lt;%(=+|\#)?(.*?)-?%&gt;([ \t]*\r?\n)?/m DEFAULT_REGEXP = /&lt;%(=+|\#)?(.*?)-?%&gt;([ \t]*\r?\n)?/m
+    name: DEFAULT_REGEXP
+    value: pattern_regexp('<% %>')
+full_name: Erubis::Basic::Converter
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Erubis::Converter
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: add_expr
+  - !ruby/object:RI::MethodSummary 
+    name: convert_input
+  - !ruby/object:RI::MethodSummary 
+    name: init_converter
+  - !ruby/object:RI::MethodSummary 
+    name: pattern_regexp
+name: Converter
+superclass: 

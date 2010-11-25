@@ -1,0 +1,22 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Makes an underscored, lowercase form from the expression in the string.
+  - !ruby/struct:SM::Flow::P 
+    body: Changes '::' to '/' to convert namespaces to paths.
+  - !ruby/struct:SM::Flow::P 
+    body: "Examples:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &quot;ActiveRecord&quot;.underscore         # =&gt; &quot;active_record&quot;\n  &quot;ActiveRecord::Errors&quot;.underscore # =&gt; active_record/errors\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "As a rule of thumb you can think of <tt>underscore</tt> as the inverse of <tt>camelize</tt>, though there are cases where that does not hold:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &quot;SSLError&quot;.underscore.camelize # =&gt; &quot;SslError&quot;\n"
+full_name: ActiveSupport::Inflector#underscore
+is_singleton: false
+name: underscore
+params: (camel_cased_word)
+visibility: public

@@ -1,0 +1,20 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: ActiveModel::MassAssignmentSecurity::Sanitizer
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: debug_protected_attribute_removal
+  - !ruby/object:RI::MethodSummary 
+    name: sanitize
+  - !ruby/object:RI::MethodSummary 
+    name: warn!
+name: Sanitizer
+superclass: 

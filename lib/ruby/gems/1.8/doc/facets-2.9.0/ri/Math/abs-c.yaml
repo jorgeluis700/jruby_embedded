@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Absolute value of <tt>x</tt>.
+full_name: Math::abs
+is_singleton: true
+name: abs
+params: (x)
+visibility: public

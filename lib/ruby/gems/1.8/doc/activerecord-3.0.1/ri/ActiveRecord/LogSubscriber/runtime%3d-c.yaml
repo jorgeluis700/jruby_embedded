@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveRecord::LogSubscriber::runtime=
+is_singleton: true
+name: runtime=
+params: (value)
+visibility: public

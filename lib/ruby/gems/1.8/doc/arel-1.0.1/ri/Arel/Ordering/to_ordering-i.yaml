@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Arel::Ordering#to_ordering
+is_singleton: false
+name: to_ordering
+params: ()
+visibility: public

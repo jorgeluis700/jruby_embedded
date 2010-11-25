@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Arel::Descending#direction_sql
+is_singleton: false
+name: direction_sql
+params: ()
+visibility: public

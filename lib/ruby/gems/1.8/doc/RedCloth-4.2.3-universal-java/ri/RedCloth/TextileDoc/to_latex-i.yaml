@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Generates LaTeX from the Textile contents.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  RedCloth.new( &quot;And then? She <b>fell</b>!&quot; ).to_latex\n    #=&gt; &quot;And then? She \\textbf{fell}!\\n\\n&quot;\n"
+full_name: RedCloth::TextileDoc#to_latex
+is_singleton: false
+name: to_latex
+params: ( *rules )
+visibility: public

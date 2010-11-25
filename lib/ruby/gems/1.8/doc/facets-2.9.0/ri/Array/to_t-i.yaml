@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Convert an array into a tuple.
+full_name: Array#to_t
+is_singleton: false
+name: to_t
+params: ()
+visibility: public

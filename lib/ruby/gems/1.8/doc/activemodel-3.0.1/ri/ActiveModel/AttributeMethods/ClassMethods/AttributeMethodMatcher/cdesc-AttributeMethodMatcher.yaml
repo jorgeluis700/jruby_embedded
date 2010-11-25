@@ -1,0 +1,31 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: prefix
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: suffix
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: AttributeMethodMatch
+    value: Struct.new(:target, :attr_name)
+full_name: ActiveModel::AttributeMethods::ClassMethods::AttributeMethodMatcher
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: match
+  - !ruby/object:RI::MethodSummary 
+    name: method_missing_target
+  - !ruby/object:RI::MethodSummary 
+    name: method_name
+name: AttributeMethodMatcher
+superclass: Object

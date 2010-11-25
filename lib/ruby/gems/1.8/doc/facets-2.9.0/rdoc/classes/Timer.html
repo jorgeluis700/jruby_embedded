@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: Timer</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">Timer</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/lib/more/facets/timer_rb.html">
+                lib/more/facets/timer.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                Object
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <h1><a href="Timer.html">Timer</a></h1>
+<p>
+Provides a strightforward means for controlling <a
+href="Timer.html#M000649">time</a> critical execution. Can be used as a
+&quot;<a href="Timer.html#M000643">stop</a> watch&quot; timer or as a
+&quot;<a href="Timer.html#M000649">time</a> bomb&quot; timer:
+</p>
+<pre>
+  t = Timer.new(10) { raise TimeoutError, &quot;timeout!&quot; }
+  t.start
+    :      # done within 10sec timeout
+  t.stop
+  t.start
+    :
+  if condition then
+    t.reset       #--&gt; restart timer
+  end
+</pre>
+<p>
+A class method is also provided for easily timing the exectuion of a block.
+</p>
+<pre>
+  Timer.time do |timer|
+   timer.total_time.round  #=&gt; 0
+
+   sleep 1
+   timer.total_time.round  #=&gt; 1
+
+   timer.stop
+   timer.total_time.round  #=&gt; 1
+
+   sleep 1
+   timer.total_time.round  #=&gt; 1
+
+   timer.start
+   timer.total_time.round  #=&gt; 1
+
+   sleep 1
+   timer.total_time.round  #=&gt; 2
+  end
+</pre>
+<p>
+Thanks to Paul Brannan for TimeLimit and Minero Aoki for <a
+href="Timer.html">Timer</a>. These two libraries served as models for
+building this class.
+</p>
+
+    </div>
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000642">defuse</a>&nbsp;&nbsp;
+      <a href="#M000638">end_time</a>&nbsp;&nbsp;
+      <a href="#M000641">limit</a>&nbsp;&nbsp;
+      <a href="#M000636">new</a>&nbsp;&nbsp;
+      <a href="#M000639">on_timeout</a>&nbsp;&nbsp;
+      <a href="#M000644">reset</a>&nbsp;&nbsp;
+      <a href="#M000645">reset_limit</a>&nbsp;&nbsp;
+      <a href="#M000646">running?</a>&nbsp;&nbsp;
+      <a href="#M000640">start</a>&nbsp;&nbsp;
+      <a href="#M000637">start_time</a>&nbsp;&nbsp;
+      <a href="#M000643">stop</a>&nbsp;&nbsp;
+      <a href="#M000647">stopped?</a>&nbsp;&nbsp;
+      <a href="#M000649">time</a>&nbsp;&nbsp;
+      <a href="#M000648">total_time</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+    <div id="class-list">
+      <h3 class="section-bar">Classes and Modules</h3>
+
+      Class <a href="Timer/Dummy.html" class="link">Timer::Dummy</a><br />
+
+    </div>
+
+
+
+
+    <div id="attribute-list">
+      <h3 class="section-bar">Attributes</h3>
+
+      <div class="name-list">
+        <table>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">time_limit</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        </table>
+      </div>
+    </div>
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000636" class="method-detail">
+        <a name="M000636"></a>
+
+        <div class="method-heading">
+          <a href="Timer.src/M000636.html" target="Code" class="method-signature"
+            onclick="popupCode('Timer.src/M000636.html');return false;">
+          <span class="method-name">new</span><span class="method-args">(time_limit=nil, &amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000649" class="method-detail">
+        <a name="M000649"></a>
+
+        <div class="method-heading">
+          <a href="Timer.src/M000649.html" target="Code" class="method-signature"
+            onclick="popupCode('Timer.src/M000649.html');return false;">
+          <span class="method-name">time</span><span class="method-args">() {|timer = Timer.new.start| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Takes a block and returns the total <a href="Timer.html#M000649">time</a>
+it took to execute.
+</p>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000642" class="method-detail">
+        <a name="M000642"></a>
+
+        <div class="method-heading">
+          <a href="Timer.src/M000642.html" target="Code" class="method-signature"
+            onclick="popupCode('Timer.src/M000642.html');return false;">
+          <span class="method-name">defuse</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Kill <a href="Timer.html#M000649">time</a> <a
+href="Timer.html#M000641">limit</a> thread, if any.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000638" class="method-detail">
+        <a name="M000638"></a>
+
+        <div class="method-heading">
+          <a href="Timer.src/M000638.html" target="Code" class="method-signature"
+            onclick="popupCode('Timer.src/M000638.html');return false;">
+          <span class="method-name">end_time</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000641" class="method-detail">
+        <a name="M000641"></a>
+
+        <div class="method-heading">
+          <a href="Timer.src/M000641.html" target="Code" class="method-signature"
+            onclick="popupCode('Timer.src/M000641.html');return false;">
+          <span class="method-name">limit</span><span class="method-args">( time_limit=nil )</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Establish a <a href="Timer.html#M000649">time</a> <a
+href="Timer.html#M000641">limit</a> on execution.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000639" class="method-detail">
+        <a name="M000639"></a>
+
+        <div class="method-heading">
+          <a href="Timer.src/M000639.html" target="Code" class="method-signature"
+            onclick="popupCode('Timer.src/M000639.html');return false;">
+          <span class="method-name">on_timeout</span><span class="method-args">( &amp;block )</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000644" class="method-detail">
+        <a name="M000644"></a>
+
+        <div class="method-heading">
+          <a href="Timer.src/M000644.html" target="Code" class="method-signature"
+            onclick="popupCode('Timer.src/M000644.html');return false;">
+          <span class="method-name">reset</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Stops and resets the timer. If the timer was running returns the total <a
+href="Timer.html#M000649">time</a>. If not returns 0.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000645" class="method-detail">
+        <a name="M000645"></a>
+
+        <div class="method-heading">
+          <a href="Timer.src/M000645.html" target="Code" class="method-signature"
+            onclick="popupCode('Timer.src/M000645.html');return false;">
+          <span class="method-name">reset_limit</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Resets the <a href="Timer.html#M000649">time</a> <a
+href="Timer.html#M000641">limit</a>. Same as:
+</p>
+<pre>
+  t.stop
+  t.start
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000646" class="method-detail">
+        <a name="M000646"></a>
+
+        <div class="method-heading">
+          <a href="Timer.src/M000646.html" target="Code" class="method-signature"
+            onclick="popupCode('Timer.src/M000646.html');return false;">
+          <span class="method-name">running?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Queries whether the timer is still running.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000640" class="method-detail">
+        <a name="M000640"></a>
+
+        <div class="method-heading">
+          <a href="Timer.src/M000640.html" target="Code" class="method-signature"
+            onclick="popupCode('Timer.src/M000640.html');return false;">
+          <span class="method-name">start</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Start the timer.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000637" class="method-detail">
+        <a name="M000637"></a>
+
+        <div class="method-heading">
+          <a href="Timer.src/M000637.html" target="Code" class="method-signature"
+            onclick="popupCode('Timer.src/M000637.html');return false;">
+          <span class="method-name">start_time</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000643" class="method-detail">
+        <a name="M000643"></a>
+
+        <div class="method-heading">
+          <a href="Timer.src/M000643.html" target="Code" class="method-signature"
+            onclick="popupCode('Timer.src/M000643.html');return false;">
+          <span class="method-name">stop</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Stops timer and returns total <a href="Timer.html#M000649">time</a>. If
+timer was not running returns false.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000647" class="method-detail">
+        <a name="M000647"></a>
+
+        <div class="method-heading">
+          <a href="Timer.src/M000647.html" target="Code" class="method-signature"
+            onclick="popupCode('Timer.src/M000647.html');return false;">
+          <span class="method-name">stopped?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Queries whether the timer is still not running.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000648" class="method-detail">
+        <a name="M000648"></a>
+
+        <div class="method-heading">
+          <a href="Timer.src/M000648.html" target="Code" class="method-signature"
+            onclick="popupCode('Timer.src/M000648.html');return false;">
+          <span class="method-name">total_time</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Queries total recorded <a href="Timer.html#M000649">time</a> of timer.
+</p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: remove text and leave code, especially useful when debugging.
+  - !ruby/struct:SM::Flow::P 
+    body: ex.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  $ erubis -s -E NoText file.eruby | more\n"
+  - !ruby/struct:SM::Flow::P 
+    body: this is language independent.
+constants: []
+
+full_name: Erubis::NoTextEnhancer
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: add_text
+name: NoTextEnhancer
+superclass: 

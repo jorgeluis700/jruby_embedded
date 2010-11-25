@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>shift (Time)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/core/facets/time/shift.rb, line 22</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">shift</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">time_units</span>)
+    <span class="ruby-identifier">time_hash</span> = <span class="ruby-constant">Hash</span><span class="ruby-operator">===</span><span class="ruby-identifier">time_units</span>.<span class="ruby-identifier">last</span> <span class="ruby-value">? </span><span class="ruby-identifier">time_units</span>.<span class="ruby-identifier">pop</span> <span class="ruby-operator">:</span> {}
+    <span class="ruby-identifier">time_units</span> = <span class="ruby-identifier">time_units</span>.<span class="ruby-identifier">flatten</span>
+    <span class="ruby-identifier">time_units</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">:seconds</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">time_units</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">%</span> <span class="ruby-value">2</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">time_hash</span>.<span class="ruby-identifier">each</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">units</span>, <span class="ruby-identifier">number</span><span class="ruby-operator">|</span> <span class="ruby-identifier">time_units</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">number</span>; <span class="ruby-identifier">time_units</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">units</span> }
+
+    <span class="ruby-identifier">time</span> = <span class="ruby-keyword kw">self</span>
+    <span class="ruby-identifier">time_units</span>.<span class="ruby-identifier">each_slice</span>(<span class="ruby-value">2</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">number</span>, <span class="ruby-identifier">units</span><span class="ruby-operator">|</span>
+      <span class="ruby-comment cmt">#next time = time.ago(-number, units) if number &lt; 0</span>
+      <span class="ruby-identifier">time</span> = (
+        <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">units</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">to_sym</span>
+        <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">:years</span>, <span class="ruby-identifier">:year</span>
+          <span class="ruby-identifier">time</span>.<span class="ruby-identifier">set</span>( <span class="ruby-identifier">:year=</span><span class="ruby-operator">&gt;</span>(<span class="ruby-identifier">year</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">number</span>) )
+        <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">:months</span>, <span class="ruby-identifier">:month</span>
+          <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">number</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+            <span class="ruby-identifier">new_month</span> = ((<span class="ruby-identifier">month</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">number</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>) <span class="ruby-operator">%</span> <span class="ruby-value">12</span>) <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+            <span class="ruby-identifier">y</span> = (<span class="ruby-identifier">number</span> <span class="ruby-operator">/</span> <span class="ruby-value">12</span>) <span class="ruby-operator">+</span> (<span class="ruby-identifier">new_month</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">month</span> <span class="ruby-value">? </span><span class="ruby-value">1</span> <span class="ruby-operator">:</span> <span class="ruby-value">0</span>)
+            <span class="ruby-identifier">time</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">:year</span> =<span class="ruby-operator">&gt;</span> (<span class="ruby-identifier">year</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">y</span>), <span class="ruby-identifier">:month</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">new_month</span>)
+          <span class="ruby-keyword kw">else</span>
+            <span class="ruby-identifier">number</span> = <span class="ruby-operator">-</span><span class="ruby-identifier">number</span>
+            <span class="ruby-identifier">new_month</span> = ((<span class="ruby-identifier">month</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">number</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>) <span class="ruby-operator">%</span> <span class="ruby-value">12</span>) <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+            <span class="ruby-identifier">y</span> = (<span class="ruby-identifier">number</span> <span class="ruby-operator">/</span> <span class="ruby-value">12</span>) <span class="ruby-operator">+</span> (<span class="ruby-identifier">new_month</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">month</span> <span class="ruby-value">? </span><span class="ruby-value">1</span> <span class="ruby-operator">:</span> <span class="ruby-value">0</span>)
+            <span class="ruby-identifier">time</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">:year</span> =<span class="ruby-operator">&gt;</span> (<span class="ruby-identifier">year</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">y</span>), <span class="ruby-identifier">:month</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">new_month</span>)
+          <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">:weeks</span>, <span class="ruby-identifier">:week</span>
+          <span class="ruby-identifier">time</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">number</span> <span class="ruby-operator">*</span> <span class="ruby-value">604800</span>)
+        <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">:days</span>, <span class="ruby-identifier">:day</span>
+          <span class="ruby-identifier">time</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">number</span> <span class="ruby-operator">*</span> <span class="ruby-value">86400</span>)
+        <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">:hours</span>, <span class="ruby-identifier">:hour</span>
+          <span class="ruby-identifier">time</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">number</span> <span class="ruby-operator">*</span> <span class="ruby-value">3600</span>)
+        <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">:minutes</span>, <span class="ruby-identifier">:minute</span>, <span class="ruby-identifier">:mins</span>, <span class="ruby-identifier">:min</span>
+          <span class="ruby-identifier">time</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">number</span> <span class="ruby-operator">*</span> <span class="ruby-value">60</span>)
+        <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">:seconds</span>, <span class="ruby-identifier">:second</span>, <span class="ruby-identifier">:secs</span>, <span class="ruby-identifier">:sec</span>, <span class="ruby-keyword kw">nil</span>
+          <span class="ruby-identifier">time</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">number</span>
+        <span class="ruby-keyword kw">else</span>
+          <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;unrecognized time units -- #{units}&quot;</span>
+        <span class="ruby-keyword kw">end</span>
+      )
+    <span class="ruby-keyword kw">end</span>
+    <span class="ruby-identifier">dst_adjustment</span>(<span class="ruby-identifier">time</span>)
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

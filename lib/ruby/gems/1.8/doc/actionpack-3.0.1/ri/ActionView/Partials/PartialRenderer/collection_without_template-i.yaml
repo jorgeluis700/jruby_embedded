@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionView::Partials::PartialRenderer#collection_without_template
+is_singleton: false
+name: collection_without_template
+params: (collection_paths = @collection_paths)
+visibility: public

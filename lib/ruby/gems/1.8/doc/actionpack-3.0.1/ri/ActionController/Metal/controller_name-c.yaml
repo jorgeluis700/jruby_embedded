@@ -1,0 +1,17 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns the last part of the controller's name, underscored, without the ending &quot;Controller&quot;. For instance, MyApp::MyPostsController would return &quot;my_posts&quot; for controller_name
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Returns
+  - !ruby/struct:SM::Flow::P 
+    body: String
+full_name: ActionController::Metal::controller_name
+is_singleton: true
+name: controller_name
+params: ()
+visibility: public

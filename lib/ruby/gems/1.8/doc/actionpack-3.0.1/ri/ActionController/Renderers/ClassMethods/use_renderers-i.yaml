@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: use_renderer
+block_params: 
+comment: 
+full_name: ActionController::Renderers::ClassMethods#use_renderers
+is_singleton: false
+name: use_renderers
+params: (*args)
+visibility: public

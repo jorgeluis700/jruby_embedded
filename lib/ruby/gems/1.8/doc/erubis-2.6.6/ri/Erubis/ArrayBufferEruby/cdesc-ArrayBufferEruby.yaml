@@ -1,0 +1,16 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: Erubis::ArrayBufferEruby
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: ArrayBufferEnhancer
+instance_methods: []
+
+name: ArrayBufferEruby
+superclass: Eruby

@@ -1,0 +1,24 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: switch '&lt;%= ... %&gt;' to escaped and '&lt;%== ... %&gt;' to unescaped
+  - !ruby/struct:SM::Flow::P 
+    body: ex.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class XmlEruby &lt; Eruby\n    include EscapeEnhancer\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: this is language-indenedent.
+constants: []
+
+full_name: Erubis::EscapeEnhancer
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: add_expr
+name: EscapeEnhancer
+superclass: 

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Return globbed matches with pathnames relative to the current pathname.
+full_name: Pathname#glob_relative
+is_singleton: false
+name: glob_relative
+params: (match, *opts)
+visibility: public

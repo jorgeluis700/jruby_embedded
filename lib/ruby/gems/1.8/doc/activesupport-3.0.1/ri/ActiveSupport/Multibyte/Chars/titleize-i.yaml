@@ -1,0 +1,17 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: titlecase
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Capitalizes the first letter of every word, when possible.
+  - !ruby/struct:SM::Flow::P 
+    body: "Example:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &quot;\xC3\x89L QUE SE ENTER\xC3\x93&quot;.mb_chars.titleize    # =&gt; &quot;\xC3\x89l Que Se Enter\xC3\xB3&quot;\n  &quot;\xE6\x97\xA5\xE6\x9C\xAC\xE8\xAA\x9E&quot;.mb_chars.titleize                 # =&gt; &quot;\xE6\x97\xA5\xE6\x9C\xAC\xE8\xAA\x9E&quot;\n"
+full_name: ActiveSupport::Multibyte::Chars#titleize
+is_singleton: false
+name: titleize
+params: ()
+visibility: public

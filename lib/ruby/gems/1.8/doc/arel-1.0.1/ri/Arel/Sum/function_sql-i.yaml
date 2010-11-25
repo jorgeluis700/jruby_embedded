@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Arel::Sum#function_sql
+is_singleton: false
+name: function_sql
+params: ()
+visibility: public

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Define a controller as abstract. See internal_methods for more details.
+full_name: AbstractController::Base::abstract!
+is_singleton: true
+name: abstract!
+params: ()
+visibility: public

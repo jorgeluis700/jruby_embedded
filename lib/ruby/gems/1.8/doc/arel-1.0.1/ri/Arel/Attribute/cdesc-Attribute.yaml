@@ -1,0 +1,79 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: alias
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: ancestor
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: hash
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: history
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: name
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: relation
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: PREDICATES
+    value: "[       :eq, :eq_any, :eq_all, :not_eq, :not_eq_any, :not_eq_all, :lt, :lt_any,       :lt_all, :lteq, :lteq_any, :lteq_all, :gt, :gt_any, :gt_all, :gteq,       :gteq_any, :gteq_all, :matches, :matches_any, :matches_all, :not_matches,       :not_matches_any, :not_matches_all, :in, :in_any, :in_all, :not_in,       :not_in_any, :not_in_all"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: Predications
+    value: Class.new do       def self.instance_methods *args
+full_name: Arel::Attribute
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: /
+  - !ruby/object:RI::MethodSummary 
+    name: ==
+  - !ruby/object:RI::MethodSummary 
+    name: aggregation?
+  - !ruby/object:RI::MethodSummary 
+    name: as
+  - !ruby/object:RI::MethodSummary 
+    name: bind
+  - !ruby/object:RI::MethodSummary 
+    name: christener
+  - !ruby/object:RI::MethodSummary 
+    name: descends_from?
+  - !ruby/object:RI::MethodSummary 
+    name: engine
+  - !ruby/object:RI::MethodSummary 
+    name: eql?
+  - !ruby/object:RI::MethodSummary 
+    name: eval
+  - !ruby/object:RI::MethodSummary 
+    name: find_correlate_in
+  - !ruby/object:RI::MethodSummary 
+    name: join?
+  - !ruby/object:RI::MethodSummary 
+    name: named?
+  - !ruby/object:RI::MethodSummary 
+    name: original_attribute
+  - !ruby/object:RI::MethodSummary 
+    name: original_relation
+  - !ruby/object:RI::MethodSummary 
+    name: root
+  - !ruby/object:RI::MethodSummary 
+    name: to_attribute
+name: Attribute
+superclass: Object

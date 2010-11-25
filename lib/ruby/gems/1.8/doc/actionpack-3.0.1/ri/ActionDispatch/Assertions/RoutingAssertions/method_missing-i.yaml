@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "ROUTES TODO: These assertions should really work in an integration context"
+full_name: ActionDispatch::Assertions::RoutingAssertions#method_missing
+is_singleton: false
+name: method_missing
+params: (selector, *args, &block)
+visibility: public

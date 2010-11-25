@@ -1,0 +1,32 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: available_locales
+  - !ruby/object:RI::MethodSummary 
+    name: locale
+  - !ruby/object:RI::MethodSummary 
+    name: lookup
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: TRUTHY_CHAR
+    value: "\"\\001\""
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: FALSY_CHAR
+    value: "\"\\002\""
+full_name: I18n::Backend::ActiveRecord::Translation
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: interpolates?
+  - !ruby/object:RI::MethodSummary 
+    name: value
+  - !ruby/object:RI::MethodSummary 
+    name: value=
+name: Translation
+superclass: "::ActiveRecord::Base"

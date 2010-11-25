@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: (*block_args)
+comment: 
+full_name: ActiveRecord::QueryMethods#select
+is_singleton: false
+name: select
+params: (*args) {|*block_args| ...}
+visibility: public

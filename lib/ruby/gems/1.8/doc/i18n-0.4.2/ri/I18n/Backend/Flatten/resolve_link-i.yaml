@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: I18n::Backend::Flatten#resolve_link
+is_singleton: false
+name: resolve_link
+params: (locale, key)
+visibility: protected

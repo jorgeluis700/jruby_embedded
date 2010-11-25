@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: We need to know the column count before opening tabular context.
+full_name: RedCloth::Formatters::LATEX#table_open
+is_singleton: false
+name: table_open
+params: (opts)
+visibility: public

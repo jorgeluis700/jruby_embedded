@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: find_all
+block_params: (*input)
+comment: []
+
+full_name: Denumerable#select
+is_singleton: false
+name: select
+params: () {|*input| ...}
+visibility: public

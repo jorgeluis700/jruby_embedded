@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveRecord::FinderMethods#find_by_attributes
+is_singleton: false
+name: find_by_attributes
+params: (match, attributes, *args)
+visibility: protected

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveRecord::Railties::ControllerRuntime::ClassMethods#log_process_action
+is_singleton: false
+name: log_process_action
+params: (payload)
+visibility: public

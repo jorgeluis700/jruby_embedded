@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Erubis::XmlHelper#escape_xml2
+is_singleton: false
+name: escape_xml2
+params: (value)
+visibility: public

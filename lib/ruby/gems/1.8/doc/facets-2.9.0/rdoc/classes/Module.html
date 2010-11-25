@@ -1,0 +1,2535 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: Module</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">Module</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/lib/core/facets/module/abstract_rb.html">
+                lib/core/facets/module/abstract.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/module/alias_accessor_rb.html">
+                lib/core/facets/module/alias_accessor.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/module/alias_method_chain_rb.html">
+                lib/core/facets/module/alias_method_chain.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/module/alias_module_function_rb.html">
+                lib/core/facets/module/alias_module_function.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/module/all_instance_methods_rb.html">
+                lib/core/facets/module/all_instance_methods.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/module/ancestor_rb.html">
+                lib/core/facets/module/ancestor.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/module/anonymous_rb.html">
+                lib/core/facets/module/anonymous.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/module/attr_setter_rb.html">
+                lib/core/facets/module/attr_setter.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/module/basename_rb.html">
+                lib/core/facets/module/basename.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/module/can_rb.html">
+                lib/core/facets/module/can.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/module/class_rb.html">
+                lib/core/facets/module/class.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/module/home_rb.html">
+                lib/core/facets/module/home.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/module/include_function_module_rb.html">
+                lib/core/facets/module/include_function_module.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/module/instance_method_rb.html">
+                lib/core/facets/module/instance_method.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/module/instance_method_defined_rb.html">
+                lib/core/facets/module/instance_method_defined.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/module/integrate_rb.html">
+                lib/core/facets/module/integrate.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/module/is_rb.html">
+                lib/core/facets/module/is.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/module/methodize_rb.html">
+                lib/core/facets/module/methodize.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/module/method_clash_rb.html">
+                lib/core/facets/module/method_clash.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/module/module_def_rb.html">
+                lib/core/facets/module/module_def.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/module/nodef_rb.html">
+                lib/core/facets/module/nodef.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/module/op_rb.html">
+                lib/core/facets/module/op.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/module/pathize_rb.html">
+                lib/core/facets/module/pathize.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/module/redefine_method_rb.html">
+                lib/core/facets/module/redefine_method.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/module/redirect_method_rb.html">
+                lib/core/facets/module/redirect_method.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/module/rename_method_rb.html">
+                lib/core/facets/module/rename_method.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/module/revise_rb.html">
+                lib/core/facets/module/revise.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/module/set_rb.html">
+                lib/core/facets/module/set.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/module/spacename_rb.html">
+                lib/core/facets/module/spacename.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/module/to_obj_rb.html">
+                lib/core/facets/module/to_obj.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/module/wrap_method_rb.html">
+                lib/core/facets/module/wrap_method.rb
+                </a>
+        <br />
+                <a href="../files/lib/tour/facets/module/attr_class_accessor_rb.html">
+                lib/tour/facets/module/attr_class_accessor.rb
+                </a>
+        <br />
+                <a href="../files/lib/tour/facets/module/attr_inheritor_rb.html">
+                lib/tour/facets/module/attr_inheritor.rb
+                </a>
+        <br />
+                <a href="../files/lib/tour/facets/module/attr_tester_rb.html">
+                lib/tour/facets/module/attr_tester.rb
+                </a>
+        <br />
+                <a href="../files/lib/tour/facets/module/attr_validator_rb.html">
+                lib/tour/facets/module/attr_validator.rb
+                </a>
+        <br />
+                <a href="../files/lib/tour/facets/module/cattr_rb.html">
+                lib/tour/facets/module/cattr.rb
+                </a>
+        <br />
+                <a href="../files/lib/tour/facets/module/class_accessor_rb.html">
+                lib/tour/facets/module/class_accessor.rb
+                </a>
+        <br />
+                <a href="../files/lib/tour/facets/module/class_extend_rb.html">
+                lib/tour/facets/module/class_extend.rb
+                </a>
+        <br />
+                <a href="../files/lib/tour/facets/module/class_inheritor_rb.html">
+                lib/tour/facets/module/class_inheritor.rb
+                </a>
+        <br />
+                <a href="../files/lib/tour/facets/module/copy_inheritor_rb.html">
+                lib/tour/facets/module/copy_inheritor.rb
+                </a>
+        <br />
+                <a href="../files/lib/tour/facets/module/enclosure_rb.html">
+                lib/tour/facets/module/enclosure.rb
+                </a>
+        <br />
+                <a href="../files/lib/tour/facets/module/instance_function_rb.html">
+                lib/tour/facets/module/instance_function.rb
+                </a>
+        <br />
+                <a href="../files/lib/tour/facets/module/memoize_rb.html">
+                lib/tour/facets/module/memoize.rb
+                </a>
+        <br />
+                <a href="../files/lib/tour/facets/module/method_space_rb.html">
+                lib/tour/facets/module/method_space.rb
+                </a>
+        <br />
+                <a href="../files/lib/tour/facets/module/module_load_rb.html">
+                lib/tour/facets/module/module_load.rb
+                </a>
+        <br />
+                <a href="../files/lib/tour/facets/module/preextend_rb.html">
+                lib/tour/facets/module/preextend.rb
+                </a>
+        <br />
+                <a href="../files/lib/tour/facets/module/prepend_rb.html">
+                lib/tour/facets/module/prepend.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                Object
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000321">*</a>&nbsp;&nbsp;
+      <a href="#M000319">+</a>&nbsp;&nbsp;
+      <a href="#M000320">-</a>&nbsp;&nbsp;
+      <a href="#M000295">abstract</a>&nbsp;&nbsp;
+      <a href="#M000296">alias_method_chain</a>&nbsp;&nbsp;
+      <a href="#M000335">alias_tester</a>&nbsp;&nbsp;
+      <a href="#M000337">alias_validator</a>&nbsp;&nbsp;
+      <a href="#M000297">all_instance_methods</a>&nbsp;&nbsp;
+      <a href="#M000298">ancestor?</a>&nbsp;&nbsp;
+      <a href="#M000299">anonymous?</a>&nbsp;&nbsp;
+      <a href="#M000330">attr_class_accessor</a>&nbsp;&nbsp;
+      <a href="#M000331">attr_class_reader</a>&nbsp;&nbsp;
+      <a href="#M000332">attr_class_writer</a>&nbsp;&nbsp;
+      <a href="#M000333">attr_inheritable_reader</a>&nbsp;&nbsp;
+      <a href="#M000300">attr_setter</a>&nbsp;&nbsp;
+      <a href="#M000334">attr_tester</a>&nbsp;&nbsp;
+      <a href="#M000336">attr_validator</a>&nbsp;&nbsp;
+      <a href="#M000301">basename</a>&nbsp;&nbsp;
+      <a href="#M000338">cattr</a>&nbsp;&nbsp;
+      <a href="#M000341">cattr_accessor</a>&nbsp;&nbsp;
+      <a href="#M000339">cattr_reader</a>&nbsp;&nbsp;
+      <a href="#M000340">cattr_writer</a>&nbsp;&nbsp;
+      <a href="#M000346">class_accessor</a>&nbsp;&nbsp;
+      <a href="#M000317">class_def</a>&nbsp;&nbsp;
+      <a href="#M000349">class_extend</a>&nbsp;&nbsp;
+      <a href="#M000350">class_extensions</a>&nbsp;&nbsp;
+      <a href="#M000351">class_inheritor</a>&nbsp;&nbsp;
+      <a href="#M000363">class_load</a>&nbsp;&nbsp;
+      <a href="#M000310">class_method_defined?</a>&nbsp;&nbsp;
+      <a href="#M000347">class_reader</a>&nbsp;&nbsp;
+      <a href="#M000362">class_require</a>&nbsp;&nbsp;
+      <a href="#M000348">class_writer</a>&nbsp;&nbsp;
+      <a href="#M000352">copy_inheritor</a>&nbsp;&nbsp;
+      <a href="#M000353">enclosure</a>&nbsp;&nbsp;
+      <a href="#M000354">enclosures</a>&nbsp;&nbsp;
+      <a href="#M000355">encname</a>&nbsp;&nbsp;
+      <a href="#M000302">home</a>&nbsp;&nbsp;
+      <a href="#M000303">homename</a>&nbsp;&nbsp;
+      <a href="#M000305">housing</a>&nbsp;&nbsp;
+      <a href="#M000359">include_as</a>&nbsp;&nbsp;
+      <a href="#M000356">instance_function</a>&nbsp;&nbsp;
+      <a href="#M000306">instance_method!</a>&nbsp;&nbsp;
+      <a href="#M000307">instance_method_defined?</a>&nbsp;&nbsp;
+      <a href="#M000311">integrate</a>&nbsp;&nbsp;
+      <a href="#M000313">is</a>&nbsp;&nbsp;
+      <a href="#M000312">is?</a>&nbsp;&nbsp;
+      <a href="#M000342">mattr</a>&nbsp;&nbsp;
+      <a href="#M000345">mattr_accessor</a>&nbsp;&nbsp;
+      <a href="#M000343">mattr_reader</a>&nbsp;&nbsp;
+      <a href="#M000344">mattr_writer</a>&nbsp;&nbsp;
+      <a href="#M000357">memoize</a>&nbsp;&nbsp;
+      <a href="#M000315">method_clash</a>&nbsp;&nbsp;
+      <a href="#M000316">method_clash?</a>&nbsp;&nbsp;
+      <a href="#M000358">method_space</a>&nbsp;&nbsp;
+      <a href="#M000314">methodize</a>&nbsp;&nbsp;
+      <a href="#M000304">modname</a>&nbsp;&nbsp;
+      <a href="#M000318">module_def</a>&nbsp;&nbsp;
+      <a href="#M000360">module_load</a>&nbsp;&nbsp;
+      <a href="#M000309">module_method_defined?</a>&nbsp;&nbsp;
+      <a href="#M000361">module_require</a>&nbsp;&nbsp;
+      <a href="#M000322">pathize</a>&nbsp;&nbsp;
+      <a href="#M000364">preextend</a>&nbsp;&nbsp;
+      <a href="#M000365">prepend</a>&nbsp;&nbsp;
+      <a href="#M000324">revisal</a>&nbsp;&nbsp;
+      <a href="#M000323">revise</a>&nbsp;&nbsp;
+      <a href="#M000325">set</a>&nbsp;&nbsp;
+      <a href="#M000308">singleton_method_defined?</a>&nbsp;&nbsp;
+      <a href="#M000326">spacename</a>&nbsp;&nbsp;
+      <a href="#M000327">to_obj</a>&nbsp;&nbsp;
+      <a href="#M000329">wrap</a>&nbsp;&nbsp;
+      <a href="#M000328">wrap_method</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+    <div id="includes">
+      <h3 class="section-bar">Included Modules</h3>
+
+      <div id="includes-list">
+        <span class="include-name"><a href="Memoizable.html">Memoizable</a></span>
+        <span class="include-name"><a href="Prependable.html">Prependable</a></span>
+      </div>
+    </div>
+
+    <div id="section">
+
+    <div id="class-list">
+      <h3 class="section-bar">Classes and Modules</h3>
+
+      Module <a href="Module/InstanceFunction.html" class="link">Module::InstanceFunction</a><br />
+
+    </div>
+
+
+    <div id="aliases-list">
+      <h3 class="section-bar">External Aliases</h3>
+
+      <div class="name-list">
+                        <table summary="aliases">
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">alias_method</td>
+          <td>-&gt;</td>
+          <td class="context-item-value">alias_setter</td>
+        </tr>
+      <tr class="top-aligned-row context-row">
+        <td>&nbsp;</td>
+        <td colspan="2" class="context-item-desc">
+Alias an accessor. This create an alias for both a reader and a writer.
+
+<pre>
+  class AttrSetterExample
+    attr_setter :a
+    alias_setter :b, :a
+  end
+
+  x = AttrSetterExample.new
+  x.b(1)
+  x.a        #=&gt; 1
+</pre>
+<p>
+CREDIT: Trans
+</p>
+</td>
+      </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">extend</td>
+          <td>-&gt;</td>
+          <td class="context-item-value">can</td>
+        </tr>
+      <tr class="top-aligned-row context-row">
+        <td>&nbsp;</td>
+        <td colspan="2" class="context-item-desc">
+An alias for extend.
+
+<pre>
+  module EgCan
+    def foo; &quot;foo&quot;; end
+  end
+
+  class EgCanClass
+    can EgCan
+  end
+
+  EgCanClass.foo  #=&gt; 'foo'
+</pre>
+<p>
+BTW, why <a href="Module.html#M000313">is</a> Forwardable an -able?
+It&#8216;s not a mixin!
+</p>
+</td>
+      </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">===</td>
+          <td>-&gt;</td>
+          <td class="context-item-value">class?</td>
+        </tr>
+      <tr class="top-aligned-row context-row">
+        <td>&nbsp;</td>
+        <td colspan="2" class="context-item-desc">
+Alias for #===. This provides a verbal method for inquery.
+
+<pre>
+  s = &quot;HELLO&quot;
+  String.class?(s)  #=&gt; true
+</pre>
+</td>
+      </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">undef_method</td>
+          <td>-&gt;</td>
+          <td class="context-item-value">nodef</td>
+        </tr>
+      <tr class="top-aligned-row context-row">
+        <td>&nbsp;</td>
+        <td colspan="2" class="context-item-desc">
+Alias for undef_method. This has been called &quot;nodef&quot; instead of
+undef to help clarify that it doesn&#8216;t get rid of the method, but
+rather represses repsonse.
+
+</td>
+      </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">remove_method</td>
+          <td>-&gt;</td>
+          <td class="context-item-value">remove</td>
+        </tr>
+      <tr class="top-aligned-row context-row">
+        <td>&nbsp;</td>
+        <td colspan="2" class="context-item-desc">
+Alias for remove_method. This method actually &quot;undefines&quot; a
+method and will raise an error <a href="Module.html#M000313">is</a> the
+method <a href="Module.html#M000313">is</a> not defined in receiver.
+
+</td>
+      </tr>
+                        </table>
+      </div>
+    </div>
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000321" class="method-detail">
+        <a name="M000321"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000321.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000321.html');return false;">
+          <span class="method-name">*</span><span class="method-args">(rename_map)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Rename methods.
+</p>
+<pre>
+  module AStar
+    def a; &quot;a&quot;; end
+  end
+
+  BStar = AStar * { :a =&gt; :b }
+
+  class XStar; include BStar; end
+
+  XStar.new.b    #=&gt; &quot;a&quot;
+</pre>
+<p>
+CREDIT: Thomas Sawyer, Robert Dober
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000319" class="method-detail">
+        <a name="M000319"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000319.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000319.html');return false;">
+          <span class="method-name">+</span><span class="method-args">(other)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Combine modules.
+</p>
+<pre>
+  module APlus
+    def a; &quot;a&quot;; end
+  end
+
+  module BPlus
+    def b; &quot;b&quot;; end
+  end
+
+  CPlus = APlus + BPlus
+
+  class XPlus; include CPlus; end
+
+  XPlus.new.a    #=&gt; &quot;a&quot;
+  XPlus.new.b    #=&gt; &quot;b&quot;
+</pre>
+<p>
+Note that in the old version of traits.rb we cloned modules and altered
+their copies&#8230;
+</p>
+<pre>
+  def +(other)
+    mod1 = other.clone
+    mod2 = clone
+    mod1.module_eval{ include mod2 }
+  end
+</pre>
+<p>
+Later it was realized that this thwarted the main benefit that Ruby&#8216;s
+concept of modules has over traditional traits, inheritance.
+</p>
+<p>
+CREDIT: Thomas Sawyer, Robert Dober
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000320" class="method-detail">
+        <a name="M000320"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000320.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000320.html');return false;">
+          <span class="method-name">-</span><span class="method-args">(other)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Subtract modules.
+</p>
+<pre>
+  module AMinus
+    def a; &quot;a&quot;; end
+    def b; &quot;b&quot;; end
+  end
+
+  CMinus = AMinus - [:a]
+
+  class XMinus; include CMinus; end
+
+  expect NameError do
+    XMinus.new.a  #=&gt; &quot;a&quot;
+  end
+
+  XMinus.new.b    #=&gt; &quot;b&quot;
+</pre>
+<p>
+TODO: Should this use all instance methods, not just public?
+</p>
+<p>
+CREDIT: Thomas Sawyer, Robert Dober
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000295" class="method-detail">
+        <a name="M000295"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000295.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000295.html');return false;">
+          <span class="method-name">abstract</span><span class="method-args">(*sym)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Create an <a href="Module.html#M000295">abstract</a> method. If it <a
+href="Module.html#M000313">is</a> not overridden, it will raise a TypeError
+when called.
+</p>
+<pre>
+  class AbstractExample
+    abstract :a
+  end
+
+  c = AbstractExample.new
+
+  expect TypeError do
+    c.a
+  end
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000296" class="method-detail">
+        <a name="M000296"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000296.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000296.html');return false;">
+          <span class="method-name">alias_method_chain</span><span class="method-args">(target, feature) {|aliased_target, punctuation| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Encapsulates the common pattern of &#8230;
+</p>
+<pre>
+  alias_method :foo_without_feature, :foo
+  alias_method :foo, :foo_with_feature
+</pre>
+<p>
+With this, you simply do &#8230;
+</p>
+<pre>
+  alias_method_chain :foo, :feature
+</pre>
+<p>
+For example
+</p>
+<pre>
+  class AliasMethodChainExample
+    def foo
+      &quot;foo&quot;
+    end
+
+    def foo_with_feature
+      &quot;foo!&quot;
+    end
+
+    alias_method_chain :foo, :feature
+  end
+</pre>
+<p>
+And both aliases are <a href="Module.html#M000325">set</a> up for you.
+</p>
+<pre>
+  example = AliasMethodChainExample.new
+  example.foo #=&gt; &quot;foo!&quot;
+  example.foo_without_feature #=&gt; &quot;foo&quot;
+</pre>
+<p>
+Query and bang methods (foo?, foo!) keep the same punctuation &#8230;
+</p>
+<pre>
+  alias_method_chain :foo?, :feature
+</pre>
+<p>
+<a href="Module.html#M000313">is</a> equivalent to &#8230;
+</p>
+<pre>
+  alias_method :foo_without_feature?, :foo?
+  alias_method :foo?, :foo_with_feature?
+</pre>
+<p>
+so you can safely chain foo, foo?, and foo! with the same feature.
+</p>
+<p>
+CREDIT: Bitsweat, Rails Team
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000335" class="method-detail">
+        <a name="M000335"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000335.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000335.html');return false;">
+          <span class="method-name">alias_tester</span><span class="method-args">(*args)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Create aliases for flag reader.
+</p>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000337" class="method-detail">
+        <a name="M000337"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000337.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000337.html');return false;">
+          <span class="method-name">alias_validator</span><span class="method-args">(*args)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Create aliases for validators.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000297" class="method-detail">
+        <a name="M000297"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000297.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000297.html');return false;">
+          <span class="method-name">all_instance_methods</span><span class="method-args">(include_super=true)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+List all instance methods, equivalent to
+</p>
+<pre>
+  public_instance_methods +
+  protected_instance_methods +
+  private_instance_methods
+</pre>
+<p>
+TODO: Better name for <a
+href="Module.html#M000297">all_instance_methods</a>?
+</p>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000298" class="method-detail">
+        <a name="M000298"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000298.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000298.html');return false;">
+          <span class="method-name">ancestor?</span><span class="method-args">( mod )</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Is a given class or module an ancestor of this class or module?
+</p>
+<pre>
+ class X ; end
+ class Y &lt; X ; end
+
+  X.ancestor?(Y)
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000299" class="method-detail">
+        <a name="M000299"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000299.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000299.html');return false;">
+          <span class="method-name">anonymous?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+A module may or may not have a name.
+</p>
+<p>
+module M; end M.name # =&gt; &quot;M&quot;
+</p>
+<p>
+m = Module.new m.name # =&gt; &quot;&quot;
+</p>
+<p>
+A module gets a name when it <a href="Module.html#M000313">is</a> first
+assigned to a constant. Either via the <tt>module</tt> or <tt>class</tt>
+keyword or by an explicit assignment:
+</p>
+<p>
+m = Module.new # creates an anonymous module M = m # =&gt; m gets a name
+here as a side-effect m.name # =&gt; &quot;M&quot;
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000330" class="method-detail">
+        <a name="M000330"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000330.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000330.html');return false;">
+          <span class="method-name">attr_class_accessor</span><span class="method-args">(name)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000331" class="method-detail">
+        <a name="M000331"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000331.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000331.html');return false;">
+          <span class="method-name">attr_class_reader</span><span class="method-args">(name)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000332" class="method-detail">
+        <a name="M000332"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000332.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000332.html');return false;">
+          <span class="method-name">attr_class_writer</span><span class="method-args">(name)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000333" class="method-detail">
+        <a name="M000333"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000333.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000333.html');return false;">
+          <span class="method-name">attr_inheritable_reader</span><span class="method-args">(name, default)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000300" class="method-detail">
+        <a name="M000300"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000300.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000300.html');return false;">
+          <span class="method-name">attr_setter</span><span class="method-args">(*args)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Create an attribute method for both getting and setting an instance
+variable:
+</p>
+<pre>
+  attr_setter :a
+</pre>
+<p>
+<a href="Module.html#M000313">is</a> equivalent to:
+</p>
+<pre>
+  def a(*args)
+    if args.size &gt; 0
+      @a = args[0]
+      self
+    else
+      @a
+    end
+  end
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000334" class="method-detail">
+        <a name="M000334"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000334.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000334.html');return false;">
+          <span class="method-name">attr_tester</span><span class="method-args">(*args)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Create an tester attribute. This creates a single method used to test the
+attribute for truth.
+</p>
+<pre>
+  attr_tester :a
+</pre>
+<p>
+<a href="Module.html#M000313">is</a> equivalent to
+</p>
+<pre>
+  def a?
+    @a ? true : @a
+  end
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000336" class="method-detail">
+        <a name="M000336"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000336.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000336.html');return false;">
+          <span class="method-name">attr_validator</span><span class="method-args">(*symbols, &amp;validator)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Like attr_writer, but the writer method validates the setting against the
+given block.
+</p>
+<p>
+CREDIT: ?
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000301" class="method-detail">
+        <a name="M000301"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000301.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000301.html');return false;">
+          <span class="method-name">basename</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the root name of the module/class.
+</p>
+<pre>
+  module ::BaseName
+    class Example
+    end
+  end
+
+  BaseName::Example.name       #=&gt; &quot;BaseName::Example&quot;
+  BaseName::Example.basename   #=&gt; &quot;Example&quot;
+</pre>
+<p>
+For anonymous modules this will provide a <a
+href="Module.html#M000301">basename</a> based on Module#inspect.
+</p>
+<pre>
+  m = Module.new
+  m.inspect       # &quot;#&lt;Module:0xb7bb0434&gt;&quot;
+  m.basename      # &quot;Module_0xb7bb0434&quot;
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000338" class="method-detail">
+        <a name="M000338"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000338.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000338.html');return false;">
+          <span class="method-name">cattr</span><span class="method-args">(*syms)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Creates a class-variable attribute that can be accessed both on an instance
+and class level.
+</p>
+<pre>
+  class CARExample
+    @@a = 10
+    cattr :a
+  end
+
+  CARExample.a           #=&gt; 10
+  CARExample.new.a       #=&gt; 10
+</pre>
+<p>
+CREDIT: David Heinemeier Hansson
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000341" class="method-detail">
+        <a name="M000341"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000341.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000341.html');return false;">
+          <span class="method-name">cattr_accessor</span><span class="method-args">(*syms)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Creates a class-variable attr_accessor that can be accessed both on an
+instance and class level.
+</p>
+<pre>
+  class CAAExample
+    cattr_accessor :a
+  end
+
+  CAAExample.a = 10
+  CAAExample.a           #=&gt; 10
+  mc = CAAExample.new
+  mc.a                   #=&gt; 10
+</pre>
+<p>
+CREDIT: David Heinemeier Hansson
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000339" class="method-detail">
+        <a name="M000339"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000339.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000339.html');return false;">
+          <span class="method-name">cattr_reader</span><span class="method-args">(*syms)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Creates a class-variable attr_reader that can be accessed both on an
+instance and class level.
+</p>
+<pre>
+  class CARExample
+    @@a = 10
+    cattr_reader :a
+  end
+
+  CARExample.a           #=&gt; 10
+  CARExample.new.a       #=&gt; 10
+</pre>
+<p>
+CREDIT: David Heinemeier Hansson
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000340" class="method-detail">
+        <a name="M000340"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000340.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000340.html');return false;">
+          <span class="method-name">cattr_writer</span><span class="method-args">(*syms)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Creates a class-variable attr_writer that can be accessed both on an
+instance and class level.
+</p>
+<pre>
+  class CAWExample
+    cattr_writer :a
+    def self.a
+      @@a
+    end
+  end
+
+  CAWExample.a = 10
+  CAWExample.a            #=&gt; 10
+  CAWExample.new.a = 29
+  CAWExample.a            #=&gt; 29
+</pre>
+<p>
+CREDIT: David Heinemeier Hansson
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000346" class="method-detail">
+        <a name="M000346"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000346.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000346.html');return false;">
+          <span class="method-name">class_accessor</span><span class="method-args">(name)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000317" class="method-detail">
+        <a name="M000317"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000317.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000317.html');return false;">
+          <span class="method-name">class_def</span><span class="method-args">(name, &amp;blk)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Defines an instance method within a class/module.
+</p>
+<p>
+CREDIT: WhyTheLuckyStiff
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000349" class="method-detail">
+        <a name="M000349"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000349.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000349.html');return false;">
+          <span class="method-name">class_extend</span><span class="method-args">(*mods, &amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Normally when including modules, class/module methods are not extended. To
+achieve this behavior requires some clever Ruby Karate. Instead <a
+href="Module.html#M000349">class_extend</a> provides an easy to use and
+clean solution. Simply place the extending class methods in a block of the
+special module method <a href="Module.html#M000349">class_extend</a>.
+</p>
+<pre>
+  module Mix
+    def inst_meth
+      puts 'inst_meth'
+    end
+
+    class_extend do
+      def class_meth
+        &quot;Class Method!&quot;
+      end
+    end
+  end
+
+  class X
+    include Mix
+  end
+
+  X.class_meth  #=&gt; &quot;Class Method!&quot;
+</pre>
+<p>
+NOTE: This old class_extension version of this method did not extend the
+containing class automatically &#8212;it had to be done by hand. With <a
+href="Module.html#M000349">class_extend</a>, that <a
+href="Module.html#M000313">is</a> no longer the case.
+</p>
+<p>
+CREDIT: Daniel Schierbeck, Thomas Sawyer
+</p>
+<p>
+THANKS: Nobu Nakada, Ulysses
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000350" class="method-detail">
+        <a name="M000350"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000350.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000350.html');return false;">
+          <span class="method-name">class_extensions</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000351" class="method-detail">
+        <a name="M000351"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000351.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000351.html');return false;">
+          <span class="method-name">class_inheritor</span><span class="method-args">(key, obj, op=nil, &amp;fop)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <h1><a href="Class.html">Class</a> Inheritor</h1>
+<p>
+Create an dynamic class inheritable attribute.
+</p>
+<p>
+Inheritor providse a means to store and inherit data via the class
+heirarchy. An inheritor creates two methods one named after the key that
+provides a reader. And one named after key! which provides the writer.
+(Because of the unique nature of inheritor the reader and writer
+can&#8216;t be the same method.)
+</p>
+<p>
+The first argument <a href="Module.html#M000313">is</a> the
+inheritor&#8216;s name. The second argument <a
+href="Module.html#M000313">is</a> the archtype object. This object must be
+duplicable (via dup). The last argument <a
+href="Module.html#M000313">is</a> either the symbolic operator/method or a
+block that specifies how one hierarchical level &quot;integrates&quot; with
+the next.
+</p>
+<pre>
+  class X
+    class_inheritor :x, [], :+
+  end
+
+  class Y &lt; X
+  end
+
+  X.x! &lt;&lt; :a
+  X.x  #=&gt; [:a]
+  Y.x  #=&gt; [:a]
+
+  Y.x! &lt;&lt; :b
+  X.x  #=&gt; [:a]
+  Y.x  #=&gt; [:a, :b]
+</pre>
+<p>
+NOTE: Adding an inheritor directly to <a href="Module.html">Module</a> or
+<a href="Class.html">Class</a> will probably not do what <a
+href="Module.html#M000313">is</a> expected. Thankfully that usecase <a
+href="Module.html#M000313">is</a> likely a YAGNI, but in anycase it <a
+href="Module.html#M000313">is</a> even more likely that it <a
+href="Module.html#M000313">is</a> not possible with this code.
+</p>
+<p>
+CREDIT: Thomas Sawyer
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000363" class="method-detail">
+        <a name="M000363"></a>
+
+        <div class="method-heading">
+          <span class="method-name">class_load</span><span class="method-args">( path )</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="Module.html#M000360">module_load</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000310" class="method-detail">
+        <a name="M000310"></a>
+
+        <div class="method-heading">
+          <span class="method-name">class_method_defined?</span><span class="method-args">(meth)</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for singleton_method_defined?
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000347" class="method-detail">
+        <a name="M000347"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000347.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000347.html');return false;">
+          <span class="method-name">class_reader</span><span class="method-args">(name)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000362" class="method-detail">
+        <a name="M000362"></a>
+
+        <div class="method-heading">
+          <span class="method-name">class_require</span><span class="method-args">( path )</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="Module.html#M000361">module_require</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000348" class="method-detail">
+        <a name="M000348"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000348.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000348.html');return false;">
+          <span class="method-name">class_writer</span><span class="method-args">(name)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000352" class="method-detail">
+        <a name="M000352"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000352.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000352.html');return false;">
+          <span class="method-name">copy_inheritor</span><span class="method-args">(name, default={})</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Like <a href="Module.html#M000351">class_inheritor</a> but non-dynamic. The
+value of the inheritor <a href="Module.html#M000313">is</a> copied from the
+ancestor on first read.
+</p>
+<pre>
+  c = Class.new do
+    def self.x; ['x']; end
+  end
+
+  d = Class.new(c) do
+    copy_inheritor :x
+  end
+
+  d.x  #=&gt; ['x']
+</pre>
+<p>
+CREDIT: Thomas Sawyer
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000353" class="method-detail">
+        <a name="M000353"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000353.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000353.html');return false;">
+          <span class="method-name">enclosure</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the module which contains this one according to its name.
+</p>
+<pre>
+  module ::EncExample
+    module M
+      module N
+      end
+    end
+  end
+
+  EncExample::M::N.enclosure  #=&gt; EncExample::M
+</pre>
+<p>
+The <a href="Module.html#M000353">enclosure</a> of top-level and anonymous
+modules <a href="Module.html#M000313">is</a> Object.
+</p>
+<pre>
+  EncExample.enclosure   #=&gt; Object
+  Module.new.enclosure   #=&gt; Object
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000354" class="method-detail">
+        <a name="M000354"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000354.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000354.html');return false;">
+          <span class="method-name">enclosures</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns all the namespaces of this module according ordered from nearest
+and moving outwards. The receiver <a href="Module.html#M000313">is</a> not
+contained within the result.
+</p>
+<pre>
+  module ::EncExample
+    module M
+      module N
+      end
+    end
+  end
+
+  EncExample.enclosures        #=&gt; [Object]
+  EncExample::M.enclosures     #=&gt; [EncExample, Object]
+  EncExample::M::N.enclosures  #=&gt; [EncExample::M, EncExample, Object]
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000355" class="method-detail">
+        <a name="M000355"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000355.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000355.html');return false;">
+          <span class="method-name">encname</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Eclosure name.
+</p>
+<pre>
+  module ::EncExample
+    module M
+      module N
+      end
+    end
+  end
+
+  EncExample::M::N.encname  #=&gt; &quot;EncExample::M&quot;
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000302" class="method-detail">
+        <a name="M000302"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000302.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000302.html');return false;">
+          <span class="method-name">home</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the module or class containing the receiver.
+</p>
+<pre>
+  module ::HomeExample
+    module M
+      module N
+      end
+    end
+  end
+
+  HomeExample::M::N.home  #=&gt; HomeExample::M
+</pre>
+<p>
+The <a href="Module.html#M000302">home</a> of a top-level module/class <a
+href="Module.html#M000313">is</a> Object.
+</p>
+<pre>
+  HomeExample.home   #=&gt; Object
+</pre>
+<p>
+This method <a href="Module.html#M000313">is</a> called <b><a
+href="Module.html#M000302">home</a></b> because techinally a module or
+class <a href="Module.html#M000313">is</a> just a constant reference, and
+as such can reside with multiple namespaces, like any variable. For
+example:
+</p>
+<pre>
+  module OtherPlace
+    M = ::HomeExample::M
+  end
+</pre>
+<p>
+In this example, you might think that +OtherPlace::M+&#8217;s <a
+href="Module.html#M000302">home</a> would be <tt>OtherPlace</tt>, but
++OtherPlace::M+ <a href="Module.html#M000313">is</a> the same object as
++HomeExample::M+, and it can have only one &quot;<a
+href="Module.html#M000302">home</a>&quot; &#8212;the original location of
+it&#8216;s definition.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000303" class="method-detail">
+        <a name="M000303"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000303.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000303.html');return false;">
+          <span class="method-name">homename</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the name of module or class containing the receiver.
+</p>
+<pre>
+  module ::HomeExample
+    module M
+      module N
+      end
+    end
+  end
+
+  HomeExample::M::N.homename  #=&gt; &quot;HomeExample::M&quot;
+</pre>
+<p>
+See also <a href="Module.html#M000301">Module#basename</a>.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000305" class="method-detail">
+        <a name="M000305"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000305.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000305.html');return false;">
+          <span class="method-name">housing</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns all the namespaces of this module according ordered from nearest
+and moving outwards. The receiver <a href="Module.html#M000313">is</a> not
+contained within the result.
+</p>
+<pre>
+  module ::HouseExample
+    module M
+      module N
+      end
+    end
+  end
+
+  HouseExample.housing        #=&gt; [Object]
+  HouseExample::M.housing     #=&gt; [HouseExample, Object]
+  HouseExample::M::N.housing  #=&gt; [HouseExample::M, HouseExample, Object]
+</pre>
+<p>
+Compare this to +Module.nesting+.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000359" class="method-detail">
+        <a name="M000359"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000359.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000359.html');return false;">
+          <span class="method-name">include_as</span><span class="method-args">(h)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Include a module via a specified space.
+</p>
+<pre>
+  module T
+    def t ; &quot;HERE&quot; ; end
+  end
+
+  class X
+    include_as :test =&gt; T
+    def t ; test.t ; end
+  end
+
+  X.new.t  #=&gt; &quot;HERE&quot;
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000356" class="method-detail">
+        <a name="M000356"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000356.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000356.html');return false;">
+          <span class="method-name">instance_function</span><span class="method-args">(*meths)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Converts module methods into instance methods such that the first parameter
+<a href="Module.html#M000313">is</a> passed <tt>self</tt>. This promotes
+DRY programming when wishing to offer both inheritable and module callable
+procedures.
+</p>
+<p>
+This method <a href="Module.html#M000313">is</a> modeled after
+<tt>module_function</tt> which essentially has the the opposite effect. Due
+to implementation limitations, this must use the callback
+singleton_method_added to emulate <tt>module_function</tt> when no method
+names are given.
+</p>
+<pre>
+  module MyModule
+    instance_function
+
+    def self.jumble(obj, arg)
+      obj + arg
+    end
+  end
+
+  MyModule.jumble(&quot;Try&quot;, &quot;Me&quot;)  #=&gt; &quot;TryMe&quot;
+
+  s = &quot;Try&quot;
+  s.extend MyModule
+  s.jumble(&quot;Me&quot;)                #=&gt; &quot;TryMe&quot;
+</pre>
+<p>
+Note: This used to be a module called PromoteSelf and later Instantize,
+before becoming a method.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000306" class="method-detail">
+        <a name="M000306"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000306.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000306.html');return false;">
+          <span class="method-name">instance_method!</span><span class="method-args">(s)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Access method as a singleton object and retain state.
+</p>
+<pre>
+  module ::K
+    def hello
+      puts &quot;Hello World!&quot;
+    end
+  end
+
+  K.instance_method!(:hello).inspect   #=&gt; &quot;#&lt;UnboundMethod: K#hello&gt;&quot;
+</pre>
+<p>
+NOTE: This <a href="Module.html#M000313">is</a> limited to the scope of the
+current module/class.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000307" class="method-detail">
+        <a name="M000307"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000307.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000307.html');return false;">
+          <span class="method-name">instance_method_defined?</span><span class="method-args">(meth)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Query whether a public instance method <a href="Module.html#M000313">is</a>
+defined for the module.
+</p>
+<p>
+CREDIT: Gavin Sinclair, Noah Gibbs
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000311" class="method-detail">
+        <a name="M000311"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000311.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000311.html');return false;">
+          <span class="method-name">integrate</span><span class="method-args">(mod, &amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Using <a href="Module.html#M000311">integrate</a> <a
+href="Module.html#M000313">is</a> just like using include except the module
+included <a href="Module.html#M000313">is</a> a reconstruction of the one
+given altered by the commands given in the block.
+</p>
+<p>
+Convenient commands available are: rename, redef, remove, nodef and <a
+href="Module.html#M000329">wrap</a>. But any module method can be used.
+</p>
+<pre>
+  module IntegrateExampleModule
+    def q ; &quot;q&quot; ; end
+    def y ; &quot;y&quot; ; end
+  end
+
+  class InegrateExampleClass
+    integrate IntegrateExampleModule do
+      undef_method :y
+    end
+  end
+
+  x = InegrateExampleClass.new
+  x.q  #=&gt; &quot;q&quot;
+
+  expect NameError do
+    x.y
+  end
+</pre>
+<p>
+This <a href="Module.html#M000313">is</a> like <a
+href="Module.html#M000324">revisal</a>, but <a
+href="Module.html#M000324">revisal</a> only returns the reconstructred
+module. It does not include it.
+</p>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000313" class="method-detail">
+        <a name="M000313"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000313.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000313.html');return false;">
+          <span class="method-name">is</span><span class="method-args">(*mods)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+An alias for include.
+</p>
+<pre>
+  class IsExample
+    is Enumerable
+  end
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000312" class="method-detail">
+        <a name="M000312"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000312.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000312.html');return false;">
+          <span class="method-name">is?</span><span class="method-args">(base)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Is a given class or module an ancestor of this class or module?
+</p>
+<pre>
+  class IsX ; end
+  class IsY &lt; IsX ; end
+
+  IsY.is?(IsX)  #=&gt; true
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000342" class="method-detail">
+        <a name="M000342"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000342.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000342.html');return false;">
+          <span class="method-name">mattr</span><span class="method-args">(*syms)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Creates a class-variable attribute that can be accessed both on an instance
+and class level.
+</p>
+<pre>
+  c = Class.new do
+    mattr :a
+    def initialize
+      @@a = 10
+    end
+  end
+
+  c.new.a       #=&gt; 10
+  c.a           #=&gt; 10
+</pre>
+<p>
+NOTE: The <a href="Module.html#M000342">mattr</a> methods may not be as
+useful for modules as the <a href="Module.html#M000338">cattr</a> methods
+are for classes, becuase class-level methods are not &quot;inherited&quot;
+across the metaclass for included modules.
+</p>
+<p>
+CREDIT: David Heinemeier Hansson
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000345" class="method-detail">
+        <a name="M000345"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000345.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000345.html');return false;">
+          <span class="method-name">mattr_accessor</span><span class="method-args">(*syms)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Creates a class-variable attr_accessor that can be accessed both on an
+instance and class level.
+</p>
+<pre>
+  c = Class.new do
+    mattr_accessor :a
+  end
+
+  c.a = 10
+  c.a           #=&gt; 10
+
+  x = c.new
+  x.a           #=&gt; 10
+</pre>
+<p>
+CREDIT: David Heinemeier Hansson
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000343" class="method-detail">
+        <a name="M000343"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000343.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000343.html');return false;">
+          <span class="method-name">mattr_reader</span><span class="method-args">( *syms )</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Creates a class-variable attr_reader that can be accessed both on an
+instance and class level.
+</p>
+<pre>
+  c = Class.new do
+    @@a = 10
+    mattr_reader :a
+  end
+
+  c.a           #=&gt; 10
+  c.new.a       #=&gt; 10
+</pre>
+<p>
+CREDIT: David Heinemeier Hansson
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000344" class="method-detail">
+        <a name="M000344"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000344.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000344.html');return false;">
+          <span class="method-name">mattr_writer</span><span class="method-args">(*syms)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Creates a class-variable attr_writer that can be accessed both on an
+instance and class level.
+</p>
+<pre>
+  c = Class.new do
+    mattr_writer :a
+    def self.a
+      @@a
+    end
+  end
+
+  c.a = 10
+  c.a            #=&gt; 10
+
+  c.new.a = 29
+  c.a            #=&gt; 29
+</pre>
+<p>
+CREDIT: David Heinemeier Hansson
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000357" class="method-detail">
+        <a name="M000357"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000357.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000357.html');return false;">
+          <span class="method-name">memoize</span><span class="method-args">(*args)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+This <a href="Module.html#M000313">is</a> here for backward compatibility.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000315" class="method-detail">
+        <a name="M000315"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000315.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000315.html');return false;">
+          <span class="method-name">method_clash</span><span class="method-args">(other)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Detect method name clash between modules and/or classes, regardless of
+method visibility:
+</p>
+<pre>
+  module MethodClashExample
+
+    module A
+      def c; end
+    end
+
+    module B
+      private
+      def c; end
+    end
+
+    A.method_clash(B)  #=&gt; [:c]
+
+  end
+</pre>
+<p>
+CREDIT: Thomas Sawyer, Robert Dober
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000316" class="method-detail">
+        <a name="M000316"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000316.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000316.html');return false;">
+          <span class="method-name">method_clash?</span><span class="method-args">(other)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Uses <a href="Module.html#M000315">method_clash</a> to return <tt>true</tt>
+or <tt>false</tt> if there are method name clashes.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000358" class="method-detail">
+        <a name="M000358"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000358.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000358.html');return false;">
+          <span class="method-name">method_space</span><span class="method-args">(name, mod=nil, &amp;blk)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Create method namespaces, allowing for method chains but still accessing
+the object&#8216;s instance.
+</p>
+<pre>
+  class A
+    attr_writer :x
+    method_space :inside do
+      def x; @x; end
+    end
+  end
+
+  a = A.new
+  a.x = 10
+  a.inside.x  #=&gt; 10
+
+  expect NoMethodError do
+    a.x
+  end
+</pre>
+<p>
+CREDIT: Pit Captain
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000314" class="method-detail">
+        <a name="M000314"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000314.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000314.html');return false;">
+          <span class="method-name">methodize</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Translate a module name to a suitable method name.
+</p>
+<pre>
+  module ::EgMethodize
+    module Eg
+    end
+  end
+
+  EgMethodize.methodize      #=&gt; &quot;eg_methodize&quot;
+  EgMethodize::Eg.methodize  #=&gt; &quot;eg_methodize__eg&quot;
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000304" class="method-detail">
+        <a name="M000304"></a>
+
+        <div class="method-heading">
+          <span class="method-name">modname</span><span class="method-args">()</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="Module.html#M000303">homename</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000318" class="method-detail">
+        <a name="M000318"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000318.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000318.html');return false;">
+          <span class="method-name">module_def</span><span class="method-args">(name, &amp;blk)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Defines an instance method within a class/module.
+</p>
+<p>
+CREDIT: WhyTheLuckyStiff
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000360" class="method-detail">
+        <a name="M000360"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000360.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000360.html');return false;">
+          <span class="method-name">module_load</span><span class="method-args">( path )</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Load file directly into module/class namespace.
+</p>
+<p>
+Please use this with careful consideration. It <a
+href="Module.html#M000313">is</a> best suited to loading plugin-type
+scripts, and should generally not be used as a substitue for Ruby&#8216;s
+standard load system.
+</p>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000309" class="method-detail">
+        <a name="M000309"></a>
+
+        <div class="method-heading">
+          <span class="method-name">module_method_defined?</span><span class="method-args">(meth)</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for singleton_method_defined?
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000361" class="method-detail">
+        <a name="M000361"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000361.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000361.html');return false;">
+          <span class="method-name">module_require</span><span class="method-args">( path )</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Require file into module/class namespace.
+</p>
+<p>
+Unlike load this keeps a per-module cache and will not load the same file
+into the same module more than once despite repeated attempts.
+</p>
+<p>
+The cache <a href="Module.html#M000313">is</a> kept in a global var called
++$<a href="Module.html#M000361">module_require</a>+.
+</p>
+<p>
+Please use this with careful consideration. It <a
+href="Module.html#M000313">is</a> best suited to loading plugin-type
+scripts, and should generally not be used as a substitue for Ruby&#8216;s
+standard load system.
+</p>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000322" class="method-detail">
+        <a name="M000322"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000322.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000322.html');return false;">
+          <span class="method-name">pathize</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Converts a class name to a unix path.
+</p>
+<pre>
+  module ::ExamplePathize
+    module Example
+    end
+  end
+
+  ExamplePathize.pathize           #=&gt; &quot;example_pathize&quot;
+  ExamplePathize::Example.pathize  #=&gt; &quot;example_pathize/example&quot;
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000364" class="method-detail">
+        <a name="M000364"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000364.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000364.html');return false;">
+          <span class="method-name">preextend</span><span class="method-args">(aspect)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Prepend an <tt>aspect</tt> module to a module. This only works at the
+module level.
+</p>
+<pre>
+  module ::PreX
+    def x; &quot;x&quot;; end
+  end
+
+  module ::PreU
+    def x; '{' + super + '}'; end
+  end
+
+  PreX.preextend(PreU)
+
+  PreX.x  # =&gt; &quot;{x}&quot;
+</pre>
+<p>
+CREDIT Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000365" class="method-detail">
+        <a name="M000365"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000365.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000365.html');return false;">
+          <span class="method-name">prepend</span><span class="method-args">(mod)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Prepend module.
+</p>
+<pre>
+  class X
+    def a; &quot;Xa&quot;; end
+  end
+
+  module M
+    def a; &quot;M&quot; + super ; end
+  end
+
+  class X
+    prepend M
+  end
+
+  X.new.a  #=&gt; MXa
+</pre>
+<p>
+IMPORTANT! <a href="Module.html#M000365">prepend</a> <a
+href="Module.html#M000313">is</a> not dynamic, rather it copies all methods
+when included on a class or module. For this reason one must be careful to
+invoke <a href="Module.html#M000365">prepend</a> AFTER any method
+definitions that are to be effected. Ideally this would not be necessary,
+but it would require support in Ruby&#8216;s C+ source to make it possible.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000324" class="method-detail">
+        <a name="M000324"></a>
+
+        <div class="method-heading">
+          <span class="method-name">revisal</span><span class="method-args">(&amp;blk)</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="Module.html#M000323">revise</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000323" class="method-detail">
+        <a name="M000323"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000323.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000323.html');return false;">
+          <span class="method-name">revise</span><span class="method-args">(&amp;blk)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return a new module based on another. This includes the original module
+into the new revised module.
+</p>
+<pre>
+  module ReviseExample
+    def foo; &quot;foo&quot;; end
+  end
+
+  ReviseExample2 = ReviseExample.revise do
+    alias_method :bar, :foo
+  end
+
+  object = Object.new
+  object.extend ReviseExample2
+  object.bar  #=&gt; 'foo'
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000325" class="method-detail">
+        <a name="M000325"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000325.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000325.html');return false;">
+          <span class="method-name">set</span><span class="method-args">(option, value=self) {|self| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets an option to the given value. If the value <a
+href="Module.html#M000313">is</a> a proc, the proc will be called every
+time the option <a href="Module.html#M000313">is</a> accessed.
+</p>
+<p>
+CREDIT: Blake Mizerany (Sinatra)
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000308" class="method-detail">
+        <a name="M000308"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000308.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000308.html');return false;">
+          <span class="method-name">singleton_method_defined?</span><span class="method-args">(meth)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Query whether a normal (singleton) method <a
+href="Module.html#M000313">is</a> defined for the module.
+</p>
+<p>
+CREDIT: Gavin Sinclair, Noah Gibbs
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000326" class="method-detail">
+        <a name="M000326"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000326.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000326.html');return false;">
+          <span class="method-name">spacename</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the name of module&#8216;s container module.
+</p>
+<pre>
+  module ::SpaceName
+    class Example
+    end
+  end
+
+  SpaceName::Example.name         #=&gt; &quot;SpaceName::Example&quot;
+  SpaceName::Example.spacename    #=&gt; &quot;SpaceName&quot;
+</pre>
+<p>
+This used to be called <tt>dirname</tt>.
+</p>
+<p>
+See also <a href="Module.html#M000301">Module#basename</a>.
+</p>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000327" class="method-detail">
+        <a name="M000327"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000327.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000327.html');return false;">
+          <span class="method-name">to_obj</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Create an instance of Object and extend it with <tt>self</tt>.
+</p>
+<pre>
+  mod = Module.new do
+    def foo; &quot;foo&quot;; end
+  end
+
+  obj = mod.to_obj
+
+  obj.foo #=&gt; &quot;foo&quot;
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000329" class="method-detail">
+        <a name="M000329"></a>
+
+        <div class="method-heading">
+          <span class="method-name">wrap</span><span class="method-args">( sym, &amp;blk )</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="Module.html#M000328">wrap_method</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000328" class="method-detail">
+        <a name="M000328"></a>
+
+        <div class="method-heading">
+          <a href="Module.src/M000328.html" target="Code" class="method-signature"
+            onclick="popupCode('Module.src/M000328.html');return false;">
+          <span class="method-name">wrap_method</span><span class="method-args">( sym, &amp;blk )</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Creates a new method wrapping the previous of the same name. <a
+href="Reference.html">Reference</a> to the old method <a
+href="Module.html#M000313">is</a> passed into the new definition block as
+the first parameter.
+</p>
+<pre>
+  class WrapExample
+    def foo
+      &quot;foo&quot;
+    end
+
+    wrap_method(:foo) do |old_meth, *args|
+      old_meth.call + '!'
+    end
+  end
+
+  example = WrapExample.new
+  example.foo #=&gt; 'foo!'
+</pre>
+<p>
+Keep in mind that this cannot be used to <a
+href="Module.html#M000329">wrap</a> methods that take a block.
+</p>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

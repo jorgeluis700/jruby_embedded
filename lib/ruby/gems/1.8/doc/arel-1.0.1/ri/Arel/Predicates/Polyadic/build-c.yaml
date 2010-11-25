@@ -1,0 +1,24 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Build a Polyadic predicate based on:"
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>operator</tt> - The Predicate subclass that defines the type of operation (LessThan, Equality, etc)
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>operand1</tt> - The left-hand operand (normally an Arel::Attribute)
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>additional_operands</tt> - All possible right-hand operands
+    type: :BULLET
+full_name: Arel::Predicates::Polyadic::build
+is_singleton: true
+name: build
+params: (operator, operand1, *additional_operands)
+visibility: public

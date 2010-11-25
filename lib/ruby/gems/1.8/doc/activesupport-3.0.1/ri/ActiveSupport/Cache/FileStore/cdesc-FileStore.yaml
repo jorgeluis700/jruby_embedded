@@ -1,0 +1,49 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: cache_path
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: A cache store implementation which stores everything on the filesystem.
+  - !ruby/struct:SM::Flow::P 
+    body: FileStore implements the Strategy::LocalCache strategy which implements an in memory cache inside of a block.
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: DIR_FORMATTER
+    value: "\"%03X\""
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: ESCAPE_FILENAME_CHARS
+    value: /[^a-z0-9_.-]/i
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: UNESCAPE_FILENAME_CHARS
+    value: /%[0-9A-F]{2}/
+full_name: ActiveSupport::Cache::FileStore
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: cleanup
+  - !ruby/object:RI::MethodSummary 
+    name: clear
+  - !ruby/object:RI::MethodSummary 
+    name: decrement
+  - !ruby/object:RI::MethodSummary 
+    name: delete_entry
+  - !ruby/object:RI::MethodSummary 
+    name: delete_matched
+  - !ruby/object:RI::MethodSummary 
+    name: increment
+  - !ruby/object:RI::MethodSummary 
+    name: read_entry
+  - !ruby/object:RI::MethodSummary 
+    name: write_entry
+name: FileStore
+superclass: Store

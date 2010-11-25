@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "TODO: what do we do with HTML?"
+full_name: RedCloth::Formatters::LATEX#inline_html
+is_singleton: false
+name: inline_html
+params: (opts)
+visibility: public

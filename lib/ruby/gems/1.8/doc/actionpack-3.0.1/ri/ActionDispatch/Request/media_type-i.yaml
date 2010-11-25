@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionDispatch::Request#media_type
+is_singleton: false
+name: media_type
+params: ()
+visibility: public

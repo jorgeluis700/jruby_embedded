@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: Regexp</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">Regexp</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/lib/core/facets/regexp/arity_rb.html">
+                lib/core/facets/regexp/arity.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/regexp/multiline_rb.html">
+                lib/core/facets/regexp/multiline.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/regexp/op_add_rb.html">
+                lib/core/facets/regexp/op_add.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/regexp/op_or_rb.html">
+                lib/core/facets/regexp/op_or.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/regexp/to_re_rb.html">
+                lib/core/facets/regexp/to_re.rb
+                </a>
+        <br />
+                <a href="../files/lib/tour/facets/regexp/op_or_rb.html">
+                lib/tour/facets/regexp/op_or.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                Object
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000407">+</a>&nbsp;&nbsp;
+      <a href="#M000405">arity</a>&nbsp;&nbsp;
+      <a href="#M000406">multiline?</a>&nbsp;&nbsp;
+      <a href="#M000410">to_re</a>&nbsp;&nbsp;
+      <a href="#M000409">to_regexp</a>&nbsp;&nbsp;
+      <a href="#M000408">|</a>&nbsp;&nbsp;
+      <a href="#M000411">|</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000407" class="method-detail">
+        <a name="M000407"></a>
+
+        <div class="method-heading">
+          <a href="Regexp.src/M000407.html" target="Code" class="method-signature"
+            onclick="popupCode('Regexp.src/M000407.html');return false;">
+          <span class="method-name">+</span><span class="method-args">(other)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Add regular expressions.
+</p>
+<pre>
+  /a/ + /b/ == /(?-mix:a)(?-mix:b)/
+</pre>
+<p>
+Functionally equivalent to:
+</p>
+<pre>
+  /ab/
+</pre>
+<p>
+CREDIT: Tyler Rick
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000405" class="method-detail">
+        <a name="M000405"></a>
+
+        <div class="method-heading">
+          <a href="Regexp.src/M000405.html" target="Code" class="method-signature"
+            onclick="popupCode('Regexp.src/M000405.html');return false;">
+          <span class="method-name">arity</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the number of backreferencing subexpressions.
+</p>
+<pre>
+  /(a)(b)(c)/.arity  #=&gt; 3
+  /(a(b(c)))/.arity  #=&gt; 3
+</pre>
+<p>
+Note that this is not perfect, especially with regards to \x and embedded
+comments.
+</p>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000406" class="method-detail">
+        <a name="M000406"></a>
+
+        <div class="method-heading">
+          <a href="Regexp.src/M000406.html" target="Code" class="method-signature"
+            onclick="popupCode('Regexp.src/M000406.html');return false;">
+          <span class="method-name">multiline?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Is a regular expression <a href="Regexp.html#M000406">multiline?</a>
+</p>
+<pre>
+  /x/.multiline?   #=&gt; false
+  /x/m.multiline?  #=&gt; true
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000410" class="method-detail">
+        <a name="M000410"></a>
+
+        <div class="method-heading">
+          <a href="Regexp.src/M000410.html" target="Code" class="method-signature"
+            onclick="popupCode('Regexp.src/M000410.html');return false;">
+          <span class="method-name">to_re</span><span class="method-args">(esc=false)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Simply returns itself. Helpful when converting strings to regular
+expressions, where regexp might occur as well &#8212;in the same vien as
+using to_s on symbols. The parameter is actaully a dummy parameter to
+coincide with <a href="String.html#M000202">String#to_re</a>.
+</p>
+<pre>
+  /abc/.to_re  #=&gt; /abc/
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000409" class="method-detail">
+        <a name="M000409"></a>
+
+        <div class="method-heading">
+          <a href="Regexp.src/M000409.html" target="Code" class="method-signature"
+            onclick="popupCode('Regexp.src/M000409.html');return false;">
+          <span class="method-name">to_regexp</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Like <a href="Regexp.html#M000410">to_re</a>, but following Ruby&#8216;s
+formal definitions, only a Regular expression type object will respond to
+this.
+</p>
+<p>
+Note that to be of much real use this should be defined in core Ruby.
+</p>
+<p>
+CREDIT: Florian Gross
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000408" class="method-detail">
+        <a name="M000408"></a>
+
+        <div class="method-heading">
+          <a href="Regexp.src/M000408.html" target="Code" class="method-signature"
+            onclick="popupCode('Regexp.src/M000408.html');return false;">
+          <span class="method-name">|</span><span class="method-args">(other)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Add regular expressions.
+</p>
+<pre>
+  /a/ | /b/ == /(?-mix:a)(?-mix:b)/
+</pre>
+<p>
+Functionally equivalent to:
+</p>
+<pre>
+  /ab/
+</pre>
+<p>
+CREDIT:
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000411" class="method-detail">
+        <a name="M000411"></a>
+
+        <div class="method-heading">
+          <a href="Regexp.src/M000411.html" target="Code" class="method-signature"
+            onclick="popupCode('Regexp.src/M000411.html');return false;">
+          <span class="method-name">|</span><span class="method-args">(arg)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Operator form of `Regexp.union`:
+</p>
+<pre>
+  /a/ | /b/  #=&gt; /(a|b)/
+</pre>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

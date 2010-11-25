@@ -1,0 +1,22 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: ActionDispatch::Http::Parameters
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: parameters
+  - !ruby/object:RI::MethodSummary 
+    name: params
+  - !ruby/object:RI::MethodSummary 
+    name: path_parameters
+  - !ruby/object:RI::MethodSummary 
+    name: symbolized_path_parameters
+name: Parameters
+superclass: 

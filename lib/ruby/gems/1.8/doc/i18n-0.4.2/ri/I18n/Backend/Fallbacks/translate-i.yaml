@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Overwrites the Base backend translate method so that it will try each locale given by I18n.fallbacks for the given locale. E.g. for the locale :&quot;de-DE&quot; it might try the locales :&quot;de-DE&quot;, :de and :en (depends on the fallbacks implementation) until it finds a result with the given options. If it does not find any result for any of the locales it will then raise a MissingTranslationData exception as usual.
+  - !ruby/struct:SM::Flow::P 
+    body: The default option takes precedence over fallback locales only when it's a Symbol. When the default contains a String or a Proc it is evaluated last after all the fallback locales have been tried.
+full_name: I18n::Backend::Fallbacks#translate
+is_singleton: false
+name: translate
+params: (locale, key, options = {})
+visibility: public

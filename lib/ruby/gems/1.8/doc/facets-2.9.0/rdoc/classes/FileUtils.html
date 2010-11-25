@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Module: FileUtils</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Module</strong></td>
+          <td class="class-name-in-header">FileUtils</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/lib/more/facets/fileutils/cp_rx_rb.html">
+                lib/more/facets/fileutils/cp_rx.rb
+                </a>
+        <br />
+                <a href="../files/lib/more/facets/fileutils/safe_ln_rb.html">
+                lib/more/facets/fileutils/safe_ln.rb
+                </a>
+        <br />
+                <a href="../files/lib/more/facets/fileutils/slice_rb.html">
+                lib/more/facets/fileutils/slice.rb
+                </a>
+        <br />
+                <a href="../files/lib/more/facets/fileutils/wc_rb.html">
+                lib/more/facets/fileutils/wc.rb
+                </a>
+        <br />
+                <a href="../files/lib/more/facets/fileutils/whereis_rb.html">
+                lib/more/facets/fileutils/whereis.rb
+                </a>
+        <br />
+                <a href="../files/lib/more/facets/fileutils/which_rb.html">
+                lib/more/facets/fileutils/which.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000779">copy_entryx</a>&nbsp;&nbsp;
+      <a href="#M000778">cp_rx</a>&nbsp;&nbsp;
+      <a href="#M000781">head</a>&nbsp;&nbsp;
+      <a href="#M000780">safe_ln</a>&nbsp;&nbsp;
+      <a href="#M000783">slice</a>&nbsp;&nbsp;
+      <a href="#M000782">tail</a>&nbsp;&nbsp;
+      <a href="#M000784">wc</a>&nbsp;&nbsp;
+      <a href="#M000785">whereis</a>&nbsp;&nbsp;
+      <a href="#M000786">which</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+    <div id="constants-list">
+      <h3 class="section-bar">Constants</h3>
+
+      <div class="name-list">
+        <table summary="Constants">
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">LINKING_SUPPORTED</td>
+          <td>=</td>
+          <td class="context-item-value">[true]</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">Win32Exts</td>
+          <td>=</td>
+          <td class="context-item-value">%w{.exe .com .bat .cmd}</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">Win32Exts</td>
+          <td>=</td>
+          <td class="context-item-value">%w{.exe .com .bat .cmd}</td>
+        </tr>
+        </table>
+      </div>
+    </div>
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000779" class="method-detail">
+        <a name="M000779"></a>
+
+        <div class="method-heading">
+          <a href="FileUtils.src/M000779.html" target="Code" class="method-signature"
+            onclick="popupCode('FileUtils.src/M000779.html');return false;">
+          <span class="method-name">copy_entryx</span><span class="method-args">(src, dest, filter, preserve = false, dereference_root = false, remove_destination = false)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Like FileUtils.copy_entry, but takes a filter proc that can return false to
+skip a file.
+</p>
+<p>
+Note that if the filter rejects a subdirectory then everything within that
+subdirectory is automatically skipped as well.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000778" class="method-detail">
+        <a name="M000778"></a>
+
+        <div class="method-heading">
+          <a href="FileUtils.src/M000778.html" target="Code" class="method-signature"
+            onclick="popupCode('FileUtils.src/M000778.html');return false;">
+          <span class="method-name">cp_rx</span><span class="method-args">(src, dest, options = {}, &amp;filter)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Like FileUtils.cp_r, but takes a filter proc that can return false to skip
+a file:
+</p>
+<pre>
+  cp_rx &quot;bigDirectoryTree&quot;, &quot;dest&quot;, {:noop =&gt; true} do |name|
+    /dontCopyThis$/.match(name)
+  end
+</pre>
+<p>
+Note that if the filter rejects a subdirectory then everything within that
+subdirectory is automatically skipped as well.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000781" class="method-detail">
+        <a name="M000781"></a>
+
+        <div class="method-heading">
+          <a href="FileUtils.src/M000781.html" target="Code" class="method-signature"
+            onclick="popupCode('FileUtils.src/M000781.html');return false;">
+          <span class="method-name">head</span><span class="method-args">(filename,lines) {|| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+In block form, yields the first number of <tt>lines</tt> of file
+<tt>filename</tt>. In non-block form, it returns an array of the first
+number of <tt>lines</tt>:
+</p>
+<pre>
+  # Returns first 10 lines of 'myfile'
+  FileUtils.head(&quot;myfile&quot;, 10)
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000780" class="method-detail">
+        <a name="M000780"></a>
+
+        <div class="method-heading">
+          <a href="FileUtils.src/M000780.html" target="Code" class="method-signature"
+            onclick="popupCode('FileUtils.src/M000780.html');return false;">
+          <span class="method-name">safe_ln</span><span class="method-args">(*args)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Attempt to do a normal file link, but fall back to a copy if the link
+fails.
+</p>
+<p>
+CREDIT: Jim Weirich
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000783" class="method-detail">
+        <a name="M000783"></a>
+
+        <div class="method-heading">
+          <a href="FileUtils.src/M000783.html" target="Code" class="method-signature"
+            onclick="popupCode('FileUtils.src/M000783.html');return false;">
+          <span class="method-name">slice</span><span class="method-args">(filename,from,to) {|| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+In block form, yields lines <tt>from</tt>-<tt>to</tt>. In non-block form,
+returns an array of lines <tt>from</tt>-<tt>to</tt>:
+</p>
+<pre>
+  # Returns lines 8-12 of 'myfile'
+  FileUtils.body(&quot;myfile&quot;,8,12)
+</pre>
+<p>
+CREDIT Shashank <a href="Date.html">Date</a>, via Daniel Berger.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000782" class="method-detail">
+        <a name="M000782"></a>
+
+        <div class="method-heading">
+          <a href="FileUtils.src/M000782.html" target="Code" class="method-signature"
+            onclick="popupCode('FileUtils.src/M000782.html');return false;">
+          <span class="method-name">tail</span><span class="method-args">(filename,lines)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+In block form, yields the last number of <tt>lines</tt> of file
+<tt>filename</tt>. In non-block form, it returns the lines as an array.
+</p>
+<p>
+Note that this method slurps the entire file, so I don&#8216;t recommend it
+for very large files. If you want an advanced form of <tt><a
+href="FileUtils.html#M000782">tail</a></tt>, I suggest using file-<a
+href="FileUtils.html#M000782">tail</a>, by Florian Frank (available on the
+RAA):
+</p>
+<pre>
+  # Returns last 3 lines of 'myfile'
+  FileUtils.tail(&quot;myfile&quot;,3)
+</pre>
+<p>
+And no <a href="FileUtils.html#M000782">tail</a> -f.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000784" class="method-detail">
+        <a name="M000784"></a>
+
+        <div class="method-heading">
+          <a href="FileUtils.src/M000784.html" target="Code" class="method-signature"
+            onclick="popupCode('FileUtils.src/M000784.html');return false;">
+          <span class="method-name">wc</span><span class="method-args">(filename,option='all')</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+With no arguments, returns a four element array consisting of the number of
+bytes, characters, words and lines in <em>filename</em>, respectively.
+</p>
+<p>
+Valid options are <tt>bytes</tt>, <tt>characters</tt> (or just
+&#8216;chars&#8217;), <tt>words</tt> and <tt>lines</tt>:
+</p>
+<pre>
+  # Return the number of words in 'myfile'
+  FileUtils.wc(&quot;myfile&quot;,'words')
+</pre>
+<p>
+CREDIT: Daniel J. Berger
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000785" class="method-detail">
+        <a name="M000785"></a>
+
+        <div class="method-heading">
+          <a href="FileUtils.src/M000785.html" target="Code" class="method-signature"
+            onclick="popupCode('FileUtils.src/M000785.html');return false;">
+          <span class="method-name">whereis</span><span class="method-args">(prog, path=ENV['PATH']) {|| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+In block form, yields each ((<b>program</b>)) within ((<b>path</b>)). In
+non-block form, returns an array of each ((<b>program</b>)) within
+((<b>path</b>)). Returns (({nil})) if not found.
+</p>
+<p>
+On the MS Windows platform, it looks for executables ending with .exe, .bat
+and .com, <a href="FileUtils.html#M000786">which</a> you may optionally
+include in the program name:
+</p>
+<pre>
+   FileUtils.whereis(&quot;ruby&quot;)  #=&gt; ['/usr/local/bin/ruby','/opt/bin/ruby']
+</pre>
+<p>
+CREDIT: Daniel J. Berger
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000786" class="method-detail">
+        <a name="M000786"></a>
+
+        <div class="method-heading">
+          <a href="FileUtils.src/M000786.html" target="Code" class="method-signature"
+            onclick="popupCode('FileUtils.src/M000786.html');return false;">
+          <span class="method-name">which</span><span class="method-args">(prog, path=ENV['PATH'])</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Looks for the first occurrence of <em>program</em> within <em>path</em>.
+</p>
+<p>
+On the MS Windows platform, it looks for executables ending with .exe, .bat
+and .com, <a href="FileUtils.html#M000786">which</a> you may optionally
+include in the program name. Returns <tt>nil</tt> if not found.
+</p>
+<p>
+CREDIT: Daniel J. Berger, Michael Granger
+</p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

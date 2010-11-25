@@ -1,0 +1,17 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Deprecated methods. Wrap them in a module so they can be overwritten by plugins (like the verify method.)
+constants: []
+
+full_name: ActionController::Base::DeprecatedBehavior
+includes: []
+
+instance_methods: []
+
+name: DeprecatedBehavior
+superclass: 

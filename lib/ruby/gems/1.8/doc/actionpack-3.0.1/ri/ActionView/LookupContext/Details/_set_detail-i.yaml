@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionView::LookupContext::Details#_set_detail
+is_singleton: false
+name: _set_detail
+params: (key, value)
+visibility: protected

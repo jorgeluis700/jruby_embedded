@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Parses the given tag and returns a Tag instance if it is valid. Returns false if the given tag is not valid according to RFC 4646.
+full_name: I18n::Locale::Tag::Rfc4646::tag
+is_singleton: true
+name: tag
+params: (tag)
+visibility: public

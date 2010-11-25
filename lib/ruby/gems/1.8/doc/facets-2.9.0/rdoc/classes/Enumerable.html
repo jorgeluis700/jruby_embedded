@@ -1,0 +1,1484 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Module: Enumerable</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Module</strong></td>
+          <td class="class-name-in-header">Enumerable</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/lib/core/facets/enumerable/accumulate_rb.html">
+                lib/core/facets/enumerable/accumulate.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/enumerable/cluster_by_rb.html">
+                lib/core/facets/enumerable/cluster_by.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/enumerable/compact_map_rb.html">
+                lib/core/facets/enumerable/compact_map.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/enumerable/count_rb.html">
+                lib/core/facets/enumerable/count.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/enumerable/defer_rb.html">
+                lib/core/facets/enumerable/defer.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/enumerable/each_by_rb.html">
+                lib/core/facets/enumerable/each_by.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/enumerable/each_with_object_rb.html">
+                lib/core/facets/enumerable/each_with_object.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/enumerable/every_rb.html">
+                lib/core/facets/enumerable/every.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/enumerable/ewise_rb.html">
+                lib/core/facets/enumerable/ewise.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/enumerable/exclude_rb.html">
+                lib/core/facets/enumerable/exclude.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/enumerable/expand_rb.html">
+                lib/core/facets/enumerable/expand.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/enumerable/filter_rb.html">
+                lib/core/facets/enumerable/filter.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/enumerable/find_yield_rb.html">
+                lib/core/facets/enumerable/find_yield.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/enumerable/frequency_rb.html">
+                lib/core/facets/enumerable/frequency.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/enumerable/graph_rb.html">
+                lib/core/facets/enumerable/graph.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/enumerable/group_by_rb.html">
+                lib/core/facets/enumerable/group_by.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/enumerable/map_by_rb.html">
+                lib/core/facets/enumerable/map_by.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/enumerable/map_send_rb.html">
+                lib/core/facets/enumerable/map_send.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/enumerable/map_with_index_rb.html">
+                lib/core/facets/enumerable/map_with_index.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/enumerable/modulate_rb.html">
+                lib/core/facets/enumerable/modulate.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/enumerable/none_rb.html">
+                lib/core/facets/enumerable/none.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/enumerable/occur_rb.html">
+                lib/core/facets/enumerable/occur.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/enumerable/one_rb.html">
+                lib/core/facets/enumerable/one.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/enumerable/per_rb.html">
+                lib/core/facets/enumerable/per.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/enumerable/purge_rb.html">
+                lib/core/facets/enumerable/purge.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/enumerable/recursively_rb.html">
+                lib/core/facets/enumerable/recursively.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/enumerable/sum_rb.html">
+                lib/core/facets/enumerable/sum.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/enumerable/take_rb.html">
+                lib/core/facets/enumerable/take.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/enumerable/uniq_by_rb.html">
+                lib/core/facets/enumerable/uniq_by.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/enumerable/visit_rb.html">
+                lib/core/facets/enumerable/visit.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/to_hash_rb.html">
+                lib/core/facets/to_hash.rb
+                </a>
+        <br />
+                <a href="../files/lib/more/facets/thread_rb.html">
+                lib/more/facets/thread.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000706">accumulate</a>&nbsp;&nbsp;
+      <a href="#M000707">accumulate_all</a>&nbsp;&nbsp;
+      <a href="#M000708">cluster_by</a>&nbsp;&nbsp;
+      <a href="#M000731">collect_with_index</a>&nbsp;&nbsp;
+      <a href="#M000710">compact_collect</a>&nbsp;&nbsp;
+      <a href="#M000709">compact_map</a>&nbsp;&nbsp;
+      <a href="#M000711">count</a>&nbsp;&nbsp;
+      <a href="#M000712">defer</a>&nbsp;&nbsp;
+      <a href="#M000713">each_by</a>&nbsp;&nbsp;
+      <a href="#M000714">each_with_object</a>&nbsp;&nbsp;
+      <a href="#M000718">elementwise</a>&nbsp;&nbsp;
+      <a href="#M000715">every</a>&nbsp;&nbsp;
+      <a href="#M000716">every!</a>&nbsp;&nbsp;
+      <a href="#M000717">ewise</a>&nbsp;&nbsp;
+      <a href="#M000719">exclude?</a>&nbsp;&nbsp;
+      <a href="#M000720">expand</a>&nbsp;&nbsp;
+      <a href="#M000721">filter</a>&nbsp;&nbsp;
+      <a href="#M000722">find_yield</a>&nbsp;&nbsp;
+      <a href="#M000724">frequency</a>&nbsp;&nbsp;
+      <a href="#M000725">graph</a>&nbsp;&nbsp;
+      <a href="#M000727">group_by</a>&nbsp;&nbsp;
+      <a href="#M000728">map_by</a>&nbsp;&nbsp;
+      <a href="#M000723">map_detect</a>&nbsp;&nbsp;
+      <a href="#M000729">map_send</a>&nbsp;&nbsp;
+      <a href="#M000730">map_with_index</a>&nbsp;&nbsp;
+      <a href="#M000726">mash</a>&nbsp;&nbsp;
+      <a href="#M000732">modulate</a>&nbsp;&nbsp;
+      <a href="#M000733">none?</a>&nbsp;&nbsp;
+      <a href="#M000734">occur</a>&nbsp;&nbsp;
+      <a href="#M000735">one?</a>&nbsp;&nbsp;
+      <a href="#M000736">per</a>&nbsp;&nbsp;
+      <a href="#M000737">purge</a>&nbsp;&nbsp;
+      <a href="#M000738">recursively</a>&nbsp;&nbsp;
+      <a href="#M000739">sum</a>&nbsp;&nbsp;
+      <a href="#M000740">take</a>&nbsp;&nbsp;
+      <a href="#M000749">threaded_map</a>&nbsp;&nbsp;
+      <a href="#M000750">threaded_map_send</a>&nbsp;&nbsp;
+      <a href="#M000743">to_h</a>&nbsp;&nbsp;
+      <a href="#M000747">to_h_assoc</a>&nbsp;&nbsp;
+      <a href="#M000744">to_h_auto</a>&nbsp;&nbsp;
+      <a href="#M000746">to_h_flat</a>&nbsp;&nbsp;
+      <a href="#M000748">to_h_multi</a>&nbsp;&nbsp;
+      <a href="#M000745">to_h_splat</a>&nbsp;&nbsp;
+      <a href="#M000741">uniq_by</a>&nbsp;&nbsp;
+      <a href="#M000742">visit</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+    <div id="class-list">
+      <h3 class="section-bar">Classes and Modules</h3>
+
+      Class <a href="Enumerable/Recursor.html" class="link">Enumerable::Recursor</a><br />
+
+    </div>
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000706" class="method-detail">
+        <a name="M000706"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000706.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000706.html');return false;">
+          <span class="method-name">accumulate</span><span class="method-args">(iterations=1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Accumulate a set of a set. For example, in an ORM design where `Group
+has_many User` we might have something equivalent to the following.
+</p>
+<pre>
+  Group = Struct.new(:users)
+  User  = Struct.new(:name, :friends)
+
+  user1 = User.new('John', [])
+  user2 = User.new('Jane', ['Jill'])
+  user3 = User.new('Joe' , ['Jack', 'Jim'])
+
+  group1 = Group.new([user1, user2])
+  group2 = Group.new([user2, user3])
+
+  groups = [group1, group2]
+</pre>
+<p>
+Now we can <b><a href="Enumerable.html#M000706">accumulate</a></b> the
+users of all groups.
+</p>
+<pre>
+  groups.accumulate.users  #=&gt; [user1, user2, user3]
+</pre>
+<p>
+You may pass an argument to perform chains, e.g. the following returns the
+names of users from all groups.
+</p>
+<pre>
+  groups.accumulate(2).users.name  #=&gt; ['John','Jane','Joe']
+</pre>
+<p>
+Or we can gather all the friends of all users in groups.
+</p>
+<pre>
+  groups.accumulate(2).users.friends  #=&gt; ['Jill','Jack','Jim']
+</pre>
+<p>
+This is more convenient then the equivalent.
+</p>
+<pre>
+  groups.accumulate.users.accumulate.friends  #=&gt; ['Jill','Jack','Jim']
+</pre>
+<p>
+CREDIT: George Moshchovitis, Daniel Emirikol
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000707" class="method-detail">
+        <a name="M000707"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000707.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000707.html');return false;">
+          <span class="method-name">accumulate_all</span><span class="method-args">(iterations=1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Same as <a href="Enumerable.html#M000706">accumulate</a>, but does not
+apply uniq to final result.
+</p>
+<pre>
+  groups.accumulate_all(2).users.friends  #=&gt; ['Jill', 'Jill','Jack','Jim']
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000708" class="method-detail">
+        <a name="M000708"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000708.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000708.html');return false;">
+          <span class="method-name">cluster_by</span><span class="method-args">(&amp;b)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Similar to <a href="Enumerable.html#M000727">group_by</a> but returns an
+array of the groups. Returned elements are sorted by block.
+</p>
+<pre>
+   %w{this is a test}.cluster_by {|x| x[0]}
+   #=&gt; [ ['a'], ['is'], ['this', 'test'] ]
+</pre>
+<p>
+CREDIT: Erik Veenstra
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000731" class="method-detail">
+        <a name="M000731"></a>
+
+        <div class="method-heading">
+          <span class="method-name">collect_with_index</span><span class="method-args">()</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="Enumerable.html#M000730">map_with_index</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000710" class="method-detail">
+        <a name="M000710"></a>
+
+        <div class="method-heading">
+          <span class="method-name">compact_collect</span><span class="method-args">(&amp;block)</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="Enumerable.html#M000709">compact_map</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000709" class="method-detail">
+        <a name="M000709"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000709.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000709.html');return false;">
+          <span class="method-name">compact_map</span><span class="method-args">() {|*a| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+A more versitle compact method. It can be used to collect and <a
+href="Enumerable.html#M000721">filter</a> items out in one single step.
+</p>
+<pre>
+  c = [1,2,3].compact_map do |n|
+    n &lt; 2 ? nil : n
+  end
+
+  c  #=&gt; [2,3]
+</pre>
+<p>
+CREDIT: Trans
+</p>
+<p>
+DEPRECATE: This method should probably be removed b/c <a
+href="Enumerable.html#M000737">purge</a> does almost the same thing and
+enum.map{}.compact works too.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000711" class="method-detail">
+        <a name="M000711"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000711.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000711.html');return false;">
+          <span class="method-name">count</span><span class="method-args">(*items, &amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Count the number of items in an enumerable equal (==) to the given
+object(s).
+</p>
+<pre>
+  e = [ 'a', 1, 'a' ]
+
+  e.count(1)       #=&gt; 1
+  e.count('a')     #=&gt; 2
+</pre>
+<p>
+The method can <a href="Enumerable.html#M000711">count</a> more than one
+item by supplying additional arguments.
+</p>
+<pre>
+  e.count('a', 1)  #=&gt; 3
+</pre>
+<p>
+A block may also be used to select countable entries.
+</p>
+<pre>
+  e.count{ |x| String === x }  #=&gt; 2
+</pre>
+<p>
+Note that Hash#count only considers values.
+</p>
+<pre>
+  e = { 'a' =&gt; 2, 'x' =&gt; 2, 'b' =&gt; 1 }
+
+  e.count(1)  #=&gt; 1
+  e.count(2)  #=&gt; 2
+</pre>
+<p>
+NOTE: This is one of the few method overrides in Facets.
+</p>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000712" class="method-detail">
+        <a name="M000712"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000712.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000712.html');return false;">
+          <span class="method-name">defer</span><span class="method-args">() {|output, *input| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Without a block: wrap the <a href="Enumerable.html">Enumerable</a> object
+in such a way that map, select and similar operations are performed
+&quot;horizontally&quot; across a series of blocks, instead of building an
+array of results at each step. This reduces memory usage, allows partial
+results to be provided early, and permits working with infinite series.
+</p>
+<pre>
+  a = (1..1_000_000_000).defer.select{ |i| i % 2 == 0 }.
+                               map{ |i| i + 100 }.
+                               take(10).to_a
+</pre>
+<p>
+With a block: the block acts as an arbitrary <a
+href="Enumerable.html#M000721">filter</a> on the data. Unlike map, it can
+choose to drop elements from the result, and/or add additional ones. The
+first object passed to the block is the receiver of the output.
+</p>
+<pre>
+  (1..1_000_000_000).
+    defer { |out,i| out &lt;&lt; i if i % 2 == 0 }.  # like select
+    defer { |out,i| out &lt;&lt; i + 100 }.          # like map
+    take(10).to_a
+</pre>
+<p>
+Use a method like to_a or <a href="Enumerable.html#M000743">to_h</a> at the
+end of the chain when you want an <a href="Array.html">Array</a> or Hash
+built with the results, or each{&#8230;} if you just want to output each
+result and discard it.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000713" class="method-detail">
+        <a name="M000713"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000713.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000713.html');return false;">
+          <span class="method-name">each_by</span><span class="method-args">(steps=nil, &amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Iterate through slices. If slice <tt>steps</tt> is not given, the arity of
+the block is used.
+</p>
+<pre>
+  x = []
+  [1,2,3,4].each_by{ |a,b| x &lt;&lt; [a,b] }
+  x  #=&gt; [ [1,2], [3,4] ]
+
+  x = []
+  [1,2,3,4,5,6].each_by(3){ |a| x &lt;&lt; a }
+  x  #=&gt; [ [1,2,3], [4,5,6] ]
+</pre>
+<p>
+This is just like each_slice, except that it will check the arity of the
+block. If each_slice ever suppots this this method can be deprecated.
+</p>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000714" class="method-detail">
+        <a name="M000714"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000714.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000714.html');return false;">
+          <span class="method-name">each_with_object</span><span class="method-args">(memo) {|| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+A variation of inject that saves one from having to return the
+aggregate/memo argument.
+</p>
+<p>
+Say we want to <a href="Enumerable.html#M000711">count</a> characters in a
+string. Using the <a href="Enumerable.html#M000714">each_with_object</a>
+method we have:
+</p>
+<pre>
+   &quot;string&quot;.each_with_object(Hash.new(0)) do |c, h|
+     h[c] += 1
+   end
+</pre>
+<p>
+versus using inject which would be:
+</p>
+<pre>
+   &quot;string&quot;.inject(Hash.new(0)) do |h, c|
+     h[c] +=1
+     h
+   end
+</pre>
+<p>
+Notice that the order of the block parameters is reversed.
+</p>
+<p>
+This method used be called injecting and had the same parameter order as
+inject, but Ruby 1.9 has adopted this method, so we support it instead.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000718" class="method-detail">
+        <a name="M000718"></a>
+
+        <div class="method-heading">
+          <span class="method-name">elementwise</span><span class="method-args">(count=1)</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="Enumerable.html#M000717">ewise</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000715" class="method-detail">
+        <a name="M000715"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000715.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000715.html');return false;">
+          <span class="method-name">every</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns an elemental object. This allows you to map a method on to <a
+href="Enumerable.html#M000715">every</a> element.
+</p>
+<pre>
+  r = [1,2,3].every + 3
+  r  #=&gt; [4,5,6]
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000716" class="method-detail">
+        <a name="M000716"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000716.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000716.html');return false;">
+          <span class="method-name">every!</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+In place version of <a href="Enumerable.html#M000715">every</a>.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000717" class="method-detail">
+        <a name="M000717"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000717.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000717.html');return false;">
+          <span class="method-name">ewise</span><span class="method-args">(count=1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns an <a href="Enumerable.html#M000718">elementwise</a> <a
+href="Functor.html">Functor</a> designed to make R-like <a
+href="Enumerable.html#M000718">elementwise</a> operations possible. This is
+very much like the <a href="Enumerable.html#M000715">every</a> method, but
+it treats array argument specially.
+</p>
+<pre>
+  ([1,2].ewise + 3)          #=&gt; [4,5]
+</pre>
+<p>
+Vector to vector
+</p>
+<pre>
+  ([1,2].ewise + [4,5])      #=&gt; [5,7]
+</pre>
+<p>
+Special thanks to Martin DeMello for helping to develop this.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000719" class="method-detail">
+        <a name="M000719"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000719.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000719.html');return false;">
+          <span class="method-name">exclude?</span><span class="method-args">(object)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+The inverse of include?.
+</p>
+<pre>
+ [:a, :b].exclude?(:c)  #=&gt; true
+ [:a, :b].exclude?(:a)  #=&gt; false
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000720" class="method-detail">
+        <a name="M000720"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000720.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000720.html');return false;">
+          <span class="method-name">expand</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Expand all elements of an <a href="Enumerable.html">Enumerable</a> object.
+</p>
+<pre>
+  [0, 2..3, 5..7].expand  #=&gt; [0,[2, 3],[5,6,7]]
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000721" class="method-detail">
+        <a name="M000721"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000721.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000721.html');return false;">
+          <span class="method-name">filter</span><span class="method-args">(output=[]) {|output, *input| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+The block acts as an arbitrary <a href="Enumerable.html#M000721">filter</a>
+on the data. Unlike map, it can choose to drop elements from the result
+and/or add additional elements. The first object passed to the block is the
+receiver of the output.
+</p>
+<pre>
+  x = (1..10000)
+  x = x.filter{ |out,i| out &lt;&lt; i if i % 2 == 0 }   # like select
+  x = x.filter{ |out,i| out &lt;&lt; i + 100 }           # like map
+  x = x.take(3)
+
+  x  #=&gt; [102, 104, 106]
+</pre>
+<p>
+This is very similar to <a
+href="Enumerable.html#M000714">each_with_object</a>, but <a
+href="Enumerable.html#M000721">filter</a> handles argument better by
+reversing their order and using the splat operator. (This was also once
+known as injecting.)
+</p>
+<p>
+CREDIT: David Black, Louis J Scoras
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000722" class="method-detail">
+        <a name="M000722"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000722.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000722.html');return false;">
+          <span class="method-name">find_yield</span><span class="method-args">(fallback=nil) {|| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Yield each element to the block and return the result of the block when
+that result evaluates as true, terminating early like detect and find.
+</p>
+<pre>
+  obj1 = Object.new
+  obj2 = Object.new
+
+  def obj1.foo?; false; end
+  def obj2.foo?; true ; end
+
+  def obj1.foo ; &quot;foo1&quot;; end
+  def obj2.foo ; &quot;foo2&quot;; end
+
+  [obj1, obj2].find_yield{ |obj| obj.foo if obj.foo? }  #=&gt; &quot;foo2&quot;
+</pre>
+<p>
+Another example.
+</p>
+<pre>
+  [1,2,3,4,5].find_yield{ |i| j = i+1; j if j % 4 == 0 }  #=&gt; 4
+</pre>
+<p>
+If the block is never true, return the object given in the first parameter,
+or nil if none specified.
+</p>
+<pre>
+  [1,2,3].find_yield{ |_| false }    #=&gt; nil
+  [false].find_yield(1){ |_| false } #=&gt; 1
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000724" class="method-detail">
+        <a name="M000724"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000724.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000724.html');return false;">
+          <span class="method-name">frequency</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Generates a hash mapping each unique symbol in the array to the absolute <a
+href="Enumerable.html#M000724">frequency</a> it appears.
+</p>
+<pre>
+  [:a,:a,:b,:c,:c,:c].frequency  #=&gt; {:a=&gt;2,:b=&gt;1,:c=&gt;3}
+</pre>
+<p>
+CREDIT: Brian Schröder
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000725" class="method-detail">
+        <a name="M000725"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000725.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000725.html');return false;">
+          <span class="method-name">graph</span><span class="method-args">(&amp;yld)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Like `map`/`collect`, but generates a Hash. The block is expected to return
+two values: the key and the value for the new hash.
+</p>
+<pre>
+  numbers  = (1..3)
+  squares  = numbers.graph{ |n| [n, n*n] }   # { 1=&gt;1, 2=&gt;4, 3=&gt;9 }
+  sq_roots = numbers.graph{ |n| [n*n, n] }   # { 1=&gt;1, 4=&gt;2, 9=&gt;3 }
+</pre>
+<p>
+CREDIT: Andrew Dudzik (adudzik), Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000727" class="method-detail">
+        <a name="M000727"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000727.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000727.html');return false;">
+          <span class="method-name">group_by</span><span class="method-args">( {|| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<a href="Enumerable.html#M000727">Enumerable#group_by</a> is used to group
+items in a collection by something they have in common. The common factor
+is the key in the resulting hash, the array of like elements is the value.
+</p>
+<pre>
+  (1..5).group_by { |n| n % 3 }
+  #=&gt; { 0 =&gt; [3], 1 =&gt; [1, 4], 2 =&gt; [2,5] }
+</pre>
+<p>
+Applied to an array.
+</p>
+<pre>
+  [&quot;I had&quot;, 1, &quot;dollar and&quot;, 50, &quot;cents&quot;].group_by { |e| e.class }
+  #=&gt; { String =&gt; [&quot;I had&quot;,&quot;dollar and&quot;,&quot;cents&quot;], Fixnum =&gt; [1,50] }
+</pre>
+<p>
+Applied to a hash:
+</p>
+<pre>
+  {:a=&gt;1, :b=&gt;2, :c=&gt;1}.group_by{ |k,v| v }
+  #=&gt; { 1=&gt;[[:c,1], [:a,1]], 2=&gt;[[:b,2]] }
+</pre>
+<p>
+CREDIT: Erik Veenstra
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000728" class="method-detail">
+        <a name="M000728"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000728.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000728.html');return false;">
+          <span class="method-name">map_by</span><span class="method-args">( {|| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Like <a href="Enumerable.html#M000727">group_by</a>, but maps the second
+value returned from the block.
+</p>
+<pre>
+  a = [1,2,3,4,5]
+  a.map_by{ |e| [e % 2, e + 1] }
+  #=&gt; { 0=&gt;[3,5], 1=&gt;[2,4,6] }
+</pre>
+<p>
+Works well with a hash too.
+</p>
+<pre>
+  h = {&quot;A&quot;=&gt;1, &quot;B&quot;=&gt;1, &quot;C&quot;=&gt;1, &quot;D&quot;=&gt;2, &quot;E&quot;=&gt;2}
+  h.map_by{ |k,v| [v, k.downcase] }
+  #=&gt; {1=&gt;[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;], 2=&gt;[&quot;d&quot;, &quot;e&quot;]}
+</pre>
+<p>
+If a second value is not returned, <a
+href="Enumerable.html#M000728">map_by</a> acts like <a
+href="Enumerable.html#M000727">group_by</a>.
+</p>
+<pre>
+  h = {&quot;A&quot;=&gt;1, &quot;B&quot;=&gt;1, &quot;C&quot;=&gt;1, &quot;D&quot;=&gt;2, &quot;E&quot;=&gt;2}
+  h.map_by{ |k,v| v }
+  #=&gt; {1=&gt;[[&quot;A&quot;,1], [&quot;B&quot;,1], [&quot;C&quot;,1]], 2=&gt;[[&quot;D&quot;,2], [&quot;E&quot;,2]]}
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000723" class="method-detail">
+        <a name="M000723"></a>
+
+        <div class="method-heading">
+          <span class="method-name">map_detect</span><span class="method-args">(fallback=nil)</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="Enumerable.html#M000722">find_yield</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000729" class="method-detail">
+        <a name="M000729"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000729.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000729.html');return false;">
+          <span class="method-name">map_send</span><span class="method-args">(meth, *args, &amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Send a message to each element and collect the result.
+</p>
+<pre>
+  [1,2,3].map_send(:+, 3)  #=&gt; [4,5,6]
+</pre>
+<p>
+CREDIT: Sean O&#8216;Halpin
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000730" class="method-detail">
+        <a name="M000730"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000730.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000730.html');return false;">
+          <span class="method-name">map_with_index</span><span class="method-args">() {|e, i| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Same as collect but with an iteration counter.
+</p>
+<pre>
+  a = [1,2,3].collect_with_index { |e,i| e*i }
+  a  #=&gt; [0,2,6]
+</pre>
+<p>
+CREDIT: Gavin Sinclair
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000726" class="method-detail">
+        <a name="M000726"></a>
+
+        <div class="method-heading">
+          <span class="method-name">mash</span><span class="method-args">(&amp;yld)</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="Enumerable.html#M000725">graph</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000732" class="method-detail">
+        <a name="M000732"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000732.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000732.html');return false;">
+          <span class="method-name">modulate</span><span class="method-args">(modulo)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Modulate. Divide an array into groups by modulo of the index.
+</p>
+<pre>
+  [2,4,6,8].modulate(2)  #=&gt; [[2,6],[4,8]]
+</pre>
+<p>
+CREDIT: Trans
+</p>
+<p>
+NOTE: Would the better name for this be &#8216;collate&#8217;?
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000733" class="method-detail">
+        <a name="M000733"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000733.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000733.html');return false;">
+          <span class="method-name">none?</span><span class="method-args">( {|e| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Enumerable#none? is the logical opposite of the builtin method
+Enumerable#any?. It returns <tt>true</tt> if and only if <em>none</em> of
+the elements in the collection satisfy the predicate.
+</p>
+<p>
+If no predicate is provided, Enumerable#none? returns <tt>true</tt> if and
+only if <em>none</em> of the elements have a true value (i.e. not
+<tt>nil</tt> or <tt>false</tt>).
+</p>
+<pre>
+  [].none?                      # =&gt; true
+  [nil].none?                   # =&gt; true
+  [5,8,9].none?                 # =&gt; false
+  (1...10).none? { |n| n &lt; 0 }  # =&gt; true
+  (1...10).none? { |n| n &gt; 0 }  # =&gt; false
+</pre>
+<p>
+CREDIT: Gavin Sinclair
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000734" class="method-detail">
+        <a name="M000734"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000734.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000734.html');return false;">
+          <span class="method-name">occur</span><span class="method-args">(n=nil) {|| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns an array of elements for the elements that <a
+href="Enumerable.html#M000734">occur</a> n times. Or according to the
+results of a given block.
+</p>
+<pre>
+  a = [1,1,2,3,3,4,5,5]
+
+  a.occur(1).sort               #=&gt; [2,4]
+  a.occur(2).sort               #=&gt; [1,3,5]
+  a.occur(3).sort               #=&gt; []
+
+  a.occur(1..1).sort            #=&gt; [2,4]
+  a.occur(2..3).sort            #=&gt; [1,3,5]
+
+  a.occur { |n| n == 1 }.sort   #=&gt; [2,4]
+  a.occur { |n| n &gt; 1 }.sort    #=&gt; [1,3,5]
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000735" class="method-detail">
+        <a name="M000735"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000735.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000735.html');return false;">
+          <span class="method-name">one?</span><span class="method-args">( {|e| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Enumerable#one? returns <tt>true</tt> if and only if <em>exactly one</em>
+element in the collection satisfies the given predicate.
+</p>
+<p>
+If no predicate is provided, Enumerable#one? returns <tt>true</tt> if and
+only if <em>exactly one</em> element has a true value (i.e. not
+<tt>nil</tt> or <tt>false</tt>).
+</p>
+<pre>
+  [].one?                      # =&gt; false
+  [nil].one?                   # =&gt; false
+  [5].one?                     # =&gt; true
+  [5,8,9].one?                 # =&gt; false
+  (1...10).one? { |n| n == 5 } # =&gt; true
+  (1...10).one? { |n| n &lt; 5 }  # =&gt; false
+</pre>
+<p>
+CREDIT: Gavin Sinclair
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000736" class="method-detail">
+        <a name="M000736"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000736.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000736.html');return false;">
+          <span class="method-name">per</span><span class="method-args">(enum_method=nil, *enum_args)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Per element meta-functor.
+</p>
+<pre>
+  ([1,2,3].per(:map) + 3)     #=&gt; [4,5,6]
+  ([1,2,3].per(:select) &gt; 1)  #=&gt; [2,3]
+</pre>
+<p>
+Using fluid notation.
+</p>
+<pre>
+  ([1,2,3].per.map + 3)       #=&gt; [4,5,6]
+  ([1,2,3].per.select &gt; 1)    #=&gt; [2,3]
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000737" class="method-detail">
+        <a name="M000737"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000737.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000737.html');return false;">
+          <span class="method-name">purge</span><span class="method-args">(*trash) {|e| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+A versitle compaction method. Like map but used to <a
+href="Enumerable.html#M000721">filter</a> out multiple items in a single
+step.
+</p>
+<p>
+Without <tt>trash</tt> arguments <tt>nil</tt> is assumed.
+</p>
+<pre>
+  [1, nil, 2].purge  #=&gt; [1,2]
+</pre>
+<p>
+If <tt>trash</tt> arguments are given, each argument is compared for a
+match using #==.
+</p>
+<pre>
+  (1..6).purge(3,4)  #=&gt; [1,2,5,6]
+</pre>
+<p>
+If a block is given, the yield is used in the matching condition instead of
+the element itsef.
+</p>
+<pre>
+  (1..6).purge(0){ |n| n % 2 }  #=&gt; [1,3,5]
+</pre>
+<p>
+NOTE: This could just as well be an override of the core compact method,
+but to avoid potential issues associated with overriding core methods we
+use the alternate name <a href="Enumerable.html#M000737">purge</a>.
+</p>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000738" class="method-detail">
+        <a name="M000738"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000738.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000738.html');return false;">
+          <span class="method-name">recursively</span><span class="method-args">(*types, &amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns a recursive functor, that allows enumerable methods to iterate
+through enumerable sub-elements. By default it only recurses over elements
+of the same type.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000739" class="method-detail">
+        <a name="M000739"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000739.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000739.html');return false;">
+          <span class="method-name">sum</span><span class="method-args">(identity = 0, &amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Uses #+ to <a href="Enumerable.html#M000739">sum</a> the enumerated
+elements.
+</p>
+<pre>
+  [1,2,3].sum  #=&gt; 6
+  [3,3,3].sum  #=&gt; 9
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000740" class="method-detail">
+        <a name="M000740"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000740.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000740.html');return false;">
+          <span class="method-name">take</span><span class="method-args">(n)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return the first n items from the collection
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000749" class="method-detail">
+        <a name="M000749"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000749.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000749.html');return false;">
+          <span class="method-name">threaded_map</span><span class="method-args">( {|| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Like Enumerable#map but each iteration is processed via a separate thread.
+</p>
+<p>
+CREDIT: Sean O&#8216;Halpin
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000750" class="method-detail">
+        <a name="M000750"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000750.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000750.html');return false;">
+          <span class="method-name">threaded_map_send</span><span class="method-args">(meth, *args, &amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Like <a href="Enumerable.html#M000729">Enumerable#map_send</a> but each
+iteration is processed via a separate thread.
+</p>
+<p>
+CREDIT: Sean O&#8216;Halpin
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000743" class="method-detail">
+        <a name="M000743"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000743.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000743.html');return false;">
+          <span class="method-name">to_h</span><span class="method-args">(mode=nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Convert an <a href="Enumerable.html">Enumerable</a> object into a hash by
+first turning it into an array.
+</p>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000747" class="method-detail">
+        <a name="M000747"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000747.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000747.html');return false;">
+          <span class="method-name">to_h_assoc</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000744" class="method-detail">
+        <a name="M000744"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000744.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000744.html');return false;">
+          <span class="method-name">to_h_auto</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000746" class="method-detail">
+        <a name="M000746"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000746.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000746.html');return false;">
+          <span class="method-name">to_h_flat</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000748" class="method-detail">
+        <a name="M000748"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000748.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000748.html');return false;">
+          <span class="method-name">to_h_multi</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000745" class="method-detail">
+        <a name="M000745"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000745.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000745.html');return false;">
+          <span class="method-name">to_h_splat</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000741" class="method-detail">
+        <a name="M000741"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000741.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000741.html');return false;">
+          <span class="method-name">uniq_by</span><span class="method-args">( {|| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Like uniq, but determines uniqueness based on a given block.
+</p>
+<pre>
+  (-5..5).to_a.uniq_by {|i| i*i }
+  #=&gt; [-5, -4, -3, -2, -1, 0]
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000742" class="method-detail">
+        <a name="M000742"></a>
+
+        <div class="method-heading">
+          <a href="Enumerable.src/M000742.html" target="Code" class="method-signature"
+            onclick="popupCode('Enumerable.src/M000742.html');return false;">
+          <span class="method-name">visit</span><span class="method-args">(opts={}, &amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Recursively iterate over all <a href="Enumerable.html">Enumerable</a>
+elements, or subset given :type=&gt;[type1, type2, &#8230;].
+</p>
+<pre>
+  [1, 2, 8..9].visit{ |x| x.succ }
+  # =&gt; [2, 3, [9, 10]]
+</pre>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

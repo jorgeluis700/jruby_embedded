@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: []
+
+full_name: Time::time_with_datetime_fallback
+is_singleton: true
+name: time_with_datetime_fallback
+params: (utc_or_local, year, month=1, day=1, hour=0, min=0, sec=0, usec=0)
+visibility: public

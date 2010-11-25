@@ -1,0 +1,21 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: JCluster::Configure
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Mongrel::Command::Base
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: configure
+  - !ruby/object:RI::MethodSummary 
+    name: run
+  - !ruby/object:RI::MethodSummary 
+    name: validate
+name: Configure
+superclass: GemPlugin::Plugin"/commands"

@@ -1,0 +1,29 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: []
+
+full_name: Enumerator
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: fx
+  - !ruby/object:RI::MethodSummary 
+    name: to_h
+  - !ruby/object:RI::MethodSummary 
+    name: to_h_assoc
+  - !ruby/object:RI::MethodSummary 
+    name: to_h_auto
+  - !ruby/object:RI::MethodSummary 
+    name: to_h_flat
+  - !ruby/object:RI::MethodSummary 
+    name: to_h_multi
+  - !ruby/object:RI::MethodSummary 
+    name: to_h_splat
+name: Enumerator
+superclass: Object

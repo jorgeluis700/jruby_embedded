@@ -1,0 +1,24 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Interpret common affirmative string meanings as true, otherwise nil or false. Blank space and case are ignored. The following strings that will return true ...
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  true\n  yes\n  on\n  t\n  1\n  y\n  ==\n"
+  - !ruby/struct:SM::Flow::P 
+    body: The following strings will return nil ...
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  nil\n  null\n"
+  - !ruby/struct:SM::Flow::P 
+    body: All other strings return false.
+  - !ruby/struct:SM::Flow::P 
+    body: Here are some exmamples.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &quot;true&quot;.to_b   #=&gt; true\n  &quot;yes&quot;.to_b    #=&gt; true\n  &quot;no&quot;.to_b     #=&gt; false\n  &quot;123&quot;.to_b    #=&gt; false\n"
+full_name: String#to_b
+is_singleton: false
+name: to_b
+params: ()
+visibility: public

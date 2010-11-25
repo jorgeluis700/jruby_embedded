@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: ""
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Use a local cache for the duration of block.
+full_name: ActiveSupport::Cache::Strategy::LocalCache#with_local_cache
+is_singleton: false
+name: with_local_cache
+params: () {|| ...}
+visibility: public

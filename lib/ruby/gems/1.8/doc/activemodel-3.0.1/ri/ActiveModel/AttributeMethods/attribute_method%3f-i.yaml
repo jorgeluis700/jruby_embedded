@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveModel::AttributeMethods#attribute_method?
+is_singleton: false
+name: attribute_method?
+params: (attr_name)
+visibility: protected

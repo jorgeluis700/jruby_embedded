@@ -1,0 +1,27 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+  - !ruby/object:RI::MethodSummary 
+    name: reset_runtime
+  - !ruby/object:RI::MethodSummary 
+    name: runtime
+  - !ruby/object:RI::MethodSummary 
+    name: runtime=
+comment: 
+constants: []
+
+full_name: ActiveRecord::LogSubscriber
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: logger
+  - !ruby/object:RI::MethodSummary 
+    name: odd?
+  - !ruby/object:RI::MethodSummary 
+    name: sql
+name: LogSubscriber
+superclass: ActiveSupport::LogSubscriber

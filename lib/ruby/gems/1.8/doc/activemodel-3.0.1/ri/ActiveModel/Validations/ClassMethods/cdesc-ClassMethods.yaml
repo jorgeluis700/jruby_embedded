@@ -1,0 +1,30 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: ActiveModel::Validations::ClassMethods
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: attribute_method?
+  - !ruby/object:RI::MethodSummary 
+    name: inherited
+  - !ruby/object:RI::MethodSummary 
+    name: validate
+  - !ruby/object:RI::MethodSummary 
+    name: validates
+  - !ruby/object:RI::MethodSummary 
+    name: validates_each
+  - !ruby/object:RI::MethodSummary 
+    name: validates_with
+  - !ruby/object:RI::MethodSummary 
+    name: validators
+  - !ruby/object:RI::MethodSummary 
+    name: validators_on
+name: ClassMethods
+superclass: 

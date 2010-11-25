@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: redirect_url
+block_params: 
+comment: 
+full_name: ActionDispatch::Response#location
+is_singleton: false
+name: location
+params: ()
+visibility: public

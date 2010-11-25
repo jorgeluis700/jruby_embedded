@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Convenience accessor for flash[:alert]=
+full_name: ActionDispatch::Flash::FlashHash#alert=
+is_singleton: false
+name: alert=
+params: (message)
+visibility: public

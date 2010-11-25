@@ -1,0 +1,20 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: "[key, value]"
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Calls <em>block</em> for each key/value pair in <em>map</em>, passing the key and value to the block as a two-element array.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  map = Multimap[&quot;a&quot; =&gt; 100, &quot;b&quot; =&gt; [200, 300]]\n  map.each { |key, value| puts &quot;#{key} is #{value}&quot; }\n"
+  - !ruby/struct:SM::Flow::P 
+    body: <em>produces:</em>
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  a is 100\n  b is 200\n  b is 300\n"
+full_name: Multimap#each
+is_singleton: false
+name: each
+params: |
+  map.each { |key, value| block } => map
+
+visibility: public

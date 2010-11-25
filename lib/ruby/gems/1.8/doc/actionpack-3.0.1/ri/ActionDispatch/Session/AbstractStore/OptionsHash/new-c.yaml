@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionDispatch::Session::AbstractStore::OptionsHash::new
+is_singleton: true
+name: new
+params: (by, env, default_options)
+visibility: public

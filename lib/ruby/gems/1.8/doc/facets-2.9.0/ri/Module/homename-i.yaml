@@ -1,0 +1,17 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: modname
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns the name of module or class containing the receiver.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  module ::HomeExample\n    module M\n      module N\n      end\n    end\n  end\n\n  HomeExample::M::N.homename  #=&gt; &quot;HomeExample::M&quot;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: See also Module#basename.
+full_name: Module#homename
+is_singleton: false
+name: homename
+params: ()
+visibility: public

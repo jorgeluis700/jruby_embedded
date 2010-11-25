@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>whereis (FileUtils)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/more/facets/fileutils/whereis.rb, line 25</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">whereis</span>(<span class="ruby-identifier">prog</span>, <span class="ruby-identifier">path</span>=<span class="ruby-constant">ENV</span>[<span class="ruby-value str">'PATH'</span>]) <span class="ruby-comment cmt">#:yield:</span>
+    <span class="ruby-identifier">dirs</span> = []
+    <span class="ruby-identifier">path</span>.<span class="ruby-identifier">split</span>(<span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-constant">PATH_SEPARATOR</span>).<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">dir</span><span class="ruby-operator">|</span>
+        <span class="ruby-comment cmt"># Windows checks against specific extensions</span>
+        <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-constant">ALT_SEPARATOR</span>
+          <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">prog</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-value str">'.'</span>)
+              <span class="ruby-identifier">f</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">dir</span>,<span class="ruby-identifier">prog</span>)
+              <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">executable?</span>(<span class="ruby-identifier">f</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span>(<span class="ruby-identifier">f</span>)
+                <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span>
+                    <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\//</span>,<span class="ruby-value str">'\\'</span>)
+                <span class="ruby-keyword kw">else</span>
+                    <span class="ruby-identifier">dirs</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\//</span>,<span class="ruby-value str">'\\'</span>)
+                <span class="ruby-keyword kw">end</span>
+              <span class="ruby-keyword kw">end</span>
+          <span class="ruby-keyword kw">else</span>
+              <span class="ruby-constant">Win32Exts</span>.<span class="ruby-identifier">find_all</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">ext</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">f</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">dir</span>,<span class="ruby-identifier">prog</span><span class="ruby-operator">+</span><span class="ruby-identifier">ext</span>)
+                <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">executable?</span>(<span class="ruby-identifier">f</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span>(<span class="ruby-identifier">f</span>)
+                    <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span>
+                      <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\//</span>,<span class="ruby-value str">'\\'</span>)
+                    <span class="ruby-keyword kw">else</span>
+                      <span class="ruby-identifier">dirs</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\//</span>,<span class="ruby-value str">'\\'</span>)
+                    <span class="ruby-keyword kw">end</span>
+                <span class="ruby-keyword kw">end</span>
+              }
+          <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">else</span>
+          <span class="ruby-identifier">f</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">dir</span>,<span class="ruby-identifier">prog</span>)
+          <span class="ruby-comment cmt"># Avoid /usr/lib/ruby, for example</span>
+          <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">executable?</span>(<span class="ruby-identifier">f</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span>(<span class="ruby-identifier">f</span>)
+              <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span>
+                <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">f</span>
+              <span class="ruby-keyword kw">else</span>
+                <span class="ruby-identifier">dirs</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">f</span>
+              <span class="ruby-keyword kw">end</span>
+          <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">end</span>
+    }
+    <span class="ruby-identifier">dirs</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-value">? </span><span class="ruby-keyword kw">nil</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">dirs</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

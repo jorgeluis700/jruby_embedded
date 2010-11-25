@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: 10 to the power <tt>x</tt>
+full_name: Math::exp10
+is_singleton: true
+name: exp10
+params: (x)
+visibility: public

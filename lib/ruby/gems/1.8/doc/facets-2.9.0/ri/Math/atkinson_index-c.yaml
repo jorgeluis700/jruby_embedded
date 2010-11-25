@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Closely related to the Theil index and easily expressible in terms of it.
+  - !ruby/struct:SM::Flow::P 
+    body: AI = 1-e^{theil_index}
+  - !ruby/struct:SM::Flow::P 
+    body: http://en.wikipedia.org/wiki/Atkinson_index
+full_name: Math::atkinson_index
+is_singleton: true
+name: atkinson_index
+params: (array)
+visibility: public

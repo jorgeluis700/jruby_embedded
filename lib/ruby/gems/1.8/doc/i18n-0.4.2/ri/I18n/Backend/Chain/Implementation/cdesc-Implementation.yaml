@@ -1,0 +1,31 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: backends
+    rw: RW
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: []
+
+full_name: I18n::Backend::Chain::Implementation
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Base
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: available_locales
+  - !ruby/object:RI::MethodSummary 
+    name: localize
+  - !ruby/object:RI::MethodSummary 
+    name: namespace_lookup?
+  - !ruby/object:RI::MethodSummary 
+    name: reload!
+  - !ruby/object:RI::MethodSummary 
+    name: store_translations
+  - !ruby/object:RI::MethodSummary 
+    name: translate
+name: Implementation
+superclass: 

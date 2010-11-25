@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Arel::Relation#externalize
+is_singleton: false
+name: externalize
+params: ()
+visibility: public

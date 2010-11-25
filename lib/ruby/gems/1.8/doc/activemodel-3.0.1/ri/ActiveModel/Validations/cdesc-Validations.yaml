@@ -1,0 +1,42 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: Active Model Validations
+  - !ruby/struct:SM::Flow::P 
+    body: Provides a full validation framework to your objects.
+  - !ruby/struct:SM::Flow::P 
+    body: "A minimal implementation could be:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class Person\n    include ActiveModel::Validations\n\n    attr_accessor :first_name, :last_name\n\n    validates_each :first_name, :last_name do |record, attr, value|\n      record.errors.add attr, 'starts with z.' if value.to_s[0] == ?z\n    end\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "Which provides you with the full standard validation stack that you know from Active Record:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  person = Person.new\n  person.valid?                   # =&gt; true\n  person.invalid?                 # =&gt; false\n\n  person.first_name = 'zoolander'\n  person.valid?                   # =&gt; false\n  person.invalid?                 # =&gt; true\n  person.errors                   # =&gt; #&lt;OrderedHash {:first_name=&gt;[&quot;starts with z.&quot;]}&gt;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Note that ActiveModel::Validations automatically adds an <tt>errors</tt> method to your instances initialized with a new ActiveModel::Errors object, so there is no need for you to do this manually.
+constants: []
+
+full_name: ActiveModel::Validations
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: ActiveSupport::Callbacks
+  - !ruby/object:RI::IncludedModule 
+    name: HelperMethods
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: errors
+  - !ruby/object:RI::MethodSummary 
+    name: invalid?
+  - !ruby/object:RI::MethodSummary 
+    name: run_validations!
+  - !ruby/object:RI::MethodSummary 
+    name: valid?
+  - !ruby/object:RI::MethodSummary 
+    name: validates_with
+name: Validations
+superclass: 

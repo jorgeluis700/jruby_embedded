@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Deletes all the identical object from the set and returns self. If <tt>n</tt> is given, it will remove that amount of identical objects from the set. Use <tt>subtract</tt> to delete many different items at once.
+full_name: Multiset#delete
+is_singleton: false
+name: delete
+params: (o, n = nil)
+visibility: public

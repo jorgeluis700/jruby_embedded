@@ -1,0 +1,17 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns a label tag tailored for labelling an input field for a specified attribute (identified by <tt>method</tt>) on an object assigned to the template (identified by <tt>object</tt>). The text of label will default to the attribute name unless a translation is found in the current I18n locale (through helpers.label.&lt;modelname&gt;.&lt;attribute&gt;) or you specify it explicitly. Additional options on the label tag can be passed as a hash with <tt>options</tt>. These options will be tagged onto the HTML as an HTML element attribute as in the example shown, except for the <tt>:value</tt> option, which is designed to target labels for radio_button tags (where the value is used in the ID of the input tag).
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Examples
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  label(:post, :title)\n  # =&gt; &lt;label for=&quot;post_title&quot;&gt;Title&lt;/label&gt;\n\n  You can localize your labels based on model and attribute names.\n  For example you can define the following in your locale (e.g. en.yml)\n\n  helpers:\n    label:\n      post:\n        body: &quot;Write your entire text here&quot;\n\n  Which then will result in\n\n  label(:post, :body)\n  # =&gt; &lt;label for=&quot;post_body&quot;&gt;Write your entire text here&lt;/label&gt;\n\n  Localization can also be based purely on the translation of the attribute-name like this:\n\n  activemodel:\n    attribute:\n      post:\n        cost: &quot;Total cost&quot;\n\n  label(:post, :cost)\n  # =&gt; &lt;label for=&quot;post_cost&quot;&gt;Total cost&lt;/label&gt;\n\n  label(:post, :title, &quot;A short title&quot;)\n  # =&gt; &lt;label for=&quot;post_title&quot;&gt;A short title&lt;/label&gt;\n\n  label(:post, :title, &quot;A short title&quot;, :class =&gt; &quot;title_label&quot;)\n  # =&gt; &lt;label for=&quot;post_title&quot; class=&quot;title_label&quot;&gt;A short title&lt;/label&gt;\n\n  label(:post, :privacy, &quot;Public Post&quot;, :value =&gt; &quot;public&quot;)\n  # =&gt; &lt;label for=&quot;post_privacy_public&quot;&gt;Public Post&lt;/label&gt;\n\n  label(:post, :terms) do\n    'Accept &lt;a href=&quot;/terms&quot;&gt;Terms&lt;/a&gt;.'\n  end\n"
+full_name: ActionView::Helpers::FormHelper#label
+is_singleton: false
+name: label
+params: (object_name, method, content_or_options = nil, options = nil, &block)
+visibility: public

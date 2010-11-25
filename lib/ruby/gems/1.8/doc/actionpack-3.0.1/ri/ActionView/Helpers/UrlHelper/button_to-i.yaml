@@ -1,0 +1,41 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Generates a form containing a single button that submits to the URL created by the set of <tt>options</tt>. This is the safest method to ensure links that cause changes to your data are not triggered by search bots or accelerators. If the HTML button does not work with your layout, you can also consider using the <tt>link_to</tt> method with the <tt>:method</tt> modifier as described in the <tt>link_to</tt> documentation.
+  - !ruby/struct:SM::Flow::P 
+    body: The generated form element has a class name of <tt>button_to</tt> to allow styling of the form itself and its children. You can control the form submission and input element behavior using <tt>html_options</tt>. This method accepts the <tt>:method</tt> and <tt>:confirm</tt> modifiers described in the <tt>link_to</tt> documentation. If no <tt>:method</tt> modifier is given, it will default to performing a POST operation. You can also disable the button by passing <tt>:disabled =&gt; true</tt> in <tt>html_options</tt>. If you are using RESTful routes, you can pass the <tt>:method</tt> to change the HTTP verb used to submit the form.
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Options
+  - !ruby/struct:SM::Flow::P 
+    body: The <tt>options</tt> hash accepts the same options as url_for.
+  - !ruby/struct:SM::Flow::P 
+    body: "There are a few special <tt>html_options</tt>:"
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>:method</tt> - Specifies the anchor name to be appended to the path.
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>:disabled</tt> - Specifies the anchor name to be appended to the path.
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>:confirm</tt> - This will use the unobtrusive JavaScript driver to prompt with the question specified. If the user accepts, the link is processed normally, otherwise no action is taken.
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>:remote</tt> - If set to true, will allow the Unobtrusive JavaScript drivers to control the submit behaviour. By default this behaviour is an ajax submit.
+    type: :BULLET
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Examples
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &lt;%= button_to &quot;New&quot;, :action =&gt; &quot;new&quot; %&gt;\n  # =&gt; &quot;&lt;form method=&quot;post&quot; action=&quot;/controller/new&quot; class=&quot;button_to&quot;&gt;\n  #      &lt;div&gt;&lt;input value=&quot;New&quot; type=&quot;submit&quot; /&gt;&lt;/div&gt;\n  #    &lt;/form&gt;&quot;\n\n  &lt;%= button_to &quot;Delete Image&quot;, { :action =&gt; &quot;delete&quot;, :id =&gt; @image.id },\n            :confirm =&gt; &quot;Are you sure?&quot;, :method =&gt; :delete %&gt;\n  # =&gt; &quot;&lt;form method=&quot;post&quot; action=&quot;/images/delete/1&quot; class=&quot;button_to&quot;&gt;\n  #      &lt;div&gt;\n  #        &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;delete&quot; /&gt;\n  #        &lt;input data-confirm='Are you sure?' value=&quot;Delete&quot; type=&quot;submit&quot; /&gt;\n  #      &lt;/div&gt;\n  #    &lt;/form&gt;&quot;\n\n  &lt;%= button_to('Destroy', 'http://www.example.com', :confirm =&gt; 'Are you sure?',\n            :method =&gt; &quot;delete&quot;, :remote =&gt; true, :disable_with =&gt; 'loading...') %&gt;\n  # =&gt; &quot;&lt;form class='button_to' method='post' action='http://www.example.com' data-remote='true'&gt;\n  #       &lt;div&gt;\n  #         &lt;input name='_method' value='delete' type='hidden' /&gt;\n  #         &lt;input value='Destroy' type='submit' disable_with='loading...' data-confirm='Are you sure?' /&gt;\n  #       &lt;/div&gt;\n  #     &lt;/form&gt;&quot;\n  #\n"
+full_name: ActionView::Helpers::UrlHelper#button_to
+is_singleton: false
+name: button_to
+params: (name, options = {}, html_options = {})
+visibility: public

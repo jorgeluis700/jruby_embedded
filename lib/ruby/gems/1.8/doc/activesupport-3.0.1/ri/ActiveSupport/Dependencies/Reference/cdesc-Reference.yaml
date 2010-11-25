@@ -1,0 +1,22 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: name
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: clear!
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: []
+
+full_name: ActiveSupport::Dependencies::Reference
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: get
+name: Reference
+superclass: Object

@@ -1,0 +1,25 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::H 
+    level: 1
+    text: Class Inheritor
+  - !ruby/struct:SM::Flow::P 
+    body: Create an dynamic class inheritable attribute.
+  - !ruby/struct:SM::Flow::P 
+    body: Inheritor providse a means to store and inherit data via the class heirarchy. An inheritor creates two methods one named after the key that provides a reader. And one named after key! which provides the writer. (Because of the unique nature of inheritor the reader and writer can't be the same method.)
+  - !ruby/struct:SM::Flow::P 
+    body: "The first argument is the inheritor's name. The second argument is the archtype object. This object must be duplicable (via #dup). The last argument is either the symbolic operator/method or a block that specifies how one hierarchical level &quot;integrates&quot; with the next."
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class X\n    class_inheritor :x, [], :+\n  end\n\n  class Y &lt; X\n  end\n\n  X.x! &lt;&lt; :a\n  X.x  #=&gt; [:a]\n  Y.x  #=&gt; [:a]\n\n  Y.x! &lt;&lt; :b\n  X.x  #=&gt; [:a]\n  Y.x  #=&gt; [:a, :b]\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "NOTE: Adding an inheritor directly to Module or Class will probably not do what is expected. Thankfully that usecase is likely a YAGNI, but in anycase it is even more likely that it is not possible with this code."
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Thomas Sawyer"
+full_name: Module#class_inheritor
+is_singleton: false
+name: class_inheritor
+params: (key, obj, op=nil, &fop)
+visibility: public

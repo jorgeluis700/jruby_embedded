@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionController::Dispatcher::before_dispatch
+is_singleton: true
+name: before_dispatch
+params: (*args, &block)
+visibility: public

@@ -1,0 +1,50 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: Active Model Attribute Methods
+  - !ruby/struct:SM::Flow::P 
+    body: <tt>ActiveModel::AttributeMethods</tt> provides a way to add prefixes and suffixes to your methods as well as handling the creation of Active Record like class methods such as <tt>table_name</tt>.
+  - !ruby/struct:SM::Flow::P 
+    body: "The requirements to implement ActiveModel::AttributeMethods are to:"
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>include ActiveModel::AttributeMethods</tt> in your object
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: Call each Attribute Method module method you want to add, such as attribute_method_suffix or attribute_method_prefix
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: Call <tt>define_attribute_methods</tt> after the other methods are called.
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: Define the various generic <tt>_attribute</tt> methods that you have declared
+    type: :BULLET
+  - !ruby/struct:SM::Flow::P 
+    body: "A minimal implementation could be:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class Person\n    include ActiveModel::AttributeMethods\n\n    attribute_method_affix  :prefix =&gt; 'reset_', :suffix =&gt; '_to_default!'\n    attribute_method_suffix '_contrived?'\n    attribute_method_prefix 'clear_'\n    define_attribute_methods ['name']\n\n    attr_accessor :name\n\n    private\n\n    def attribute_contrived?(attr)\n      true\n    end\n\n    def clear_attribute(attr)\n      send(&quot;#{attr}=&quot;, nil)\n    end\n\n    def reset_attribute_to_default!(attr)\n      send(&quot;#{attr}=&quot;, &quot;Default Name&quot;)\n    end\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Notice that whenever you include ActiveModel::AttributeMethods in your class, it requires you to implement a <tt>attributes</tt> methods which returns a hash with each attribute name in your model as hash key and the attribute value as hash value.
+  - !ruby/struct:SM::Flow::P 
+    body: Hash keys must be strings.
+constants: []
+
+full_name: ActiveModel::AttributeMethods
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: attribute_method?
+  - !ruby/object:RI::MethodSummary 
+    name: method_missing
+  - !ruby/object:RI::MethodSummary 
+    name: respond_to?
+name: AttributeMethods
+superclass: 

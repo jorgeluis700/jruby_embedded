@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveSupport::Callbacks::Callback#next_id
+is_singleton: false
+name: next_id
+params: ()
+visibility: public

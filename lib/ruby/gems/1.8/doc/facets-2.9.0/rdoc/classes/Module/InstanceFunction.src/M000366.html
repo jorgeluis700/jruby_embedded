@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>singleton_method_added (Module::InstanceFunction)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/tour/facets/module/instance_function.rb, line 50</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">singleton_method_added</span>(<span class="ruby-identifier">meth</span>)
+      <span class="ruby-identifier">this</span> = <span class="ruby-keyword kw">self</span>
+      <span class="ruby-comment cmt">##module_eval %{</span>
+      <span class="ruby-comment cmt">##  def #{meth}(*args)</span>
+      <span class="ruby-comment cmt">##    #{self.name}.#{meth}(self,*args)</span>
+      <span class="ruby-comment cmt">##  end</span>
+      <span class="ruby-comment cmt">##}</span>
+      <span class="ruby-identifier">module_eval</span> <span class="ruby-keyword kw">do</span>
+        <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">meth</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-operator">*</span><span class="ruby-identifier">args</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">this</span>.<span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">meth</span>, <span class="ruby-keyword kw">self</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">super</span>(<span class="ruby-identifier">meth</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

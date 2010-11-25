@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Symbol does not end in `!`, `=`, or `?`.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  :a.plain?   #=&gt; true\n  :a?.plain?  #=&gt; false\n  :a!.plain?  #=&gt; false\n  :a=.plain?  #=&gt; false\n"
+full_name: Symbol#plain?
+is_singleton: false
+name: plain?
+params: ()
+visibility: public

@@ -1,0 +1,26 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: I18n::Backend::Memoize
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: available_locales
+  - !ruby/object:RI::MethodSummary 
+    name: lookup
+  - !ruby/object:RI::MethodSummary 
+    name: memoized_lookup
+  - !ruby/object:RI::MethodSummary 
+    name: reload!
+  - !ruby/object:RI::MethodSummary 
+    name: reset_memoizations!
+  - !ruby/object:RI::MethodSummary 
+    name: store_translations
+name: Memoize
+superclass: 

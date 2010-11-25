@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Treats <tt>self</tt> and <tt>path</tt> as representations of pathnames, joining thme together as a single path.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  ('home' / 'trans')  #=&gt; 'home/trans'\n"
+full_name: String#/
+is_singleton: false
+name: /
+params: (path)
+visibility: public

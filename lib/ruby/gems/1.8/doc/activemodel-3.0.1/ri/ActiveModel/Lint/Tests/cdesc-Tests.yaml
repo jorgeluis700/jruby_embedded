@@ -1,0 +1,28 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: ActiveModel::Lint::Tests
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: test_errors_aref
+  - !ruby/object:RI::MethodSummary 
+    name: test_errors_full_messages
+  - !ruby/object:RI::MethodSummary 
+    name: test_model_naming
+  - !ruby/object:RI::MethodSummary 
+    name: test_persisted?
+  - !ruby/object:RI::MethodSummary 
+    name: test_to_key
+  - !ruby/object:RI::MethodSummary 
+    name: test_to_param
+  - !ruby/object:RI::MethodSummary 
+    name: test_valid?
+name: Tests
+superclass: 

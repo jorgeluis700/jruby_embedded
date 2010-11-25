@@ -1,0 +1,17 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: raised when method or function is not supported
+constants: []
+
+full_name: Erubis::NotSupportedError
+includes: []
+
+instance_methods: []
+
+name: NotSupportedError
+superclass: ErubisError

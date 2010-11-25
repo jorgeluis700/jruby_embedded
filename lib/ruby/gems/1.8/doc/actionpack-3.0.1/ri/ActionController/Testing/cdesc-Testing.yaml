@@ -1,0 +1,21 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: ActionController::Testing
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: RackDelegation
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: headers=
+  - !ruby/object:RI::MethodSummary 
+    name: process_with_new_base_test
+  - !ruby/object:RI::MethodSummary 
+    name: set_test_assigns
+name: Testing
+superclass: 

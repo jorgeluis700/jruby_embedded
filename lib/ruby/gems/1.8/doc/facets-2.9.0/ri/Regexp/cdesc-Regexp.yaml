@@ -1,0 +1,28 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: Regexp
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: +
+  - !ruby/object:RI::MethodSummary 
+    name: arity
+  - !ruby/object:RI::MethodSummary 
+    name: multiline?
+  - !ruby/object:RI::MethodSummary 
+    name: to_re
+  - !ruby/object:RI::MethodSummary 
+    name: to_regexp
+  - !ruby/object:RI::MethodSummary 
+    name: "|"
+  - !ruby/object:RI::MethodSummary 
+    name: "|"
+name: Regexp
+superclass: Object

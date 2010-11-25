@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveSupport::JSON::set_default_backend
+is_singleton: true
+name: set_default_backend
+params: ()
+visibility: public

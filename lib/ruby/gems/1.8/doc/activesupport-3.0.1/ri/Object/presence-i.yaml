@@ -1,0 +1,20 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Returns object if it's #present? otherwise returns nil. object.presence is equivalent to object.present? ? object : nil."
+  - !ruby/struct:SM::Flow::P 
+    body: "This is handy for any representation of objects where blank is the same as not present at all. For example, this simplifies a common check for HTTP POST/query parameters:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  state   = params[:state]   if params[:state].present?\n  country = params[:country] if params[:country].present?\n  region  = state || country || 'US'\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "...becomes:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  region = params[:state].presence || params[:country].presence || 'US'\n"
+full_name: Object#presence
+is_singleton: false
+name: presence
+params: ()
+visibility: public

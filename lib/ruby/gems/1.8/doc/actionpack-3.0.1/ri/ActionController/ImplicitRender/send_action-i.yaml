@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionController::ImplicitRender#send_action
+is_singleton: false
+name: send_action
+params: (*)
+visibility: public

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Alias for #telephone_field_tag"
+full_name: ActionView::Helpers::FormTagHelper#phone_field_tag
+is_singleton: false
+name: phone_field_tag
+params: (name, value = nil, options = {})
+visibility: public

@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Return the first glob match.
+  - !ruby/struct:SM::Flow::P 
+    body: "DEPRECATE: While slightly faster then glob().first, not really worth it unless this can be rewritten to shortcut on first match (using fnmatch?). In wich case, is there a better name for this method?"
+full_name: Pathname#glob_first
+is_singleton: false
+name: glob_first
+params: (match, *opts)
+visibility: public

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: block quotations
+full_name: RedCloth::Formatters::LATEX#bq_open
+is_singleton: false
+name: bq_open
+params: (opts)
+visibility: public

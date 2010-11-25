@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveModel::MassAssignmentSecurity::PermissionSet#remove_multiparameter_id
+is_singleton: false
+name: remove_multiparameter_id
+params: (key)
+visibility: protected

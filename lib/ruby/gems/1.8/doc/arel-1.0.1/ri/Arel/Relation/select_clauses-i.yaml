@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Arel::Relation#select_clauses
+is_singleton: false
+name: select_clauses
+params: ()
+visibility: public

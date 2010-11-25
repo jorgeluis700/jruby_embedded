@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Raw rendering of a template to a string. Just convert the results of render_to_body into a String. :api: plugin"
+full_name: AbstractController::Rendering#render_to_string
+is_singleton: false
+name: render_to_string
+params: (*args, &block)
+visibility: public

@@ -1,0 +1,18 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: "[]="
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Associates the value given by <em>value</em> with the key given by <em>key</em>. Unlike a regular hash, multiple can be assoicated with the same value.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  map = Multimap[&quot;a&quot; =&gt; 100, &quot;b&quot; =&gt; 200]\n  map[&quot;a&quot;] = 9\n  map[&quot;c&quot;] = 4\n  map   #=&gt; {&quot;a&quot; =&gt; [100, 9], &quot;b&quot; =&gt; [200], &quot;c&quot; =&gt; [4]}\n"
+full_name: Multimap#store
+is_singleton: false
+name: store
+params: |
+  map[key] = value        => value
+  map.store(key, value)   => value
+
+visibility: public

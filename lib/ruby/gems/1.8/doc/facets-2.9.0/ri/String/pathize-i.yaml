@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Converts a camelcase name (e.g. class or module name) to a unix path.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &quot;ExamplePathize&quot;.pathize           #=&gt; &quot;example_pathize&quot;\n  &quot;ExamplePathize::Example&quot;.pathize  #=&gt; &quot;example_pathize/example&quot;\n"
+full_name: String#pathize
+is_singleton: false
+name: pathize
+params: ()
+visibility: public

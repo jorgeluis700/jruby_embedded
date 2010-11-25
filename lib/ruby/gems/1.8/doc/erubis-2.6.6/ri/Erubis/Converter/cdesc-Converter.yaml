@@ -1,0 +1,35 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: escape
+    rw: RW
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: postamble
+    rw: RW
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: preamble
+    rw: RW
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: convert
+constants: []
+
+full_name: Erubis::Converter
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: convert
+  - !ruby/object:RI::MethodSummary 
+    name: convert_input
+  - !ruby/object:RI::MethodSummary 
+    name: detect_spaces_at_bol
+  - !ruby/object:RI::MethodSummary 
+    name: init_converter
+name: Converter
+superclass: 

@@ -1,0 +1,26 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Escape special character used in DOS-based shells.
+  - !ruby/struct:SM::Flow::P 
+    body: "TODO: How to integrate with rest of system?"
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "1."
+        body: Use platform condition?
+      - !ruby/struct:SM::Flow::LI 
+        label: "2."
+        body: Use separate dos_xxx methods?
+      - !ruby/struct:SM::Flow::LI 
+        label: "3."
+        body: Put in separate PowerShellwords module?
+    type: :NUMBER
+full_name: Shellwords#dos_escape
+is_singleton: false
+name: dos_escape
+params: (cmdline)
+visibility: public

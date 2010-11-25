@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Converts <em>map</em> to a nested array of [<em>key, value</em>] arrays.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  map = Multimap[&quot;a&quot; =&gt; 100, &quot;b&quot; =&gt; [200, 300], &quot;c&quot; =&gt; 400]\n  map.to_a   #=&gt; [[&quot;a&quot;, 100], [&quot;b&quot;, 200], [&quot;b&quot;, 300], [&quot;c&quot;, 400]]\n"
+full_name: Multimap#to_a
+is_singleton: false
+name: to_a
+params: |
+  map.to_a => array
+
+visibility: public

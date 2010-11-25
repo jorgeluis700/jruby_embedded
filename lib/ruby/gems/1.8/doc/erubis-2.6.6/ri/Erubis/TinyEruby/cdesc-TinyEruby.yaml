@@ -1,0 +1,33 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: src
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: tiny and the simplest implementation of eRuby
+  - !ruby/struct:SM::Flow::P 
+    body: ex.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  eruby = TinyEruby.new(File.read('example.rhtml'))\n  print eruby.src                 # print ruby code\n  print eruby.result(binding())   # eval ruby code with Binding object\n  print eruby.evalute(context)    # eval ruby code with context object\n"
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: EMBEDDED_PATTERN
+    value: /<%(=+|\#)?(.*?)-?%>/m
+full_name: Erubis::TinyEruby
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: convert
+  - !ruby/object:RI::MethodSummary 
+    name: evaluate
+  - !ruby/object:RI::MethodSummary 
+    name: result
+name: TinyEruby
+superclass: Object

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Alias for #exists?"
+full_name: ActionView::LookupContext::ViewPaths#template_exists?
+is_singleton: false
+name: template_exists?
+params: (name, prefix = nil, partial = false)
+visibility: public

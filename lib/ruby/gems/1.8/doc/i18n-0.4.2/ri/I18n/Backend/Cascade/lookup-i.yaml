@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: I18n::Backend::Cascade#lookup
+is_singleton: false
+name: lookup
+params: (locale, key, scope = [], options = {})
+visibility: public

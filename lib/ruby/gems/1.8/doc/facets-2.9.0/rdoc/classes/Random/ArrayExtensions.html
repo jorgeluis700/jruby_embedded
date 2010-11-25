@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Module: Random::ArrayExtensions</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Module</strong></td>
+          <td class="class-name-in-header">Random::ArrayExtensions</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../files/lib/more/facets/random_rb.html">
+                lib/more/facets/random.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000600">at_rand</a>&nbsp;&nbsp;
+      <a href="#M000601">at_rand!</a>&nbsp;&nbsp;
+      <a href="#M000602">pick</a>&nbsp;&nbsp;
+      <a href="#M000603">pick!</a>&nbsp;&nbsp;
+      <a href="#M000604">rand_index</a>&nbsp;&nbsp;
+      <a href="#M000605">rand_subset</a>&nbsp;&nbsp;
+      <a href="#M000606">shuffle</a>&nbsp;&nbsp;
+      <a href="#M000607">shuffle!</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000600" class="method-detail">
+        <a name="M000600"></a>
+
+        <div class="method-heading">
+          <a href="ArrayExtensions.src/M000600.html" target="Code" class="method-signature"
+            onclick="popupCode('ArrayExtensions.src/M000600.html');return false;">
+          <span class="method-name">at_rand</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return a random element from the array.
+</p>
+<pre>
+  [1, 2, 3, 4].at_rand           #~&gt; 2
+  [1, 2, 3, 4].at_rand           #~&gt; 4
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000601" class="method-detail">
+        <a name="M000601"></a>
+
+        <div class="method-heading">
+          <a href="ArrayExtensions.src/M000601.html" target="Code" class="method-signature"
+            onclick="popupCode('ArrayExtensions.src/M000601.html');return false;">
+          <span class="method-name">at_rand!</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Same as <a href="ArrayExtensions.html#M000600">at_rand</a>, but acts in
+place removing a random element from the array.
+</p>
+<pre>
+  a = [1,2,3,4]
+  a.at_rand!       #~&gt; 2
+  a                #~&gt; [1,3,4]
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000602" class="method-detail">
+        <a name="M000602"></a>
+
+        <div class="method-heading">
+          <a href="ArrayExtensions.src/M000602.html" target="Code" class="method-signature"
+            onclick="popupCode('ArrayExtensions.src/M000602.html');return false;">
+          <span class="method-name">pick</span><span class="method-args">(n=nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Similar to <a href="ArrayExtensions.html#M000600">at_rand</a>, but will
+return an array of randomly picked exclusive elements if given a number.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000603" class="method-detail">
+        <a name="M000603"></a>
+
+        <div class="method-heading">
+          <a href="ArrayExtensions.src/M000603.html" target="Code" class="method-signature"
+            onclick="popupCode('ArrayExtensions.src/M000603.html');return false;">
+          <span class="method-name">pick!</span><span class="method-args">(n=nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Similar to <a href="ArrayExtensions.html#M000600">at_rand</a>!, but given a
+number will return an array of exclusive elements.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000604" class="method-detail">
+        <a name="M000604"></a>
+
+        <div class="method-heading">
+          <a href="ArrayExtensions.src/M000604.html" target="Code" class="method-signature"
+            onclick="popupCode('ArrayExtensions.src/M000604.html');return false;">
+          <span class="method-name">rand_index</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<a href="../Random.html">Random</a> index.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000605" class="method-detail">
+        <a name="M000605"></a>
+
+        <div class="method-heading">
+          <a href="ArrayExtensions.src/M000605.html" target="Code" class="method-signature"
+            onclick="popupCode('ArrayExtensions.src/M000605.html');return false;">
+          <span class="method-name">rand_subset</span><span class="method-args">( number=nil, exclusive=true )</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns a random subset of an <a href="../Array.html">Array</a>. If a
+<em>number</em> of elements is specified then returns that number of
+elements, otherwise returns a random number of elements upto the size of
+the <a href="../Array.html">Array</a>.
+</p>
+<p>
+By defualt the returned values are exclusive of each other, but if
+<em>exclusive</em> is set to <tt>false</tt>, the same values can be choosen
+more than once.
+</p>
+<p>
+When <em>exclusive</em> is <tt>true</tt> (the default) and the
+<em>number</em> given is greater than the size of the array, then all
+values are returned.
+</p>
+<pre>
+  [1, 2, 3, 4].rand_subset(1)        #~&gt; [2]
+  [1, 2, 3, 4].rand_subset(4)        #~&gt; [2, 1, 3, 4]
+  [1, 2, 3, 4].rand_subset           #~&gt; [1, 3, 4]
+  [1, 2, 3, 4].rand_subset           #~&gt; [2, 3]
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000606" class="method-detail">
+        <a name="M000606"></a>
+
+        <div class="method-heading">
+          <a href="ArrayExtensions.src/M000606.html" target="Code" class="method-signature"
+            onclick="popupCode('ArrayExtensions.src/M000606.html');return false;">
+          <span class="method-name">shuffle</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Randomize the order of an array.
+</p>
+<pre>
+  [1,2,3,4].shuffle  #~&gt; [2,4,1,3]
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000607" class="method-detail">
+        <a name="M000607"></a>
+
+        <div class="method-heading">
+          <a href="ArrayExtensions.src/M000607.html" target="Code" class="method-signature"
+            onclick="popupCode('ArrayExtensions.src/M000607.html');return false;">
+          <span class="method-name">shuffle!</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+As with <a href="ArrayExtensions.html#M000606">shuffle</a> but modifies the
+array in place. The algorithm used here is known as a Fisher-Yates <a
+href="ArrayExtensions.html#M000606">shuffle</a>.
+</p>
+<pre>
+  a = [1,2,3,4]
+  a.shuffle!
+
+  a  #~&gt; [2,4,1,3]
+</pre>
+<p>
+CREDIT Niel Spring
+</p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

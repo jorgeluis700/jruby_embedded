@@ -1,0 +1,58 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Defines callbacks types:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  define_callbacks :validate\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "This macro accepts the following options:"
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>:terminator</tt> - Indicates when a before filter is considered
+    type: :BULLET
+  - !ruby/struct:SM::Flow::P 
+    body: to be halted.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  define_callbacks :validate, :terminator =&gt; &quot;result == false&quot;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: In the example above, if any before validate callbacks returns <tt>false</tt>, other callbacks are not executed. Defaults to &quot;false&quot;, meaning no value halts the chain.
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>:rescuable</tt> - By default, after filters are not executed if
+    type: :BULLET
+  - !ruby/struct:SM::Flow::P 
+    body: the given block or a before filter raises an error. Set this option to true to change this behavior.
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>:scope</tt> - Indicates which methods should be executed when a class
+    type: :BULLET
+  - !ruby/struct:SM::Flow::P 
+    body: is given as callback. Defaults to <tt>[:kind]</tt>.
+  - !ruby/struct:SM::Flow::VERB 
+    body: " class Audit\n   def before(caller)\n     puts 'Audit: before is called'\n   end\n\n   def before_save(caller)\n     puts 'Audit: before_save is called'\n   end\n end\n\n class Account\n   include ActiveSupport::Callbacks\n\n   define_callbacks :save\n   set_callback :save, :before, Audit.new\n\n   def save\n     run_callbacks :save do\n       puts 'save in main'\n     end\n   end\n end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: In the above case whenever you save an account the method <tt>Audit#before</tt> will be called. On the other hand
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  define_callbacks :save, :scope =&gt; [:kind, :name]\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "would trigger <tt>Audit#before_save</tt> instead. That's constructed by calling <tt>&quot;#{kind}_#{name}&quot;</tt> on the given instance. In this case &quot;kind&quot; is &quot;before&quot; and &quot;name&quot; is &quot;save&quot;. In this context &quot;:kind&quot; and &quot;:name&quot; have special meanings: &quot;:kind&quot; refers to the kind of callback (before/after/around) and &quot;:name&quot; refers to the method on which callbacks are being defined."
+  - !ruby/struct:SM::Flow::P 
+    body: A declaration like
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  define_callbacks :save, :scope =&gt; [:name]\n"
+  - !ruby/struct:SM::Flow::P 
+    body: would call <tt>Audit#save</tt>.
+full_name: ActiveSupport::Callbacks::ClassMethods#define_callbacks
+is_singleton: false
+name: define_callbacks
+params: (*callbacks)
+visibility: public

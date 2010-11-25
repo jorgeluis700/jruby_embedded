@@ -1,0 +1,33 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: controller_path
+    rw: W
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: params
+    rw: RW
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: request
+    rw: RW
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: response
+    rw: RW
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: []
+
+full_name: ActionView::TestCase::TestController
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: ActionDispatch::TestProcess
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: controller_path=
+name: TestController
+superclass: ActionController::Base

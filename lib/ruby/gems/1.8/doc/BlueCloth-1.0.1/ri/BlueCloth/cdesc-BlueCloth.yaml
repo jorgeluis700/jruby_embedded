@@ -1,0 +1,371 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: Filters for controlling what gets output for untrusted input. (But really, you're filtering bad stuff out of untrusted input at submission-time via untainting, aren't you?)
+    name: filter_html
+    rw: RW
+  - !ruby/object:RI::Attribute 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: Filters for controlling what gets output for untrusted input. (But really, you're filtering bad stuff out of untrusted input at submission-time via untainting, aren't you?)
+    name: filter_styles
+    rw: RW
+  - !ruby/object:RI::Attribute 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: RedCloth-compatibility accessor. Line-folding is part of Markdown syntax, so this isn't used by anything.
+    name: fold_lines
+    rw: RW
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Bluecloth is a Ruby implementation of Markdown, a text-to-HTML conversion tool.
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: Synopsis
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  doc = BlueCloth::new &quot;\n    ## Test document ##\n\n    Just a simple test.\n  &quot;\n\n  puts doc.to_html\n"
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: Authors
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: Michael Granger &lt;ged@FaerieMUD.org&gt;
+    type: :BULLET
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: Contributors
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: Martin Chase &lt;stillflame@FaerieMUD.org&gt; - Peer review, helpful suggestions
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: Florian Gross &lt;flgr@ccan.de&gt; - Filter options, suggestions
+    type: :BULLET
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: Copyright
+  - !ruby/struct:SM::Flow::P 
+    body: "Original version:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  Copyright (c) 2003-2004 John Gruber\n  &lt;http://daringfireball.net/&gt;\n  All rights reserved.\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "Ruby port:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  Copyright (c) 2004 The FaerieMUD Consortium.\n"
+  - !ruby/struct:SM::Flow::P 
+    body: BlueCloth is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+  - !ruby/struct:SM::Flow::P 
+    body: BlueCloth is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: To-do
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: Refactor some of the larger uglier methods that have to do their own brute-force scanning because of lack of Perl features in Ruby's Regexp class. Alternately, could add a dependency on 'pcre' and use most Perl regexps.
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: Put the StringScanner in the render state for thread-safety.
+    type: :BULLET
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: Version
+  - !ruby/struct:SM::Flow::VERB 
+    body: " $Id: bluecloth.rb 130 2009-07-16 00:08:36Z deveiant $\n"
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: Release Version
+    name: Version
+    value: VERSION = '1.0.1'
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: SVN Revision
+    name: SvnRev
+    value: "%q$Rev: 130 $"
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: SVN Id tag
+    name: SvnId
+    value: "%q$Id: bluecloth.rb 130 2009-07-16 00:08:36Z deveiant $"
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: SVN URL
+    name: SvnUrl
+    value: "%q$URL: svn+ssh://deveiate/svn/BlueCloth/releases/1.0.0/lib/bluecloth.rb $"
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: Rendering state struct. Keeps track of URLs, titles, and HTML blocks midway through a render. I prefer this to the globals of the Perl version because globals make me break out in hives. Or something.
+    name: RenderState
+    value: Struct::new( "RenderState", :urls, :titles, :html_blocks, :log )
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: "Tab width for #detab! if none is specified"
+    name: TabWidth
+    value: "4"
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: The tag-closing string -- set to '&gt;' for HTML
+    name: EmptyElementSuffix
+    value: "\"/>\";"
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: Table of MD5 sums for escaped characters
+    name: EscapeTable
+    value: "{}"
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: The list of tags which are considered block-level constructs and an alternation pattern suitable for use in regexps made from the list
+    name: StrictBlockTags
+    value: "%w[ p div h[1-6] blockquote pre table dl ol ul script noscript                 form fieldset iframe math ins del ]"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: StrictTagPattern
+    value: StrictBlockTags.join('|')
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: LooseBlockTags
+    value: StrictBlockTags - %w[ins del]
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: LooseTagPattern
+    value: LooseBlockTags.join('|')
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: "Nested blocks:"
+      - !ruby/struct:SM::Flow::VERB 
+        body: "     &lt;div&gt;\n             &lt;div&gt;\n             tags for inner block must be indented.\n             &lt;/div&gt;\n     &lt;/div&gt;\n"
+    name: StrictBlockRegex
+    value: "%r{                 ^                                             # Start of line                 <(#{StrictTagPattern})        # Start tag: \\2                 \\b                                            # word break                 (.*\\n)*?                              # Any number of lines, minimal match                 </\\1>                                 # Matching end tag                 [ ]*                                  # trailing spaces                 $                                             # End of line or document           }ix"
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: More-liberal block-matching
+    name: LooseBlockRegex
+    value: "%r{                 ^                                             # Start of line                 <(#{LooseTagPattern}) # start tag: \\2                 \\b                                            # word break                 (.*\\n)*?                              # Any number of lines, minimal match                 .*</\\1>                                       # Anything + Matching end tag                 [ ]*                                  # trailing spaces                 $                                             # End of line or document           }ix"
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: Special case for &lt;hr /&gt;.
+    name: HruleBlockRegex
+    value: "%r{                 (                                             # $1                         \\A\\n?                                # Start of doc + optional \\n                         |                                    # or                         .*\\n\\n                               # anything + blank line                 )                 (                                             # save in $2                         [ ]*                         # Any spaces                         <hr                                  # Tag open                         \\b                                   # Word break                         ([^<>])*?                    # Attributes                         /?>                                  # Tag close                         $                                    # followed by a blank line or end of document                 )           }ix"
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: "Link defs are in the form: ^[id]: url &quot;optional title&quot;"
+    name: LinkRegex
+    value: "%r{                 ^[ ]*\\[(.+)\\]:                # id = $1                   [ ]*                   \\n?                         # maybe *one* newline                   [ ]*                 <?(\\S+?)>?                            # url = $2                   [ ]*                   \\n?                         # maybe one newline                   [ ]*                 (?:                         # Titles are delimited by \"quotes\" or (parens).                         [\"(]                         (.+?)                        # title = $3                         [\")]                 # Matching ) or \"                         [ ]*                 )?    # title is optional                 (?:\\n+|\\Z)           }x"
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: Patterns to match and transform lists
+    name: ListMarkerOl
+    value: "%r{\\d+\\.}"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: ListMarkerUl
+    value: "%r{[*+-]}"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: ListMarkerAny
+    value: Regexp::union( ListMarkerOl, ListMarkerUl )
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: ListRegexp
+    value: "%r{                   (?:                         ^[ ]{0,#{TabWidth - 1}}              # Indent < tab width                         (#{ListMarkerAny})                   # unordered or ordered ($1)                         [ ]+                                         # At least one space                   )                   (?m:.+?)                                            # item content (include newlines)                   (?:                           \\z                                         # Either EOF                         |                                                    #  or                           \\n{2,}                                     # Blank line...                           (?=\\S)                                     # ...followed by non-space                           (?![ ]*                                    # ...but not another item                                 (#{ListMarkerAny})                            [ ]+)                   )           }x"
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: Pattern for transforming list items
+    name: ListItemRegexp
+    value: "%r{                 (\\n)?                                                 # leading line = $1                 (^[ ]*)                                                       # leading whitespace = $2                 (#{ListMarkerAny}) [ ]+                       # list marker = $3                 ((?m:.+?)                                             # list item text   = $4                 (\\n{1,2}))                 (?= \\n* (\\z | \\2 (#{ListMarkerAny}) [ ]+))           }x"
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: Pattern for matching codeblocks
+    name: CodeBlockRegexp
+    value: "%r{                 (?:\\n\\n|\\A)                 (                                                                     # $1 = the code block                   (?:                         (?:[ ]{#{TabWidth}} | \\t)            # a tab or tab-width of spaces                         .*\\n+                   )+                 )                 (^[ ]{0,#{TabWidth - 1}}\\S|\\Z)                # Lookahead for non-space at                                                                                         # line-start, or end of doc           }x"
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: Pattern for matching Markdown blockquote blocks
+    name: BlockQuoteRegexp
+    value: "%r{                   (?:                         ^[ ]*>[ ]?           # '>' at the start of a line                           .+\\n                       # rest of the first line                         (?:.+\\n)*            # subsequent consecutive lines                         \\n*                          # blanks                   )+           }x"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: PreChunk
+    value: "%r{ ( ^ \\s* <pre> .+? </pre> ) }xm"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: AutoAnchorURLRegexp
+    value: /<((https?|ftp):[^'">\s]+)>/
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: AutoAnchorEmailRegexp
+    value: "%r{                 <                 (                         [-.\\w]+                         \\@                         [-a-z0-9]+(\\.[-a-z0-9]+)*\\.[a-z]+                 )                 >           }xi"
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: Encoder functions to turn characters of an email address into encoded entities.
+    name: Encoders
+    value: "[                 lambda {|char| \"&#%03d;\" % char},                 lambda {|char| \"&#x%X;\" % char},                 lambda {|char| char.chr },         ]"
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: Regex for matching Setext-style headers
+    name: SetextHeaderRegexp
+    value: "%r{                 (.+)                  # The title text ($1)                 \\n                 ([\\-=])+              # Match a line of = or -. Save only one in $2.                 [ ]*\\n+            }x"
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: Regexp for matching ATX-style headers
+    name: AtxHeaderRegexp
+    value: "%r{                 ^(\\#{1,6})    # $1 = string of #'s                 [ ]*                 (.+?)         # $2 = Header text                 [ ]*                 \\#*                   # optional closing #'s (not counted)                 \\n+           }x"
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: Pattern to match the linkid part of an anchor tag for reference-style links.
+    name: RefLinkIdRegex
+    value: "%r{                 [ ]?                                  # Optional leading space                 (?:\\n[ ]*)?                           # Optional newline + spaces                 \\[                         (.*?)                                # Id = $1                 \\]           }x"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: InlineLinkRegex
+    value: "%r{                 \\(                                            # Literal paren                         [ ]*                         # Zero or more spaces                         <?(.+?)>?                    # URI = $1                         [ ]*                         # Zero or more spaces                         (?:                                  #                                  ([\\\"\\'])            # Opening quote char = $2                                 (.*?)                       # Title = $3                                 \\2                          # Matching quote char                         )?                                   # Title is optional                 \\)           }x"
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: Pattern to match strong emphasis in Markdown text
+    name: BoldRegexp
+    value: "%r{ (\\*\\*|__) (\\S|\\S.*?\\S) \\1 }x"
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: Pattern to match normal emphasis in Markdown text
+    name: ItalicRegexp
+    value: "%r{ (\\*|_) (\\S|\\S.*?\\S) \\1 }x"
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: "Next, handle inline images: ![alt text](url &quot;optional title&quot;) Don't forget: encode * and _"
+    name: InlineImageRegexp
+    value: "%r{                 (                                     # Whole match = $1                         !\\[ (.*?) \\] # alt text = $2                   \\([ ]*                         <?(\\S+?)>?           # source url = $3                     [ ]*                         (?:                          #                            ([\"'])             # quote char = $4                           (.*?)                      # title = $5                           \\4                 # matching quote                           [ ]*                         )?                           # title is optional                   \\)                 )           }xs"
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: Reference-style images
+    name: ReferenceImageRegexp
+    value: "%r{                 (                                     # Whole match = $1                         !\\[ (.*?) \\] # Alt text = $2                         [ ]?                 # Optional space                         (?:\\n[ ]*)?          # One optional newline + spaces                         \\[ (.*?) \\]          # id = $3                 )           }xs"
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: Regexp to match special characters in a code block
+    name: CodeEscapeRegexp
+    value: "%r{( \\* | _ | \\{ | \\} | \\[ | \\] | \\\\ )}x"
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: Matching constructs for tokenizing X/HTML
+    name: HTMLCommentRegexp
+    value: "%r{ <! ( -- .*? -- \\s* )+ > }mx"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: XMLProcInstRegexp
+    value: "%r{ <\\? .*? \\?> }mx"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: MetaTag
+    value: Regexp::union( HTMLCommentRegexp, XMLProcInstRegexp )
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: HTMLTagOpenRegexp
+    value: "%r{ < [a-z/!$] [^<>]* }imx"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: HTMLTagCloseRegexp
+    value: "%r{ > }x"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: HTMLTagPart
+    value: Regexp::union( HTMLTagOpenRegexp, HTMLTagCloseRegexp )
+full_name: BlueCloth
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: apply_block_transforms
+  - !ruby/object:RI::MethodSummary 
+    name: apply_span_transforms
+  - !ruby/object:RI::MethodSummary 
+    name: detab
+  - !ruby/object:RI::MethodSummary 
+    name: detab!
+  - !ruby/object:RI::MethodSummary 
+    name: encode_backslash_escapes
+  - !ruby/object:RI::MethodSummary 
+    name: encode_code
+  - !ruby/object:RI::MethodSummary 
+    name: encode_email_address
+  - !ruby/object:RI::MethodSummary 
+    name: encode_html
+  - !ruby/object:RI::MethodSummary 
+    name: escape_md
+  - !ruby/object:RI::MethodSummary 
+    name: escape_special_chars
+  - !ruby/object:RI::MethodSummary 
+    name: form_paragraphs
+  - !ruby/object:RI::MethodSummary 
+    name: hide_html_blocks
+  - !ruby/object:RI::MethodSummary 
+    name: outdent
+  - !ruby/object:RI::MethodSummary 
+    name: strip_link_definitions
+  - !ruby/object:RI::MethodSummary 
+    name: to_html
+  - !ruby/object:RI::MethodSummary 
+    name: tokenize_html
+  - !ruby/object:RI::MethodSummary 
+    name: transform_anchors
+  - !ruby/object:RI::MethodSummary 
+    name: transform_auto_links
+  - !ruby/object:RI::MethodSummary 
+    name: transform_block_quotes
+  - !ruby/object:RI::MethodSummary 
+    name: transform_code_blocks
+  - !ruby/object:RI::MethodSummary 
+    name: transform_code_spans
+  - !ruby/object:RI::MethodSummary 
+    name: transform_headers
+  - !ruby/object:RI::MethodSummary 
+    name: transform_hrules
+  - !ruby/object:RI::MethodSummary 
+    name: transform_images
+  - !ruby/object:RI::MethodSummary 
+    name: transform_italic_and_bold
+  - !ruby/object:RI::MethodSummary 
+    name: transform_list_items
+  - !ruby/object:RI::MethodSummary 
+    name: transform_lists
+  - !ruby/object:RI::MethodSummary 
+    name: unescape_special_chars
+name: BlueCloth
+superclass: String

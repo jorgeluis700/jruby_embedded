@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: u
+block_params: 
+comment: 
+full_name: Erubis::XmlHelper#url_encode
+is_singleton: false
+name: url_encode
+params: (str)
+visibility: public

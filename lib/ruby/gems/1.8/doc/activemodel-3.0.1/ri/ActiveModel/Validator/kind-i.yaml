@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Return the kind for this validator.
+full_name: ActiveModel::Validator#kind
+is_singleton: false
+name: kind
+params: ()
+visibility: public

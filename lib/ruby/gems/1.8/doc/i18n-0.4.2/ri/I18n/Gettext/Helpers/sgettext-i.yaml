@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: s_
+block_params: 
+comment: 
+full_name: I18n::Gettext::Helpers#sgettext
+is_singleton: false
+name: sgettext
+params: (msgid, separator = '|')
+visibility: public

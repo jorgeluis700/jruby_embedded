@@ -1,0 +1,13 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: render_partial
+  - !ruby/object:RI::AliasName 
+    name: render_collection
+block_params: 
+comment: 
+full_name: ActionView::LogSubscriber#render_template
+is_singleton: false
+name: render_template
+params: (event)
+visibility: public

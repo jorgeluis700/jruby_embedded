@@ -1,0 +1,122 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: The default normalization used for operations that require normalization. It can be set to any of the normalizations in NORMALIZATION_FORMS.
+      - !ruby/struct:SM::Flow::P 
+        body: "Example:"
+      - !ruby/struct:SM::Flow::VERB 
+        body: "  ActiveSupport::Multibyte::Unicode.default_normalization_form = :c\n"
+    name: default_normalization_form
+    rw: RW
+class_methods: []
+
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: A list of all available normalization forms. See http://www.unicode.org/reports/tr15/tr15-29.html for more information about normalization.
+    name: NORMALIZATION_FORMS
+    value: "[:c, :kc, :d, :kd]"
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: The Unicode version that is supported by the implementation
+    name: UNICODE_VERSION
+    value: "'5.2.0'"
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: Hangul character boundaries and properties
+    name: HANGUL_SBASE
+    value: "0xAC00"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: HANGUL_LBASE
+    value: "0x1100"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: HANGUL_VBASE
+    value: "0x1161"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: HANGUL_TBASE
+    value: "0x11A7"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: HANGUL_LCOUNT
+    value: "19"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: HANGUL_VCOUNT
+    value: "21"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: HANGUL_TCOUNT
+    value: "28"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: HANGUL_NCOUNT
+    value: HANGUL_VCOUNT * HANGUL_TCOUNT
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: HANGUL_SCOUNT
+    value: "11172"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: HANGUL_SLAST
+    value: HANGUL_SBASE + HANGUL_SCOUNT
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: HANGUL_JAMO_FIRST
+    value: "0x1100"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: HANGUL_JAMO_LAST
+    value: "0x11FF"
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: All the unicode whitespace
+    name: WHITESPACE
+    value: "[         (0x0009..0x000D).to_a, # White_Space # Cc   [5] <control-0009>..<control-000D>         0x0020,                # White_Space # Zs       SPACE         0x0085,                # White_Space # Cc       <control-0085>         0x00A0,                # White_Space # Zs       NO-BREAK SPACE         0x1680,                # White_Space # Zs       OGHAM SPACE MARK         0x180E,                # White_Space # Zs       MONGOLIAN VOWEL SEPARATOR         (0x2000..0x200A).to_a, # White_Space # Zs  [11] EN QUAD..HAIR SPACE         0x2028,                # White_Space # Zl       LINE SEPARATOR         0x2029,                # White_Space # Zp       PARAGRAPH SEPARATOR         0x202F,                # White_Space # Zs       NARROW NO-BREAK SPACE         0x205F,                # White_Space # Zs       MEDIUM MATHEMATICAL SPACE         0x3000,                # White_Space # Zs       IDEOGRAPHIC SPACE       ].flatten.freeze"
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: BOM (byte order mark) can also be seen as whitespace, it's a non-rendering character used to distinguish between little and big endian. This is not an issue in utf-8, so it must be ignored.
+    name: LEADERS_AND_TRAILERS
+    value: WHITESPACE + [65279]
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: TRAILERS_PAT
+    value: /(#{codepoints_to_pattern(LEADERS_AND_TRAILERS)})+\Z/u
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: LEADERS_PAT
+    value: /\A(#{codepoints_to_pattern(LEADERS_AND_TRAILERS)})+/u
+full_name: ActiveSupport::Multibyte::Unicode
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: compose_codepoints
+  - !ruby/object:RI::MethodSummary 
+    name: decompose_codepoints
+  - !ruby/object:RI::MethodSummary 
+    name: g_pack
+  - !ruby/object:RI::MethodSummary 
+    name: g_unpack
+  - !ruby/object:RI::MethodSummary 
+    name: in_char_class?
+  - !ruby/object:RI::MethodSummary 
+    name: normalize
+  - !ruby/object:RI::MethodSummary 
+    name: reorder_characters
+  - !ruby/object:RI::MethodSummary 
+    name: tidy_bytes
+  - !ruby/object:RI::MethodSummary 
+    name: u_unpack
+name: Unicode
+superclass: 

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: This is the common behavior for &quot;navigation&quot; requests, like :html, :iphone and so forth.
+full_name: ActionController::Responder#navigation_behavior
+is_singleton: false
+name: navigation_behavior
+params: (error)
+visibility: protected

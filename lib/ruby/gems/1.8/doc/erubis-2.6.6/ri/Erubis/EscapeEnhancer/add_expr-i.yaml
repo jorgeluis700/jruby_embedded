@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: ""
+full_name: Erubis::EscapeEnhancer#add_expr
+is_singleton: false
+name: add_expr
+params: (src, code, indicator)
+visibility: public

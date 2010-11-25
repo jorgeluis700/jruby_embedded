@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Main entry point for responder responsible to dispatch to the proper format.
+full_name: ActionController::Responder#respond
+is_singleton: false
+name: respond
+params: ()
+visibility: public

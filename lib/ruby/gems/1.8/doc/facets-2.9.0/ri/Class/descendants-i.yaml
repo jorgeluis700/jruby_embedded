@@ -1,0 +1,20 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: List all descedents of this class.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class A ; end\n  class B &lt; A; end\n  class C &lt; A; end\n  A.descendants  #=&gt; [B,C]\n"
+  - !ruby/struct:SM::Flow::P 
+    body: You may also limit the generational distance the subclass may be from the parent class.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class X ; end\n  class Y &lt; X; end\n  class Z &lt; Y; end\n  X.descendants    #=&gt; [Y,Z]\n  X.descendants(1) #=&gt; [Y]\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "NOTE: This is a intensive operation. Do not expect it to be very fast."
+full_name: Class#descendants
+is_singleton: false
+name: descendants
+params: (generations=-1)
+visibility: public

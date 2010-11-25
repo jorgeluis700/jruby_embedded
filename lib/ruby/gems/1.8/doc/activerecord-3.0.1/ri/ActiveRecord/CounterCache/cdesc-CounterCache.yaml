@@ -1,0 +1,25 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::H 
+    level: 1
+    text: Active Record Counter Cache
+constants: []
+
+full_name: ActiveRecord::CounterCache
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: decrement_counter
+  - !ruby/object:RI::MethodSummary 
+    name: increment_counter
+  - !ruby/object:RI::MethodSummary 
+    name: reset_counters
+  - !ruby/object:RI::MethodSummary 
+    name: update_counters
+name: CounterCache
+superclass: 

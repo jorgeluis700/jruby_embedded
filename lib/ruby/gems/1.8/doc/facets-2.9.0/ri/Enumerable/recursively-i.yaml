@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns a recursive functor, that allows enumerable methods to iterate through enumerable sub-elements. By default it only recurses over elements of the same type.
+full_name: Enumerable#recursively
+is_singleton: false
+name: recursively
+params: (*types, &block)
+visibility: public

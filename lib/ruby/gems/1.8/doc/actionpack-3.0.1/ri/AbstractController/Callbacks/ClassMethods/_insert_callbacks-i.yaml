@@ -1,0 +1,36 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: callback, options
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Take callback names and an optional callback proc, normalize them, then call the block with each callback. This allows us to abstract the normalization across several methods that use it.
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Parameters
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>callbacks</tt> - An array of callbacks, with an optional options hash as the last parameter.
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>block</tt> - A proc that should be added to the callbacks.
+    type: :BULLET
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Block Parameters
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>name</tt> - The callback to be added
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>options</tt> - A hash of options to be used when adding the callback
+    type: :BULLET
+full_name: AbstractController::Callbacks::ClassMethods#_insert_callbacks
+is_singleton: false
+name: _insert_callbacks
+params: (callbacks, block) {|callback, options| ...}
+visibility: public

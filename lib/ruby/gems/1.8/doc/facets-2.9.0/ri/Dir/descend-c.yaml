@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: ""
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Descend a directory path.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  d = []\n\n  Dir.descend(&quot;/var/log&quot;) do |path|\n    d &lt;&lt; path\n  end\n\n  d  #=&gt; ['/', '/var', '/var/log']\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Daniel Berger, Jeffrey Schwab"
+full_name: Dir::descend
+is_singleton: true
+name: descend
+params: (path) {|| ...}
+visibility: public

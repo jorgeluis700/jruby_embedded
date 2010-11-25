@@ -1,0 +1,34 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: ActiveRecord model used to store actual translations to the database.
+  - !ruby/struct:SM::Flow::P 
+    body: "This model expects a table like the following to be already set up in your the database:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  create_table :translations do |t|\n    t.string :locale\n    t.string :key\n    t.text   :value\n    t.text   :interpolations\n    t.boolean :is_proc, :default =&gt; false\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "This model supports to named scopes :locale and :lookup. The :locale scope simply adds a condition for a given locale:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  I18n::Backend::ActiveRecord::Translation.locale(:en).all\n  # =&gt; all translation records that belong to the :en locale\n"
+  - !ruby/struct:SM::Flow::P 
+    body: The :lookup scope adds a condition for looking up all translations that either start with the given keys (joined by an optionally given separator or I18n.default_separator) or that exactly have this key.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  # with translations present for :&quot;foo.bar&quot; and :&quot;foo.baz&quot;\n  I18n::Backend::ActiveRecord::Translation.lookup(:foo)\n  # =&gt; an array with both translation records :&quot;foo.bar&quot; and :&quot;foo.baz&quot;\n\n  I18n::Backend::ActiveRecord::Translation.lookup([:foo, :bar])\n  I18n::Backend::ActiveRecord::Translation.lookup(:&quot;foo.bar&quot;)\n  # =&gt; an array with the translation record :&quot;foo.bar&quot;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: When the StoreProcs module was mixed into this model then Procs will be stored to the database as Ruby code and evaluated when :value is called.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  Translation = I18n::Backend::ActiveRecord::Translation\n  Translation.create      #     :locale =&gt; 'en'\n    :key    =&gt; 'foo'\n    :value  =&gt; lambda { |key, options| 'FOO' }\n  Translation.find_by_locale_and_key('en', 'foo').value\n  # =&gt; 'FOO'\n"
+constants: []
+
+full_name: I18n::Backend::ActiveRecord
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Implementation
+instance_methods: []
+
+name: ActiveRecord
+superclass: Object

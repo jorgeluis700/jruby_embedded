@@ -1,0 +1,29 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Adds instrumentation to several ends in ActionController::Base. It also provides some hooks related with process_action, this allows an ORM like Active Record and/or DataMapper to plug in ActionController and show related information.
+  - !ruby/struct:SM::Flow::P 
+    body: Check ActiveRecord::Railties::ControllerRuntime for an example.
+constants: []
+
+full_name: ActionController::Instrumentation
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: AbstractController::Logger
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: process_action
+  - !ruby/object:RI::MethodSummary 
+    name: redirect_to
+  - !ruby/object:RI::MethodSummary 
+    name: render
+  - !ruby/object:RI::MethodSummary 
+    name: send_data
+  - !ruby/object:RI::MethodSummary 
+    name: send_file
+name: Instrumentation
+superclass: 

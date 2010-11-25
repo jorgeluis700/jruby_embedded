@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Rack::Mount::Analysis::Splitting#separators
+is_singleton: false
+name: separators
+params: (key)
+visibility: public

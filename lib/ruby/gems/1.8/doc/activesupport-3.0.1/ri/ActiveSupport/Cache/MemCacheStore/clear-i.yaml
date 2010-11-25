@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Clear the entire cache on all memcached servers. This method should be used with care when shared cache is being used.
+full_name: ActiveSupport::Cache::MemCacheStore#clear
+is_singleton: false
+name: clear
+params: (options = nil)
+visibility: public

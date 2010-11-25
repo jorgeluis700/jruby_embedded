@@ -1,0 +1,24 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Join with <em>path</em> as a file path.
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: path - The path component(s) to append. [#to_s]
+    type: :BULLET
+  - !ruby/struct:SM::Flow::P 
+    body: Examples
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  (:merb / &quot;string&quot;)   #=&gt; &quot;merb/string&quot;\n  (:merb / :symbol)    #=&gt; &quot;merb/symbol&quot;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Returns String of the receiver (as a path string), concatenated with <em>path</em>.
+full_name: Symbol#/
+is_singleton: false
+name: /
+params: (path)
+visibility: public

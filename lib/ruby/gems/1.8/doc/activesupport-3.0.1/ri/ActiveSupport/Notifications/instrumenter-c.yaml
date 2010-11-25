@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveSupport::Notifications::instrumenter
+is_singleton: true
+name: instrumenter
+params: ()
+visibility: public

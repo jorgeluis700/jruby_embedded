@@ -1,0 +1,51 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: backend
+    rw: R
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::H 
+    level: 1
+    text: XmlMini
+  - !ruby/struct:SM::Flow::P 
+    body: "To use the much faster libxml parser:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  gem 'libxml-ruby', '=0.9.7'\n  XmlMini.backend = 'LibXML'\n"
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: DEFAULT_ENCODINGS
+    value: "{       \"binary\" => \"base64\""
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: TYPE_NAMES
+    value: "{       \"Symbol\"     => \"symbol\",       \"Fixnum\"     => \"integer\",       \"Bignum\"     => \"integer\",       \"BigDecimal\" => \"decimal\",       \"Float\"      => \"float\",       \"TrueClass\"  => \"boolean\",       \"FalseClass\" => \"boolean\",       \"Date\"       => \"date\",       \"DateTime\"   => \"datetime\",       \"Time\"       => \"datetime\",       \"Array\"      => \"array\",       \"Hash\"       => \"hash\""
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: FORMATTING
+    value: "{       \"symbol\"   => Proc.new { |symbol| symbol.to_s },       \"date\"     => Proc.new { |date| date.to_s(:db) },       \"datetime\" => Proc.new { |time| time.xmlschema },       \"binary\"   => Proc.new { |binary| ActiveSupport::Base64.encode64(binary) },       \"yaml\"     => Proc.new { |yaml| yaml.to_yaml }"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: PARSING
+    value: "{         \"symbol\"       => Proc.new { |symbol|  symbol.to_sym },         \"date\"         => Proc.new { |date|    ::Date.parse(date) },         \"datetime\"     => Proc.new { |time|    ::Time.parse(time).utc rescue ::DateTime.parse(time).utc },         \"integer\"      => Proc.new { |integer| integer.to_i },         \"float\"        => Proc.new { |float|   float.to_f },         \"decimal\"      => Proc.new { |number|  BigDecimal(number) },         \"boolean\"      => Proc.new { |boolean| %w(1 true).include?(boolean.strip) },         \"string\"       => Proc.new { |string|  string.to_s },         \"yaml\"         => Proc.new { |yaml|    YAML::load(yaml) rescue yaml },         \"base64Binary\" => Proc.new { |bin|     ActiveSupport::Base64.decode64(bin) },         \"binary\"       => Proc.new { |bin, entity| _parse_binary(bin, entity) },         \"file\"         => Proc.new { |file, entity| _parse_file(file, entity) }"
+full_name: ActiveSupport::XmlMini
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: _dasherize
+  - !ruby/object:RI::MethodSummary 
+    name: _parse_file
+  - !ruby/object:RI::MethodSummary 
+    name: backend=
+  - !ruby/object:RI::MethodSummary 
+    name: rename_key
+  - !ruby/object:RI::MethodSummary 
+    name: to_tag
+  - !ruby/object:RI::MethodSummary 
+    name: with_backend
+name: XmlMini
+superclass: 

@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Convert symbol to string, apply string method and convert back to symbol via a fluent interface.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  :HELLO.as_s.downcase  #=&gt; :hello\n"
+full_name: Symbol#as_s
+is_singleton: false
+name: as_s
+params: ()
+visibility: public

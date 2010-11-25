@@ -1,0 +1,31 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: view_context_class
+    rw: W
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: []
+
+full_name: AbstractController::Rendering
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: AbstractController::ViewPaths
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: _prefix
+  - !ruby/object:RI::MethodSummary 
+    name: render
+  - !ruby/object:RI::MethodSummary 
+    name: render_to_body
+  - !ruby/object:RI::MethodSummary 
+    name: render_to_string
+  - !ruby/object:RI::MethodSummary 
+    name: view_context
+  - !ruby/object:RI::MethodSummary 
+    name: view_context_class
+name: Rendering
+superclass: 

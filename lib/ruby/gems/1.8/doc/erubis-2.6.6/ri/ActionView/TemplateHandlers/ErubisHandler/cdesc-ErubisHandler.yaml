@@ -1,0 +1,35 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: ActionView::TemplateHandlers::ErubisHandler
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Compilable
+  - !ruby/object:RI::IncludedModule 
+    name: "::Erubis::Helpers::RailsHelper::TemplateConverter"
+  - !ruby/object:RI::IncludedModule 
+    name: "::Erubis::PreprocessingHelper"
+  - !ruby/object:RI::IncludedModule 
+    name: Compilable
+  - !ruby/object:RI::IncludedModule 
+    name: Erubis::Helpers::RailsHelper::TemplateConverter
+  - !ruby/object:RI::IncludedModule 
+    name: Erubis::PreprocessingHelper
+  - !ruby/object:RI::IncludedModule 
+    name: Erubis::Helpers::RailsHelper::TemplateConverter
+  - !ruby/object:RI::IncludedModule 
+    name: Erubis::PreprocessingHelper
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: compile
+  - !ruby/object:RI::MethodSummary 
+    name: compile
+  - !ruby/object:RI::MethodSummary 
+    name: compile
+name: ErubisHandler
+superclass: TemplateHandler

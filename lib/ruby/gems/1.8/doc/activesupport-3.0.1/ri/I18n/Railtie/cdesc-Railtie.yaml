@@ -1,0 +1,22 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: include_fallbacks_module
+  - !ruby/object:RI::MethodSummary 
+    name: init_fallbacks
+  - !ruby/object:RI::MethodSummary 
+    name: reloader
+  - !ruby/object:RI::MethodSummary 
+    name: validate_fallbacks
+comment: 
+constants: []
+
+full_name: I18n::Railtie
+includes: []
+
+instance_methods: []
+
+name: Railtie
+superclass: Rails::Railtie

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>start (JCluster::ExecBase)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/mongrel_jcluster/init.rb, line 28</span>
+      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">start</span>
+        <span class="ruby-identifier">read_options</span>
+        <span class="ruby-identifier">port</span> = <span class="ruby-ivar">@options</span>[<span class="ruby-value str">&quot;port&quot;</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+        <span class="ruby-identifier">pid</span> = <span class="ruby-ivar">@options</span>[<span class="ruby-value str">&quot;pid_file&quot;</span>].<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;.&quot;</span>)
+        <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;Starting JRuby server...&quot;</span>
+        <span class="ruby-identifier">system</span>(<span class="ruby-node">&quot;sh -c 'jrubysrv -p #{@options[&quot;jport&quot;]} -k #{@options[&quot;jkey&quot;]} &lt;/dev/null &gt;jrubyserver.stdout.log 2&gt;jrubyserver.stderr.log &amp;'&quot;</span>)
+        <span class="ruby-identifier">sleep</span> <span class="ruby-value">1</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Starting #{@options[&quot;servers&quot;]} Mongrel servers...&quot;</span>
+        <span class="ruby-value">1</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-ivar">@options</span>[<span class="ruby-value str">&quot;servers&quot;</span>].<span class="ruby-identifier">to_i</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">argv</span> = [ <span class="ruby-value str">&quot;mongrel_rails&quot;</span> ]
+          <span class="ruby-identifier">argv</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;start&quot;</span>
+          <span class="ruby-identifier">argv</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;-e #{@options[&quot;environment&quot;]}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">&quot;environment&quot;</span>]
+          <span class="ruby-identifier">argv</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;-p #{port+i}&quot;</span>
+          <span class="ruby-identifier">argv</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;-a #{@options[&quot;address&quot;]}&quot;</span>  <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">&quot;address&quot;</span>]
+          <span class="ruby-identifier">argv</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;-l #{@options[&quot;log_file&quot;]}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">&quot;log_file&quot;</span>]
+          <span class="ruby-identifier">argv</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;-P #{pid[0]}.#{port+i}.#{pid[1]}&quot;</span>
+          <span class="ruby-identifier">argv</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;-c #{@options[&quot;cwd&quot;]}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">&quot;cwd&quot;</span>]
+          <span class="ruby-identifier">argv</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;-t #{@options[&quot;timeout&quot;]}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">&quot;timeout&quot;</span>]
+          <span class="ruby-identifier">argv</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;-m #{@options[&quot;mime_map&quot;]}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">&quot;mime_map&quot;</span>]
+          <span class="ruby-identifier">argv</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;-r #{@options[&quot;docroot&quot;]}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">&quot;docroot&quot;</span>]
+          <span class="ruby-identifier">argv</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;-n #{@options[&quot;num_procs&quot;]}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">&quot;num_procs&quot;</span>]
+          <span class="ruby-identifier">argv</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;-B&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">&quot;debug&quot;</span>]
+          <span class="ruby-identifier">argv</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;-S #{@options[&quot;config_script&quot;]}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">&quot;config_script&quot;</span>]
+          <span class="ruby-identifier">argv</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;--user #{@options[&quot;user&quot;]}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">&quot;user&quot;</span>]
+          <span class="ruby-identifier">argv</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;--group #{@options[&quot;group&quot;]}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">&quot;group&quot;</span>]
+          <span class="ruby-identifier">argv</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;--prefix #{@options[&quot;prefix&quot;]}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">&quot;prefix&quot;</span>]
+          <span class="ruby-identifier">cmd</span> = <span class="ruby-identifier">argv</span>.<span class="ruby-identifier">join</span> <span class="ruby-value str">&quot; &quot;</span>
+
+          <span class="ruby-identifier">puts</span> <span class="ruby-identifier">cmd</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@verbose</span>
+          <span class="ruby-identifier">output</span> = <span class="ruby-node">`sh -c 'jrubycli -p #{@options[&quot;jport&quot;]} -k #{@options[&quot;jkey&quot;]} -S #{cmd}'`</span>
+          <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">$?</span>.<span class="ruby-identifier">success?</span>
+            <span class="ruby-identifier">puts</span> <span class="ruby-identifier">cmd</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@verbose</span>
+            <span class="ruby-identifier">puts</span> <span class="ruby-identifier">output</span>
+          <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

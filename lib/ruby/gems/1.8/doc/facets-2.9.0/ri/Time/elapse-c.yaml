@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: ""
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Tracks the elapse time of a code block.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  e = Time.elapse { sleep 1 }\n\n  e.assert &gt; 1\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Hal Fulton"
+full_name: Time::elapse
+is_singleton: true
+name: elapse
+params: () {|| ...}
+visibility: public

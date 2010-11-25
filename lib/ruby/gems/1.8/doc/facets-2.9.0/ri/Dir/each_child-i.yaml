@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: file unless ignore.any?{ |i| i === file
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Like #each, except the &quot;.&quot; and &quot;..&quot; special files are ignored. You can use <tt>ignore</tt> to override '.' and '..' and ignore other entries via a exact match or regular expression."
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Tyler Rick"
+full_name: Dir#each_child
+is_singleton: false
+name: each_child
+params: (*ignore) {|file unless ignore.any?{ |i| i === file| ...}
+visibility: public

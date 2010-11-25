@@ -1,0 +1,19 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: ParseError
+    value: "::JSON::ParserError"
+full_name: ActiveSupport::JSON::Backends::JSONGem
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: decode
+name: JSONGem
+superclass: 

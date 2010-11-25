@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Bind a procedure to an object. This works wrapping instance_eval on the Proc object and then wrapping this in a new Proc.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "   a = [1,2,3]\n   p1 = Proc.new{ join(' ') }\n   p2 = p1.bind_to(a)\n   p2.call  #=&gt; '1 2 3'\n"
+full_name: Proc#bind_to
+is_singleton: false
+name: bind_to
+params: (object)
+visibility: public

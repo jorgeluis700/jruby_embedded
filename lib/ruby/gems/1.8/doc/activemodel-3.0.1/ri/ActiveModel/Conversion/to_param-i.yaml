@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns a string representing the object's key suitable for use in URLs, or nil if persisted? is false
+full_name: ActiveModel::Conversion#to_param
+is_singleton: false
+name: to_param
+params: ()
+visibility: public

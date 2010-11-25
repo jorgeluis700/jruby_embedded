@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Handles non supported datatypes - e.g. XML
+full_name: ActiveRecord::ConnectionAdapters::TableDefinition#method_missing
+is_singleton: false
+name: method_missing
+params: (symbol, *args)
+visibility: public

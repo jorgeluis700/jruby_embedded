@@ -1,0 +1,40 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: ActiveRecord::Associations::ThroughAssociationScope
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: build_conditions
+  - !ruby/object:RI::MethodSummary 
+    name: build_sti_condition
+  - !ruby/object:RI::MethodSummary 
+    name: build_through_conditions
+  - !ruby/object:RI::MethodSummary 
+    name: conditions
+  - !ruby/object:RI::MethodSummary 
+    name: construct_conditions
+  - !ruby/object:RI::MethodSummary 
+    name: construct_from
+  - !ruby/object:RI::MethodSummary 
+    name: construct_join_attributes
+  - !ruby/object:RI::MethodSummary 
+    name: construct_joins
+  - !ruby/object:RI::MethodSummary 
+    name: construct_owner_attributes
+  - !ruby/object:RI::MethodSummary 
+    name: construct_quoted_owner_attributes
+  - !ruby/object:RI::MethodSummary 
+    name: construct_scope
+  - !ruby/object:RI::MethodSummary 
+    name: construct_select
+  - !ruby/object:RI::MethodSummary 
+    name: sql_conditions
+name: ThroughAssociationScope
+superclass: 

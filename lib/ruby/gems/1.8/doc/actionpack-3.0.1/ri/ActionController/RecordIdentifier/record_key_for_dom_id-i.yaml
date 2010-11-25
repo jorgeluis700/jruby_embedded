@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns a string representation of the key attribute(s) that is suitable for use in an HTML DOM id. This can be overwritten to customize the default generated string representation if desired. If you need to read back a key from a dom_id in order to query for the underlying database record, you should write a helper like 'person_record_from_dom_id' that will extract the key either based on the default implementation (which just joins all key attributes with '-') or on your own overwritten version of the method. By default, this implementation passes the key string through a method that replaces all characters that are invalid inside DOM ids, with valid ones. You need to make sure yourself that your dom ids are valid, in case you overwrite this method.
+full_name: ActionController::RecordIdentifier#record_key_for_dom_id
+is_singleton: false
+name: record_key_for_dom_id
+params: (record)
+visibility: protected

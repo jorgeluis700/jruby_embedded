@@ -1,0 +1,62 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: chain
+    rw: RW
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: filter
+    rw: RW
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: kind
+    rw: RW
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: klass
+    rw: RW
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: options
+    rw: RW
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: per_key
+    rw: RW
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: raw_filter
+    rw: RW
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: []
+
+full_name: ActiveSupport::Callbacks::Callback
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: _compile_per_key_options
+  - !ruby/object:RI::MethodSummary 
+    name: _update_filter
+  - !ruby/object:RI::MethodSummary 
+    name: clone
+  - !ruby/object:RI::MethodSummary 
+    name: end
+  - !ruby/object:RI::MethodSummary 
+    name: matches?
+  - !ruby/object:RI::MethodSummary 
+    name: name
+  - !ruby/object:RI::MethodSummary 
+    name: next_id
+  - !ruby/object:RI::MethodSummary 
+    name: normalize_options!
+  - !ruby/object:RI::MethodSummary 
+    name: recompile!
+  - !ruby/object:RI::MethodSummary 
+    name: start
+name: Callback
+superclass: Object

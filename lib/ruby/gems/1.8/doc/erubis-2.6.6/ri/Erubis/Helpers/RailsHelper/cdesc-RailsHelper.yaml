@@ -1,0 +1,47 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: engine_class
+  - !ruby/object:RI::MethodSummary 
+    name: engine_class=
+  - !ruby/object:RI::MethodSummary 
+    name: init_properties
+  - !ruby/object:RI::MethodSummary 
+    name: init_properties=
+  - !ruby/object:RI::MethodSummary 
+    name: preprocessing
+  - !ruby/object:RI::MethodSummary 
+    name: preprocessing=
+  - !ruby/object:RI::MethodSummary 
+    name: show_src
+  - !ruby/object:RI::MethodSummary 
+    name: show_src=
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: helper module for Ruby on Rails
+  - !ruby/struct:SM::Flow::P 
+    body: "howto:"
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "1."
+        body: add the folliwng code in your 'config/environment.rb'
+      - !ruby/struct:SM::Flow::VERB 
+        body: "  require 'erubis/helpers/rails_helper'\n  #Erubis::Helpers::RailsHelper.engine_class = Erubis::Eruby # or Erubis::FastEruby\n  #Erubis::Helpers::RailsHelper.init_properties = {}\n  #Erubis::Helpers::RailsHelper.show_src = false       # set true for debugging\n  #Erubis::Helpers::RailsHelper.preprocessing = true   # set true to enable preprocessing\n"
+      - !ruby/struct:SM::Flow::LI 
+        label: "2."
+        body: restart web server.
+    type: :NUMBER
+  - !ruby/struct:SM::Flow::P 
+    body: if Erubis::Helper::Rails.show_src is true, Erubis prints converted Ruby code into log file ('log/development.log' or so). if false, it doesn't. if nil, Erubis prints converted Ruby code if ENV['RAILS_ENV'] == 'development'.
+constants: []
+
+full_name: Erubis::Helpers::RailsHelper
+includes: []
+
+instance_methods: []
+
+name: RailsHelper
+superclass: 

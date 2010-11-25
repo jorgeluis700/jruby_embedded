@@ -1,0 +1,49 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: extended
+comment: 
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: Active Model Callbacks
+  - !ruby/struct:SM::Flow::P 
+    body: Provides an interface for any class to have Active Record like callbacks.
+  - !ruby/struct:SM::Flow::P 
+    body: Like the Active Record methods, the callback chain is aborted as soon as one of the methods in the chain returns false.
+  - !ruby/struct:SM::Flow::P 
+    body: "First, extend ActiveModel::Callbacks from the class you are creating:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class MyModel\n    extend ActiveModel::Callbacks\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "Then define a list of methods that you want callbacks attached to:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  define_model_callbacks :create, :update\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "This will provide all three standard callbacks (before, around and after) for both the :create and :update methods. To implement, you need to wrap the methods you want callbacks on in a block so that the callbacks get a chance to fire:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  def create\n    _run_create_callbacks do\n      # Your create action methods here\n    end\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: The <em>run</em>&lt;method_name&gt;_callbacks methods are dynamically created when you extend the <tt>ActiveModel::Callbacks</tt> module.
+  - !ruby/struct:SM::Flow::P 
+    body: Then in your class, you can use the <tt>before_create</tt>, <tt>after_create</tt> and <tt>around_create</tt> methods, just as you would in an Active Record module.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  before_create :action_before_create\n\n  def action_before_create\n    # Your code here\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: You can choose not to have all three callbacks by passing a hash to the define_model_callbacks method.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  define_model_callbacks :create, :only =&gt; :after, :before\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Would only create the after_create and before_create callback methods in your class.
+constants: []
+
+full_name: ActiveModel::Callbacks
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: ActiveSupport::Callbacks
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: define_model_callbacks
+name: Callbacks
+superclass: 

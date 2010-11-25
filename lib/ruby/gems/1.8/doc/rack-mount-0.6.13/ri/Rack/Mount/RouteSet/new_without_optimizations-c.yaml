@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Initialize a new RouteSet without optimizations
+full_name: Rack::Mount::RouteSet::new_without_optimizations
+is_singleton: true
+name: new_without_optimizations
+params: (options = {}, &block)
+visibility: public

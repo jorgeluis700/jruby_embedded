@@ -1,0 +1,42 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: relation
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: value
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: []
+
+full_name: Arel::Value
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: ==
+  - !ruby/object:RI::MethodSummary 
+    name: bind
+  - !ruby/object:RI::MethodSummary 
+    name: equality_predicate_sql
+  - !ruby/object:RI::MethodSummary 
+    name: eval
+  - !ruby/object:RI::MethodSummary 
+    name: exclusion_predicate_sql
+  - !ruby/object:RI::MethodSummary 
+    name: format
+  - !ruby/object:RI::MethodSummary 
+    name: inclusion_predicate_sql
+  - !ruby/object:RI::MethodSummary 
+    name: inequality_predicate_sql
+  - !ruby/object:RI::MethodSummary 
+    name: to_ordering
+  - !ruby/object:RI::MethodSummary 
+    name: to_sql
+name: Value
+superclass: Object

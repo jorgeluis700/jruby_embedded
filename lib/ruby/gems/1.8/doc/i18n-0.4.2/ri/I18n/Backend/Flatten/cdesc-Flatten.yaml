@@ -1,0 +1,40 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: normalize_flat_keys
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "This module contains several helpers to assist flattening translations. You may want to flatten translations for:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  1) speed up lookups, as in the Memoize backend;\n  2) In case you want to store translations in a data store, as in ActiveRecord backend;\n"
+  - !ruby/struct:SM::Flow::P 
+    body: You can check both backends above for some examples. This module also keeps all links in a hash so they can be properly resolved when flattened.
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: SEPARATOR_ESCAPE_CHAR
+    value: "\"\\001\""
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: FLATTEN_SEPARATOR
+    value: "\".\""
+full_name: I18n::Backend::Flatten
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: flatten_keys
+  - !ruby/object:RI::MethodSummary 
+    name: flatten_translations
+  - !ruby/object:RI::MethodSummary 
+    name: links
+  - !ruby/object:RI::MethodSummary 
+    name: normalize_flat_keys
+  - !ruby/object:RI::MethodSummary 
+    name: resolve_link
+  - !ruby/object:RI::MethodSummary 
+    name: store_link
+name: Flatten
+superclass: 

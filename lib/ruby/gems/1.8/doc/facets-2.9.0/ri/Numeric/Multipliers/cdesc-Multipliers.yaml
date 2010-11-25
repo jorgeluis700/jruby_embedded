@@ -1,0 +1,71 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::H 
+    level: 1
+    text: Numeric::Multipliers
+  - !ruby/struct:SM::Flow::P 
+    body: Adds methods to Numeric to make working with magnitudes (kilo, mega, giga, milli, micro, etc.)
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  1.kilo               #=&gt; 1000\n  1.milli              #=&gt; 0.001\n  1.kibi               #=&gt; 1024\n"
+  - !ruby/struct:SM::Flow::P 
+    body: To display a value in a certain denomination, simply perform the inverse operation by placing the multiplier called on unit (1) in the denominator.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  (1000 / 1.kilo)        #=&gt; 1\n  (1024 / 1.kibi)        #=&gt; 1\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Thanks to Rich Kilmer and bytes.rb which inspired this library.
+constants: []
+
+full_name: Numeric::Multipliers
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: atto
+  - !ruby/object:RI::MethodSummary 
+    name: centi
+  - !ruby/object:RI::MethodSummary 
+    name: deci
+  - !ruby/object:RI::MethodSummary 
+    name: deka
+  - !ruby/object:RI::MethodSummary 
+    name: exa
+  - !ruby/object:RI::MethodSummary 
+    name: exbi
+  - !ruby/object:RI::MethodSummary 
+    name: femto
+  - !ruby/object:RI::MethodSummary 
+    name: gibi
+  - !ruby/object:RI::MethodSummary 
+    name: giga
+  - !ruby/object:RI::MethodSummary 
+    name: hecto
+  - !ruby/object:RI::MethodSummary 
+    name: kibi
+  - !ruby/object:RI::MethodSummary 
+    name: kilo
+  - !ruby/object:RI::MethodSummary 
+    name: mebi
+  - !ruby/object:RI::MethodSummary 
+    name: mega
+  - !ruby/object:RI::MethodSummary 
+    name: micro
+  - !ruby/object:RI::MethodSummary 
+    name: milli
+  - !ruby/object:RI::MethodSummary 
+    name: nano
+  - !ruby/object:RI::MethodSummary 
+    name: pebi
+  - !ruby/object:RI::MethodSummary 
+    name: peta
+  - !ruby/object:RI::MethodSummary 
+    name: pico
+  - !ruby/object:RI::MethodSummary 
+    name: tebi
+  - !ruby/object:RI::MethodSummary 
+    name: tera
+name: Multipliers
+superclass: 

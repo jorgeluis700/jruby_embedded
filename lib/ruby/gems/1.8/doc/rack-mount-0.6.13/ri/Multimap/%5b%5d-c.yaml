@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Creates a new multimap populated with the given objects.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  Multimap[&quot;a&quot;, 100, &quot;b&quot;, 200]       #=&gt; {&quot;a&quot;=&gt;[100], &quot;b&quot;=&gt;[200]}\n  Multimap[&quot;a&quot; =&gt; 100, &quot;b&quot; =&gt; 200]   #=&gt; {&quot;a&quot;=&gt;[100], &quot;b&quot;=&gt;[200]}\n"
+full_name: Multimap::[]
+is_singleton: true
+name: "[]"
+params: |
+  Multimap[ [key =>|, value]* ]   => multimap
+
+visibility: public

@@ -1,0 +1,15 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: Naming
+  - !ruby/struct:SM::Flow::P 
+    body: Model.model_name must return a string with some convenience methods as :human and :partial_path. Check ActiveModel::Naming for more information.
+full_name: ActiveModel::Lint::Tests#test_model_naming
+is_singleton: false
+name: test_model_naming
+params: ()
+visibility: public

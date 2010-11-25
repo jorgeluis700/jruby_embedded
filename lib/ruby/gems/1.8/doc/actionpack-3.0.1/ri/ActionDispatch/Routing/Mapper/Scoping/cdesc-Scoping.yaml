@@ -1,0 +1,24 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: ActionDispatch::Routing::Mapper::Scoping
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: constraints
+  - !ruby/object:RI::MethodSummary 
+    name: controller
+  - !ruby/object:RI::MethodSummary 
+    name: defaults
+  - !ruby/object:RI::MethodSummary 
+    name: namespace
+  - !ruby/object:RI::MethodSummary 
+    name: scope
+name: Scoping
+superclass: 

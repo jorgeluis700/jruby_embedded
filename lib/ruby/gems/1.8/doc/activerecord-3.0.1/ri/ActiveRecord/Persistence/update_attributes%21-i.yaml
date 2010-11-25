@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Updates its receiver just like <tt>update_attributes</tt> but calls <tt>save!</tt> instead of <tt>save</tt>, so an exception is raised if the record is invalid.
+full_name: ActiveRecord::Persistence#update_attributes!
+is_singleton: false
+name: update_attributes!
+params: (attributes)
+visibility: public

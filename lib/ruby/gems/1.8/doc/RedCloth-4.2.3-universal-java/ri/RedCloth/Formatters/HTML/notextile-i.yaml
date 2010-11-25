@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: RedCloth::Formatters::HTML#notextile
+is_singleton: false
+name: notextile
+params: (opts)
+visibility: public

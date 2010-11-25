@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Rack compatible recognition and dispatching method. Routes are tried until one returns a non-catch status code. If no routes match, the catch status code is returned.
+  - !ruby/struct:SM::Flow::P 
+    body: This method can only be invoked after the RouteSet has been finalized.
+full_name: Rack::Mount::RouteSet#call
+is_singleton: false
+name: call
+params: (env)
+visibility: public

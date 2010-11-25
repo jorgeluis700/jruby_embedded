@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionView::Helpers::ActiveModelInstanceTag#error_wrapping
+is_singleton: false
+name: error_wrapping
+params: (html_tag)
+visibility: public

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Wrap all remaining paragraph-looking text in a copy of <tt>str</tt> inside &lt;p&gt; tags and return it.
+full_name: BlueCloth#form_paragraphs
+is_singleton: false
+name: form_paragraphs
+params: ( str, rs )
+visibility: public

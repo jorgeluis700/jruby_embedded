@@ -1,0 +1,20 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: I18n::Locale::Tag::Parents
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: parent
+  - !ruby/object:RI::MethodSummary 
+    name: parents
+  - !ruby/object:RI::MethodSummary 
+    name: self_and_parents
+name: Parents
+superclass: 

@@ -1,0 +1,18 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: Arel::SqlCompiler::IBM_DBCompiler
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: add_limit_on_delete
+  - !ruby/object:RI::MethodSummary 
+    name: limited_update_conditions
+name: IBM_DBCompiler
+superclass: GenericCompiler

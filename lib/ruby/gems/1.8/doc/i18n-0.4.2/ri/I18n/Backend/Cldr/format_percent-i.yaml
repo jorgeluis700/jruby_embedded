@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: I18n::Backend::Cldr#format_percent
+is_singleton: false
+name: format_percent
+params: (locale, object, format = :default, options = {})
+visibility: public

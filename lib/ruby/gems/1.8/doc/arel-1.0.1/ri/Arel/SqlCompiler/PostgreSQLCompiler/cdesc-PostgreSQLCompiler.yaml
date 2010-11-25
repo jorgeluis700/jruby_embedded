@@ -1,0 +1,22 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: Arel::SqlCompiler::PostgreSQLCompiler
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: aliased_orders
+  - !ruby/object:RI::MethodSummary 
+    name: select_sql
+  - !ruby/object:RI::MethodSummary 
+    name: supports_insert_with_returning?
+  - !ruby/object:RI::MethodSummary 
+    name: using_distinct_on?
+name: PostgreSQLCompiler
+superclass: GenericCompiler

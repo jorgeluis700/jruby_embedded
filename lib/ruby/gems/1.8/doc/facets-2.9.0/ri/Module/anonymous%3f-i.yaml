@@ -1,0 +1,20 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: A module may or may not have a name.
+  - !ruby/struct:SM::Flow::P 
+    body: "module M; end M.name # =&gt; &quot;M&quot;"
+  - !ruby/struct:SM::Flow::P 
+    body: "m = Module.new m.name # =&gt; &quot;&quot;"
+  - !ruby/struct:SM::Flow::P 
+    body: "A module gets a name when it is first assigned to a constant. Either via the <tt>module</tt> or <tt>class</tt> keyword or by an explicit assignment:"
+  - !ruby/struct:SM::Flow::P 
+    body: "m = Module.new # creates an anonymous module M = m # =&gt; m gets a name here as a side-effect m.name # =&gt; &quot;M&quot;"
+full_name: Module#anonymous?
+is_singleton: false
+name: anonymous?
+params: ()
+visibility: public

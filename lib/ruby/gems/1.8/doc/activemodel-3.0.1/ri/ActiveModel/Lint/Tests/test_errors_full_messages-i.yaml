@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns an Array of all error messages for the object. Each message should contain information about the field, if applicable.
+full_name: ActiveModel::Lint::Tests#test_errors_full_messages
+is_singleton: false
+name: test_errors_full_messages
+params: ()
+visibility: public

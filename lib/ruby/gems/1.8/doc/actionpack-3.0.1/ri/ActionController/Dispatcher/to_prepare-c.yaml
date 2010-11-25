@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionController::Dispatcher::to_prepare
+is_singleton: true
+name: to_prepare
+params: (*args, &block)
+visibility: public

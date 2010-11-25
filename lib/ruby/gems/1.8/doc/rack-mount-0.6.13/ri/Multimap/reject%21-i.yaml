@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Equivalent to <tt>Multimap#delete_if</tt>, but returns <tt>nil</tt> if no changes were made.
+full_name: Multimap#reject!
+is_singleton: false
+name: reject!
+params: |
+  map.reject! {| key, value | block }  -> map or nil
+
+visibility: public

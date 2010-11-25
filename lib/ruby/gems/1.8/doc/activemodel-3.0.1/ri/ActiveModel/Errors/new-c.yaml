@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Pass in the instance of the object that is using the errors object.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class Person\n    def initialize\n      @errors = ActiveModel::Errors.new(self)\n    end\n  end\n"
+full_name: ActiveModel::Errors::new
+is_singleton: true
+name: new
+params: (base)
+visibility: public

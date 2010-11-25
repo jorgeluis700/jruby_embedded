@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Restore the new record state and id of a record that was previously saved by a call to save_record_state.
+full_name: ActiveRecord::Transactions#restore_transaction_record_state
+is_singleton: false
+name: restore_transaction_record_state
+params: (force = false)
+visibility: protected

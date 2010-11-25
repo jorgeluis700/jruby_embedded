@@ -1,0 +1,16 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: Mime::Mimes
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: symbols
+name: Mimes
+superclass: Array

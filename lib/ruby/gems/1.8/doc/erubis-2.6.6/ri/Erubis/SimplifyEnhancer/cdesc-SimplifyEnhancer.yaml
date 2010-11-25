@@ -1,0 +1,25 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: get convert faster, but spaces around '&lt;%...%&gt;' are not trimmed.
+  - !ruby/struct:SM::Flow::P 
+    body: this is language-independent.
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: DEFAULT_REGEXP = /(^[ \t]*)?&lt;%(=+|\#)?(.*?)-?%&gt;([ \t]*\r?\n)?/m
+    name: SIMPLE_REGEXP
+    value: /<%(=+|\#)?(.*?)-?%>/m
+full_name: Erubis::SimplifyEnhancer
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: convert
+name: SimplifyEnhancer
+superclass: 

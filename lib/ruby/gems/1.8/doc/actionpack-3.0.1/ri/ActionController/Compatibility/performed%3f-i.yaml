@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionController::Compatibility#performed?
+is_singleton: false
+name: performed?
+params: ()
+visibility: public

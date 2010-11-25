@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: When passed a symbol or a name of a method, returns an array of errors for the method.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  p.errors[:name]   # =&gt; [&quot;can not be nil&quot;]\n  p.errors['name']  # =&gt; [&quot;can not be nil&quot;]\n"
+full_name: ActiveModel::Errors#[]
+is_singleton: false
+name: "[]"
+params: (attribute)
+visibility: public

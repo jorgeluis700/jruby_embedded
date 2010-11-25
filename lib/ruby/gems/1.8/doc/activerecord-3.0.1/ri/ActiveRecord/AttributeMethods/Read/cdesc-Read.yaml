@@ -1,0 +1,23 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: ATTRIBUTE_TYPES_CACHED_BY_DEFAULT
+    value: "[:datetime, :timestamp, :time, :date]"
+full_name: ActiveRecord::AttributeMethods::Read
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: read_attribute
+  - !ruby/object:RI::MethodSummary 
+    name: unserializable_attribute?
+  - !ruby/object:RI::MethodSummary 
+    name: unserialize_attribute
+name: Read
+superclass: 

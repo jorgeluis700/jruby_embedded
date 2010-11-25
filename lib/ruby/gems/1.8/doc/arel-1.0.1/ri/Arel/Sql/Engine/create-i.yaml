@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Arel::Sql::Engine#create
+is_singleton: false
+name: create
+params: (relation)
+visibility: public

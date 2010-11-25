@@ -1,0 +1,30 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: PARTIAL_NAMES
+    value: Hash.new {|h,k| h[k] = {} }
+full_name: ActionView::Partials::PartialRenderer
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: collection_with_template
+  - !ruby/object:RI::MethodSummary 
+    name: collection_without_template
+  - !ruby/object:RI::MethodSummary 
+    name: render
+  - !ruby/object:RI::MethodSummary 
+    name: render_collection
+  - !ruby/object:RI::MethodSummary 
+    name: render_partial
+  - !ruby/object:RI::MethodSummary 
+    name: setup
+name: PartialRenderer
+superclass: Object

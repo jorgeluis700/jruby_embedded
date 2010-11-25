@@ -1,0 +1,104 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: ""
+constants: []
+
+full_name: Enumerable
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: accumulate
+  - !ruby/object:RI::MethodSummary 
+    name: accumulate_all
+  - !ruby/object:RI::MethodSummary 
+    name: cluster_by
+  - !ruby/object:RI::MethodSummary 
+    name: collect_with_index
+  - !ruby/object:RI::MethodSummary 
+    name: compact_collect
+  - !ruby/object:RI::MethodSummary 
+    name: compact_map
+  - !ruby/object:RI::MethodSummary 
+    name: count
+  - !ruby/object:RI::MethodSummary 
+    name: defer
+  - !ruby/object:RI::MethodSummary 
+    name: each_by
+  - !ruby/object:RI::MethodSummary 
+    name: each_with_object
+  - !ruby/object:RI::MethodSummary 
+    name: elementwise
+  - !ruby/object:RI::MethodSummary 
+    name: every
+  - !ruby/object:RI::MethodSummary 
+    name: every!
+  - !ruby/object:RI::MethodSummary 
+    name: ewise
+  - !ruby/object:RI::MethodSummary 
+    name: exclude?
+  - !ruby/object:RI::MethodSummary 
+    name: expand
+  - !ruby/object:RI::MethodSummary 
+    name: filter
+  - !ruby/object:RI::MethodSummary 
+    name: find_yield
+  - !ruby/object:RI::MethodSummary 
+    name: frequency
+  - !ruby/object:RI::MethodSummary 
+    name: graph
+  - !ruby/object:RI::MethodSummary 
+    name: group_by
+  - !ruby/object:RI::MethodSummary 
+    name: map_by
+  - !ruby/object:RI::MethodSummary 
+    name: map_detect
+  - !ruby/object:RI::MethodSummary 
+    name: map_send
+  - !ruby/object:RI::MethodSummary 
+    name: map_with_index
+  - !ruby/object:RI::MethodSummary 
+    name: mash
+  - !ruby/object:RI::MethodSummary 
+    name: modulate
+  - !ruby/object:RI::MethodSummary 
+    name: none?
+  - !ruby/object:RI::MethodSummary 
+    name: occur
+  - !ruby/object:RI::MethodSummary 
+    name: one?
+  - !ruby/object:RI::MethodSummary 
+    name: per
+  - !ruby/object:RI::MethodSummary 
+    name: purge
+  - !ruby/object:RI::MethodSummary 
+    name: recursively
+  - !ruby/object:RI::MethodSummary 
+    name: sum
+  - !ruby/object:RI::MethodSummary 
+    name: take
+  - !ruby/object:RI::MethodSummary 
+    name: threaded_map
+  - !ruby/object:RI::MethodSummary 
+    name: threaded_map_send
+  - !ruby/object:RI::MethodSummary 
+    name: to_h
+  - !ruby/object:RI::MethodSummary 
+    name: to_h_assoc
+  - !ruby/object:RI::MethodSummary 
+    name: to_h_auto
+  - !ruby/object:RI::MethodSummary 
+    name: to_h_flat
+  - !ruby/object:RI::MethodSummary 
+    name: to_h_multi
+  - !ruby/object:RI::MethodSummary 
+    name: to_h_splat
+  - !ruby/object:RI::MethodSummary 
+    name: uniq_by
+  - !ruby/object:RI::MethodSummary 
+    name: visit
+name: Enumerable
+superclass: 

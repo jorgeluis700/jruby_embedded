@@ -1,0 +1,22 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: I18n::Backend::Gettext
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: load_po
+  - !ruby/object:RI::MethodSummary 
+    name: normalize
+  - !ruby/object:RI::MethodSummary 
+    name: normalize_pluralization
+  - !ruby/object:RI::MethodSummary 
+    name: parse
+name: Gettext
+superclass: 

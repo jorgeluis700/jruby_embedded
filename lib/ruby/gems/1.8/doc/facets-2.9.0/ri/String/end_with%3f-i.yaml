@@ -1,0 +1,19 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: ends_with?
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Does a string end with the given suffix?
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  &quot;hello&quot;.end_with?(&quot;lo&quot;)    #=&gt; true\n  &quot;hello&quot;.end_with?(&quot;to&quot;)    #=&gt; false\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "Note: This definition is better than standard Ruby's becuase it handles regular expressions."
+  - !ruby/struct:SM::Flow::P 
+    body: "CREDIT: Juris Galang"
+full_name: String#end_with?
+is_singleton: false
+name: end_with?
+params: (suffix)
+visibility: public

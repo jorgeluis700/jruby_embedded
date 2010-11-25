@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Allows access to the object attributes, which are held in the <tt>@attributes</tt> hash, as though they were first-class methods. So a Person class with a name attribute can use Person#name and Person#name= and never directly use the attributes hash -- except for multiple assigns with ActiveRecord#attributes=. A Milestone class can also ask Milestone#completed? to test that the completed attribute is not <tt>nil</tt> or 0.
+  - !ruby/struct:SM::Flow::P 
+    body: It's also possible to instantiate related objects, so a Client class belonging to the clients table with a <tt>master_id</tt> foreign key can instantiate master through Client#master.
+full_name: ActiveModel::AttributeMethods#method_missing
+is_singleton: false
+name: method_missing
+params: (method_id, *args, &block)
+visibility: public

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionDispatch::Integration::Session#default_url_options
+is_singleton: false
+name: default_url_options
+params: ()
+visibility: public

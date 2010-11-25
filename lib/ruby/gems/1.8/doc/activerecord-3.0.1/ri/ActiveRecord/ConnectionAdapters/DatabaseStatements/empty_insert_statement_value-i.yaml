@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveRecord::ConnectionAdapters::DatabaseStatements#empty_insert_statement_value
+is_singleton: false
+name: empty_insert_statement_value
+params: ()
+visibility: public

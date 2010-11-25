@@ -1,0 +1,34 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: ActiveRecord::ConnectionAdapters::DatabaseLimits
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: column_name_length
+  - !ruby/object:RI::MethodSummary 
+    name: columns_per_multicolumn_index
+  - !ruby/object:RI::MethodSummary 
+    name: columns_per_table
+  - !ruby/object:RI::MethodSummary 
+    name: in_clause_length
+  - !ruby/object:RI::MethodSummary 
+    name: index_name_length
+  - !ruby/object:RI::MethodSummary 
+    name: indexes_per_table
+  - !ruby/object:RI::MethodSummary 
+    name: joins_per_query
+  - !ruby/object:RI::MethodSummary 
+    name: sql_query_length
+  - !ruby/object:RI::MethodSummary 
+    name: table_alias_length
+  - !ruby/object:RI::MethodSummary 
+    name: table_name_length
+name: DatabaseLimits
+superclass: 

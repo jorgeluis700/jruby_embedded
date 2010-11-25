@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveRecord::Railties::ControllerRuntime#append_info_to_payload
+is_singleton: false
+name: append_info_to_payload
+params: (payload)
+visibility: protected

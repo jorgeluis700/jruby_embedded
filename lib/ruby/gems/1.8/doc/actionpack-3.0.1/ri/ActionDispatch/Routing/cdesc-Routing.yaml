@@ -1,0 +1,144 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::H 
+    level: 1
+    text: Routing
+  - !ruby/struct:SM::Flow::P 
+    body: The routing module provides URL rewriting in native Ruby. It's a way to redirect incoming requests to controllers and actions. This replaces mod_rewrite rules. Best of all, Rails' Routing works with any web server. Routes are defined in <tt>config/routes.rb</tt>.
+  - !ruby/struct:SM::Flow::P 
+    body: "Consider the following route, which you will find commented out at the bottom of your generated <tt>config/routes.rb</tt>:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  match ':controller(/:action(/:id(.:format)))'\n"
+  - !ruby/struct:SM::Flow::P 
+    body: This route states that it expects requests to consist of a <tt>:controller</tt> followed optionally by an <tt>:action</tt> that in turn is followed optionally by an <tt>:id</tt>, which in turn is followed optionally by a <tt>:format</tt>
+  - !ruby/struct:SM::Flow::P 
+    body: "Suppose you get an incoming request for <tt>/blog/edit/22</tt>, you'll end up with:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  params = { :controller =&gt; 'blog',\n             :action     =&gt; 'edit',\n             :id         =&gt; '22'\n          }\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "Think of creating routes as drawing a map for your requests. The map tells them where to go based on some predefined pattern:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  AppName::Application.routes.draw do\n    Pattern 1 tells some request to go to one place\n    Pattern 2 tell them to go to another\n    ...\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "The following symbols are special:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  :controller maps to your controller name\n  :action     maps to an action with your controllers\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Other names simply map to a parameter as in the case of <tt>:id</tt>.
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: Named routes
+  - !ruby/struct:SM::Flow::P 
+    body: Routes can be named by passing an <tt>:as</tt> option, allowing for easy reference within your source as <tt>name_of_route_url</tt> for the full URL and <tt>name_of_route_path</tt> for the URI path.
+  - !ruby/struct:SM::Flow::P 
+    body: "Example:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  # In routes.rb\n  match '/login' =&gt; 'accounts#login', :as =&gt; 'login'\n\n  # With render, redirect_to, tests, etc.\n  redirect_to login_url\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Arguments can be passed as well.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  redirect_to show_item_path(:id =&gt; 25)\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Use <tt>root</tt> as a shorthand to name a route for the root path &quot;/&quot;.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  # In routes.rb\n  root :to =&gt; 'blogs#index'\n\n  # would recognize http://www.example.com/ as\n  params = { :controller =&gt; 'blogs', :action =&gt; 'index' }\n\n  # and provide these named routes\n  root_url   # =&gt; 'http://www.example.com/'\n  root_path  # =&gt; '/'\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "Note: when using <tt>controller</tt>, the route is simply named after the method you call on the block parameter rather than map."
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  # In routes.rb\n  controller :blog do\n    match 'blog/show'     =&gt; :list\n    match 'blog/delete'   =&gt; :delete\n    match 'blog/edit/:id' =&gt; :edit\n  end\n\n  # provides named routes for show, delete, and edit\n  link_to @article.title, show_path(:id =&gt; @article.id)\n"
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: Pretty URLs
+  - !ruby/struct:SM::Flow::P 
+    body: "Routes can generate pretty URLs. For example:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  match '/articles/:year/:month/:day' =&gt; 'articles#find_by_id', :constraints =&gt; {\n    :year       =&gt; /\\d{4}/,\n    :month      =&gt; /\\d{1,2}/,\n    :day        =&gt; /\\d{1,2}/\n  }\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Using the route above, the URL &quot;http://localhost:3000/articles/2005/11/06&quot; maps to
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  params = {:year =&gt; '2005', :month =&gt; '11', :day =&gt; '06'}\n"
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: Regular Expressions and parameters
+  - !ruby/struct:SM::Flow::P 
+    body: You can specify a regular expression to define a format for a parameter.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  controller 'geocode' do\n    match 'geocode/:postalcode' =&gt; :show, :constraints =&gt; {\n      :postalcode =&gt; /\\d{5}(-\\d{4})?/\n    }\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "Constraints can include the 'ignorecase' and 'extended syntax' regular expression modifiers:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  controller 'geocode' do\n    match 'geocode/:postalcode' =&gt; :show, :constraints =&gt; {\n      :postalcode =&gt; /hx\\d\\d\\s\\d[a-z]{2}/i\n    }\n  end\n\n  controller 'geocode' do\n    match 'geocode/:postalcode' =&gt; :show, :constraints =&gt; {\n      :postalcode =&gt; /# Postcode format\n         \\d{5} #Prefix\n         (-\\d{4})? #Suffix\n         /x\n    }\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Using the multiline match modifier will raise an ArgumentError. Encoding regular expression modifiers are silently ignored. The match will always use the default encoding or ASCII.
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: HTTP Methods
+  - !ruby/struct:SM::Flow::P 
+    body: Using the <tt>:via</tt> option when specifying a route allows you to restrict it to a specific HTTP method. Possible values are <tt>:post</tt>, <tt>:get</tt>, <tt>:put</tt>, <tt>:delete</tt> and <tt>:any</tt>. If your route needs to respond to more than one method you can use an array, e.g. <tt>[ :get, :post ]</tt>. The default value is <tt>:any</tt> which means that the route will respond to any of the HTTP methods.
+  - !ruby/struct:SM::Flow::P 
+    body: "Examples:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  match 'post/:id' =&gt; 'posts#show', :via =&gt; :get\n  match 'post/:id' =&gt; &quot;posts#create_comment', :via =&gt; :post\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Now, if you POST to <tt>/posts/:id</tt>, it will route to the <tt>create_comment</tt> action. A GET on the same URL will route to the <tt>show</tt> action.
+  - !ruby/struct:SM::Flow::H 
+    level: 3
+    text: HTTP helper methods
+  - !ruby/struct:SM::Flow::P 
+    body: An alternative method of specifying which HTTP method a route should respond to is to use the helper methods <tt>get</tt>, <tt>post</tt>, <tt>put</tt> and <tt>delete</tt>.
+  - !ruby/struct:SM::Flow::P 
+    body: "Examples:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  get 'post/:id' =&gt; 'posts#show'\n  post 'post/:id' =&gt; &quot;posts#create_comment'\n"
+  - !ruby/struct:SM::Flow::P 
+    body: This syntax is less verbose and the intention is more apparent to someone else reading your code, however if your route needs to respond to more than one HTTP method (or all methods) then using the <tt>:via</tt> option on <tt>match</tt> is preferable.
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: Reloading routes
+  - !ruby/struct:SM::Flow::P 
+    body: "You can reload routes if you feel you must:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  Rails.application.reload_routes!\n"
+  - !ruby/struct:SM::Flow::P 
+    body: This will clear all named routes and reload routes.rb if the file has been modified from last load. To absolutely force reloading, use <tt>reload!</tt>.
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: Testing Routes
+  - !ruby/struct:SM::Flow::P 
+    body: "The two main methods for testing your routes:"
+  - !ruby/struct:SM::Flow::H 
+    level: 3
+    text: <tt>assert_routing</tt>
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  def test_movie_route_properly_splits\n   opts = {:controller =&gt; &quot;plugin&quot;, :action =&gt; &quot;checkout&quot;, :id =&gt; &quot;2&quot;}\n   assert_routing &quot;plugin/checkout/2&quot;, opts\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: <tt>assert_routing</tt> lets you test whether or not the route properly resolves into options.
+  - !ruby/struct:SM::Flow::H 
+    level: 3
+    text: <tt>assert_recognizes</tt>
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  def test_route_has_options\n   opts = {:controller =&gt; &quot;plugin&quot;, :action =&gt; &quot;show&quot;, :id =&gt; &quot;12&quot;}\n   assert_recognizes opts, &quot;/plugins/show/12&quot;\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "Note the subtle difference between the two: <tt>assert_routing</tt> tests that a URL fits options while <tt>assert_recognizes</tt> tests that a URL breaks into parameters properly."
+  - !ruby/struct:SM::Flow::P 
+    body: In tests you can simply pass the URL or named route to <tt>get</tt> or <tt>post</tt>.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  def send_to_jail\n    get '/jail'\n    assert_response :success\n    assert_template &quot;jail/front&quot;\n  end\n\n  def goes_to_login\n    get login_url\n    #...\n  end\n"
+  - !ruby/struct:SM::Flow::H 
+    level: 2
+    text: View a list of all your routes
+  - !ruby/struct:SM::Flow::P 
+    body: Run <tt>rake routes</tt>.
+constants: []
+
+full_name: ActionDispatch::Routing
+includes: []
+
+instance_methods: []
+
+name: Routing
+superclass: 

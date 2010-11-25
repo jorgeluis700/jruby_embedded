@@ -1,0 +1,25 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: Arel::Externalization
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Recursion::BaseCase
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: ==
+  - !ruby/object:RI::MethodSummary 
+    name: attributes
+  - !ruby/object:RI::MethodSummary 
+    name: name
+  - !ruby/object:RI::MethodSummary 
+    name: table_sql
+  - !ruby/object:RI::MethodSummary 
+    name: wheres
+name: Externalization
+superclass: Compound

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Arel::From#eval
+is_singleton: false
+name: eval
+params: ()
+visibility: public

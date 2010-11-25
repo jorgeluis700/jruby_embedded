@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionDispatch::MiddlewareStack#assert_index
+is_singleton: false
+name: assert_index
+params: (index, where)
+visibility: protected

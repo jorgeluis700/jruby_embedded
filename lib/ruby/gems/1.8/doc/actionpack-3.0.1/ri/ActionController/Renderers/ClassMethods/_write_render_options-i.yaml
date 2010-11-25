@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionController::Renderers::ClassMethods#_write_render_options
+is_singleton: false
+name: _write_render_options
+params: ()
+visibility: public

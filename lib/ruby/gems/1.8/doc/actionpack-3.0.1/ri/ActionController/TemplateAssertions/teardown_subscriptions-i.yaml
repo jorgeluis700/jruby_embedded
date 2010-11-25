@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionController::TemplateAssertions#teardown_subscriptions
+is_singleton: false
+name: teardown_subscriptions
+params: ()
+visibility: public

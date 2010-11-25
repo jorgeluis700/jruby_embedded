@@ -1,0 +1,40 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: escape
+  - !ruby/object:RI::MethodSummary 
+    name: method_to_filename
+comment: 
+  - !ruby/struct:SM::Flow::H 
+    level: 1
+    text: OpEsc
+  - !ruby/struct:SM::Flow::P 
+    body: "NOTE: As of v3.0 of Facets these have been renamed:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "   op_plus_self   -&gt; op_plus\n   op_minus_self  -&gt; op_minus\n   op_plus        -&gt; op_add\n   op_minus       -&gt; op_sub\n   op_case_eq     -&gt; op_case\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "TODO: In the future we might also rename:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "   op_lshift      -&gt; op_push\n   op_rshift      -&gt; op_pull\n   op_store       -&gt; op_index\n   op_fetch       -&gt; op_index  (b/c [] and []= in same file)\n"
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: OPERATORS
+    value: "%w{ +@ -@ + - ** * / % ~ <=> << >> < > === == =~ <= >= | & ^ []= [] }"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: OPERATORS_REGEXP
+    value: Regexp.new( '(' << OPERATORS.collect{ |k| Regexp.escape(k) }.join('|') << ')' )
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: OPERATORS_ESC_TABLE
+    value: "{       \"+@\"   => \"op_plus\",       \"-@\"   => \"op_minus\",       \"+\"    => \"op_add\",       \"-\"    => \"op_sub\",       \"**\"   => \"op_pow\",       \"*\"    => \"op_mul\",       \"/\"    => \"op_div\",       \"%\"    => \"op_mod\",       \"~\"    => \"op_tilde\",       \"<=>\"  => \"op_cmp\",       \"<<\"   => \"op_lshift\",  #push?       \">>\"   => \"op_rshift\",  #pull?       \"<\"    => \"op_lt\",       \">\"    => \"op_gt\",       \"===\"  => \"op_case\",       \"==\"   => \"op_equal\",       \"=~\"   => \"op_apply\",       \"<=\"   => \"op_lt_eq\",       \">=\"   => \"op_gt_eq\",       \"|\"    => \"op_or\",       \"&\"    => \"op_and\",       \"^\"    => \"op_xor\",       \"[]=\"  => \"op_store\",       \"[]\"   => \"op_fetch\""
+full_name: OpEsc
+includes: []
+
+instance_methods: []
+
+name: OpEsc
+superclass: 

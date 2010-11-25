@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionView::Partials::PartialRenderer#render
+is_singleton: false
+name: render
+params: ()
+visibility: public

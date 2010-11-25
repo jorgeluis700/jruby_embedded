@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Translate a class name to a suitable method name.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  module ::Example\n    class MethodizeExample\n    end\n  end\n\n  Example::MethodizeExample.methodize  #=&gt; &quot;example__methodize_example&quot;\n"
+full_name: Class#methodize
+is_singleton: false
+name: methodize
+params: ()
+visibility: public

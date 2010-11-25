@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Clear the entire cache. Be careful with this method since it could affect other processes if shared cache is being used.
+  - !ruby/struct:SM::Flow::P 
+    body: Options are passed to the underlying cache implementation.
+  - !ruby/struct:SM::Flow::P 
+    body: All implementations may not support this method.
+full_name: ActiveSupport::Cache::Store#clear
+is_singleton: false
+name: clear
+params: (options = nil)
+visibility: public

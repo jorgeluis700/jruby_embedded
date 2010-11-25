@@ -1,0 +1,41 @@
+#!/bin/bash
+#
+# Copyright (c) 2006 Bradley Taylor, bradley@railsmachine.com
+#
+# mongrel_jcluster       Startup script for Mongrel clusters.
+#
+# chkconfig: - 85 15
+# description: mongrel_jcluster manages multiple Mongrel processes for use \
+#              behind a load balancer.
+#              
+
+CONF_DIR=/etc/mongrel_jcluster
+RETVAL=0
+
+
+# Gracefully exit if the controller is missing.
+which mongrel_jcluster_ctl >/dev/null || exit 0
+
+# Go no further if config directory is missing.
+[ -d "$CONF_DIR" ] || exit 0
+
+case "$1" in
+    start)
+      mongrel_jcluster_ctl start -c $CONF_DIR
+      RETVAL=$?
+  ;;
+    stop)
+      mongrel_jcluster_ctl stop -c $CONF_DIR
+      RETVAL=$?
+  ;;
+    restart)
+      mongrel_jcluster_ctl restart -c $CONF_DIR
+      RETVAL=$?
+  ;;
+    *)
+      echo "Usage: mongrel_jcluster {start|stop|restart}"
+      exit 1
+  ;;
+esac      
+
+exit $RETVAL

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Maps CSS style names to latex formatting options
+full_name: RedCloth::Formatters::LATEX::Settings#latex_image_styles
+is_singleton: false
+name: latex_image_styles
+params: ()
+visibility: public

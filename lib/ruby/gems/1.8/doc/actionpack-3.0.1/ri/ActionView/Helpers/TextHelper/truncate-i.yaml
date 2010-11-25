@@ -1,0 +1,21 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Truncates a given <tt>text</tt> after a given <tt>:length</tt> if <tt>text</tt> is longer than <tt>:length</tt> (defaults to 30). The last characters will be replaced with the <tt>:omission</tt> (defaults to &quot;...&quot;) for a total length not exceeding <tt>:length</tt>.
+  - !ruby/struct:SM::Flow::P 
+    body: Pass a <tt>:separator</tt> to truncate <tt>text</tt> at a natural break.
+  - !ruby/struct:SM::Flow::P 
+    body: The result is not marked as HTML-safe, so will be subject to the default escaping when used in views, unless wrapped by <tt>raw()</tt>. Care should be taken if <tt>text</tt> contains HTML tags or entities, because truncation may produce invalid HTML (such as unbalanced or incomplete tags).
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Examples
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  truncate(&quot;Once upon a time in a world far far away&quot;)\n  # =&gt; &quot;Once upon a time in a world...&quot;\n\n  truncate(&quot;Once upon a time in a world far far away&quot;, :length =&gt; 17)\n  # =&gt; &quot;Once upon a ti...&quot;\n\n  truncate(&quot;Once upon a time in a world far far away&quot;, :length =&gt; 17, :separator =&gt; ' ')\n  # =&gt; &quot;Once upon a...&quot;\n\n  truncate(&quot;And they found that many people were sleeping better.&quot;, :length =&gt; 25, :omission =&gt; '... (continued)')\n  # =&gt; &quot;And they f... (continued)&quot;\n\n  truncate(&quot;&lt;p&gt;Once upon a time in a world far far away&lt;/p&gt;&quot;)\n  # =&gt; &quot;&lt;p&gt;Once upon a time in a wo...&quot;\n"
+full_name: ActionView::Helpers::TextHelper#truncate
+is_singleton: false
+name: truncate
+params: (text, options = {})
+visibility: public

@@ -1,0 +1,29 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Resets one or more counter caches to their correct value using an SQL count query. This is useful when adding new counter caches, or if the counter has been corrupted or modified directly by SQL.
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Parameters
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>id</tt> - The id of the object you wish to reset a counter on.
+      - !ruby/struct:SM::Flow::LI 
+        label: "*"
+        body: <tt>counters</tt> - One or more counter names to reset
+    type: :BULLET
+  - !ruby/struct:SM::Flow::H 
+    level: 4
+    text: Examples
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  # For Post with id #1 records reset the comments_count\n  Post.reset_counters(1, :comments)\n"
+full_name: ActiveRecord::CounterCache#reset_counters
+is_singleton: false
+name: reset_counters
+params: (id, *counters)
+visibility: public

@@ -1,0 +1,22 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: ""
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Like #group_by, but maps the second value returned from the block."
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  a = [1,2,3,4,5]\n  a.map_by{ |e| [e % 2, e + 1] }\n  #=&gt; { 0=&gt;[3,5], 1=&gt;[2,4,6] }\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Works well with a hash too.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  h = {&quot;A&quot;=&gt;1, &quot;B&quot;=&gt;1, &quot;C&quot;=&gt;1, &quot;D&quot;=&gt;2, &quot;E&quot;=&gt;2}\n  h.map_by{ |k,v| [v, k.downcase] }\n  #=&gt; {1=&gt;[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;], 2=&gt;[&quot;d&quot;, &quot;e&quot;]}\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "If a second value is not returned, #map_by acts like #group_by."
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  h = {&quot;A&quot;=&gt;1, &quot;B&quot;=&gt;1, &quot;C&quot;=&gt;1, &quot;D&quot;=&gt;2, &quot;E&quot;=&gt;2}\n  h.map_by{ |k,v| v }\n  #=&gt; {1=&gt;[[&quot;A&quot;,1], [&quot;B&quot;,1], [&quot;C&quot;,1]], 2=&gt;[[&quot;D&quot;,2], [&quot;E&quot;,2]]}\n"
+full_name: Enumerable#map_by
+is_singleton: false
+name: map_by
+params: ( {|| ...}
+visibility: public

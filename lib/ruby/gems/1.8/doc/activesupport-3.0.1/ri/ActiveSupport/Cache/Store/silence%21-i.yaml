@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Silence the logger.
+full_name: ActiveSupport::Cache::Store#silence!
+is_singleton: false
+name: silence!
+params: ()
+visibility: public

@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+  - !ruby/object:RI::AliasName 
+    name: sql_conditions
+block_params: 
+comment: 
+full_name: ActiveRecord::Associations::ThroughAssociationScope#conditions
+is_singleton: false
+name: conditions
+params: ()
+visibility: protected

@@ -1,0 +1,20 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: I18n::Backend::Fallbacks
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: extract_string_or_lambda_default!
+  - !ruby/object:RI::MethodSummary 
+    name: find_first_string_or_lambda_default
+  - !ruby/object:RI::MethodSummary 
+    name: translate
+name: Fallbacks
+superclass: 

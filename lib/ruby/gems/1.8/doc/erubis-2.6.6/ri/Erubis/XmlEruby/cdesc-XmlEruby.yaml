@@ -1,0 +1,20 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: sanitize expression (&lt;%= ... %&gt;) by default
+  - !ruby/struct:SM::Flow::P 
+    body: this is equivalent to EscapedEruby and is prepared only for compatibility.
+constants: []
+
+full_name: Erubis::XmlEruby
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: EscapeEnhancer
+instance_methods: []
+
+name: XmlEruby
+superclass: Eruby

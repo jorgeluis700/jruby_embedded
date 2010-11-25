@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Normalizes the arguments and passes it on to find_template.
+full_name: ActionView::Resolver#find_all
+is_singleton: false
+name: find_all
+params: (name, prefix=nil, partial=false, details={}, key=nil)
+visibility: public

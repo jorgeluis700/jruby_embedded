@@ -1,0 +1,56 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: []
+
+    name: ROMAN_MAX
+    value: 3999 unless const_defined?(:ROMAN_MAX)
+  - !ruby/object:RI::Constant 
+    comment: []
+
+    name: ROMAN_VALUES
+    value: "[     [\"M\", 1000],     [\"CM\", 900],     [\"D\",  500],     [\"CD\", 400],     [\"C\",  100],     [\"XC\",  90],     [\"L\",   50],     [\"XL\",  40],     [\"X\",   10],     [\"IX\",   9],     [\"V\",    5],     [\"IV\",   4],     [\"I\",    1]"
+full_name: Integer
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: Random::IntegerExtensions
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: bit
+  - !ruby/object:RI::MethodSummary 
+    name: bit?
+  - !ruby/object:RI::MethodSummary 
+    name: bit_clear
+  - !ruby/object:RI::MethodSummary 
+    name: bitmask
+  - !ruby/object:RI::MethodSummary 
+    name: bitmask?
+  - !ruby/object:RI::MethodSummary 
+    name: even?
+  - !ruby/object:RI::MethodSummary 
+    name: fac
+  - !ruby/object:RI::MethodSummary 
+    name: factorial
+  - !ruby/object:RI::MethodSummary 
+    name: multiple?
+  - !ruby/object:RI::MethodSummary 
+    name: odd?
+  - !ruby/object:RI::MethodSummary 
+    name: of
+  - !ruby/object:RI::MethodSummary 
+    name: ordinal
+  - !ruby/object:RI::MethodSummary 
+    name: ordinalize
+  - !ruby/object:RI::MethodSummary 
+    name: roman
+  - !ruby/object:RI::MethodSummary 
+    name: times_collect
+  - !ruby/object:RI::MethodSummary 
+    name: times_map
+name: Integer
+superclass: Object

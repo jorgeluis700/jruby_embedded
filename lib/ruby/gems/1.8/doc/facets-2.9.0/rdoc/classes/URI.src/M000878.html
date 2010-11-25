@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>query_to_hash (URI)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/more/facets/uri.rb, line 42</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">query_to_hash</span>(<span class="ruby-identifier">query_string</span>)
+    <span class="ruby-keyword kw">return</span> {} <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">query_string</span>
+
+    <span class="ruby-identifier">query_parameters</span> = <span class="ruby-identifier">cgi_parse</span>(<span class="ruby-identifier">query_string</span>)
+
+    <span class="ruby-identifier">query_parameters</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">val</span><span class="ruby-operator">|</span>
+      <span class="ruby-comment cmt">## replace the array with an object</span>
+      <span class="ruby-identifier">query_parameters</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">val</span>[<span class="ruby-value">0</span>] <span class="ruby-keyword kw">if</span> <span class="ruby-value">1</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">val</span>.<span class="ruby-identifier">length</span>
+    }
+
+    <span class="ruby-comment cmt">## set default value to nil! cgi sets this to []</span>
+    <span class="ruby-identifier">query_parameters</span>.<span class="ruby-identifier">default</span> = <span class="ruby-keyword kw">nil</span>
+
+    <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">query_parameters</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

@@ -1,0 +1,26 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: Integer
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: month
+  - !ruby/object:RI::MethodSummary 
+    name: months
+  - !ruby/object:RI::MethodSummary 
+    name: multiple_of?
+  - !ruby/object:RI::MethodSummary 
+    name: ordinalize
+  - !ruby/object:RI::MethodSummary 
+    name: year
+  - !ruby/object:RI::MethodSummary 
+    name: years
+name: Integer
+superclass: Object

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionController::HideActions::ClassMethods#visible_action?
+is_singleton: false
+name: visible_action?
+params: (action_name)
+visibility: public

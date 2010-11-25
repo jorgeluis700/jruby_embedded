@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionController::RackDelegation#dispatch
+is_singleton: false
+name: dispatch
+params: (action, request, response = ActionDispatch::Response.new)
+visibility: public

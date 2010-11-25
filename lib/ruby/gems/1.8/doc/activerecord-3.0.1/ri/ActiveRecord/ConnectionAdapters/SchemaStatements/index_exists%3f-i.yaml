@@ -1,0 +1,17 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Checks to see if an index exists on a table for a given index definition
+  - !ruby/struct:SM::Flow::H 
+    level: 3
+    text: Examples
+  - !ruby/struct:SM::Flow::VERB 
+    body: " # Check an index exists\n index_exists?(:suppliers, :company_id)\n\n # Check an index on multiple columns exists\n index_exists?(:suppliers, [:company_id, :company_type])\n\n # Check a unique index exists\n index_exists?(:suppliers, :company_id, :unique =&gt; true)\n\n # Check an index with a custom name exists\n index_exists?(:suppliers, :company_id, :name =&gt; &quot;idx_company_id&quot;\n"
+full_name: ActiveRecord::ConnectionAdapters::SchemaStatements#index_exists?
+is_singleton: false
+name: index_exists?
+params: (table_name, column_name, options = {})
+visibility: public

@@ -1,0 +1,41 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: notifier
+    rw: W
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: instrument
+  - !ruby/object:RI::MethodSummary 
+    name: instrumenter
+  - !ruby/object:RI::MethodSummary 
+    name: notifier
+  - !ruby/object:RI::MethodSummary 
+    name: subscribe
+  - !ruby/object:RI::MethodSummary 
+    name: unsubscribe
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Notifications provides an instrumentation API for Ruby. To instrument an action in Ruby you just need to do:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  ActiveSupport::Notifications.instrument(:render, :extra =&gt; :information) do\n    render :text =&gt; &quot;Foo&quot;\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "You can consume those events and the information they provide by registering a log subscriber. For instance, let's store all instrumented events in an array:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  @events = []\n\n  ActiveSupport::Notifications.subscribe do |*args|\n    @events &lt;&lt; ActiveSupport::Notifications::Event.new(*args)\n  end\n\n  ActiveSupport::Notifications.instrument(:render, :extra =&gt; :information) do\n    render :text =&gt; &quot;Foo&quot;\n  end\n\n  event = @events.first\n  event.name      # =&gt; :render\n  event.duration  # =&gt; 10 (in milliseconds)\n  event.payload   # =&gt; { :extra =&gt; :information }\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "When subscribing to Notifications, you can pass a pattern, to only consume events that match the pattern:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  ActiveSupport::Notifications.subscribe(/render/) do |event|\n    @render_events &lt;&lt; event\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Notifications ships with a queue implementation that consumes and publish events to log subscribers in a thread. You can use any queue implementation you want.
+constants: []
+
+full_name: ActiveSupport::Notifications
+includes: []
+
+instance_methods: []
+
+name: Notifications
+superclass: 

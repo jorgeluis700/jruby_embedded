@@ -1,0 +1,27 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: src
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: EMBEDDED_PATTERN
+    value: /(^[ \t]*)?<\?rb(\s.*?)\?>([ \t]*\r?\n)?|@(!+)?\{(.*?)\}@/m
+full_name: Erubis::PI::TinyEruby
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: convert
+  - !ruby/object:RI::MethodSummary 
+    name: evaluate
+  - !ruby/object:RI::MethodSummary 
+    name: result
+name: TinyEruby
+superclass: Object

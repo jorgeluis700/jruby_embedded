@@ -1,0 +1,25 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: ActionController::ConditionalGet
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: RackDelegation
+  - !ruby/object:RI::IncludedModule 
+    name: Head
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: expires_in
+  - !ruby/object:RI::MethodSummary 
+    name: expires_now
+  - !ruby/object:RI::MethodSummary 
+    name: fresh_when
+  - !ruby/object:RI::MethodSummary 
+    name: stale?
+name: ConditionalGet
+superclass: 

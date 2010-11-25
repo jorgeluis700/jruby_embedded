@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Start a path. Another alias for #new."
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  Pathname / 'usr'\n"
+full_name: Pathname::/
+is_singleton: true
+name: /
+params: (path)
+visibility: public

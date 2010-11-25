@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Prepend module.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class X\n    def a; &quot;Xa&quot;; end\n  end\n\n  module M\n    def a; &quot;M&quot; + super ; end\n  end\n\n  class X\n    prepend M\n  end\n\n  X.new.a  #=&gt; MXa\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "IMPORTANT! #prepend is not dynamic, rather it copies all methods when included on a class or module. For this reason one must be careful to invoke #prepend AFTER any method definitions that are to be effected. Ideally this would not be necessary, but it would require support in Ruby's C+ source to make it possible."
+full_name: Module#prepend
+is_singleton: false
+name: prepend
+params: (mod)
+visibility: public

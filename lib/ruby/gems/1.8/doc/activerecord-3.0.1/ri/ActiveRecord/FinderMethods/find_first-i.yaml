@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveRecord::FinderMethods#find_first
+is_singleton: false
+name: find_first
+params: ()
+visibility: protected

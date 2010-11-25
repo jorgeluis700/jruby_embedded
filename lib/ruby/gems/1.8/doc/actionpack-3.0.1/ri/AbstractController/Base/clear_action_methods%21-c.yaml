@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: action_methods are cached and there is sometimes need to refresh them. clear_action_methods! allows you to do that, so next time you run action_methods, they will be recalculated
+full_name: AbstractController::Base::clear_action_methods!
+is_singleton: true
+name: clear_action_methods!
+params: ()
+visibility: public

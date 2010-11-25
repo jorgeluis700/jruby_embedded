@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Alias for #to_sql"
+full_name: Arel::Predicates::Binary#value
+is_singleton: false
+name: value
+params: (formatter = nil)
+visibility: public

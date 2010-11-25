@@ -1,0 +1,50 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: active_record
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: Returns the macro type.
+      - !ruby/struct:SM::Flow::P 
+        body: <tt>composed_of :balance, :class_name =&gt; 'Money'</tt> returns <tt>:composed_of</tt> <tt>has_many :clients</tt> returns <tt>:has_many</tt>
+    name: macro
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: Returns the name of the macro.
+      - !ruby/struct:SM::Flow::P 
+        body: <tt>composed_of :balance, :class_name =&gt; 'Money'</tt> returns <tt>:balance</tt> <tt>has_many :clients</tt> returns <tt>:clients</tt>
+    name: name
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: Returns the hash of options used for the macro.
+      - !ruby/struct:SM::Flow::P 
+        body: <tt>composed_of :balance, :class_name =&gt; 'Money'</tt> returns <tt>{ :class_name =&gt; &quot;Money&quot; }</tt> <tt>has_many :clients</tt> returns +{}+
+    name: options
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Abstract base class for AggregateReflection and AssociationReflection. Objects of AggregateReflection and AssociationReflection are returned by the Reflection::ClassMethods.
+constants: []
+
+full_name: ActiveRecord::Reflection::MacroReflection
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: ==
+  - !ruby/object:RI::MethodSummary 
+    name: class_name
+  - !ruby/object:RI::MethodSummary 
+    name: klass
+name: MacroReflection
+superclass: Object

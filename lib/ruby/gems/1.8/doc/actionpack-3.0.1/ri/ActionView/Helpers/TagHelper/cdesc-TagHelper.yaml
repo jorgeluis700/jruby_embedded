@@ -1,0 +1,30 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Provides methods to generate HTML tags programmatically when you can't use a Builder. By default, they output XHTML compliant tags.
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: BOOLEAN_ATTRIBUTES
+    value: "%w(disabled readonly multiple checked autobuffer                            autoplay controls loop selected hidden scoped async                            defer reversed ismap seemless muted required                            autofocus novalidate formnovalidate open).to_set"
+full_name: ActionView::Helpers::TagHelper
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: ERB::Util
+  - !ruby/object:RI::IncludedModule 
+    name: CaptureHelper
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: cdata_section
+  - !ruby/object:RI::MethodSummary 
+    name: content_tag
+  - !ruby/object:RI::MethodSummary 
+    name: escape_once
+  - !ruby/object:RI::MethodSummary 
+    name: tag
+name: TagHelper
+superclass: 

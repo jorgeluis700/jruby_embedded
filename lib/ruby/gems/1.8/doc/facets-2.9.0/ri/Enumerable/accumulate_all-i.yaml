@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Same as #accumulate, but does not apply #uniq to final result."
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  groups.accumulate_all(2).users.friends  #=&gt; ['Jill', 'Jill','Jack','Jim']\n"
+full_name: Enumerable#accumulate_all
+is_singleton: false
+name: accumulate_all
+params: (iterations=1)
+visibility: public

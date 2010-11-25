@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Returns a text_field of type &quot;search&quot;.
+full_name: ActionView::Helpers::FormHelper#search_field
+is_singleton: false
+name: search_field
+params: (object_name, method, options = {})
+visibility: public

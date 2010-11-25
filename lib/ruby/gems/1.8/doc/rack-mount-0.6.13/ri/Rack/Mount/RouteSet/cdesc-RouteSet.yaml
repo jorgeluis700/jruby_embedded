@@ -1,0 +1,42 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: new
+  - !ruby/object:RI::MethodSummary 
+    name: new_without_optimizations
+comment: 
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: X_CASCADE
+    value: "'X-Cascade'.freeze"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: PASS
+    value: "'pass'.freeze"
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: PATH_INFO
+    value: "'PATH_INFO'.freeze"
+full_name: Rack::Mount::RouteSet
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: add_route
+  - !ruby/object:RI::MethodSummary 
+    name: call
+  - !ruby/object:RI::MethodSummary 
+    name: freeze
+  - !ruby/object:RI::MethodSummary 
+    name: length
+  - !ruby/object:RI::MethodSummary 
+    name: recognition_stats
+  - !ruby/object:RI::MethodSummary 
+    name: recognize
+  - !ruby/object:RI::MethodSummary 
+    name: url
+name: RouteSet
+superclass: Object

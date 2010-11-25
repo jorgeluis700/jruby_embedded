@@ -1,0 +1,28 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: use print statement instead of '_buf &lt;&lt; ...'
+  - !ruby/struct:SM::Flow::P 
+    body: this is only for Eruby.
+constants: []
+
+full_name: Erubis::PrintOutEnhancer
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: add_expr_escaped
+  - !ruby/object:RI::MethodSummary 
+    name: add_expr_literal
+  - !ruby/object:RI::MethodSummary 
+    name: add_postamble
+  - !ruby/object:RI::MethodSummary 
+    name: add_preamble
+  - !ruby/object:RI::MethodSummary 
+    name: add_text
+name: PrintOutEnhancer
+superclass: 

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Instance variable values.
+full_name: Instance#values
+is_singleton: false
+name: values
+params: ()
+visibility: public

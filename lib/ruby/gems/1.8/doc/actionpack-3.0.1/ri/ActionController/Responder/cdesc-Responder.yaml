@@ -1,0 +1,107 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: controller
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: format
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: options
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: request
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: resource
+    rw: R
+  - !ruby/object:RI::Attribute 
+    comment: 
+    name: resources
+    rw: R
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: call
+  - !ruby/object:RI::MethodSummary 
+    name: new
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Responder is responsible for exposing a resource to different mime requests, usually depending on the HTTP verb. The responder is triggered when <tt>respond_with</tt> is called. The simplest case to study is a GET request:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class PeopleController &lt; ApplicationController\n    respond_to :html, :xml, :json\n\n    def index\n      @people = Person.find(:all)\n      respond_with(@people)\n    end\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "When a request comes in, for example for an XML response, three steps happen:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  1) the responder searches for a template at people/index.xml;\n\n  2) if the template is not available, it will invoke <tt>#to_xml</tt> on the given resource;\n\n  3) if the responder does not <tt>respond_to :to_xml</tt>, call <tt>#to_format</tt> on it.\n"
+  - !ruby/struct:SM::Flow::H 
+    level: 3
+    text: Builtin HTTP verb semantics
+  - !ruby/struct:SM::Flow::P 
+    body: The default Rails responder holds semantics for each HTTP verb. Depending on the content type, verb and the resource status, it will behave differently.
+  - !ruby/struct:SM::Flow::P 
+    body: "Using Rails default responder, a POST request for creating an object could be written as:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  def create\n    @user = User.new(params[:user])\n    flash[:notice] = 'User was successfully created.' if @user.save\n    respond_with(@user)\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "Which is exactly the same as:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  def create\n    @user = User.new(params[:user])\n\n    respond_to do |format|\n      if @user.save\n        flash[:notice] = 'User was successfully created.'\n        format.html { redirect_to(@user) }\n        format.xml { render :xml =&gt; @user, :status =&gt; :created, :location =&gt; @user }\n      else\n        format.html { render :action =&gt; &quot;new&quot; }\n        format.xml { render :xml =&gt; @user.errors, :status =&gt; :unprocessable_entity }\n      end\n    end\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: The same happens for PUT and DELETE requests.
+  - !ruby/struct:SM::Flow::H 
+    level: 3
+    text: Nested resources
+  - !ruby/struct:SM::Flow::P 
+    body: "You can supply nested resources as you do in <tt>form_for</tt> and <tt>polymorphic_url</tt>. Consider the project has many tasks example. The create action for TasksController would be like:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  def create\n    @project = Project.find(params[:project_id])\n    @task = @project.comments.build(params[:task])\n    flash[:notice] = 'Task was successfully created.' if @task.save\n    respond_with(@project, @task)\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Giving an array of resources, you ensure that the responder will redirect to <tt>project_task_url</tt> instead of <tt>task_url</tt>.
+  - !ruby/struct:SM::Flow::P 
+    body: "Namespaced and singleton resources require a symbol to be given, as in polymorphic urls. If a project has one manager which has many tasks, it should be invoked as:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  respond_with(@project, :manager, @task)\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Check <tt>polymorphic_url</tt> documentation for more examples.
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: ACTIONS_FOR_VERBS
+    value: "{       :post => :new,       :put => :edit"
+full_name: ActionController::Responder
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: api_behavior
+  - !ruby/object:RI::MethodSummary 
+    name: api_location
+  - !ruby/object:RI::MethodSummary 
+    name: default_action
+  - !ruby/object:RI::MethodSummary 
+    name: default_render
+  - !ruby/object:RI::MethodSummary 
+    name: display
+  - !ruby/object:RI::MethodSummary 
+    name: has_errors?
+  - !ruby/object:RI::MethodSummary 
+    name: navigation_behavior
+  - !ruby/object:RI::MethodSummary 
+    name: navigation_location
+  - !ruby/object:RI::MethodSummary 
+    name: resource_location
+  - !ruby/object:RI::MethodSummary 
+    name: resourceful?
+  - !ruby/object:RI::MethodSummary 
+    name: respond
+  - !ruby/object:RI::MethodSummary 
+    name: to_format
+  - !ruby/object:RI::MethodSummary 
+    name: to_html
+name: Responder
+superclass: Object

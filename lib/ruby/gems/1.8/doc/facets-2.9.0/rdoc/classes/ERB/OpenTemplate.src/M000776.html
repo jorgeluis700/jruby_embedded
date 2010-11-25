@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>new (ERB::OpenTemplate)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/more/facets/erb.rb, line 21</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">objs_ioc</span>)
+    <span class="ruby-identifier">ioc</span> = <span class="ruby-constant">Hash</span><span class="ruby-operator">===</span><span class="ruby-identifier">objs_ioc</span>.<span class="ruby-identifier">last</span> <span class="ruby-value">? </span><span class="ruby-identifier">objs_ioc</span>.<span class="ruby-identifier">pop</span> <span class="ruby-operator">:</span> {}
+    <span class="ruby-identifier">objs</span> = <span class="ruby-identifier">objs_ioc</span>
+
+    <span class="ruby-identifier">mods</span> = []
+
+    <span class="ruby-identifier">objs</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">obj</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">mod</span> = <span class="ruby-constant">Module</span>.<span class="ruby-identifier">new</span>
+      <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">public_methods</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">module_eval</span> <span class="ruby-keyword kw">do</span>
+          <span class="ruby-comment cmt">#define_method(m){ |*a,&amp;b| obj.__send__(m,*a,&amp;b) }</span>
+          <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">m</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">obj</span>.<span class="ruby-identifier">method</span>(<span class="ruby-identifier">m</span>).<span class="ruby-identifier">to_proc</span>)
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-identifier">mods</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">mod</span>
+    <span class="ruby-keyword kw">end</span>
+
+    <span class="ruby-identifier">mod</span> = <span class="ruby-constant">Module</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-identifier">ioc</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">module_eval</span> <span class="ruby-keyword kw">do</span>
+        <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">k</span>){ <span class="ruby-identifier">v</span> }
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span>
+    <span class="ruby-identifier">mods</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">mod</span>
+
+    <span class="ruby-identifier">extend</span> <span class="ruby-operator">*</span><span class="ruby-identifier">mods</span>.<span class="ruby-identifier">reverse</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

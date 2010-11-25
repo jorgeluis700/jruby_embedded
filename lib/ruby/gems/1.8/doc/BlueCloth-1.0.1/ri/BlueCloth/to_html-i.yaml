@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Render Markdown-formatted text in this string object as HTML and return it. The parameter is for compatibility with RedCloth, and is currently unused, though that may change in the future.
+full_name: BlueCloth#to_html
+is_singleton: false
+name: to_html
+params: ( lite=false )
+visibility: public

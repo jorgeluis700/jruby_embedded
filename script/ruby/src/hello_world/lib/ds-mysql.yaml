@@ -1,0 +1,5 @@
+url: 'jdbc:mysql://localhost/seam_jruby'
+adapter: 'jdbc'
+driver: 'com.mysql.jdbc.Driver'
+username: 'root'
+password: '1234'

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveRecord::FinderMethods#apply_join_dependency
+is_singleton: false
+name: apply_join_dependency
+params: (relation, join_dependency)
+visibility: protected

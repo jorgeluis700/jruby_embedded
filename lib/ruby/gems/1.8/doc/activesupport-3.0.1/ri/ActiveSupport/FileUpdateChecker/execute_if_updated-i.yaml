@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActiveSupport::FileUpdateChecker#execute_if_updated
+is_singleton: false
+name: execute_if_updated
+params: ()
+visibility: public

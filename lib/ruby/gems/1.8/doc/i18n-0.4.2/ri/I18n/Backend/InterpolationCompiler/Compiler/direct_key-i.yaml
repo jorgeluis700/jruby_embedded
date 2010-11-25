@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: I18n::Backend::InterpolationCompiler::Compiler#direct_key
+is_singleton: false
+name: direct_key
+params: (key)
+visibility: protected

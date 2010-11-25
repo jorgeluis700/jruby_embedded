@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>similarity (String)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/core/facets/string/similarity.rb, line 28</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">similarity</span>(<span class="ruby-identifier">str_in</span>)
+    <span class="ruby-keyword kw">return</span> <span class="ruby-value">0</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">str_in</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">nil</span>
+    <span class="ruby-keyword kw">return</span> <span class="ruby-value">1</span> <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">str_in</span>
+
+    <span class="ruby-comment cmt"># -- make a graph of each word (okay, its not a true graph, but is similar)</span>
+    <span class="ruby-identifier">graph_A</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-identifier">graph_B</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+
+    <span class="ruby-comment cmt"># -- &quot;graph&quot; self</span>
+    <span class="ruby-identifier">last</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">length</span>
+    (<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">last</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ff</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">loc</span>  = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">length</span>
+      <span class="ruby-keyword kw">break</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">ff</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">last</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+      <span class="ruby-identifier">wordB</span> = (<span class="ruby-value">1</span><span class="ruby-operator">..</span>(<span class="ruby-identifier">last</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>)).<span class="ruby-identifier">to_a</span>.<span class="ruby-identifier">reverse!</span>
+      <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">wordB</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword kw">nil</span>)
+        <span class="ruby-identifier">wordB</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ss</span><span class="ruby-operator">|</span>
+          <span class="ruby-keyword kw">break</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">ss</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">ff</span>
+          <span class="ruby-identifier">graph_A</span>.<span class="ruby-identifier">push</span>( <span class="ruby-node">&quot;#{self[ff..ss]}&quot;</span> )
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span>
+
+    <span class="ruby-comment cmt"># -- &quot;graph&quot; input string</span>
+    <span class="ruby-identifier">last</span> = <span class="ruby-identifier">str_in</span>.<span class="ruby-identifier">length</span>
+    (<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">last</span>).<span class="ruby-identifier">each</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">ff</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">loc</span>  = <span class="ruby-identifier">str_in</span>.<span class="ruby-identifier">length</span>
+      <span class="ruby-keyword kw">break</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">ff</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">last</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+      <span class="ruby-identifier">wordB</span> = (<span class="ruby-value">1</span><span class="ruby-operator">..</span>(<span class="ruby-identifier">last</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>)).<span class="ruby-identifier">to_a</span>.<span class="ruby-identifier">reverse!</span>
+      <span class="ruby-identifier">wordB</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ss</span><span class="ruby-operator">|</span>
+        <span class="ruby-keyword kw">break</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">ss</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">ff</span>
+        <span class="ruby-identifier">graph_B</span>.<span class="ruby-identifier">push</span>( <span class="ruby-node">&quot;#{str_in[ff..ss]}&quot;</span> )
+      <span class="ruby-keyword kw">end</span>
+    }
+
+    <span class="ruby-comment cmt"># -- count how many of these &quot;graph edges&quot; we have that are the same</span>
+    <span class="ruby-identifier">matches</span> = <span class="ruby-identifier">graph_A</span> <span class="ruby-operator">&amp;</span> <span class="ruby-identifier">graph_B</span>
+
+    <span class="ruby-comment cmt">#--</span>
+    <span class="ruby-comment cmt">#matches = Array.new</span>
+    <span class="ruby-comment cmt">#graph_A.each{ |aa| matches.push(aa) if( graph_B.include?(aa) ) }</span>
+    <span class="ruby-comment cmt">#++</span>
+
+    <span class="ruby-comment cmt"># -- for eliminating subsets, we want to start with the smallest hits.</span>
+    <span class="ruby-identifier">matches</span>.<span class="ruby-identifier">sort!</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">y</span>.<span class="ruby-identifier">length</span>}
+
+    <span class="ruby-comment cmt"># -- eliminate any subsets</span>
+    <span class="ruby-identifier">mclone</span> = <span class="ruby-identifier">matches</span>.<span class="ruby-identifier">dup</span>
+    <span class="ruby-identifier">mclone</span>.<span class="ruby-identifier">each_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ii</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">reg</span> = <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">compile</span>( <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">escape</span>(<span class="ruby-identifier">mclone</span>[<span class="ruby-identifier">ii</span>]) )
+      <span class="ruby-identifier">count</span> = <span class="ruby-value">0</span><span class="ruby-value">.0</span>
+      <span class="ruby-identifier">matches</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">xx</span><span class="ruby-operator">|</span> <span class="ruby-identifier">count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">xx</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">reg</span>}
+      <span class="ruby-identifier">matches</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">mclone</span>[<span class="ruby-identifier">ii</span>]) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword kw">end</span>
+
+    <span class="ruby-identifier">score</span> = <span class="ruby-value">0</span><span class="ruby-value">.0</span>
+    <span class="ruby-identifier">matches</span>.<span class="ruby-identifier">each</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">mm</span><span class="ruby-operator">|</span> <span class="ruby-identifier">score</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">mm</span>.<span class="ruby-identifier">length</span> }
+    <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">str_in</span>.<span class="ruby-identifier">length</span> <span class="ruby-value">? </span><span class="ruby-identifier">largest</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">largest</span> = <span class="ruby-identifier">str_in</span>.<span class="ruby-identifier">length</span>
+    <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">score</span><span class="ruby-operator">/</span><span class="ruby-identifier">largest</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

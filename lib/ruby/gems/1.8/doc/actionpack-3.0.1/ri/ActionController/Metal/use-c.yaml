@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ActionController::Metal::use
+is_singleton: true
+name: use
+params: (*args)
+visibility: public

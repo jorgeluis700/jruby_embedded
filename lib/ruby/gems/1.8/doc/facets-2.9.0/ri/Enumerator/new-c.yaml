@@ -1,0 +1,20 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Provides the ruby-1.9 block form of Enumerator, where you can write:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "   obj = Enumerator.new do |yielder|\n     # ...\n     yielder.yield(data)  # or: yielder &lt;&lt; data\n     # ...\n   end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: When obj.each is called, the block is run once. It should call yielder.yield with each item it wishes to generate.
+  - !ruby/struct:SM::Flow::P 
+    body: "Example:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  fib = Enumerator.new { |y|\n    a = b = 1\n    loop {\n      y &lt;&lt; a\n      a, b = b, a + b\n    }\n  }\n\n  fib.take(10)  #=&gt; [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]\n"
+full_name: Enumerator::new
+is_singleton: true
+name: new
+params: (*args, &block)
+visibility: public

@@ -1,0 +1,86 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: attach_to
+  - !ruby/object:RI::MethodSummary 
+    name: flush_all!
+  - !ruby/object:RI::MethodSummary 
+    name: flushable_loggers
+  - !ruby/object:RI::MethodSummary 
+    name: log_subscribers
+  - !ruby/object:RI::MethodSummary 
+    name: logger
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: ActiveSupport::LogSubscriber is an object set to consume ActiveSupport::Notifications with solely purpose of logging. The log subscriber dispatches notifications to a regirested object based on its given namespace.
+  - !ruby/struct:SM::Flow::P 
+    body: "An example would be Active Record log subscriber responsible for logging queries:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  module ActiveRecord\n    class LogSubscriber &lt; ActiveSupport::LogSubscriber\n      def sql(event)\n        &quot;#{event.payload[:name]} (#{event.duration}) #{event.payload[:sql]}&quot;\n      end\n    end\n  end\n"
+  - !ruby/struct:SM::Flow::P 
+    body: "And it's finally registed as:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  ActiveRecord::LogSubscriber.attach_to :active_record\n"
+  - !ruby/struct:SM::Flow::P 
+    body: Since we need to know all instance methods before attaching the log subscriber, the line above should be called after your ActiveRecord::LogSubscriber definition.
+  - !ruby/struct:SM::Flow::P 
+    body: After configured, whenever a &quot;sql.active_record&quot; notification is published, it will properly dispatch the event (ActiveSupport::Notifications::Event) to the sql method.
+  - !ruby/struct:SM::Flow::P 
+    body: Log subscriber also has some helpers to deal with logging and automatically flushes all logs when the request finishes (via action_dispatch.callback notification) in a Rails environment.
+constants: 
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: Embed in a String to clear all previous ANSI sequences.
+    name: CLEAR
+    value: "\"\\e[0m\""
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: BOLD
+    value: "\"\\e[1m\""
+  - !ruby/object:RI::Constant 
+    comment: 
+      - !ruby/struct:SM::Flow::P 
+        body: Colors
+    name: BLACK
+    value: "\"\\e[30m\""
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: RED
+    value: "\"\\e[31m\""
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: GREEN
+    value: "\"\\e[32m\""
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: YELLOW
+    value: "\"\\e[33m\""
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: BLUE
+    value: "\"\\e[34m\""
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: MAGENTA
+    value: "\"\\e[35m\""
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: CYAN
+    value: "\"\\e[36m\""
+  - !ruby/object:RI::Constant 
+    comment: 
+    name: WHITE
+    value: "\"\\e[37m\""
+full_name: ActiveSupport::LogSubscriber
+includes: []
+
+instance_methods: 
+  - !ruby/object:RI::MethodSummary 
+    name: call
+  - !ruby/object:RI::MethodSummary 
+    name: color
+name: LogSubscriber
+superclass: Object

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Initializes a new responder an invoke the proper format. If the format is not defined, call to_format.
+full_name: ActionController::Responder::call
+is_singleton: true
+name: call
+params: (*args)
+visibility: public

@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: Symbol</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">Symbol</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/lib/core/facets/object/dup_rb.html">
+                lib/core/facets/object/dup.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/symbol/as_s_rb.html">
+                lib/core/facets/symbol/as_s.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/symbol/chomp_rb.html">
+                lib/core/facets/symbol/chomp.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/symbol/generate_rb.html">
+                lib/core/facets/symbol/generate.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/symbol/not_rb.html">
+                lib/core/facets/symbol/not.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/symbol/op_div_rb.html">
+                lib/core/facets/symbol/op_div.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/symbol/plain_rb.html">
+                lib/core/facets/symbol/plain.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/symbol/succ_rb.html">
+                lib/core/facets/symbol/succ.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/symbol/thrown_rb.html">
+                lib/core/facets/symbol/thrown.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/symbol/to_proc_rb.html">
+                lib/core/facets/symbol/to_proc.rb
+                </a>
+        <br />
+                <a href="../files/lib/core/facets/symbol/variablize_rb.html">
+                lib/core/facets/symbol/variablize.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                Object
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000378">/</a>&nbsp;&nbsp;
+      <a href="#M000372">as_s</a>&nbsp;&nbsp;
+      <a href="#M000382">bang?</a>&nbsp;&nbsp;
+      <a href="#M000373">chomp</a>&nbsp;&nbsp;
+      <a href="#M000371">clone?</a>&nbsp;&nbsp;
+      <a href="#M000369">dup!</a>&nbsp;&nbsp;
+      <a href="#M000370">dup?</a>&nbsp;&nbsp;
+      <a href="#M000375">generate</a>&nbsp;&nbsp;
+      <a href="#M000374">lchomp</a>&nbsp;&nbsp;
+      <a href="#M000376">not?</a>&nbsp;&nbsp;
+      <a href="#M000379">plain?</a>&nbsp;&nbsp;
+      <a href="#M000381">query?</a>&nbsp;&nbsp;
+      <a href="#M000380">setter?</a>&nbsp;&nbsp;
+      <a href="#M000383">succ</a>&nbsp;&nbsp;
+      <a href="#M000384">thrown?</a>&nbsp;&nbsp;
+      <a href="#M000385">to_proc</a>&nbsp;&nbsp;
+      <a href="#M000386">variablize</a>&nbsp;&nbsp;
+      <a href="#M000377">~</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000375" class="method-detail">
+        <a name="M000375"></a>
+
+        <div class="method-heading">
+          <a href="Symbol.src/M000375.html" target="Code" class="method-signature"
+            onclick="popupCode('Symbol.src/M000375.html');return false;">
+          <span class="method-name">generate</span><span class="method-args">(key=nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Generate a unique symbol.
+</p>
+<pre>
+  Symbol.generate  #=&gt; :&quot;-1&quot;
+</pre>
+<p>
+If <tt>key</tt> is given the new symbol will be prefixed with it.
+</p>
+<pre>
+  Symbol.generate(:foo)  #=&gt; :&quot;foo-1&quot;
+</pre>
+<p>
+TODO: Is the generated symbol format acceptable?
+</p>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000378" class="method-detail">
+        <a name="M000378"></a>
+
+        <div class="method-heading">
+          <a href="Symbol.src/M000378.html" target="Code" class="method-signature"
+            onclick="popupCode('Symbol.src/M000378.html');return false;">
+          <span class="method-name">/</span><span class="method-args">(path)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Join with <em>path</em> as a file path.
+</p>
+<ul>
+<li>path - The path component(s) to append. [to_s]
+
+</li>
+</ul>
+<p>
+Examples
+</p>
+<pre>
+  (:merb / &quot;string&quot;)   #=&gt; &quot;merb/string&quot;
+  (:merb / :symbol)    #=&gt; &quot;merb/symbol&quot;
+</pre>
+<p>
+Returns <a href="String.html">String</a> of the receiver (as a path
+string), concatenated with <em>path</em>.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000372" class="method-detail">
+        <a name="M000372"></a>
+
+        <div class="method-heading">
+          <a href="Symbol.src/M000372.html" target="Code" class="method-signature"
+            onclick="popupCode('Symbol.src/M000372.html');return false;">
+          <span class="method-name">as_s</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Convert symbol to string, apply string method and convert back to symbol
+via a fluent interface.
+</p>
+<pre>
+  :HELLO.as_s.downcase  #=&gt; :hello
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000382" class="method-detail">
+        <a name="M000382"></a>
+
+        <div class="method-heading">
+          <a href="Symbol.src/M000382.html" target="Code" class="method-signature"
+            onclick="popupCode('Symbol.src/M000382.html');return false;">
+          <span class="method-name">bang?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<a href="Symbol.html">Symbol</a> ends in `!`.
+</p>
+<pre>
+  :a!.bang? #=&gt; true
+  :a.bang?  #=&gt; false
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000373" class="method-detail">
+        <a name="M000373"></a>
+
+        <div class="method-heading">
+          <a href="Symbol.src/M000373.html" target="Code" class="method-signature"
+            onclick="popupCode('Symbol.src/M000373.html');return false;">
+          <span class="method-name">chomp</span><span class="method-args">(seperator)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Just like String#chomp.
+</p>
+<pre>
+  :ab.chomp(:b)  #=&gt; :a
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000371" class="method-detail">
+        <a name="M000371"></a>
+
+        <div class="method-heading">
+          <a href="Symbol.src/M000371.html" target="Code" class="method-signature"
+            onclick="popupCode('Symbol.src/M000371.html');return false;">
+          <span class="method-name">clone?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000369" class="method-detail">
+        <a name="M000369"></a>
+
+        <div class="method-heading">
+          <a href="Symbol.src/M000369.html" target="Code" class="method-signature"
+            onclick="popupCode('Symbol.src/M000369.html');return false;">
+          <span class="method-name">dup!</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Since <a href="Symbol.html">Symbol</a> is immutable it cannot be
+duplicated. For this reason try_dup returns <tt>self</tt>.
+</p>
+<pre>
+  :a.dup!  #=&gt; :a
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000370" class="method-detail">
+        <a name="M000370"></a>
+
+        <div class="method-heading">
+          <a href="Symbol.src/M000370.html" target="Code" class="method-signature"
+            onclick="popupCode('Symbol.src/M000370.html');return false;">
+          <span class="method-name">dup?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000374" class="method-detail">
+        <a name="M000374"></a>
+
+        <div class="method-heading">
+          <a href="Symbol.src/M000374.html" target="Code" class="method-signature"
+            onclick="popupCode('Symbol.src/M000374.html');return false;">
+          <span class="method-name">lchomp</span><span class="method-args">(seperator)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Just like <a href="String.html#M000169">String#lchomp</a>.
+</p>
+<pre>
+  :ab.lchomp(:a)  #=&gt; :b
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000376" class="method-detail">
+        <a name="M000376"></a>
+
+        <div class="method-heading">
+          <a href="Symbol.src/M000376.html" target="Code" class="method-signature"
+            onclick="popupCode('Symbol.src/M000376.html');return false;">
+          <span class="method-name">not?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Does a symbol have a &quot;not&quot; sign?
+</p>
+<pre>
+  &quot;friend&quot;.to_sym.not?   #=&gt; false
+  &quot;~friend&quot;.to_sym.not?  #=&gt; true
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000379" class="method-detail">
+        <a name="M000379"></a>
+
+        <div class="method-heading">
+          <a href="Symbol.src/M000379.html" target="Code" class="method-signature"
+            onclick="popupCode('Symbol.src/M000379.html');return false;">
+          <span class="method-name">plain?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<a href="Symbol.html">Symbol</a> does not end in `!`, `=`, or `?`.
+</p>
+<pre>
+  :a.plain?   #=&gt; true
+  :a?.plain?  #=&gt; false
+  :a!.plain?  #=&gt; false
+  :a=.plain?  #=&gt; false
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000381" class="method-detail">
+        <a name="M000381"></a>
+
+        <div class="method-heading">
+          <a href="Symbol.src/M000381.html" target="Code" class="method-signature"
+            onclick="popupCode('Symbol.src/M000381.html');return false;">
+          <span class="method-name">query?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<a href="Symbol.html">Symbol</a> ends in `?`.
+</p>
+<pre>
+  :a?.query? #=&gt; true
+  :a.query?  #=&gt; false
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000380" class="method-detail">
+        <a name="M000380"></a>
+
+        <div class="method-heading">
+          <a href="Symbol.src/M000380.html" target="Code" class="method-signature"
+            onclick="popupCode('Symbol.src/M000380.html');return false;">
+          <span class="method-name">setter?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<a href="Symbol.html">Symbol</a> ends in `=`.
+</p>
+<pre>
+  :a=.setter? #=&gt; true
+  :a.setter?  #=&gt; false
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000383" class="method-detail">
+        <a name="M000383"></a>
+
+        <div class="method-heading">
+          <a href="Symbol.src/M000383.html" target="Code" class="method-signature"
+            onclick="popupCode('Symbol.src/M000383.html');return false;">
+          <span class="method-name">succ</span><span class="method-args">(n=1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Successor method for symobol. This simply converts the symbol to a string
+uses String#succ and then converts it back to a symbol.
+</p>
+<pre>
+  :a.succ  #=&gt; :b
+</pre>
+<p>
+TODO: Make this work more like a simple character dial?
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000384" class="method-detail">
+        <a name="M000384"></a>
+
+        <div class="method-heading">
+          <a href="Symbol.src/M000384.html" target="Code" class="method-signature"
+            onclick="popupCode('Symbol.src/M000384.html');return false;">
+          <span class="method-name">thrown?</span><span class="method-args">() {|| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Does the block throw the symbol?
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000385" class="method-detail">
+        <a name="M000385"></a>
+
+        <div class="method-heading">
+          <a href="Symbol.src/M000385.html" target="Code" class="method-signature"
+            onclick="popupCode('Symbol.src/M000385.html');return false;">
+          <span class="method-name">to_proc</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Turn a symbol into a proc calling the method to which it refers.
+</p>
+<pre>
+  up = :upcase.to_proc
+  up.call(&quot;hello&quot;)  #=&gt; 'HELLO'
+</pre>
+<p>
+More useful is the fact that this allows <tt>&amp;</tt> to be used to
+coerce <a href="Symbol.html">Symbol</a> into <a href="Proc.html">Proc</a>.
+</p>
+<pre>
+  %w{foo bar qux}.map(&amp;:upcase)   #=&gt; [&quot;FOO&quot;,&quot;BAR&quot;,&quot;QUX&quot;]
+  [1, 2, 3].inject(&amp;:+)           #=&gt; 6
+</pre>
+<p>
+TODO: This will be deprecated as of Ruby 1.9, since it will become standard
+Ruby.
+</p>
+<p>
+CREDIT: Florian Gross (orignal), Nobuhiro Imai (current)
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000386" class="method-detail">
+        <a name="M000386"></a>
+
+        <div class="method-heading">
+          <a href="Symbol.src/M000386.html" target="Code" class="method-signature"
+            onclick="popupCode('Symbol.src/M000386.html');return false;">
+          <span class="method-name">variablize</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Prepend an &quot;@&quot; to the beginning of a symbol to make a instance
+variable name. This also replaces non-valid characters with underscores.
+</p>
+<pre>
+  :a.variablize  #=&gt; :&quot;@a&quot;
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000377" class="method-detail">
+        <a name="M000377"></a>
+
+        <div class="method-heading">
+          <a href="Symbol.src/M000377.html" target="Code" class="method-signature"
+            onclick="popupCode('Symbol.src/M000377.html');return false;">
+          <span class="method-name">~</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Add a &quot;not&quot; sign to the front of a symbol.
+</p>
+<pre>
+  (~:friend)  #=&gt; :&quot;~friend&quot;
+</pre>
+<p>
+CREDIT: Trans
+</p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

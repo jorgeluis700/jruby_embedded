@@ -1,0 +1,16 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: Erubis::HeaderFooterEruby
+includes: 
+  - !ruby/object:RI::IncludedModule 
+    name: HeaderFooterEnhancer
+instance_methods: []
+
+name: HeaderFooterEruby
+superclass: Eruby

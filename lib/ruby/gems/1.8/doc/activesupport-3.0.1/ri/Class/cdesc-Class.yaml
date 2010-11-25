@@ -1,0 +1,27 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: It is recommended to use <tt>class_attribute</tt> over methods defined in this file. Please refer to documentation for <tt>class_attribute</tt> for more information. Officially it is not deprecated but <tt>class_attribute</tt> is faster.
+  - !ruby/struct:SM::Flow::P 
+    body: Allows attributes to be shared within an inheritance hierarchy. Each descendant gets a copy of their parents' attributes, instead of just a pointer to the same. This means that the child can add elements to, for example, an array without those additions being shared with either their parent, siblings, or children. This is unlike the regular class-level attributes that are shared across the entire hierarchy.
+  - !ruby/struct:SM::Flow::P 
+    body: The copies of inheritable parent attributes are added to subclasses when they are created, via the <tt>inherited</tt> hook.
+  - !ruby/struct:SM::Flow::VERB 
+    body: " class Person\n   class_inheritable_accessor :hair_colors\n end\n\n Person.hair_colors = [:brown, :black, :blonde, :red]\n Person.hair_colors     # =&gt; [:brown, :black, :blonde, :red]\n Person.new.hair_colors # =&gt; [:brown, :black, :blonde, :red]\n"
+  - !ruby/struct:SM::Flow::P 
+    body: To opt out of the instance writer method, pass :instance_writer =&gt; false. To opt out of the instance reader method, pass :instance_reader =&gt; false.
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  class Person\n    class_inheritable_accessor :hair_colors :instance_writer =&gt; false, :instance_reader =&gt; false\n  end\n\n  Person.new.hair_colors = [:brown]  # =&gt; NoMethodError\n  Person.new.hair_colors             # =&gt; NoMethodError\n"
+constants: []
+
+full_name: Class
+includes: []
+
+instance_methods: []
+
+name: Class
+superclass: Object

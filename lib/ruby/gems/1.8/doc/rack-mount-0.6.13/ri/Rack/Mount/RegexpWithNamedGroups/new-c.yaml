@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Wraps Regexp with named capture support.
+full_name: Rack::Mount::RegexpWithNamedGroups::new
+is_singleton: true
+name: new
+params: (regexp)
+visibility: public
